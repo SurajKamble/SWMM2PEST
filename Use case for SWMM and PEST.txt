@@ -1,0 +1,41 @@
+- User has an .inp file.
+- Upload the .inp file.
+- Generate UI of SWMM that consists of these sections:
+	- Subcatchments.
+	- SubAreas.
+	- Infiltration.
+	- LID_Controls.
+	- LID_Usage.
+
+.tpl file section:
+- Read the .inp file and fill the areas of each section accordingly.
+- Add functionality to allow user to select the parameters that have to be estimated.
+- Add functionality to enter the range of parameters and other parameter data.
+- Generate a .tpl file using this data.
+
+.ins file section:
+- Provide options to the user to select output parameters.
+- Generate a .ins file using this data.
+
+.pst file section:
+- Provide a way for the user to enter the observation data.
+- Generate this file automatically combining all the data.
+
+- Run PEST using the .pst file.
+- Read the estimated values of parameters from the output files of PEST.
+- Generate graphs.
+
+
+
+SWMM and PEST - Traditional way:
+
+- User has .inp file.
+- User has to create a .tpl file, by using delemiters in place of the parameters that have to be estimated.
+- User has to create a .ins file, by providing the locations of the output parameters in the .txt file of SWMM output.
+- User has to create a .pst file, by providing:
+	- Control data.
+	- Parameter data.
+	- Observation data.
+	- Model data.
+- Provide .pst file as input to PEST.
+- PEST provides the estimated values for the parameters mentioned.

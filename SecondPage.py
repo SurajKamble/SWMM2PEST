@@ -1,0 +1,91 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'E:\UC\EPA\SWMM2PEST\SecondPage.ui'
+#
+# Created by: PyQt5 UI code generator 5.6
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(800, 600)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
+        self.gridLayout.setObjectName("gridLayout")
+        self.tabOuter = QtWidgets.QTabWidget(self.centralwidget)
+        self.tabOuter.setObjectName("tabOuter")
+        self.tabParameters = QtWidgets.QWidget()
+        self.tabParameters.setObjectName("tabParameters")
+        self.horizontalLayout = QtWidgets.QHBoxLayout(self.tabParameters)
+        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.tabInner = QtWidgets.QTabWidget(self.tabParameters)
+        self.tabInner.setObjectName("tabInner")
+        self.tabSubcatchments = QtWidgets.QWidget()
+        self.tabSubcatchments.setObjectName("tabSubcatchments")
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.tabSubcatchments)
+        self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        self.horizontalLayout_4 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
+        self.listSubcatchments = QtWidgets.QListWidget(self.tabSubcatchments)
+        self.listSubcatchments.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.listSubcatchments.setObjectName("listSubcatchments")
+        self.horizontalLayout_4.addWidget(self.listSubcatchments)
+        self.widget = QtWidgets.QWidget(self.tabSubcatchments)
+        self.widget.setObjectName("widget")
+        self.horizontalLayout_4.addWidget(self.widget)
+        self.horizontalLayout_3.addLayout(self.horizontalLayout_4)
+        self.tabInner.addTab(self.tabSubcatchments, "")
+        self.tabLID_Controls = QtWidgets.QWidget()
+        self.tabLID_Controls.setObjectName("tabLID_Controls")
+        self.tabInner.addTab(self.tabLID_Controls, "")
+        self.tabLID_Usage = QtWidgets.QWidget()
+        self.tabLID_Usage.setObjectName("tabLID_Usage")
+        self.tabInner.addTab(self.tabLID_Usage, "")
+        self.horizontalLayout.addWidget(self.tabInner)
+        self.tabOuter.addTab(self.tabParameters, "")
+        self.tabObservations = QtWidgets.QWidget()
+        self.tabObservations.setObjectName("tabObservations")
+        self.tabOuter.addTab(self.tabObservations, "")
+        self.tabControls = QtWidgets.QWidget()
+        self.tabControls.setObjectName("tabControls")
+        self.tabOuter.addTab(self.tabControls, "")
+        self.gridLayout.addWidget(self.tabOuter, 0, 1, 1, 1)
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 21))
+        self.menubar.setObjectName("menubar")
+        self.menuFile = QtWidgets.QMenu(self.menubar)
+        self.menuFile.setObjectName("menuFile")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+        self.actionExit = QtWidgets.QAction(MainWindow)
+        self.actionExit.setObjectName("actionExit")
+        self.menuFile.addSeparator()
+        self.menuFile.addAction(self.actionExit)
+        self.menubar.addAction(self.menuFile.menuAction())
+
+        self.retranslateUi(MainWindow)
+        self.tabOuter.setCurrentIndex(0)
+        self.tabInner.setCurrentIndex(0)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.tabInner.setTabText(self.tabInner.indexOf(self.tabSubcatchments), _translate("MainWindow", "Subcatchments"))
+        self.tabInner.setTabText(self.tabInner.indexOf(self.tabLID_Controls), _translate("MainWindow", "LID_Controls"))
+        self.tabInner.setTabText(self.tabInner.indexOf(self.tabLID_Usage), _translate("MainWindow", "LID_Usage"))
+        self.tabOuter.setTabText(self.tabOuter.indexOf(self.tabParameters), _translate("MainWindow", "Parameter Data"))
+        self.tabOuter.setTabText(self.tabOuter.indexOf(self.tabObservations), _translate("MainWindow", "Observation Data"))
+        self.tabOuter.setTabText(self.tabOuter.indexOf(self.tabControls), _translate("MainWindow", "Control Data"))
+        self.menuFile.setTitle(_translate("MainWindow", "File"))
+        self.actionExit.setText(_translate("MainWindow", "Exit"))
+
