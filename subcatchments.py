@@ -126,6 +126,29 @@ class DataField():
         self.lower_limit = ''
         self.upper_limit = ''
 
+        self.selected_for_estimation = self.check_if_selected_for_estimation()
+
+        if self.selected_for_estimation:
+            self.short_name = self.generate_short_name(self.name)
+
+    def check_if_selected_for_estimation(self):
+        if self.lower_limit != '' or self.upper_limit != '':
+            return True
+
+    def generate_short_name(self, name):
+
+        name = name.lower()
+
+        short_name = ""
+
+        for i in range(len(name)):
+            if name[i] not in [" ", "a", "e", "i", "o", "u"]:
+                short_name += name[i]
+
+        return short_name
+
+
+
 
 class HortonInfiltration():
     """Horton Infiltration parameters"""
