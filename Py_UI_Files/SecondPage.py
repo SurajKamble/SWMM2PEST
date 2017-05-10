@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(705, 587)
+        MainWindow.resize(703, 569)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
@@ -38,6 +38,15 @@ class Ui_MainWindow(object):
         self.horizontalLayout_4.addWidget(self.listSubcatchments)
         self.widget = QtWidgets.QWidget(self.tabSubcatchments)
         self.widget.setObjectName("widget")
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.widget)
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.widget_3 = QtWidgets.QWidget(self.widget)
+        self.widget_3.setObjectName("widget_3")
+        self.verticalLayout.addWidget(self.widget_3)
+        self.buttonOkParameters = QtWidgets.QPushButton(self.widget)
+        self.buttonOkParameters.setObjectName("buttonOkParameters")
+        self.verticalLayout.addWidget(self.buttonOkParameters)
         self.horizontalLayout_4.addWidget(self.widget)
         self.horizontalLayout_3.addLayout(self.horizontalLayout_4)
         self.tabInner.addTab(self.tabSubcatchments, "")
@@ -68,7 +77,7 @@ class Ui_MainWindow(object):
         self.gridLayout.addWidget(self.tabOuter, 0, 1, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 705, 22))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 703, 22))
         self.menubar.setObjectName("menubar")
         self.menuFile = QtWidgets.QMenu(self.menubar)
         self.menuFile.setObjectName("menuFile")
@@ -90,6 +99,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.buttonOkParameters.setText(_translate("MainWindow", "PushButton"))
         self.tabInner.setTabText(self.tabInner.indexOf(self.tabSubcatchments), _translate("MainWindow", "Subcatchments"))
         self.tabInner.setTabText(self.tabInner.indexOf(self.tabLID_Controls), _translate("MainWindow", "LID_Controls"))
         self.tabOuter.setTabText(self.tabOuter.indexOf(self.tabParameters), _translate("MainWindow", "Parameter Data"))

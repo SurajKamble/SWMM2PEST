@@ -4,135 +4,126 @@ from PyQt5 import QtWidgets
 class Subcatchment():
     """Subcatchment geometry, location, parameters, and time-series data"""
 
-    def __init__(self):
+    def __init__(self, sub_index):
+
+        self.sub_index = sub_index
 
         self.name = ''
 
         self.description = ''
-        """str: Optional description of the Subcatchment."""
 
         self.tag = ''
-        """Optional label used to categorize or classify the Subcatchment."""
 
         self.rain_gage = 'None'
-        """str: The RainGage ID associated with the Subcatchment."""
 
         self.outlet = 'None'
-        """The Node or Subcatchment which receives Subcatchment's runoff."""
 
-        self.area = DataField("area", "Area")
-        """float: Area of the subcatchment (acres or hectares)."""
+        self.area = DataField("area", "Area", 3)
 
-        self.percent_impervious = DataField('percent_impervious', "% Impervious")
-        """float: Percent of land area which is impervious."""
+        self.percent_impervious = DataField('percent_impervious', "% Impervious", 4)
 
-        self.width = DataField('width', "Width")
-        """Characteristic width of the overland flow path for sheet flow
-            runoff (feet or meters). An initial estimate of the characteristic
-            width is given by the subcatchment area divided by the average
-            maximum overland flow length. The maximum overland flow
-            length is the length of the flow path from the the furthest drainage
-            point of the subcatchment before the flow becomes channelized.
-            Maximum lengths from several different possible flow paths
-            should be averaged. These paths should reflect slow flow, such as
-            over pervious surfaces, more than rapid flow over pavement, for
-            example. Adjustments should be made to the width parameter to
-            produce good fits to measured runoff hydrographs."""
+        self.width = DataField('width', "Width", 5)
 
-        self.percent_slope = DataField('percent_slope', "% Slope")
-        """float: Average percent slope of the subcatchment."""
+        self.percent_slope = DataField('percent_slope', "% Slope", 6)
+
+        self.snow_pack = DataField('snow_pack', "Snow Pack", 7)
+
+        self.curb_length = DataField('curb_length', "Curb Length", 8)
+
+        # -------Sub Areas------------
 
         self.n_imperv = DataField('n_imperv', "N_Imperv")
-        """float: Manning's n for overland flow in impervious part of Subcatchment"""
 
         self.n_perv = DataField('n_perv', "N_Perv")
-        """Manning's n for overland flow in pervious part of Subcatchment"""
 
         self.storage_depth_imperv = DataField('storage_depth_imperv', "Storage Depth Imperv")
-        """float: Depth of depression storage on the impervious portion of the
-            Subcatchment (inches or millimeters) """
 
         self.storage_depth_perv = DataField('storage_depth_perv', "Storage Depth Perv")
-        """float: Depth of depression storage on the pervious portion of the
-            Subcatchment (inches or millimeters)"""
 
         self.percent_zero_impervious = DataField('percent_zero_impervious', "% Zero Impervious")
-        """float: Percent of the impervious area with no depression storage."""
 
         self.subarea_routing = DataField('subarea_routing', "Subarea Routing")
-        """Routing: Internal routing of runoff between pervious and impervious areas"""
 
         self.percent_routed = DataField('percent_routed', "% Routing")
-        """float: Percent of runoff routed between subareas"""
 
         # -------Infiltration----------
 
         self.suction = DataField('suction', "Suction")
-        """Soil capillary suction (in or mm)."""
 
         self.hydraulic_conductivity = DataField('hydraulic_conductivity', "Hydraulic Conductivity")
-        """Soil saturated hydraulic conductivity (in/hr or mm/hr)."""
 
         self.initial_moisture_deficit = DataField('initial_moisture_deficit', "Initial Moisture Deficit")
-        """Initial soil moisture deficit (volume of voids / total volume)."""
 
-        self.snow_pack = DataField('snow_pack', "Snow Pack")
-        """Snow pack parameter set (if any) of the subcatchment."""
-
-        self.curb_length = DataField('curb_length', "Curb Length")
-        """ Total length of curbs in the subcatchment (any length units).
-            Used only when initial_loadings are normalized to curb length."""
 
         # -------LID_Usage-------------
 
         self.control_name = ''
-        """Name of the LID control defined in [LID_CONTROLS] to be used in the subcatchment"""
 
         self.number_replicate_units = DataField('number_replicate_units', "Number Replicate Units")
-        """Number of equal size units of the LID practice deployed within the subcatchment"""
 
         self.area_each_unit = DataField('area_each_unit', "Area Each Unit")
-        """Surface area devoted to each replicate LID unit"""
 
         self.top_width_overland_flow_surface = DataField('top_width_overland_flow_surface', "Top Width Overland Flow Surface")
-        """Width of the outflow face of each identical LID unit"""
 
         self.percent_initially_saturated = DataField('percent_initially_saturated', "% Initially Saturated")
-        """Degree to which storage zone is initially filled with water"""
 
         self.percent_impervious_area_treated = DataField('percent_impervious_area_treated', "% Imperv Area Treated")
-        """Percent of the impervious portion of the subcatchment's non-LID area whose runoff
-        is treated by the LID practice"""
 
         self.send_outflow_pervious_area = DataField('send_outflow_pervious_area', "Send Outflow Perv Area")
-        """1 if the outflow from the LID is returned onto the subcatchment's pervious area rather
-        than going to the subcatchment's outlet"""
 
         self.detailed_report_file = ''
-        """Name of an optional file where detailed time series results for the LID will be written"""
 
         self.subcatchment_drains_to = ''
-        """ID of a subcatchment that this LID drains to"""
+
+
+    def get_subcatchment_data_as_list(self):
+
+        return [self.area, self.percent_impervious, self.width, self.percent_slope, self.snow_pack, self.curb_length]
+
+
+    def get_selected_subcatchment_pars(self):
+
+        list_of_selected_pars = []
+
+        for parameter in self.get_subcatchment_data_as_list():
+
+            if parameter.check_if_selected_for_estimation():
+
+                print(parameter.name)
+
+                list_of_selected_pars.append(parameter)
+
+        print("List of selected pars: ")
+        print(list_of_selected_pars)
+
+        return list_of_selected_pars
+
 
 
 class DataField():
 
-    def __init__(self, name, label):
+    def __init__(self, name, label, index=0):
         self.name = name
         self.value = ''
         self.label = label
+
+        self.index = index
         # self.edit_field = QtWidgets.QLineEdit().setText(self.value)
 
         self.lower_limit = ''
         self.upper_limit = ''
 
-        self.selected_for_estimation = self.check_if_selected_for_estimation()
+        self.short_name = ''
 
-        if self.selected_for_estimation:
-            self.short_name = self.generate_short_name(self.name)
+        self.is_selected_for_estimation = self.check_if_selected_for_estimation()
+
 
     def check_if_selected_for_estimation(self):
+
         if self.lower_limit != '' or self.upper_limit != '':
+
+            print("in selecgef for estimation")
+
             return True
 
     def generate_short_name(self, name):
@@ -146,6 +137,16 @@ class DataField():
                 short_name += name[i]
 
         return short_name
+
+    def get_short_name(self):
+
+        if self.check_if_selected_for_estimation():
+            self.short_name = self.generate_short_name(self.name)
+
+        if len(self.name) > 6:
+            return "#" + self.short_name + "#"
+        else:
+            return "#" + self.name + "#"
 
 
 

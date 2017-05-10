@@ -6,6 +6,7 @@ from Py_UI_Files import FirstPage, SecondPage, ParametersWindow, DialogBox
 from subcatchments import Subcatchment, DataField
 import sys
 from readsections import ReadSections
+from write_sections import write_sections
 
 
 class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
@@ -80,6 +81,9 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
 
         self.loadLIDControlsUI(lid_controls_data)
 
+
+        self.secondPage.buttonOkParameters.clicked.connect(self.replace_subcatchment_data)
+
         '''
         print("TESTING: ")
         for sub in self.subcatchments_data:
@@ -106,6 +110,13 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
         self.listWidget_2.setObjectName("listWidget_2")
         self.horizontalLayout_3.addWidget(self.listWidget_2)
         '''
+
+
+    def replace_subcatchment_data(self):
+
+        write_sections_data = write_sections(self.subcatchments_data, self.lid_controls_data)
+
+        write_sections_data.write_template_data(self.subcatchments_data)
 
 
     def loadLIDControlsUI(self, lid_controls_data):
@@ -233,7 +244,7 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
     def loadParametersWindow(self, item, type_of):
 
         self.window = LoadParametersWindow()
-        self.current_sub = Subcatchment()
+        #self.current_sub = Subcatchment()
 
         print("TESTING: ")
 

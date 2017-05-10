@@ -4,7 +4,10 @@ from lidcontrol import LIDControl
 
 class ReadSections:
 
+    input_file_name = ""
+
     def __init__(self):
+
         self.subcatchments_data = []
         self.lid_control_data = LIDControl()
         print("In ReadSections.__init__()")
@@ -12,7 +15,10 @@ class ReadSections:
 
     def read_subcatchment_data(self, file_name):
 
+        ReadSections.input_file_name = file_name
+
         print(file_name)
+
         with open(file_name, 'r') as inp_file:
 
             print(file_name)
@@ -32,11 +38,16 @@ class ReadSections:
                 print("Subcatchments: ")
                 print(len(sub_items))
 
+                sub_index = 0
+
                 for item in sub_items:
                     if len(item) > 1:
                         item = item.split()
                         print(item)
-                        sub = Subcatchment()  # Create and assign values to subcatchment objects.
+
+                        sub_index = sub_index + 1
+
+                        sub = Subcatchment(sub_index)  # Create and assign values to subcatchment objects.
 
                         sub.name = item[0]
                         sub.rain_gage = item[1]
@@ -181,6 +192,7 @@ class ReadSections:
         data = ""
 
         while not (lines[line_num + 1].startswith("[")):
+
             data += lines[line_num]
 
             line_num += 1
