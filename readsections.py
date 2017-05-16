@@ -47,9 +47,9 @@ class ReadSections:
 
                         sub_index = sub_index + 1
 
-                        sub = Subcatchment(sub_index)  # Create and assign values to subcatchment objects.
+                        sub = Subcatchment(sub_index, item[0])  # Create and assign values to subcatchment objects.
 
-                        sub.name = item[0]
+                        # sub.name = item[0]
                         sub.rain_gage = item[1]
                         sub.outlet = item[2]
                         sub.area.value = item[3]
@@ -108,23 +108,25 @@ class ReadSections:
 
                     print("LID USAGE: ")
 
-                    print(item[0])
+                    if len(item) > 0:
 
-                    for sub_data in self.subcatchments_data:
+                        print(item[0])
 
-                        print(sub_data.name)
+                        for sub_data in self.subcatchments_data:
 
-                        if item[0] == sub_data.name:
-                            sub_data.control_name = item[1]
-                            sub_data.number_replicate_units.value = item[2]
-                            sub_data.area_each_unit.value = item[3]
-                            sub_data.top_width_overland_flow_surface.value = item[4]
-                            sub_data.percent_initially_saturated.value = item[5]
-                            sub_data.percent_impervious_area_treated.value = item[6]
-                            sub_data.send_outflow_pervious_area.value = item[7]
-                            sub_data.detailed_report_file = item[8]
-                            if len(item) > 9:
-                                sub_data.subcatchment_drains_to = item[9]
+                            print(sub_data.name)
+
+                            if item[0] == sub_data.name:
+                                sub_data.control_name = item[1]
+                                sub_data.number_replicate_units.value = item[2]
+                                sub_data.area_each_unit.value = item[3]
+                                sub_data.top_width_overland_flow_surface.value = item[4]
+                                sub_data.percent_initially_saturated.value = item[5]
+                                sub_data.percent_impervious_area_treated.value = item[6]
+                                sub_data.send_outflow_pervious_area.value = item[7]
+                                sub_data.detailed_report_file = item[8]
+                                if len(item) > 9:
+                                    sub_data.subcatchment_drains_to = item[9]
 
 
             if lines[line_num] == "[LID_CONTROLS]\n":
@@ -191,11 +193,16 @@ class ReadSections:
 
         data = ""
 
-        while not (lines[line_num + 1].startswith("[")):
+        line_num += 1
 
-            data += lines[line_num]
+        while not (lines[line_num].startswith("[")):
+            print(lines[line_num])
 
-            line_num += 1
+            if lines[line_num] != "":
+
+                data += lines[line_num]
+
+                line_num += 1
         # print data
 
         # print data.split("\n")

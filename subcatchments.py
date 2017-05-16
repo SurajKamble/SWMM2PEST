@@ -4,11 +4,11 @@ from PyQt5 import QtWidgets
 class Subcatchment():
     """Subcatchment geometry, location, parameters, and time-series data"""
 
-    def __init__(self, sub_index):
+    def __init__(self, sub_index, name):
 
         self.sub_index = sub_index
 
-        self.name = ''
+        self.name = name
 
         self.description = ''
 
@@ -18,67 +18,144 @@ class Subcatchment():
 
         self.outlet = 'None'
 
-        self.area = DataField("area", "Area", 3)
+        self.area = DataField("area", "Area", self.name, 3)
 
-        self.percent_impervious = DataField('percent_impervious', "% Impervious", 4)
+        self.percent_impervious = DataField('percent_impervious', "% Impervious", self.name, 4)
 
-        self.width = DataField('width', "Width", 5)
+        self.width = DataField('width', "Width", self.name, 5)
 
-        self.percent_slope = DataField('percent_slope', "% Slope", 6)
+        self.percent_slope = DataField('percent_slope', "% Slope", self.name, 6)
 
-        self.snow_pack = DataField('snow_pack', "Snow Pack", 7)
+        self.snow_pack = DataField('snow_pack', "Snow Pack", self.name, 7)
 
-        self.curb_length = DataField('curb_length', "Curb Length", 8)
+        self.curb_length = DataField('curb_length', "Curb Length", self.name, 8)
 
         # -------Sub Areas------------
 
-        self.n_imperv = DataField('n_imperv', "N_Imperv")
+        self.n_imperv = DataField('n_imperv', "N_Imperv", self.name, 1)
 
-        self.n_perv = DataField('n_perv', "N_Perv")
+        self.n_perv = DataField('n_perv', "N_Perv", self.name, 2)
 
-        self.storage_depth_imperv = DataField('storage_depth_imperv', "Storage Depth Imperv")
+        self.storage_depth_imperv = DataField('storage_depth_imperv', "Storage Depth Imperv", self.name, 3)
 
-        self.storage_depth_perv = DataField('storage_depth_perv', "Storage Depth Perv")
+        self.storage_depth_perv = DataField('storage_depth_perv', "Storage Depth Perv", self.name, 4)
 
-        self.percent_zero_impervious = DataField('percent_zero_impervious', "% Zero Impervious")
+        self.percent_zero_impervious = DataField('percent_zero_impervious', "% Zero Impervious", self.name, 5)
 
-        self.subarea_routing = DataField('subarea_routing', "Subarea Routing")
+        self.subarea_routing = DataField('subarea_routing', "Subarea Routing", self.name, 6)
 
-        self.percent_routed = DataField('percent_routed', "% Routing")
+        self.percent_routed = DataField('percent_routed', "% Routing", self.name, 7)
 
         # -------Infiltration----------
 
-        self.suction = DataField('suction', "Suction")
+        self.suction = DataField('suction', "Suction", self.name, 1)
 
-        self.hydraulic_conductivity = DataField('hydraulic_conductivity', "Hydraulic Conductivity")
+        self.hydraulic_conductivity = DataField('hydraulic_conductivity', "Hydraulic Conductivity", self.name, 2)
 
-        self.initial_moisture_deficit = DataField('initial_moisture_deficit', "Initial Moisture Deficit")
+        self.initial_moisture_deficit = DataField('initial_moisture_deficit', "Initial Moisture Deficit", self.name, 3)
 
 
         # -------LID_Usage-------------
 
         self.control_name = ''
 
-        self.number_replicate_units = DataField('number_replicate_units', "Number Replicate Units")
+        self.number_replicate_units = DataField('number_replicate_units', "Number Replicate Units", self.name, 2)
 
-        self.area_each_unit = DataField('area_each_unit', "Area Each Unit")
+        self.area_each_unit = DataField('area_each_unit', "Area Each Unit", self.name, 3)
 
-        self.top_width_overland_flow_surface = DataField('top_width_overland_flow_surface', "Top Width Overland Flow Surface")
+        self.top_width_overland_flow_surface = DataField('top_width_overland_flow_surface', "Top Width Overland Flow Surface", self.name, 4)
 
-        self.percent_initially_saturated = DataField('percent_initially_saturated', "% Initially Saturated")
+        self.percent_initially_saturated = DataField('percent_initially_saturated', "% Initially Saturated", self.name, 5)
 
-        self.percent_impervious_area_treated = DataField('percent_impervious_area_treated', "% Imperv Area Treated")
+        self.percent_impervious_area_treated = DataField('percent_impervious_area_treated', "% Imperv Area Treated", self.name, 6)
 
-        self.send_outflow_pervious_area = DataField('send_outflow_pervious_area', "Send Outflow Perv Area")
+        self.send_outflow_pervious_area = DataField('send_outflow_pervious_area', "Send Outflow Perv Area", self.name, 7)
 
         self.detailed_report_file = ''
 
         self.subcatchment_drains_to = ''
 
 
+    def get_sub_index(self):
+        return self.sub_index
+
+
+    def get_lid_usage_data_as_list(self):
+
+        if self.control_name == '':
+            return None
+
+        return [self.number_replicate_units, self.area_each_unit, self.top_width_overland_flow_surface,
+                self.percent_initially_saturated, self.percent_impervious_area_treated, self.send_outflow_pervious_area]
+
     def get_subcatchment_data_as_list(self):
 
         return [self.area, self.percent_impervious, self.width, self.percent_slope, self.snow_pack, self.curb_length]
+
+    def get_subareas_data_as_list(self):
+
+        return [self.n_imperv, self.n_perv, self.storage_depth_imperv, self.storage_depth_perv,
+                self.percent_zero_impervious, self.subarea_routing, self.percent_routed]
+
+    def get_infiltration_data_as_list(self):
+
+        return [self.suction, self.hydraulic_conductivity, self.initial_moisture_deficit]
+
+
+    def get_selected_lid_usage_pars(self):
+
+        list_of_selected_pars = []
+
+        if self.get_lid_usage_data_as_list() is None:
+            return None
+
+        else:
+
+            for parameter in self.get_lid_usage_data_as_list():
+
+                if parameter.check_if_selected_for_estimation():
+                    print(parameter.name)
+
+                    list_of_selected_pars.append(parameter)
+
+            print("List of selected pars: ")
+            print(list_of_selected_pars)
+
+            return list_of_selected_pars
+
+
+    def get_selected_inflitration_pars(self):
+
+        list_of_selected_pars = []
+
+        for parameter in self.get_infiltration_data_as_list():
+
+            if parameter.check_if_selected_for_estimation():
+                print(parameter.name)
+
+                list_of_selected_pars.append(parameter)
+
+        print("List of selected pars: ")
+        print(list_of_selected_pars)
+
+        return list_of_selected_pars
+
+
+    def get_selected_subareas_pars(self):
+
+        list_of_selected_pars = []
+
+        for parameter in self.get_subareas_data_as_list():
+
+            if parameter.check_if_selected_for_estimation():
+                print(parameter.name)
+
+                list_of_selected_pars.append(parameter)
+
+        print("List of selected pars: ")
+        print(list_of_selected_pars)
+
+        return list_of_selected_pars
 
 
     def get_selected_subcatchment_pars(self):
@@ -102,10 +179,12 @@ class Subcatchment():
 
 class DataField():
 
-    def __init__(self, name, label, index=0):
+    def __init__(self, name, label, sub_name="", index=0):
         self.name = name
         self.value = ''
         self.label = label
+
+        self.sub_name = sub_name
 
         self.index = index
         # self.edit_field = QtWidgets.QLineEdit().setText(self.value)
@@ -122,7 +201,7 @@ class DataField():
 
         if self.lower_limit != '' or self.upper_limit != '':
 
-            print("in selecgef for estimation")
+            print("in selected for estimation")
 
             return True
 
@@ -141,12 +220,18 @@ class DataField():
     def get_short_name(self):
 
         if self.check_if_selected_for_estimation():
+
             self.short_name = self.generate_short_name(self.name)
+
+            if len(self.sub_name) > 0:
+
+                self.short_name = self.sub_name[0] + self.sub_name[-1] + self.short_name
 
         if len(self.name) > 6:
             return "#" + self.short_name + "#"
         else:
-            return "#" + self.name + "#"
+            if len(self.sub_name) > 0:
+                return "#" + self.sub_name[0] + self.sub_name[-1] + self.name + "#"
 
 
 

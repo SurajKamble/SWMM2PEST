@@ -37,7 +37,13 @@ class write_sections():
 
         print("Replaced file lines: ")
 
-        print(self.string_of_file_lines)
+        # print(self.string_of_file_lines)
+
+        print("subcatchments data: ")
+        for sub in self.subcatchments_data:
+
+            print(sub.sub_index)
+
 
     def read_subcatchment_data(self, file_name, subcatchments):
 
@@ -54,7 +60,7 @@ class write_sections():
             self.string_of_file_lines = inp_file.read()
 
             print("String of file lines after reading: ")
-            print(self.string_of_file_lines)
+            # print(self.string_of_file_lines)
 
             original_subcatchment_data = ""
 
@@ -70,9 +76,101 @@ class write_sections():
                 print("line_num2: ")
                 print(line_num)
 
-                self.replace_subcatchment_data(original_subcatchment_data, line_num, subcatchments)
+                self.replace_subcatchment_data("SUBCATCHMENTS", line_num, subcatchments)
 
-                break
+            if self.list_of_file_lines[line_num] == "[SUBAREAS]\n":
+
+                self.replace_subcatchment_data("SUBAREAS", line_num, subcatchments)
+
+            if self.list_of_file_lines[line_num] == "[INFILTRATION]\n":
+
+                self.replace_subcatchment_data("INFILTRATION", line_num, subcatchments)
+
+            if self.list_of_file_lines[line_num] == "[LID_USAGE]\n":
+
+                self.replace_subcatchment_data("LID_USAGE", line_num, subcatchments)
+
+            if self.list_of_file_lines[line_num] == "[LID_CONTROLS]\n":
+
+                self.replace_lid_controls_data(line_num, self.lid_controls_data)
+
+    def replace_lid_controls_data(self, line_num, lid_controls_data):
+
+        line_num += 1
+
+        while not (self.list_of_file_lines[line_num].startswith("[")):
+
+            if not (self.list_of_file_lines[line_num].startswith(";") or self.list_of_file_lines[line_num] == "" or
+                        len(self.list_of_file_lines[line_num].split()) <= 2):
+
+                individual_control_line = self.list_of_file_lines[line_num]
+                individual_control_line_as_list_with_spaces = self.list_of_file_lines[line_num].split(" ")
+                individual_control_line_as_list = self.list_of_file_lines[line_num].split()
+
+                print("individual control line: ")
+                print(individual_control_line)
+
+                selected_pars = []
+
+                control_name = individual_control_line_as_list[1]
+
+                if control_name == "SURFACE":
+                    selected_pars = lid_controls_data.get_selected_surface_pars()
+                if control_name == "PAVEMENT":
+                    selected_pars = lid_controls_data.get_selected_pavement_pars()
+                if control_name == "SOIL":
+                    selected_pars = lid_controls_data.get_selected_soil_pars()
+                if control_name == "STORAGE":
+                    selected_pars = lid_controls_data.get_selected_storage_pars()
+                if control_name == "DRAIN":
+                    selected_pars = lid_controls_data.get_selected_drain_pars()
+                if control_name == "DRAINMAT":
+                    selected_pars = lid_controls_data.get_selected_drainmat_pars()
+
+                for par in selected_pars:
+                    print("par short name: ")
+                    print(par.get_short_name())
+                    print("par index: ")
+                    print(par.index)
+
+                    individual_control_line_as_list[par.index] = par.get_short_name()
+
+                for i in range(len(individual_control_line_as_list_with_spaces)):
+                    if individual_control_line_as_list_with_spaces[i] == "":
+                        individual_control_line_as_list.insert(i, individual_control_line_as_list_with_spaces[i])
+
+                print("LID controls data as list with spaces: ")
+                print(individual_control_line_as_list)
+
+                replaced_control_line = ' '.join(individual_control_line_as_list)
+
+                replaced_control_line += "\n"
+
+                print("Individual sub data: ")
+                print(individual_control_line)
+
+                print("String of file lines before replacing: ")
+                # print(self.string_of_file_lines)
+
+
+                self.string_of_file_lines = self.string_of_file_lines.replace(individual_control_line, replaced_control_line)
+
+                print("String of file lines: ")
+                # print(self.string_of_file_lines)
+
+                print("replaced sub data: ")
+                print(replaced_control_line)
+
+                line_num += 1
+
+
+            line_num += 1
+
+
+
+
+
+
 
     def read_section_data(self, list_of_file_lines, line_num, string_of_file_lines):
 
@@ -89,7 +187,7 @@ class write_sections():
 
         return original_data
 
-    def replace_subcatchment_data(self, original_subcatchment_data, line_num, subcatchments):
+    def replace_subcatchment_data(self, section_name, line_num, subcatchments):
 
         current_index = 0
 
@@ -109,11 +207,20 @@ class write_sections():
 
                     current_index = current_index + 1
 
+                    current_sub_name = self.list_of_file_lines[line_num].split()[0]
+
+                    print("current sub name")
+                    print(current_sub_name)
+
+                    print(subcatchment.name)
+
                     individual_sub_data = ""
+
+                    print("current index: ")
 
                     print(current_index)
 
-                    if current_index == subcatchment.sub_index:
+                    if current_sub_name == subcatchment.name:
 
                         individual_sub_data = self.list_of_file_lines[line_num]
 
@@ -121,10 +228,25 @@ class write_sections():
 
                         individual_sub_data_as_list = individual_sub_data.split()
 
-                        for par in subcatchment.get_selected_subcatchment_pars():
+                        selected_pars = []
+
+                        if section_name == "SUBCATCHMENTS":
+                            selected_pars = subcatchment.get_selected_subcatchment_pars()
+                        if section_name == "SUBAREAS":
+                            selected_pars = subcatchment.get_selected_subareas_pars()
+                        if section_name == "INFILTRATION":
+                            selected_pars = subcatchment.get_selected_inflitration_pars()
+                        if section_name == "LID_USAGE":
+                            if subcatchment.get_selected_lid_usage_pars() is None:
+                                break
+                            selected_pars = subcatchment.get_selected_lid_usage_pars()
+
+                        for par in selected_pars:
 
                             print("par short name: ")
                             print(par.get_short_name())
+                            print("par index: ")
+                            print(par.index)
 
                             individual_sub_data_as_list[par.index] = par.get_short_name()
 
@@ -143,15 +265,21 @@ class write_sections():
                         print(individual_sub_data)
 
                         print("String of file lines before replacing: ")
-                        print(self.string_of_file_lines)
+                        # print(self.string_of_file_lines)
 
 
                         self.string_of_file_lines = self.string_of_file_lines.replace(individual_sub_data, replaced_sub_data)
 
                         print("String of file lines: ")
-                        print(self.string_of_file_lines)
+                        # print(self.string_of_file_lines)
 
                         print("replaced sub data: ")
                         print(replaced_sub_data)
+
+                        break
+
+                    else:  # for LID_USAGE, if there is only one line of subcatchment
+                        line_num -= 1
+                        break
 
                 line_num += 1

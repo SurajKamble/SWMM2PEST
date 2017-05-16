@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/Users/surajkamble/Documents/SWMM2PEST/DialogBox.ui'
+# Form implementation generated from reading ui file '/Users/surajkamble/Documents/SWMM2PEST/UI_Files/DialogBox.ui'
 #
 # Created by: PyQt5 UI code generator 5.6
 #
@@ -55,6 +55,6 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Estimate Parameter"))
         self.lineEdit_UpperLimit.setPlaceholderText(_translate("MainWindow", "Upper Limit"))
 

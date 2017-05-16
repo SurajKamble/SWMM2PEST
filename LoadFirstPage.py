@@ -24,6 +24,8 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
 
         self.subcatchments_data = []
 
+        self.current_sub = None
+
         
 
 
@@ -225,7 +227,7 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
 
         upper_limit = self.dialog_box.lineEdit_UpperLimit.text()
 
-        if parameter.name in vars(self.current_sub).keys():
+        if (self.current_sub is not None) and (parameter.name in vars(self.current_sub).keys()):
 
             vars(vars(self.current_sub)[parameter.name])['lower_limit'] = lower_limit
             vars(vars(self.current_sub)[parameter.name])['upper_limit'] = upper_limit
@@ -236,8 +238,8 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
             vars(vars(self.lid_controls_data)[parameter.name])['upper_limit'] = upper_limit
 
 
-        print(self.current_sub.area.lower_limit)
-        print(self.current_sub.area.upper_limit)
+        # print(self.current_sub.area.lower_limit)
+        # print(self.current_sub.area.upper_limit)
 
         self.dialog_box.hide()
 
@@ -282,6 +284,102 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
                 self.window.formLayout.addRow(self.lid_controls_data.surface_layer_surface_slope.label, surface_layer_surface_slope_line_edit)
                 self.window.formLayout.addRow(self.lid_controls_data.surface_layer_swale_side_slope.label, surface_layer_swale_side_slope_line_edit)
 
+                print(self.lid_controls_data.has_drainmat_system)
+
+            if item.text() == "Pavement":
+                pavement_layer_thickness_line_edit = self.createLineEdit(self.lid_controls_data.pavement_layer_thickness)
+                pavement_layer_void_ratio_line_edit = self.createLineEdit(self.lid_controls_data.pavement_layer_void_ratio)
+                pavement_layer_impervious_surface_fraction_line_edit = self.createLineEdit(self.lid_controls_data.pavement_layer_impervious_surface_fraction)
+                pavement_layer_permeability_line_edit = self.createLineEdit(self.lid_controls_data.pavement_layer_permeability)
+                pavement_layer_clogging_factor_line_edit = self.createLineEdit(self.lid_controls_data.pavement_layer_clogging_factor)
+
+                pavement_layer_thickness_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.pavement_layer_thickness))
+                pavement_layer_void_ratio_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.pavement_layer_void_ratio))
+                pavement_layer_impervious_surface_fraction_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.pavement_layer_impervious_surface_fraction))
+                pavement_layer_permeability_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.pavement_layer_permeability))
+                pavement_layer_clogging_factor_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.pavement_layer_clogging_factor))
+
+                self.window.formLayout.addRow(self.lid_controls_data.pavement_layer_thickness.label, pavement_layer_void_ratio_line_edit)
+                self.window.formLayout.addRow(self.lid_controls_data.pavement_layer_void_ratio.label, pavement_layer_void_ratio_line_edit)
+                self.window.formLayout.addRow(self.lid_controls_data.pavement_layer_impervious_surface_fraction.label, pavement_layer_impervious_surface_fraction_line_edit)
+                self.window.formLayout.addRow(self.lid_controls_data.pavement_layer_permeability.label, pavement_layer_permeability_line_edit)
+                self.window.formLayout.addRow(self.lid_controls_data.pavement_layer_clogging_factor.label, pavement_layer_clogging_factor_line_edit)
+
+            if item.text() == "Soil":
+                soil_layer_thickness_line_edit = self.createLineEdit(self.lid_controls_data.soil_layer_thickness)
+                soil_layer_porosity_line_edit = self.createLineEdit(self.lid_controls_data.soil_layer_porosity)
+                soil_layer_field_capacity_line_edit = self.createLineEdit(self.lid_controls_data.soil_layer_field_capacity)
+                soil_layer_wilting_point_line_edit = self.createLineEdit(self.lid_controls_data.soil_layer_wilting_point)
+                soil_layer_conductivity_line_edit = self.createLineEdit(self.lid_controls_data.soil_layer_conductivity)
+                soil_layer_conductivity_slope_line_edit = self.createLineEdit(self.lid_controls_data.soil_layer_conductivity_slope)
+                soil_layer_suction_head_line_edit = self.createLineEdit(self.lid_controls_data.soil_layer_suction_head)
+
+                soil_layer_thickness_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.soil_layer_thickness))
+                soil_layer_porosity_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.soil_layer_porosity))
+                soil_layer_field_capacity_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.soil_layer_field_capacity))
+                soil_layer_wilting_point_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.soil_layer_wilting_point))
+                soil_layer_conductivity_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.soil_layer_conductivity))
+                soil_layer_conductivity_slope_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.soil_layer_conductivity_slope))
+                soil_layer_suction_head_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.soil_layer_suction_head))
+
+                self.window.formLayout.addRow(self.lid_controls_data.soil_layer_thickness.label, soil_layer_thickness_line_edit)
+                self.window.formLayout.addRow(self.lid_controls_data.soil_layer_porosity.label, soil_layer_porosity_line_edit)
+                self.window.formLayout.addRow(self.lid_controls_data.soil_layer_field_capacity.label, soil_layer_field_capacity_line_edit)
+                self.window.formLayout.addRow(self.lid_controls_data.soil_layer_wilting_point.label, soil_layer_wilting_point_line_edit)
+                self.window.formLayout.addRow(self.lid_controls_data.soil_layer_conductivity.label, soil_layer_conductivity_line_edit)
+                self.window.formLayout.addRow(self.lid_controls_data.soil_layer_conductivity_slope.label, soil_layer_conductivity_slope_line_edit)
+                self.window.formLayout.addRow(self.lid_controls_data.soil_layer_suction_head.label, soil_layer_suction_head_line_edit)
+
+            if item.text() == "Storage":
+                storage_layer_height_line_edit = self.createLineEdit(self.lid_controls_data.storage_layer_height)
+                storage_layer_void_ratio_line_edit = self.createLineEdit(self.lid_controls_data.storage_layer_void_ratio)
+                storage_layer_filtration_rate_line_edit = self.createLineEdit(self.lid_controls_data.storage_layer_filtration_rate)
+                storage_layer_clogging_factor_line_edit = self.createLineEdit(self.lid_controls_data.storage_layer_clogging_factor)
+
+                storage_layer_height_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.storage_layer_height))
+                storage_layer_void_ratio_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.storage_layer_void_ratio))
+                storage_layer_filtration_rate_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.storage_layer_filtration_rate))
+                storage_layer_clogging_factor_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.storage_layer_clogging_factor))
+
+                self.window.formLayout.addRow(self.lid_controls_data.storage_layer_height.label, storage_layer_height_line_edit)
+                self.window.formLayout.addRow(self.lid_controls_data.storage_layer_void_ratio.label, storage_layer_void_ratio_line_edit)
+                self.window.formLayout.addRow(self.lid_controls_data.storage_layer_filtration_rate.label, storage_layer_filtration_rate_line_edit)
+                self.window.formLayout.addRow(self.lid_controls_data.storage_layer_clogging_factor.label, storage_layer_clogging_factor_line_edit)
+
+            if item.text() == "Drain":
+                drain_coefficient_line_edit = self.createLineEdit(self.lid_controls_data.drain_coefficient)
+                drain_exponent_line_edit = self.createLineEdit(self.lid_controls_data.drain_exponent)
+                drain_offset_height_line_edit = self.createLineEdit(self.lid_controls_data.drain_offset_height)
+                drain_delay_line_edit = self.createLineEdit(self.lid_controls_data.drain_delay)
+
+                drain_coefficient_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.drain_coefficient))
+                drain_exponent_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.drain_exponent))
+                drain_offset_height_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.drain_offset_height))
+                drain_delay_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.drain_delay))
+
+                self.window.formLayout.addRow(self.lid_controls_data.drain_coefficient.label, drain_coefficient_line_edit)
+                self.window.formLayout.addRow(self.lid_controls_data.drain_exponent.label, drain_exponent_line_edit)
+                self.window.formLayout.addRow(self.lid_controls_data.drain_offset_height.label, drain_offset_height_line_edit)
+                self.window.formLayout.addRow(self.lid_controls_data.drain_delay.label, drain_delay_line_edit)
+
+            if item.text() == "DrainMat":
+
+                print("In Drain Mat")
+                drainmat_thickness_line_edit = self.createLineEdit(self.lid_controls_data.drainmat_thickness)
+                drainmat_void_fraction_line_edit = self.createLineEdit(self.lid_controls_data.drainmat_void_fraction)
+                drainmat_roughness_line_edit = self.createLineEdit(self.lid_controls_data.drainmat_roughness)
+
+                drainmat_thickness_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.drainmat_thickness))
+                drainmat_void_fraction_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.drainmat_void_fraction))
+                drainmat_roughness_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.drainmat_roughness))
+
+                self.window.formLayout.addRow(self.lid_controls_data.drainmat_thickness.label, drainmat_thickness_line_edit)
+                self.window.formLayout.addRow(self.lid_controls_data.drainmat_void_fraction.label, drainmat_void_fraction_line_edit)
+                self.window.formLayout.addRow(self.lid_controls_data.drainmat_roughness.label, drainmat_roughness_line_edit)
+
+
+
+
         if type_of == "Sub":
 
             area_line_edit = self.createLineEdit(self.current_sub.area)
@@ -318,11 +416,18 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
             percent_impervious_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.current_sub.percent_impervious))
             width_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.current_sub.width))
             percent_slope_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.current_sub.percent_slope))
+
             n_imperv_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.current_sub.n_imperv))
             n_perv_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.current_sub.n_perv))
             storage_depth_imperv_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.current_sub.storage_depth_imperv))
             storage_depth_perv_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.current_sub.storage_depth_perv))
             percent_zero_impervious_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.current_sub.percent_zero_impervious))
+
+            suction_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.current_sub.suction))
+            hydraulic_conductivity_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.current_sub.hydraulic_conductivity))
+            initial_moisture_deficit_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.current_sub.initial_moisture_deficit))
+
+
 
 
             self.window.formLayout.addRow(self.current_sub.area.label, area_line_edit)
@@ -333,6 +438,7 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
 
             self.window.formLayout.addRow(self.current_sub.percent_slope.label, percent_slope_line_edit)
 
+
             self.window.formLayout.addRow(self.current_sub.n_imperv.label, n_imperv_line_edit)
 
             self.window.formLayout.addRow(self.current_sub.n_perv.label, n_perv_line_edit)
@@ -342,6 +448,13 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
             self.window.formLayout.addRow(self.current_sub.storage_depth_perv.label, storage_depth_perv_line_edit)
 
             self.window.formLayout.addRow(self.current_sub.percent_zero_impervious.label, percent_zero_impervious_line_edit)
+
+
+            self.window.formLayout.addRow(self.current_sub.suction.label, suction_line_edit)
+
+            self.window.formLayout.addRow(self.current_sub.hydraulic_conductivity.label, hydraulic_conductivity_line_edit)
+
+            self.window.formLayout.addRow(self.current_sub.initial_moisture_deficit.label, initial_moisture_deficit_line_edit)
 
 
             # --------LID USAGE------------

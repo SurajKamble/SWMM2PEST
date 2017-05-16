@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'FirstPage.ui'
+# Form implementation generated from reading ui file '/Users/surajkamble/Documents/SWMM2PEST/UI_Files/FirstPage.ui'
 #
 # Created by: PyQt5 UI code generator 5.6
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -49,7 +48,7 @@ class Ui_MainWindow(object):
         self.gridLayout.addLayout(self.horizontalLayout_2, 3, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 807, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 807, 22))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -61,7 +60,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "SWMM2PEST"))
         self.label.setText(_translate("MainWindow", "Browse or Drop SWMM Input File"))
         self.btnBrowse.setText(_translate("MainWindow", "Browse"))
 
