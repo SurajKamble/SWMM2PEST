@@ -2,8 +2,9 @@ from PyQt5.QtWidgets import (QMainWindow, QTextEdit, QAction, QFileDialog, QAppl
 from PyQt5 import QtWidgets
 from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtCore import pyqtSignal
-from Py_UI_Files import FirstPage, SecondPage, ParametersWindow, DialogBox
+from Py_UI_Files import FirstPage, SecondPage, ParametersWindow, DialogBox, browseWindow
 from subcatchments import Subcatchment, DataField
+
 import sys
 from readsections import ReadSections
 from write_sections import write_sections
@@ -37,8 +38,10 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
 
         print(dir)
 
-        fname = QFileDialog.getOpenFileName(self, 'Select file', dir)
+        fname = QFileDialog.getOpenFileName(self, 'Select input file', dir)
         print(str(fname[0][-3:]))
+
+        self.inp_fname = fname[0]
 
         if str(fname[0][-4:]) == ".inp":
             print("Second page")
@@ -120,6 +123,348 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
 
         write_sections_data.write_template_data(self.subcatchments_data)
 
+        self.secondPage.tabOuter.setCurrentIndex(1)
+
+        self.browseOutFileWindow = LoadBrowseWindow()
+
+        self.browseOutFileWindow.pushButtonBrowse.clicked.connect(self.outputFileDialog)
+
+    def outputFileDialog(self):
+
+        dir = '/Users/surajkamble/Documents/SWMM2PEST'
+
+        print(dir)
+
+        out_fname = QFileDialog.getOpenFileName(self, 'Select Output File', dir)
+        print(str(out_fname[0][-3:]))
+
+        if str(out_fname[0][-4:]) == ".txt":
+            print("Second page")
+            self.browseOutFileWindow.hide()
+        out_fname = out_fname[0]
+
+        self.secondPage.pushButtonTotalEvap.clicked.connect(lambda: self.readOutputFile(out_fname, 2))
+        self.secondPage.pushButtonSurfInfil.clicked.connect(lambda: self.readOutputFile(out_fname, 3))
+        self.secondPage.pushButtonSoilPerc.clicked.connect(lambda: self.readOutputFile(out_fname, 4))
+        self.secondPage.pushButtonBottomInfil.clicked.connect(lambda: self.readOutputFile(out_fname, 5))
+        self.secondPage.pushButtonSurfRunoff.clicked.connect(lambda: self.readOutputFile(out_fname, 6))
+        self.secondPage.pushButtonDrainOut.clicked.connect(lambda: self.readOutputFile(out_fname, 7))
+        self.secondPage.pushButtonSurfDepth.clicked.connect(lambda: self.readOutputFile(out_fname, 8))
+        self.secondPage.pushButtonSoilMoist.clicked.connect(lambda: self.readOutputFile(out_fname, 9))
+        self.secondPage.pushButtonStorageDepth.clicked.connect(lambda: self.readOutputFile(out_fname, 10))
+
+
+
+
+
+    def readOutputFile(self, out_fname, index_needed):
+
+
+
+        self.out_fname = out_fname
+
+        index_needed += 1
+
+        with open(self.out_fname, 'r') as out_file:
+            lines = out_file.readlines()
+
+        for line_num in range(len(lines)):
+            if lines[line_num].startswith("-------"):
+                start_line = line_num + 1
+
+        split_lines = lines[start_line].split(" ")
+
+
+        index = 0
+
+        print(' '.join(split_lines))
+
+        for i in range(len(split_lines)):
+
+            if split_lines[i] != '':
+                split_lines[i] += " "
+
+        l = ' '.join(split_lines)
+
+        print("L: " + l)
+
+        split_lines = l.split(" ")
+
+        print(split_lines)
+
+        index_got = 0
+
+        for i in range(len(split_lines)):
+
+            if index == index_needed + 1:
+                print(i)
+                index_got = i - 1
+                print(split_lines[i - 1])
+                break
+
+            if split_lines[i] != '':
+                print(index)
+                index += 1
+
+        location_start = 0
+
+        location_end = 0
+
+        for i in range(len(split_lines)):
+            if i < index_got:
+                if split_lines[i] == '':
+                    location_start += 1
+                else:
+                    location_start += len(split_lines[i])
+            if i == index_got:
+                location_end = location_start + len(split_lines[i])
+
+        print(location_start)
+        print(location_end)
+
+
+        if location_end > location_start:
+            self.writeInsFile(lines, start_line, index_needed - 1, location_start, location_end)
+        else:
+            print("Wrong locations generated")
+
+
+    def writeInsFile(self, lines, start_line, index, location_start, location_end):
+
+        ins_lines = "pif #\n#-------#\n"
+
+        self.ins_fname = self.out_fname[:-3] + "ins"
+
+
+        obs_name = ""
+
+        if index == 2:
+            self.secondPage.pushButtonTotalEvap.setFlat(True)
+            obs_name = "tevap"
+        if index == 3:
+            self.secondPage.pushButtonSurfInfil.setFlat(True)
+            obs_name = "sinfil"
+        if index == 4:
+            obs_name = "sperc"
+        if index == 5:
+            obs_name = "binfil"
+        if index == 6:
+            obs_name = "srunoff"
+        if index == 7:
+            obs_name = "dflow"
+        if index == 8:
+            obs_name = "sudepth"
+        if index == 9:
+            obs_name = "smoist"
+        if index == 10:
+            obs_name = "stdepth"
+
+        line_num = start_line
+
+        self.out_lines = lines[start_line:]
+
+        self.obs_name = obs_name
+
+        while line_num < len(lines):
+
+            dstamp = lines[line_num].split()[0]
+
+            dstamp = dstamp.split("-")[1]
+
+            tstamp = lines[line_num].split()[1]
+
+            tstamp = tstamp.split(":")[0] + tstamp.split(":")[1]
+
+            print(dstamp + tstamp)
+
+            # obs_name += tstamp
+
+            line = "l1  [" + obs_name + dstamp + tstamp + "]" + str(location_start) + ":" + str(location_end) + "\n"
+
+            ins_lines += line
+
+            line_num += 1
+
+        print(ins_lines)
+
+        with open(self.ins_fname, 'w') as f:
+            f.write(ins_lines)
+
+
+        self.secondPage.tabOuter.setCurrentIndex(2)
+        self.enterControlSection(obs_name)
+
+    def enterControlSection(self, obs_name):
+
+        self.browseObsFileWindow = LoadBrowseWindow()
+
+        self.browseObsFileWindow.label.setText("                Select Observation data File for " + obs_name + ":")
+
+        self.browseObsFileWindow.pushButtonBrowse.clicked.connect(self.readObsFile)
+
+    def readObsFile(self):
+
+        dir = '/Users/surajkamble/Documents/SWMM2PEST'
+
+        print(dir)
+
+        obs_fname = QFileDialog.getOpenFileName(self, 'Select Observation Data File', dir)
+        print(str(obs_fname[0][-3:]))
+
+
+        self.browseObsFileWindow.hide()
+        obs_fname = obs_fname[0]
+
+        '''
+        Read observation file
+        '''
+
+        with open(obs_fname, 'r') as f:
+            obs_data = f.readlines()
+
+        '''
+        Add control data
+        '''
+
+        '''
+        pcf	
+        * control data
+        restart	estimation
+           15   580    1     0     1
+            1     1 single point 1 0 0
+          5.0   2.0   0.3    0.01  10
+          5.0   5.0   0.001
+          0.1
+           30  0.01     4     3  0.01     3
+            1     1     1
+        
+        '''
+
+
+        '''
+        * control data
+        RSTFLE PESTMODE
+        NPAR NOBS NPARGP NPRIOR NOBSGP [MAXCOMPDIM] [DERZEROLIM]
+        NTPLFLE NINSFLE PRECIS DPOINT [NUMCOM JACFILE MESSFILE] [OBSREREF]
+        RLAMBDA1 RLAMFAC PHIRATSUF PHIREDLAM NUMLAM [JACUPDATE] [LAMFORGIVE] [DERFORGIVE]
+        RELPARMAX FACPARMAX FACORIG [IBOUNDSTICK UPVECBEND] [ABSPARMAX]
+        PHIREDSWH [NOPTSWITCH] [SPLITSWH] [DOAUI] [DOSENREUSE] [BOUNDSCALE]
+        NOPTMAX PHIREDSTP NPHISTP NPHINORED RELPARSTP NRELPAR [PHISTOPTHRESH] [LASTRUN] [PHIABANDON]
+        ICOV ICOR IEIG [IRES] [JCOSAVE] [VERBOSEREC] [JCOSAVEITN] [REISAVEITN] [PARSAVEITN] [PARSAVERUN]
+        
+        '''
+        control_file_data = "pcf\n* control data\nrestart estimation\n"
+
+        all_selected_pars = []
+
+        for sub in self.subcatchments_data:
+            all_selected_pars.extend(sub.get_all_selected_pars())
+
+
+        all_selected_pars.extend(self.lid_controls_data.get_all_selected_pars())
+
+
+        num_of_pars = len(all_selected_pars)
+
+        print(obs_data[:50])
+
+        num_of_obs = len(obs_data)
+
+
+        control_file_data += "   " + str(num_of_pars) + "    " + str(num_of_obs) + "    " + "1    0    1\n"
+
+        control_file_data +=  "    1     1 single point 1 0 0\n"
+
+        control_file_data += "  5.0   2.0   0.3    0.01  10\n"
+
+        control_file_data += "  5.0   5.0   0.001\n"
+
+        control_file_data += "  0.1\n"
+
+        control_file_data += "   30  0.01     4     3  0.01     3\n"
+
+        control_file_data += "    1     1     1\n"
+
+
+        '''
+        Parameter data
+        '''
+
+        control_file_data += "* parameter groups\nparagroup  relative 0.01  0.0  switch  2.0 parabolic\n\n"
+
+        control_file_data += "* parameter data\n"
+
+
+
+        #  ldu_wdth  fixed  factor   90.1   30.0  110.0  paragroup  1.0   0.0  1
+
+        for par in all_selected_pars:
+
+            par_short_name = par.get_short_name()[1:-1]
+
+            par_val = par.get_value()
+            par_low_limit = par.get_lower_limit()
+            par_up_limit = par.get_upper_limit()
+
+
+            control_file_data += par_short_name + "                  fixed  factor    " + par_val + "    " + par_low_limit + "    " + \
+                par_up_limit + "    paragroup  1.0  0.0  1\n"
+
+
+
+        '''
+        Observation data
+        '''
+        control_file_data += "* observation groups\nobsgroup\n\n"
+
+        control_file_data += "* observation data\n"
+
+        line_num = 0
+
+        lines = self.out_lines
+
+        obs_name = self.obs_name
+
+        obs_lines = ""
+
+        while line_num < len(lines):
+
+            dstamp = lines[line_num].split()[0]
+
+            dstamp = dstamp.split("-")[1]
+
+            tstamp = lines[line_num].split()[1]
+
+            tstamp = tstamp.split(":")[0] + tstamp.split(":")[1]
+
+            print(dstamp + tstamp)
+
+            # obs_name += tstamp
+
+            line = obs_name + dstamp + tstamp + "               " + str(obs_data[line_num].strip('\n')) + "    1.0  obsgroup" "\n"
+
+            obs_lines += line
+
+            line_num += 1
+
+        control_file_data += obs_lines
+
+
+        self.control_fname = self.inp_fname[:-3] + "pst"
+
+        with open(self.control_fname, 'w') as f:
+            f.write(control_file_data)
+
+
+
+
+
+
+
+
+
+
+
 
     def loadLIDControlsUI(self, lid_controls_data):
 
@@ -195,6 +540,7 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
 
     def printText(self):
         print("Clicked lineEdit")
+
 
     def loadDialogBoxWindow(self, parameter):
 
@@ -559,6 +905,16 @@ class cQLineEdit(QtWidgets.QLineEdit):
 
     def mousePressEvent(self, QMouseEvent):
         self.clicked.emit()
+
+class LoadBrowseWindow(QMainWindow, browseWindow.Ui_MainWindow):
+
+    def __init__(self):
+        super(self.__class__, self).__init__()
+
+        self.setupUi(self)
+        self.show()
+
+
 
 
 if __name__ == '__main__':

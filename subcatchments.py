@@ -101,6 +101,34 @@ class Subcatchment():
 
         return [self.suction, self.hydraulic_conductivity, self.initial_moisture_deficit]
 
+    def get_all_data_as_list(self):
+
+        return [self.number_replicate_units, self.area_each_unit, self.top_width_overland_flow_surface,
+                self.percent_initially_saturated, self.percent_impervious_area_treated, self.send_outflow_pervious_area,
+                self.area, self.percent_impervious, self.width, self.percent_slope, self.snow_pack, self.curb_length,
+                self.n_imperv, self.n_perv, self.storage_depth_imperv, self.storage_depth_perv,
+                self.percent_zero_impervious, self.subarea_routing, self.percent_routed,
+                self.suction, self.hydraulic_conductivity, self.initial_moisture_deficit]
+
+
+    def get_all_selected_pars(self):
+
+        list_of_selected_pars = []
+
+        for parameter in self.get_all_data_as_list():
+
+            if parameter.check_if_selected_for_estimation():
+                print(parameter.name)
+
+                list_of_selected_pars.append(parameter)
+
+        print("List of selected pars: ")
+        print(list_of_selected_pars)
+
+        return list_of_selected_pars
+
+
+
 
     def get_selected_lid_usage_pars(self):
 
@@ -196,6 +224,14 @@ class DataField():
 
         self.is_selected_for_estimation = self.check_if_selected_for_estimation()
 
+    def get_value(self):
+        return self.value
+
+    def get_lower_limit(self):
+        return self.lower_limit
+
+    def get_upper_limit(self):
+        return self.upper_limit
 
     def check_if_selected_for_estimation(self):
 

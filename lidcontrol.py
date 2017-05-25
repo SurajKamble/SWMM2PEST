@@ -147,6 +147,40 @@ class LIDControl():
 
         return [self.drainmat_thickness, self.drainmat_void_fraction, self.drainmat_roughness]
 
+    def get_all_data_as_list(self):
+
+        return [self.surface_layer_storage_depth, self.surface_layer_vegetative_cover_fraction, self.surface_layer_surface_roughness,
+                self.surface_layer_surface_slope, self.surface_layer_swale_side_slope,
+                self.pavement_layer_thickness, self.pavement_layer_void_ratio,
+                self.pavement_layer_impervious_surface_fraction,
+                self.pavement_layer_permeability, self.pavement_layer_clogging_factor,
+                self.soil_layer_thickness, self.soil_layer_porosity, self.soil_layer_field_capacity,
+                self.soil_layer_wilting_point,
+                self.soil_layer_conductivity, self.soil_layer_conductivity_slope, self.soil_layer_suction_head,
+                self.storage_layer_height, self.storage_layer_void_ratio, self.storage_layer_filtration_rate,
+                self.storage_layer_clogging_factor,
+                self.drain_coefficient, self.drain_exponent, self.drain_offset_height, self.drain_delay,
+                self.drainmat_thickness, self.drainmat_void_fraction, self.drainmat_roughness]
+
+    def get_all_selected_pars(self):
+
+        list_of_selected_pars = []
+
+        for parameter in self.get_all_data_as_list():
+
+            if parameter.check_if_selected_for_estimation():
+                print(parameter.name)
+
+                list_of_selected_pars.append(parameter)
+
+        print("List of selected pars: ")
+        print(list_of_selected_pars)
+
+        return list_of_selected_pars
+
+
+
+
 
     def get_selected_surface_pars(self):
 

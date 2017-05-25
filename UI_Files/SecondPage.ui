@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>894</width>
-    <height>569</height>
+    <width>738</width>
+    <height>516</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -51,10 +51,7 @@
                <widget class="QWidget" name="widget" native="true">
                 <layout class="QVBoxLayout" name="verticalLayout">
                  <item>
-                  <widget class="QWidget" name="widget_3" native="true">
-                   <zorder>buttonOkParameters</zorder>
-                   <zorder>buttonOkParameters</zorder>
-                  </widget>
+                  <widget class="QWidget" name="widget_3" native="true"/>
                  </item>
                 </layout>
                </widget>
@@ -122,6 +119,97 @@
        <attribute name="title">
         <string>Observation Data</string>
        </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="minimumSize">
+             <size>
+              <width>400</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>25</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>        Select Output Parameter:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <widget class="QPushButton" name="pushButtonTotalEvap">
+              <property name="text">
+               <string>Total Evaporation</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButtonSurfInfil">
+              <property name="text">
+               <string>Surface Infiltration</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButtonSoilPerc">
+              <property name="text">
+               <string>Soil Perc</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButtonBottomInfil">
+              <property name="text">
+               <string>Bottom Infiltration</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButtonSurfRunoff">
+              <property name="text">
+               <string>Surface Runoff</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButtonDrainOut">
+              <property name="text">
+               <string>Drain Outflow</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButtonSurfDepth">
+              <property name="text">
+               <string>Surface Depth</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButtonSoilMoist">
+              <property name="text">
+               <string>Soil/Pave Moist</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButtonStorageDepth">
+              <property name="text">
+               <string>Storage Depth</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
       </widget>
       <widget class="QWidget" name="tabControls">
        <attribute name="title">
@@ -137,7 +225,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>894</width>
+     <width>738</width>
      <height>22</height>
     </rect>
    </property>

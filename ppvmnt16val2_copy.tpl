@@ -52,7 +52,7 @@ DRY_ONLY         NO
 [SUBCATCHMENTS]
 ;;Name           Rain Gage        Outlet           Area     %Imperv  Width    %Slope   CurbLen  SnowPack
 ;;-------------- ---------------- ---------------- -------- -------- -------- -------- -------- ----------------
-Roadway          01-11-2006_Storm   LID              0.224    100      143.000000     .100000000        0
+Roadway          01-11-2006_Storm   LID              #Ryarea#    100      143.000000     .100000000        0
 ;Swale
 LID              01-11-2006_Storm   Out1             0.312    0        15.76    1.6      0
  
@@ -65,8 +65,8 @@ LID              0.01       0.24       0.05       5.0000000000    100        OUT
 [INFILTRATION]
 ;;Subcatchment   Suction    Ksat       IMD
 ;;-------------- ---------- ---------- ----------
-Roadway          99.441     #Ryhydrlc_cndctvty#      0.378
-LID              275.90000 3.0000000000 #LDntl_mstr_dfct#
+Roadway          99.441     7.112      0.378
+LID              275.90000 3.0000000000 .100000000
  
 [LID_CONTROLS]
 ;;Name           Type/Layer Parameters
@@ -77,7 +77,7 @@ Swale            SURFACE    2164.000000 .2000000000 .4100000000 1.600000000 3.25
 [LID_USAGE]
 ;;Subcatchment   LID Process      Number  Area       Width      InitSat    FromImp    ToPerv     RptFile                  DrainTo
 ;;-------------- ---------------- ------- ---------- ---------- ---------- ---------- ---------- ------------------------ ----------------
-LID              Swale            1       3120       15.76      #LDprcnt_ntlly_strtd#          100        0          ".\UMD0111.txt"
+LID              Swale            1       3120       15.76      .01000000          100        0          ".\UMD0111.txt"
  
 [OUTFALLS]
 ;;Name           Elevation  Type       Stage Data       Gated    Route To
