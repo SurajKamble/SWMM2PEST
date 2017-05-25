@@ -1,0 +1,38 @@
+ PARAMETER STATISTICAL MATRICES: CASE ppvmnt16val2
+
+ OPTIMISATION ITERATION NUMBER  5
+
+
+ Parameter standard deviations ----->
+
+ Adjustable        Group           Current          Standard
+ parameter                         value            deviation
+ ldu_ntstr         paragroup        16.8652         0.130826    
+
+ Note that if a parameter is log-transformed, the standard deviation in the 
+ above table refers to the log of the parameter. Note also that the objective
+ function used in the calculation of the covariance matrix (and eigenvalues
+ of the covariance matrix) was calculated at the end of the previous iteration.
+
+
+ Parameter covariance matrix ----->
+
+               ldu_ntstr  
+ ldu_ntstr      1.7116E-02
+
+
+ Parameter correlation coefficient matrix ----->
+
+               ldu_ntstr  
+ ldu_ntstr       1.000    
+
+
+ Normalized eigenvectors of covariance matrix ----->
+
+               Vector_1   
+ ldu_ntstr       1.000    
+
+
+ Eigenvalues ----->
+
+                1.7116E-02

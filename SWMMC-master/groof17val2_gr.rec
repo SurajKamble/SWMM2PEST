@@ -1,0 +1,1301 @@
+
+                  PEST RUN RECORD: CASE groof17val2_gr
+
+
+PEST Version: 13.0
+
+
+PEST run mode:-
+
+   Parameter estimation mode
+
+
+Case dimensions:-
+
+   Number of parameters                           :    16
+   Number of adjustable parameters                :     7
+   Number of parameter groups                     :     1
+   Number of observations                         :   435
+   Number of prior estimates                      :     0
+
+
+Model command line(s):-
+
+   swmm5110_test.exe groof17val2.inp groof17val2.rpt groof17val2.out
+
+
+Jacobian command line:-
+
+   na
+
+
+Model interface files:-
+
+   Templates:
+      groof17Val2_gr.tpl
+   for model input files:
+      groof17val2.inp
+
+   (Parameter values written using single precision protocol.)
+   (Decimal point always included.)
+
+   Instruction files:
+      groof17val2.ins
+      report.ins
+   for reading model output files:
+      gr17.txt
+      groof17val2.rpt
+
+
+PEST-to-model message file:-
+
+   na
+
+
+Derivatives calculation:-
+
+Param        Increment   Increment   Increment   Forward or   Multiplier  Method
+group        type                    low bound   central      (central)   (central)
+paragroup    relative    1.0000E-02   none         switch       2.000     parabolic
+
+
+Parameter definitions:-
+
+Name         Trans-            Change       Initial        Lower          Upper
+             formation         limit        value          bound          bound
+ldu_wdth     none              factor      100.800        30.0000        110.000    
+ldu_ntstr    none              factor      2.82000       1.000000E-02    25.0000    
+srf_strg     fixed               na       0.100000          na             na
+srf_vgvlm    fixed               na       5.000000E-02      na             na
+srf_rghns    fixed               na       0.410000          na             na
+srf_slp      fixed               na        4.17000          na             na
+sl_thck      fixed               na        4.00000          na             na
+sl_prsty     none              factor     0.700000       0.340000       0.700000    
+sl_fldcp     none              factor     0.330000       0.300000       0.330000    
+sl_wltpt     none              factor     0.220000       9.000000E-02   0.290000    
+sl_kst       fixed               na        3.00000          na             na
+sl_kcff      fixed               na       0.500000          na             na
+sl_sctn      fixed               na        4.00000          na             na
+drnm_thck    fixed               na        2.00000          na             na
+drnm_vdfr    none              factor     0.500000       0.200000       0.500000    
+drnm_rghns   none              factor      6.99000       1.000000E-02    10.0000    
+
+Name         Group          Scale         Offset        Model command number
+ldu_wdth     paragroup     1.00000        0.00000            1
+ldu_ntstr    paragroup     1.00000        0.00000            1
+srf_strg     paragroup     1.00000        0.00000            1
+srf_vgvlm    paragroup     1.00000        0.00000            1
+srf_rghns    paragroup     1.00000        0.00000            1
+srf_slp      paragroup     1.00000        0.00000            1
+sl_thck      paragroup     1.00000        0.00000            1
+sl_prsty     paragroup     1.00000        0.00000            1
+sl_fldcp     paragroup     1.00000        0.00000            1
+sl_wltpt     paragroup     1.00000        0.00000            1
+sl_kst       paragroup     1.00000        0.00000            1
+sl_kcff      paragroup     1.00000        0.00000            1
+sl_sctn      paragroup     1.00000        0.00000            1
+drnm_thck    paragroup     1.00000        0.00000            1
+drnm_vdfr    paragroup     1.00000        0.00000            1
+drnm_rghns   paragroup     1.00000        0.00000            1
+
+
+Prior information:-
+
+   No prior information supplied
+
+
+Observations:-
+
+Observation name        Observation       Weight       Group
+ drnflw1                 0.00000          1.000       obsgroup    
+ drnflw2                 0.00000          1.000       obsgroup    
+ drnflw3                 0.00000          1.000       obsgroup    
+ drnflw4                 0.00000          1.000       obsgroup    
+ drnflw5                 0.00000          1.000       obsgroup    
+ drnflw6                 0.00000          1.000       obsgroup    
+ drnflw7                 0.00000          1.000       obsgroup    
+ drnflw8                 0.00000          1.000       obsgroup    
+ drnflw9                 0.00000          1.000       obsgroup    
+ drnflw10                0.00000          1.000       obsgroup    
+ drnflw11                0.00000          1.000       obsgroup    
+ drnflw12                0.00000          1.000       obsgroup    
+ drnflw13                0.00000          1.000       obsgroup    
+ drnflw14                0.00000          1.000       obsgroup    
+ drnflw15                0.00000          1.000       obsgroup    
+ drnflw16                0.00000          1.000       obsgroup    
+ drnflw17                0.00000          1.000       obsgroup    
+ drnflw18                0.00000          1.000       obsgroup    
+ drnflw19                0.00000          1.000       obsgroup    
+ drnflw20                0.00000          1.000       obsgroup    
+ drnflw21                0.00000          1.000       obsgroup    
+ drnflw22                0.00000          1.000       obsgroup    
+ drnflw23                0.00000          1.000       obsgroup    
+ drnflw24                0.00000          1.000       obsgroup    
+ drnflw25                0.00000          1.000       obsgroup    
+ drnflw26               2.189064E-04      1.000       obsgroup    
+ drnflw27               2.189064E-04      1.000       obsgroup    
+ drnflw28               2.189064E-04      1.000       obsgroup    
+ drnflw29               2.189064E-04      1.000       obsgroup    
+ drnflw30               2.189063E-04      1.000       obsgroup    
+ drnflw31               2.189063E-04      1.000       obsgroup    
+ drnflw32               3.332547E-04      1.000       obsgroup    
+ drnflw33               5.702333E-04      1.000       obsgroup    
+ drnflw34               6.923171E-04      1.000       obsgroup    
+ drnflw35               5.702331E-04      1.000       obsgroup    
+ drnflw36               6.923169E-04      1.000       obsgroup    
+ drnflw37               9.424417E-04      1.000       obsgroup    
+ drnflw38               1.329316E-03      1.000       obsgroup    
+ drnflw39               1.859503E-03      1.000       obsgroup    
+ drnflw40               2.128173E-03      1.000       obsgroup    
+ drnflw41               1.859502E-03      1.000       obsgroup    
+ drnflw42               1.460639E-03      1.000       obsgroup    
+ drnflw43               1.329315E-03      1.000       obsgroup    
+ drnflw44               1.329314E-03      1.000       obsgroup    
+ drnflw45               1.329314E-03      1.000       obsgroup    
+ drnflw46               1.329314E-03      1.000       obsgroup    
+ drnflw47               1.329313E-03      1.000       obsgroup    
+ drnflw48               1.329313E-03      1.000       obsgroup    
+ drnflw49               1.199056E-03      1.000       obsgroup    
+ drnflw50               1.329312E-03      1.000       obsgroup    
+ drnflw51               1.329312E-03      1.000       obsgroup    
+ drnflw52               1.460635E-03      1.000       obsgroup    
+ drnflw53               1.460635E-03      1.000       obsgroup    
+ drnflw54               1.592868E-03      1.000       obsgroup    
+ drnflw55               1.329311E-03      1.000       obsgroup    
+ drnflw56               1.460634E-03      1.000       obsgroup    
+ drnflw57               1.460633E-03      1.000       obsgroup    
+ drnflw58               1.460633E-03      1.000       obsgroup    
+ drnflw59               1.329309E-03      1.000       obsgroup    
+ drnflw60               1.460632E-03      1.000       obsgroup    
+ drnflw61               1.592864E-03      1.000       obsgroup    
+ drnflw62               1.592864E-03      1.000       obsgroup    
+ drnflw63               1.725861E-03      1.000       obsgroup    
+ drnflw64               1.725860E-03      1.000       obsgroup    
+ drnflw65               1.725860E-03      1.000       obsgroup    
+ drnflw66               1.725859E-03      1.000       obsgroup    
+ drnflw67               1.725859E-03      1.000       obsgroup    
+ drnflw68               1.725858E-03      1.000       obsgroup    
+ drnflw69               1.859485E-03      1.000       obsgroup    
+ drnflw70               1.859485E-03      1.000       obsgroup    
+ drnflw71               1.993620E-03      1.000       obsgroup    
+ drnflw72               2.262973E-03      1.000       obsgroup    
+ drnflw73               2.533127E-03      1.000       obsgroup    
+ drnflw74               2.668296E-03      1.000       obsgroup    
+ drnflw75               2.938469E-03      1.000       obsgroup    
+ drnflw76               3.208041E-03      1.000       obsgroup    
+ drnflw77               3.610493E-03      1.000       obsgroup    
+ drnflw78               3.877153E-03      1.000       obsgroup    
+ drnflw79               4.274306E-03      1.000       obsgroup    
+ drnflw80               4.537091E-03      1.000       obsgroup    
+ drnflw81               4.405895E-03      1.000       obsgroup    
+ drnflw82               4.405893E-03      1.000       obsgroup    
+ drnflw83               4.274298E-03      1.000       obsgroup    
+ drnflw84               4.405888E-03      1.000       obsgroup    
+ drnflw85               4.537080E-03      1.000       obsgroup    
+ drnflw86               4.537077E-03      1.000       obsgroup    
+ drnflw87               4.798285E-03      1.000       obsgroup    
+ drnflw88               4.667871E-03      1.000       obsgroup    
+ drnflw89               4.405877E-03      1.000       obsgroup    
+ drnflw90               4.667866E-03      1.000       obsgroup    
+ drnflw91               5.057982E-03      1.000       obsgroup    
+ drnflw92               5.573413E-03      1.000       obsgroup    
+ drnflw93               5.316301E-03      1.000       obsgroup    
+ drnflw94               5.187299E-03      1.000       obsgroup    
+ drnflw95               5.187296E-03      1.000       obsgroup    
+ drnflw96               5.187293E-03      1.000       obsgroup    
+ drnflw97               5.187291E-03      1.000       obsgroup    
+ drnflw98               5.187288E-03      1.000       obsgroup    
+ drnflw99               5.187285E-03      1.000       obsgroup    
+ drnflw100              5.187282E-03      1.000       obsgroup    
+ drnflw101              5.187279E-03      1.000       obsgroup    
+ drnflw102              5.187276E-03      1.000       obsgroup    
+ drnflw103              4.928278E-03      1.000       obsgroup    
+ drnflw104              4.798242E-03      1.000       obsgroup    
+ drnflw105              4.798240E-03      1.000       obsgroup    
+ drnflw106              4.798237E-03      1.000       obsgroup    
+ drnflw107              4.537028E-03      1.000       obsgroup    
+ drnflw108              4.537026E-03      1.000       obsgroup    
+ drnflw109              4.537023E-03      1.000       obsgroup    
+ drnflw110              4.405830E-03      1.000       obsgroup    
+ drnflw111              4.274238E-03      1.000       obsgroup    
+ drnflw112              4.274235E-03      1.000       obsgroup    
+ drnflw113              4.274233E-03      1.000       obsgroup    
+ drnflw114              4.405821E-03      1.000       obsgroup    
+ drnflw115              4.405818E-03      1.000       obsgroup    
+ drnflw116              4.667803E-03      1.000       obsgroup    
+ drnflw117              5.057911E-03      1.000       obsgroup    
+ drnflw118              5.187231E-03      1.000       obsgroup    
+ drnflw119              5.701487E-03      1.000       obsgroup    
+ drnflw120              5.829417E-03      1.000       obsgroup    
+ drnflw121              6.084727E-03      1.000       obsgroup    
+ drnflw122              6.339523E-03      1.000       obsgroup    
+ drnflw123              6.466815E-03      1.000       obsgroup    
+ drnflw124              6.594086E-03      1.000       obsgroup    
+ drnflw125              6.594082E-03      1.000       obsgroup    
+ drnflw126              7.103745E-03      1.000       obsgroup    
+ drnflw127              7.487700E-03      1.000       obsgroup    
+ drnflw128              7.745083E-03      1.000       obsgroup    
+ drnflw129              8.395770E-03      1.000       obsgroup    
+ drnflw130              8.926143E-03      1.000       obsgroup    
+ drnflw131              9.330996E-03      1.000       obsgroup    
+ drnflw132              1.002125E-02      1.000       obsgroup    
+ drnflw133              1.073267E-02      1.000       obsgroup    
+ drnflw134              1.131763E-02      1.000       obsgroup    
+ drnflw135              1.206815E-02      1.000       obsgroup    
+ drnflw136              1.268282E-02      1.000       obsgroup    
+ drnflw137              1.362477E-02      1.000       obsgroup    
+ drnflw138              1.458413E-02      1.000       obsgroup    
+ drnflw139              1.555274E-02      1.000       obsgroup    
+ drnflw140              1.652325E-02      1.000       obsgroup    
+ drnflw141              1.700773E-02      1.000       obsgroup    
+ drnflw142              1.813640E-02      1.000       obsgroup    
+ drnflw143              1.927328E-02      1.000       obsgroup    
+ drnflw144              2.027759E-02      1.000       obsgroup    
+ drnflw145              2.134624E-02      1.000       obsgroup    
+ drnflw146              2.253123E-02      1.000       obsgroup    
+ drnflw147              2.318799E-02      1.000       obsgroup    
+ drnflw148              2.415136E-02      1.000       obsgroup    
+ drnflw149              2.444861E-02      1.000       obsgroup    
+ drnflw150              2.573538E-02      1.000       obsgroup    
+ drnflw151              2.792289E-02      1.000       obsgroup    
+ drnflw152              3.036775E-02      1.000       obsgroup    
+ drnflw153              3.191187E-02      1.000       obsgroup    
+ drnflw154              3.281261E-02      1.000       obsgroup    
+ drnflw155              3.358467E-02      1.000       obsgroup    
+ drnflw156              3.461409E-02      1.000       obsgroup    
+ drnflw157              3.512879E-02      1.000       obsgroup    
+ drnflw158              3.525747E-02      1.000       obsgroup    
+ drnflw159              3.551482E-02      1.000       obsgroup    
+ drnflw160              3.551482E-02      1.000       obsgroup    
+ drnflw161              3.615821E-02      1.000       obsgroup    
+ drnflw162              3.602953E-02      1.000       obsgroup    
+ drnflw163              3.641556E-02      1.000       obsgroup    
+ drnflw164              3.525747E-02      1.000       obsgroup    
+ drnflw165              3.474276E-02      1.000       obsgroup    
+ drnflw166              3.474276E-02      1.000       obsgroup    
+ drnflw167              3.448541E-02      1.000       obsgroup    
+ drnflw168              3.487144E-02      1.000       obsgroup    
+ drnflw169              3.474276E-02      1.000       obsgroup    
+ drnflw170              3.474276E-02      1.000       obsgroup    
+ drnflw171              3.435673E-02      1.000       obsgroup    
+ drnflw172              3.500012E-02      1.000       obsgroup    
+ drnflw173              3.898910E-02      1.000       obsgroup    
+ drnflw174              3.963248E-02      1.000       obsgroup    
+ drnflw175              4.079058E-02      1.000       obsgroup    
+ drnflw176              4.426485E-02      1.000       obsgroup    
+ drnflw177              4.645236E-02      1.000       obsgroup    
+ drnflw178              4.979796E-02      1.000       obsgroup    
+ drnflw179              5.327224E-02      1.000       obsgroup    
+ drnflw180              5.507371E-02      1.000       obsgroup    
+ drnflw181              5.597445E-02      1.000       obsgroup    
+ drnflw182              5.751857E-02      1.000       obsgroup    
+ drnflw183              5.687519E-02      1.000       obsgroup    
+ drnflw184              5.674651E-02      1.000       obsgroup    
+ drnflw185              5.443033E-02      1.000       obsgroup    
+ drnflw186              5.533107E-02      1.000       obsgroup    
+ drnflw187              5.314356E-02      1.000       obsgroup    
+ drnflw188              5.108473E-02      1.000       obsgroup    
+ drnflw189              5.018399E-02      1.000       obsgroup    
+ drnflw190              4.786781E-02      1.000       obsgroup    
+ drnflw191              4.632368E-02      1.000       obsgroup    
+ drnflw192              4.503691E-02      1.000       obsgroup    
+ drnflw193              4.323544E-02      1.000       obsgroup    
+ drnflw194              4.156264E-02      1.000       obsgroup    
+ drnflw195              4.091925E-02      1.000       obsgroup    
+ drnflw196              3.976116E-02      1.000       obsgroup    
+ drnflw197              3.834572E-02      1.000       obsgroup    
+ drnflw198              3.705895E-02      1.000       obsgroup    
+ drnflw199              3.577218E-02      1.000       obsgroup    
+ drnflw200              3.487144E-02      1.000       obsgroup    
+ drnflw201              3.345599E-02      1.000       obsgroup    
+ drnflw202              3.216922E-02      1.000       obsgroup    
+ drnflw203              3.178319E-02      1.000       obsgroup    
+ drnflw204              3.049642E-02      1.000       obsgroup    
+ drnflw205              2.869495E-02      1.000       obsgroup    
+ drnflw206              2.818024E-02      1.000       obsgroup    
+ drnflw207              2.727950E-02      1.000       obsgroup    
+ drnflw208              2.637876E-02      1.000       obsgroup    
+ drnflw209              2.547803E-02      1.000       obsgroup    
+ drnflw210              2.406258E-02      1.000       obsgroup    
+ drnflw211              2.341795E-02      1.000       obsgroup    
+ drnflw212              2.296263E-02      1.000       obsgroup    
+ drnflw213              2.232220E-02      1.000       obsgroup    
+ drnflw214              2.153328E-02      1.000       obsgroup    
+ drnflw215              2.116094E-02      1.000       obsgroup    
+ drnflw216              2.062372E-02      1.000       obsgroup    
+ drnflw217              1.976928E-02      1.000       obsgroup    
+ drnflw218              1.910874E-02      1.000       obsgroup    
+ drnflw219              1.845876E-02      1.000       obsgroup    
+ drnflw220              1.797442E-02      1.000       obsgroup    
+ drnflw221              1.749085E-02      1.000       obsgroup    
+ drnflw222              1.732963E-02      1.000       obsgroup    
+ drnflw223              1.684563E-02      1.000       obsgroup    
+ drnflw224              1.652255E-02      1.000       obsgroup    
+ drnflw225              1.603742E-02      1.000       obsgroup    
+ drnflw226              1.571382E-02      1.000       obsgroup    
+ drnflw227              1.506708E-02      1.000       obsgroup    
+ drnflw228              1.458344E-02      1.000       obsgroup    
+ drnflw229              1.426222E-02      1.000       obsgroup    
+ drnflw230              1.362408E-02      1.000       obsgroup    
+ drnflw231              1.346566E-02      1.000       obsgroup    
+ drnflw232              1.299370E-02      1.000       obsgroup    
+ drnflw233              1.283758E-02      1.000       obsgroup    
+ drnflw234              1.237331E-02      1.000       obsgroup    
+ drnflw235              1.222000E-02      1.000       obsgroup    
+ drnflw236              1.206746E-02      1.000       obsgroup    
+ drnflw237              1.161465E-02      1.000       obsgroup    
+ drnflw238              1.146537E-02      1.000       obsgroup    
+ drnflw239              1.116939E-02      1.000       obsgroup    
+ drnflw240              1.073200E-02      1.000       obsgroup    
+ drnflw241              1.073199E-02      1.000       obsgroup    
+ drnflw242              1.044481E-02      1.000       obsgroup    
+ drnflw243              1.030253E-02      1.000       obsgroup    
+ drnflw244              1.002059E-02      1.000       obsgroup    
+ drnflw245              9.880894E-03      1.000       obsgroup    
+ drnflw246              9.742041E-03      1.000       obsgroup    
+ drnflw247              9.604010E-03      1.000       obsgroup    
+ drnflw248              9.330347E-03      1.000       obsgroup    
+ drnflw249              9.330341E-03      1.000       obsgroup    
+ drnflw250              9.059726E-03      1.000       obsgroup    
+ drnflw251              9.059721E-03      1.000       obsgroup    
+ drnflw252              8.791955E-03      1.000       obsgroup    
+ drnflw253              8.659068E-03      1.000       obsgroup    
+ drnflw254              8.526806E-03      1.000       obsgroup    
+ drnflw255              8.526801E-03      1.000       obsgroup    
+ drnflw256              8.264029E-03      1.000       obsgroup    
+ drnflw257              8.133444E-03      1.000       obsgroup    
+ drnflw258              8.133439E-03      1.000       obsgroup    
+ drnflw259              7.873704E-03      1.000       obsgroup    
+ drnflw260              7.873699E-03      1.000       obsgroup    
+ drnflw261              7.744469E-03      1.000       obsgroup    
+ drnflw262              7.615614E-03      1.000       obsgroup    
+ drnflw263              7.487095E-03      1.000       obsgroup    
+ drnflw264              7.358873E-03      1.000       obsgroup    
+ drnflw265              7.230908E-03      1.000       obsgroup    
+ drnflw266              7.103159E-03      1.000       obsgroup    
+ drnflw267              7.103154E-03      1.000       obsgroup    
+ drnflw268              7.103150E-03      1.000       obsgroup    
+ drnflw269              6.848145E-03      1.000       obsgroup    
+ drnflw270              6.720804E-03      1.000       obsgroup    
+ drnflw271              6.720801E-03      1.000       obsgroup    
+ drnflw272              6.593517E-03      1.000       obsgroup    
+ drnflw273              6.593513E-03      1.000       obsgroup    
+ drnflw274              6.466248E-03      1.000       obsgroup    
+ drnflw275              6.338963E-03      1.000       obsgroup    
+ drnflw276              6.338959E-03      1.000       obsgroup    
+ drnflw277              6.211617E-03      1.000       obsgroup    
+ drnflw278              6.211613E-03      1.000       obsgroup    
+ drnflw279              6.084177E-03      1.000       obsgroup    
+ drnflw280              5.956613E-03      1.000       obsgroup    
+ drnflw281              6.084170E-03      1.000       obsgroup    
+ drnflw282              5.956606E-03      1.000       obsgroup    
+ drnflw283              5.828880E-03      1.000       obsgroup    
+ drnflw284              5.828876E-03      1.000       obsgroup    
+ drnflw285              5.700955E-03      1.000       obsgroup    
+ drnflw286              5.700952E-03      1.000       obsgroup    
+ drnflw287              5.700949E-03      1.000       obsgroup    
+ drnflw288              5.572804E-03      1.000       obsgroup    
+ drnflw289              5.572800E-03      1.000       obsgroup    
+ drnflw290              5.572797E-03      1.000       obsgroup    
+ drnflw291              5.315723E-03      1.000       obsgroup    
+ drnflw292              5.444396E-03      1.000       obsgroup    
+ drnflw293              5.315717E-03      1.000       obsgroup    
+ drnflw294              5.186734E-03      1.000       obsgroup    
+ drnflw295              5.186731E-03      1.000       obsgroup    
+ drnflw296              5.186729E-03      1.000       obsgroup    
+ drnflw297              5.057420E-03      1.000       obsgroup    
+ drnflw298              5.186723E-03      1.000       obsgroup    
+ drnflw299              5.057414E-03      1.000       obsgroup    
+ drnflw300              4.927760E-03      1.000       obsgroup    
+ drnflw301              4.927757E-03      1.000       obsgroup    
+ drnflw302              4.927754E-03      1.000       obsgroup    
+ drnflw303              4.797738E-03      1.000       obsgroup    
+ drnflw304              4.797735E-03      1.000       obsgroup    
+ drnflw305              4.797732E-03      1.000       obsgroup    
+ drnflw306              4.797730E-03      1.000       obsgroup    
+ drnflw307              4.667337E-03      1.000       obsgroup    
+ drnflw308              4.667335E-03      1.000       obsgroup    
+ drnflw309              4.536555E-03      1.000       obsgroup    
+ drnflw310              4.536552E-03      1.000       obsgroup    
+ drnflw311              4.536550E-03      1.000       obsgroup    
+ drnflw312              4.405376E-03      1.000       obsgroup    
+ drnflw313              4.536545E-03      1.000       obsgroup    
+ drnflw314              4.273801E-03      1.000       obsgroup    
+ drnflw315              4.405369E-03      1.000       obsgroup    
+ drnflw316              4.273797E-03      1.000       obsgroup    
+ drnflw317              4.273795E-03      1.000       obsgroup    
+ drnflw318              4.273793E-03      1.000       obsgroup    
+ drnflw319              4.273790E-03      1.000       obsgroup    
+ drnflw320              4.141819E-03      1.000       obsgroup    
+ drnflw321              4.273786E-03      1.000       obsgroup    
+ drnflw322              4.141815E-03      1.000       obsgroup    
+ drnflw323              4.141813E-03      1.000       obsgroup    
+ drnflw324              4.009447E-03      1.000       obsgroup    
+ drnflw325              4.009445E-03      1.000       obsgroup    
+ drnflw326              4.009443E-03      1.000       obsgroup    
+ drnflw327              4.009441E-03      1.000       obsgroup    
+ drnflw328              3.876688E-03      1.000       obsgroup    
+ drnflw329              3.876686E-03      1.000       obsgroup    
+ drnflw330              3.876684E-03      1.000       obsgroup    
+ drnflw331              3.876682E-03      1.000       obsgroup    
+ drnflw332              3.876680E-03      1.000       obsgroup    
+ drnflw333              3.743551E-03      1.000       obsgroup    
+ drnflw334              3.876677E-03      1.000       obsgroup    
+ drnflw335              3.743548E-03      1.000       obsgroup    
+ drnflw336              3.743546E-03      1.000       obsgroup    
+ drnflw337              3.743544E-03      1.000       obsgroup    
+ drnflw338              3.743543E-03      1.000       obsgroup    
+ drnflw339              3.610055E-03      1.000       obsgroup    
+ drnflw340              3.743539E-03      1.000       obsgroup    
+ drnflw341              3.610051E-03      1.000       obsgroup    
+ drnflw342              3.610050E-03      1.000       obsgroup    
+ drnflw343              3.610048E-03      1.000       obsgroup    
+ drnflw344              3.476222E-03      1.000       obsgroup    
+ drnflw345              3.476220E-03      1.000       obsgroup    
+ drnflw346              3.342082E-03      1.000       obsgroup    
+ drnflw347              3.476217E-03      1.000       obsgroup    
+ drnflw348              3.476216E-03      1.000       obsgroup    
+ drnflw349              3.342078E-03      1.000       obsgroup    
+ drnflw350              3.342076E-03      1.000       obsgroup    
+ drnflw351              3.342075E-03      1.000       obsgroup    
+ drnflw352              3.342073E-03      1.000       obsgroup    
+ drnflw353              3.342072E-03      1.000       obsgroup    
+ drnflw354              3.342070E-03      1.000       obsgroup    
+ drnflw355              3.342069E-03      1.000       obsgroup    
+ drnflw356              3.342067E-03      1.000       obsgroup    
+ drnflw357              3.342066E-03      1.000       obsgroup    
+ drnflw358              3.342064E-03      1.000       obsgroup    
+ drnflw359              3.207646E-03      1.000       obsgroup    
+ drnflw360              3.207645E-03      1.000       obsgroup    
+ drnflw361              3.207644E-03      1.000       obsgroup    
+ drnflw362              3.207642E-03      1.000       obsgroup    
+ drnflw363              3.072980E-03      1.000       obsgroup    
+ drnflw364              3.207639E-03      1.000       obsgroup    
+ drnflw365              3.072978E-03      1.000       obsgroup    
+ drnflw366              3.207637E-03      1.000       obsgroup    
+ drnflw367              3.072975E-03      1.000       obsgroup    
+ drnflw368              3.072974E-03      1.000       obsgroup    
+ drnflw369              3.072973E-03      1.000       obsgroup    
+ drnflw370              2.938110E-03      1.000       obsgroup    
+ drnflw371              3.072970E-03      1.000       obsgroup    
+ drnflw372              2.938108E-03      1.000       obsgroup    
+ drnflw373              2.938107E-03      1.000       obsgroup    
+ drnflw374              2.938106E-03      1.000       obsgroup    
+ drnflw375              2.938104E-03      1.000       obsgroup    
+ drnflw376              2.938103E-03      1.000       obsgroup    
+ drnflw377              2.938102E-03      1.000       obsgroup    
+ drnflw378              2.938101E-03      1.000       obsgroup    
+ drnflw379              2.938099E-03      1.000       obsgroup    
+ drnflw380              2.938098E-03      1.000       obsgroup    
+ drnflw381              2.938097E-03      1.000       obsgroup    
+ drnflw382              2.938096E-03      1.000       obsgroup    
+ drnflw383              2.938095E-03      1.000       obsgroup    
+ drnflw384              2.803081E-03      1.000       obsgroup    
+ drnflw385              2.938092E-03      1.000       obsgroup    
+ drnflw386              2.938091E-03      1.000       obsgroup    
+ drnflw387              2.803078E-03      1.000       obsgroup    
+ drnflw388              2.803077E-03      1.000       obsgroup    
+ drnflw389              2.938087E-03      1.000       obsgroup    
+ drnflw390              2.803075E-03      1.000       obsgroup    
+ drnflw391              2.667965E-03      1.000       obsgroup    
+ drnflw392              2.803072E-03      1.000       obsgroup    
+ drnflw393              2.803071E-03      1.000       obsgroup    
+ drnflw394              2.667962E-03      1.000       obsgroup    
+ drnflw395              2.803069E-03      1.000       obsgroup    
+ drnflw396              2.667960E-03      1.000       obsgroup    
+ drnflw397              2.667959E-03      1.000       obsgroup    
+ drnflw398              2.667958E-03      1.000       obsgroup    
+ drnflw399              2.532814E-03      1.000       obsgroup    
+ drnflw400              2.667956E-03      1.000       obsgroup    
+ drnflw401              2.667955E-03      1.000       obsgroup    
+ drnflw402              2.532811E-03      1.000       obsgroup    
+ drnflw403              2.532810E-03      1.000       obsgroup    
+ drnflw404              2.667951E-03      1.000       obsgroup    
+ drnflw405              2.532808E-03      1.000       obsgroup    
+ drnflw406              2.532807E-03      1.000       obsgroup    
+ drnflw407              2.532806E-03      1.000       obsgroup    
+ drnflw408              2.532805E-03      1.000       obsgroup    
+ drnflw409              2.532805E-03      1.000       obsgroup    
+ drnflw410              2.532804E-03      1.000       obsgroup    
+ drnflw411              2.532803E-03      1.000       obsgroup    
+ drnflw412              2.532802E-03      1.000       obsgroup    
+ drnflw413              2.532801E-03      1.000       obsgroup    
+ drnflw414              2.532800E-03      1.000       obsgroup    
+ drnflw415              2.532799E-03      1.000       obsgroup    
+ drnflw416              2.532798E-03      1.000       obsgroup    
+ drnflw417              2.397691E-03      1.000       obsgroup    
+ drnflw418              2.532796E-03      1.000       obsgroup    
+ drnflw419              2.532795E-03      1.000       obsgroup    
+ drnflw420              2.397688E-03      1.000       obsgroup    
+ drnflw421              2.532793E-03      1.000       obsgroup    
+ drnflw422              2.397686E-03      1.000       obsgroup    
+ drnflw423              2.532791E-03      1.000       obsgroup    
+ drnflw424              2.397685E-03      1.000       obsgroup    
+ drnflw425              2.397684E-03      1.000       obsgroup    
+ drnflw426              2.397683E-03      1.000       obsgroup    
+ drnflw427              2.397682E-03      1.000       obsgroup    
+ drnflw428              2.262688E-03      1.000       obsgroup    
+ drnflw429              2.397680E-03      1.000       obsgroup    
+ drnflw430              2.397679E-03      1.000       obsgroup    
+ drnflw431              2.262685E-03      1.000       obsgroup    
+ drnflw432              2.262685E-03      1.000       obsgroup    
+ drnflw433              2.262684E-03      1.000       obsgroup    
+ drnflw434              2.262683E-03      1.000       obsgroup    
+ ttl_dflw               0.367000          2.000       obsgroup    
+
+
+Control settings:-
+
+   Initial lambda                                               :  5.0000    
+   Lambda adjustment factor                                     :  2.0000    
+   Sufficient new/old phi ratio per optimisation iteration      : 0.30000    
+   Limiting relative phi reduction between lambdas              : 1.00000E-02
+   Maximum trial lambdas per iteration                          :  10
+   Forgive model run failure during lamda testing               : no
+   Forgive model run failure during Jacobian runs               : no
+
+   Perform Broyden's update of Jacobian matrix                  : no
+   Undertake observation re-referencing                         : no
+
+   Maximum  factor  parameter change (factor-limited changes)   :  5.0000
+   Maximum relative parameter change (relative-limited changes) : na
+   Fraction of initial parameter values used in computing
+   change limit for near-zero parameters                        : 1.00000E-03
+   Allow bending of parameter upgrade vector                    : no
+   Allow parameters to stick to their bounds                    : no
+
+   Relative phi reduction below which to begin use of
+   central derivatives                                          : 0.10000             
+   Iteration at which to first consider derivatives switch      :   1
+
+   Relative phi reduction indicating convergence                : 0.10000E-01
+   Number of phi values required within this range              :   4
+   Maximum number of consecutive failures to lower phi          :   3
+   Minimal relative parameter change indicating convergence     : 0.10000E-01
+   Number of consecutive iterations with minimal param change   :   3
+   Maximum number of optimisation iterations                    :  30
+
+   Attempt automatic user intervention                          : no
+
+   Attempt reuse of parameter sensitivities                     : no
+
+   Scale parameters by their bounds                             : no
+
+
+File saving options: -
+
+   Save best JCO file                                           : yes
+   Save multiple JCO files                                      : no
+   Save multiple REI files                                      : no
+   Save multiple PAR files                                      : no
+
+
+                            OPTIMISATION RECORD
+
+
+INITIAL CONDITIONS: 
+   Sum of squared weighted residuals (ie phi) =  2.36157E-03
+
+      Current parameter values
+      ldu_wdth         100.800    
+      ldu_ntstr        2.82000    
+      srf_strg        0.100000    
+      srf_vgvlm       5.000000E-02
+      srf_rghns       0.410000    
+      srf_slp          4.17000    
+      sl_thck          4.00000    
+      sl_prsty        0.700000    
+      sl_fldcp        0.330000    
+      sl_wltpt        0.220000    
+      sl_kst           3.00000    
+      sl_kcff         0.500000    
+      sl_sctn          4.00000    
+      drnm_thck        2.00000    
+      drnm_vdfr       0.500000    
+      drnm_rghns       6.99000    
+
+
+OPTIMISATION ITERATION NO.        : 1
+   Model calls so far             : 1
+   Starting phi for this iteration:  2.36157E-03
+       param "drnm_vdfr" frozen: gradient and update vectors out of bounds
+
+       Lambda =   5.0000     ----->
+          Phi =  5.60557E-03  (  2.374 times starting phi)
+
+       Lambda =   2.5000     ----->
+          Phi =  5.60572E-03  (  2.374 times starting phi)
+
+       Lambda =   10.000     ----->
+          Phi =  5.60100E-03  (  2.372 times starting phi)
+
+   No more lambdas: relative phi reduction between lambdas less than 0.0100
+   Lowest phi this iteration:  5.60100E-03
+   Relative phi reduction between optimisation iterations less than 0.1000
+   Switch to central derivatives calculation
+   (restart from best parameters so far - these achieved at iteration    0)
+
+      Current parameter values
+      ldu_wdth         100.800    
+      ldu_ntstr        2.82000    
+      srf_strg        0.100000    
+      srf_vgvlm       5.000000E-02
+      srf_rghns       0.410000    
+      srf_slp          4.17000    
+      sl_thck          4.00000    
+      sl_prsty        0.700000    
+      sl_fldcp        0.330000    
+      sl_wltpt        0.220000    
+      sl_kst           3.00000    
+      sl_kcff         0.500000    
+      sl_sctn          4.00000    
+      drnm_thck        2.00000    
+      drnm_vdfr       0.500000    
+      drnm_rghns       6.99000    
+
+
+OPTIMISATION ITERATION NO.        : 2
+   Model calls so far             : 11
+   Starting phi for this iteration:  2.36157E-03
+   All frozen parameters freed.
+       param "drnm_vdfr" frozen: gradient and update vectors out of bounds
+
+       Lambda =   5.0000     ----->
+          Phi =  2.36720E-03  (  1.002 times starting phi)
+
+       Lambda =   2.5000     ----->
+          Phi =  2.36605E-03  (  1.002 times starting phi)
+
+   No more lambdas: relative phi reduction between lambdas less than 0.0100
+   Lowest phi this iteration:  2.36605E-03
+
+      Current parameter values                 Previous parameter values
+      ldu_wdth         100.793                 ldu_wdth          100.800    
+      ldu_ntstr        3.18006                 ldu_ntstr         2.82000    
+      srf_strg        0.100000                 srf_strg         0.100000    
+      srf_vgvlm       5.000000E-02             srf_vgvlm        5.000000E-02
+      srf_rghns       0.410000                 srf_rghns        0.410000    
+      srf_slp          4.17000                 srf_slp           4.17000    
+      sl_thck          4.00000                 sl_thck           4.00000    
+      sl_prsty        0.661482                 sl_prsty         0.700000    
+      sl_fldcp        0.323346                 sl_fldcp         0.330000    
+      sl_wltpt        0.210658                 sl_wltpt         0.220000    
+      sl_kst           3.00000                 sl_kst            3.00000    
+      sl_kcff         0.500000                 sl_kcff          0.500000    
+      sl_sctn          4.00000                 sl_sctn           4.00000    
+      drnm_thck        2.00000                 drnm_thck         2.00000    
+      drnm_vdfr       0.500000                 drnm_vdfr        0.500000    
+      drnm_rghns       7.23279                 drnm_rghns        6.99000    
+   Maximum   factor change:  1.128     ["ldu_ntstr"]
+   Maximum relative change: 0.1277     ["ldu_ntstr"]
+
+
+OPTIMISATION ITERATION NO.        : 3
+   Model calls so far             : 27
+   Starting phi for this iteration:  2.36605E-03
+   All frozen parameters freed.
+
+       Lambda =   1.2500     ----->
+          Phi =  2.40169E-02  ( 10.151 times starting phi)
+
+       Lambda =  0.62500     ----->
+          Phi =  3.01931E-02  ( 12.761 times starting phi)
+
+       Lambda =   2.5000     ----->
+          Phi =  1.86221E-02  (  7.871 times starting phi)
+
+       Lambda =   5.0000     ----->
+          Phi =  1.83077E-02  (  7.738 times starting phi)
+
+       Lambda =   10.000     ----->
+          Phi =  1.81322E-02  (  7.664 times starting phi)
+
+   No more lambdas: relative phi reduction between lambdas less than 0.0100
+   Lowest phi this iteration:  1.81322E-02
+
+      Current parameter values                 Previous parameter values
+      ldu_wdth         100.776                 ldu_wdth          100.793    
+      ldu_ntstr        3.45149                 ldu_ntstr         3.18006    
+      srf_strg        0.100000                 srf_strg         0.100000    
+      srf_vgvlm       5.000000E-02             srf_vgvlm        5.000000E-02
+      srf_rghns       0.410000                 srf_rghns        0.410000    
+      srf_slp          4.17000                 srf_slp           4.17000    
+      sl_thck          4.00000                 sl_thck           4.00000    
+      sl_prsty        0.630305                 sl_prsty         0.661482    
+      sl_fldcp        0.300000                 sl_fldcp         0.323346    
+      sl_wltpt        0.173539                 sl_wltpt         0.210658    
+      sl_kst           3.00000                 sl_kst            3.00000    
+      sl_kcff         0.500000                 sl_kcff          0.500000    
+      sl_sctn          4.00000                 sl_sctn           4.00000    
+      drnm_thck        2.00000                 drnm_thck         2.00000    
+      drnm_vdfr       0.468423                 drnm_vdfr        0.500000    
+      drnm_rghns       7.50848                 drnm_rghns        7.23279    
+   Maximum   factor change:  1.214     ["sl_wltpt"]
+   Maximum relative change: 0.1762     ["sl_wltpt"]
+
+   Optimisation complete:   3 optimisation iterations have elapsed since lowest
+                          phi was achieved.
+   Total model calls:     46
+
+   The model has been run one final time using best parameters. 
+   Thus all model input files contain best parameter values, and model 
+   output files contain model results based on these parameters.
+
+
+                            OPTIMISATION RESULTS
+
+
+Adjustable parameters ----->
+
+Parameter        Estimated         95% percent confidence limits
+                 value             lower limit       upper limit
+ ldu_wdth        100.800            48.9221           152.678    
+ ldu_ntstr       2.82000            1.67393           3.96607    
+ sl_prsty       0.700000           0.483698          0.916302    
+ sl_fldcp       0.330000           0.318993          0.341007    
+ sl_wltpt       0.220000           0.212624          0.227376    
+ drnm_vdfr      0.500000           0.291690          0.708310    
+ drnm_rghns      6.99000            4.55579           9.42421    
+
+Note: confidence limits provide only an indication of parameter uncertainty.
+      They rely on a linearity assumption which  may not extend as far in 
+      parameter space as the confidence limits themselves - see PEST manual.
+
+
+Fixed parameters ----->
+
+Parameter      Fixed value
+ srf_strg       0.100000    
+ srf_vgvlm      5.000000E-02
+ srf_rghns      0.410000    
+ srf_slp         4.17000    
+ sl_thck         4.00000    
+ sl_kst          3.00000    
+ sl_kcff        0.500000    
+ sl_sctn         4.00000    
+ drnm_thck       2.00000    
+
+See file groof17val2_gr.sen for parameter sensitivities.
+
+
+Observations ----->
+
+Observation            Measured       Calculated     Residual       Weight     Group
+                       value          value
+drnflw1                0.00000       1.660000E-03  -1.660000E-03    1.000      obsgroup    
+drnflw2                0.00000       1.650000E-03  -1.650000E-03    1.000      obsgroup    
+drnflw3                0.00000       1.630000E-03  -1.630000E-03    1.000      obsgroup    
+drnflw4                0.00000       1.620000E-03  -1.620000E-03    1.000      obsgroup    
+drnflw5                0.00000       1.610000E-03  -1.610000E-03    1.000      obsgroup    
+drnflw6                0.00000       1.590000E-03  -1.590000E-03    1.000      obsgroup    
+drnflw7                0.00000       1.580000E-03  -1.580000E-03    1.000      obsgroup    
+drnflw8                0.00000       1.570000E-03  -1.570000E-03    1.000      obsgroup    
+drnflw9                0.00000       1.560000E-03  -1.560000E-03    1.000      obsgroup    
+drnflw10               0.00000       1.540000E-03  -1.540000E-03    1.000      obsgroup    
+drnflw11               0.00000       1.530000E-03  -1.530000E-03    1.000      obsgroup    
+drnflw12               0.00000       1.520000E-03  -1.520000E-03    1.000      obsgroup    
+drnflw13               0.00000       1.510000E-03  -1.510000E-03    1.000      obsgroup    
+drnflw14               0.00000       1.500000E-03  -1.500000E-03    1.000      obsgroup    
+drnflw15               0.00000       1.480000E-03  -1.480000E-03    1.000      obsgroup    
+drnflw16               0.00000       1.470000E-03  -1.470000E-03    1.000      obsgroup    
+drnflw17               0.00000       1.460000E-03  -1.460000E-03    1.000      obsgroup    
+drnflw18               0.00000       1.450000E-03  -1.450000E-03    1.000      obsgroup    
+drnflw19               0.00000       1.440000E-03  -1.440000E-03    1.000      obsgroup    
+drnflw20               0.00000       1.430000E-03  -1.430000E-03    1.000      obsgroup    
+drnflw21               0.00000       1.420000E-03  -1.420000E-03    1.000      obsgroup    
+drnflw22               0.00000       1.400000E-03  -1.400000E-03    1.000      obsgroup    
+drnflw23               0.00000       1.390000E-03  -1.390000E-03    1.000      obsgroup    
+drnflw24               0.00000       1.380000E-03  -1.380000E-03    1.000      obsgroup    
+drnflw25               0.00000       1.370000E-03  -1.370000E-03    1.000      obsgroup    
+drnflw26              2.189064E-04   1.360000E-03  -1.141094E-03    1.000      obsgroup    
+drnflw27              2.189064E-04   1.350000E-03  -1.131094E-03    1.000      obsgroup    
+drnflw28              2.189064E-04   1.340000E-03  -1.121094E-03    1.000      obsgroup    
+drnflw29              2.189064E-04   1.330000E-03  -1.111094E-03    1.000      obsgroup    
+drnflw30              2.189063E-04   1.320000E-03  -1.101094E-03    1.000      obsgroup    
+drnflw31              2.189063E-04   1.310000E-03  -1.091094E-03    1.000      obsgroup    
+drnflw32              3.332547E-04   1.300000E-03  -9.667453E-04    1.000      obsgroup    
+drnflw33              5.702333E-04   1.290000E-03  -7.197667E-04    1.000      obsgroup    
+drnflw34              6.923171E-04   1.280000E-03  -5.876829E-04    1.000      obsgroup    
+drnflw35              5.702331E-04   1.270000E-03  -6.997669E-04    1.000      obsgroup    
+drnflw36              6.923169E-04   1.260000E-03  -5.676831E-04    1.000      obsgroup    
+drnflw37              9.424417E-04   1.260000E-03  -3.175583E-04    1.000      obsgroup    
+drnflw38              1.329316E-03   1.250000E-03   7.931648E-05    1.000      obsgroup    
+drnflw39              1.859503E-03   1.240000E-03   6.195029E-04    1.000      obsgroup    
+drnflw40              2.128173E-03   1.230000E-03   8.981731E-04    1.000      obsgroup    
+drnflw41              1.859502E-03   1.220000E-03   6.395017E-04    1.000      obsgroup    
+drnflw42              1.460639E-03   1.210000E-03   2.506392E-04    1.000      obsgroup    
+drnflw43              1.329315E-03   1.200000E-03   1.293148E-04    1.000      obsgroup    
+drnflw44              1.329314E-03   1.190000E-03   1.393145E-04    1.000      obsgroup    
+drnflw45              1.329314E-03   1.180000E-03   1.493141E-04    1.000      obsgroup    
+drnflw46              1.329314E-03   1.180000E-03   1.493138E-04    1.000      obsgroup    
+drnflw47              1.329313E-03   1.170000E-03   1.593134E-04    1.000      obsgroup    
+drnflw48              1.329313E-03   1.160000E-03   1.693131E-04    1.000      obsgroup    
+drnflw49              1.199056E-03   1.150000E-03   4.905631E-05    1.000      obsgroup    
+drnflw50              1.329312E-03   1.140000E-03   1.893124E-04    1.000      obsgroup    
+drnflw51              1.329312E-03   1.130000E-03   1.993121E-04    1.000      obsgroup    
+drnflw52              1.460635E-03   1.130000E-03   3.306352E-04    1.000      obsgroup    
+drnflw53              1.460635E-03   1.120000E-03   3.406348E-04    1.000      obsgroup    
+drnflw54              1.592868E-03   1.110000E-03   4.828676E-04    1.000      obsgroup    
+drnflw55              1.329311E-03   1.100000E-03   2.293107E-04    1.000      obsgroup    
+drnflw56              1.460634E-03   1.100000E-03   3.606337E-04    1.000      obsgroup    
+drnflw57              1.460633E-03   1.090000E-03   3.706333E-04    1.000      obsgroup    
+drnflw58              1.460633E-03   1.080000E-03   3.806329E-04    1.000      obsgroup    
+drnflw59              1.329309E-03   1.070000E-03   2.593094E-04    1.000      obsgroup    
+drnflw60              1.460632E-03   1.070000E-03   3.906321E-04    1.000      obsgroup    
+drnflw61              1.592864E-03   1.060000E-03   5.328645E-04    1.000      obsgroup    
+drnflw62              1.592864E-03   1.050000E-03   5.428640E-04    1.000      obsgroup    
+drnflw63              1.725861E-03   1.040000E-03   6.858608E-04    1.000      obsgroup    
+drnflw64              1.725860E-03   1.040000E-03   6.858603E-04    1.000      obsgroup    
+drnflw65              1.725860E-03   1.030000E-03   6.958598E-04    1.000      obsgroup    
+drnflw66              1.725859E-03   1.020000E-03   7.058593E-04    1.000      obsgroup    
+drnflw67              1.725859E-03   1.020000E-03   7.058587E-04    1.000      obsgroup    
+drnflw68              1.725858E-03   1.010000E-03   7.158582E-04    1.000      obsgroup    
+drnflw69              1.859485E-03   1.000000E-03   8.594854E-04    1.000      obsgroup    
+drnflw70              1.859485E-03   1.000000E-03   8.594849E-04    1.000      obsgroup    
+drnflw71              1.993620E-03   9.900000E-04   1.003620E-03    1.000      obsgroup    
+drnflw72              2.262973E-03   9.800000E-04   1.282973E-03    1.000      obsgroup    
+drnflw73              2.533127E-03   9.800000E-04   1.553127E-03    1.000      obsgroup    
+drnflw74              2.668296E-03   9.700000E-04   1.698296E-03    1.000      obsgroup    
+drnflw75              2.938469E-03   9.600000E-04   1.978469E-03    1.000      obsgroup    
+drnflw76              3.208041E-03   9.600000E-04   2.248041E-03    1.000      obsgroup    
+drnflw77              3.610493E-03   9.500000E-04   2.660493E-03    1.000      obsgroup    
+drnflw78              3.877153E-03   9.400000E-04   2.937153E-03    1.000      obsgroup    
+drnflw79              4.274306E-03   9.400000E-04   3.334306E-03    1.000      obsgroup    
+drnflw80              4.537091E-03   9.300000E-04   3.607091E-03    1.000      obsgroup    
+drnflw81              4.405895E-03   9.300000E-04   3.475895E-03    1.000      obsgroup    
+drnflw82              4.405893E-03   9.200000E-04   3.485893E-03    1.000      obsgroup    
+drnflw83              4.274298E-03   9.100000E-04   3.364298E-03    1.000      obsgroup    
+drnflw84              4.405888E-03   9.100000E-04   3.495888E-03    1.000      obsgroup    
+drnflw85              4.537080E-03   9.000000E-04   3.637080E-03    1.000      obsgroup    
+drnflw86              4.537077E-03   9.000000E-04   3.637077E-03    1.000      obsgroup    
+drnflw87              4.798285E-03   8.900000E-04   3.908285E-03    1.000      obsgroup    
+drnflw88              4.667871E-03   8.900000E-04   3.777871E-03    1.000      obsgroup    
+drnflw89              4.405877E-03   8.800000E-04   3.525877E-03    1.000      obsgroup    
+drnflw90              4.667866E-03   8.700000E-04   3.797866E-03    1.000      obsgroup    
+drnflw91              5.057982E-03   8.700000E-04   4.187982E-03    1.000      obsgroup    
+drnflw92              5.573413E-03   8.600000E-04   4.713413E-03    1.000      obsgroup    
+drnflw93              5.316301E-03   8.600000E-04   4.456301E-03    1.000      obsgroup    
+drnflw94              5.187299E-03   8.500000E-04   4.337299E-03    1.000      obsgroup    
+drnflw95              5.187296E-03   8.500000E-04   4.337296E-03    1.000      obsgroup    
+drnflw96              5.187293E-03   8.400000E-04   4.347293E-03    1.000      obsgroup    
+drnflw97              5.187291E-03   8.400000E-04   4.347291E-03    1.000      obsgroup    
+drnflw98              5.187288E-03   8.300000E-04   4.357288E-03    1.000      obsgroup    
+drnflw99              5.187285E-03   8.300000E-04   4.357285E-03    1.000      obsgroup    
+drnflw100             5.187282E-03   8.200000E-04   4.367282E-03    1.000      obsgroup    
+drnflw101             5.187279E-03   8.200000E-04   4.367279E-03    1.000      obsgroup    
+drnflw102             5.187276E-03   8.100000E-04   4.377276E-03    1.000      obsgroup    
+drnflw103             4.928278E-03   8.100000E-04   4.118278E-03    1.000      obsgroup    
+drnflw104             4.798242E-03   8.000000E-04   3.998242E-03    1.000      obsgroup    
+drnflw105             4.798240E-03   8.000000E-04   3.998240E-03    1.000      obsgroup    
+drnflw106             4.798237E-03   7.900000E-04   4.008237E-03    1.000      obsgroup    
+drnflw107             4.537028E-03   7.900000E-04   3.747028E-03    1.000      obsgroup    
+drnflw108             4.537026E-03   7.800000E-04   3.757026E-03    1.000      obsgroup    
+drnflw109             4.537023E-03   7.800000E-04   3.757023E-03    1.000      obsgroup    
+drnflw110             4.405830E-03   7.700000E-04   3.635830E-03    1.000      obsgroup    
+drnflw111             4.274238E-03   7.700000E-04   3.504238E-03    1.000      obsgroup    
+drnflw112             4.274235E-03   7.600000E-04   3.514235E-03    1.000      obsgroup    
+drnflw113             4.274233E-03   7.600000E-04   3.514233E-03    1.000      obsgroup    
+drnflw114             4.405821E-03   7.500000E-04   3.655821E-03    1.000      obsgroup    
+drnflw115             4.405818E-03   7.500000E-04   3.655818E-03    1.000      obsgroup    
+drnflw116             4.667803E-03   7.600000E-04   3.907803E-03    1.000      obsgroup    
+drnflw117             5.057911E-03   1.060000E-03   3.997911E-03    1.000      obsgroup    
+drnflw118             5.187231E-03   1.050000E-03   4.137231E-03    1.000      obsgroup    
+drnflw119             5.701487E-03   1.580000E-03   4.121487E-03    1.000      obsgroup    
+drnflw120             5.829417E-03   1.970000E-03   3.859417E-03    1.000      obsgroup    
+drnflw121             6.084727E-03   2.620000E-03   3.464727E-03    1.000      obsgroup    
+drnflw122             6.339523E-03   3.080000E-03   3.259523E-03    1.000      obsgroup    
+drnflw123             6.466815E-03   3.040000E-03   3.426815E-03    1.000      obsgroup    
+drnflw124             6.594086E-03   3.010000E-03   3.584086E-03    1.000      obsgroup    
+drnflw125             6.594082E-03   3.760000E-03   2.834082E-03    1.000      obsgroup    
+drnflw126             7.103745E-03   4.280000E-03   2.823745E-03    1.000      obsgroup    
+drnflw127             7.487700E-03   5.120000E-03   2.367700E-03    1.000      obsgroup    
+drnflw128             7.745083E-03   5.670000E-03   2.075083E-03    1.000      obsgroup    
+drnflw129             8.395770E-03   5.600000E-03   2.795770E-03    1.000      obsgroup    
+drnflw130             8.926143E-03   6.510000E-03   2.416143E-03    1.000      obsgroup    
+drnflw131             9.330996E-03   7.100000E-03   2.230996E-03    1.000      obsgroup    
+drnflw132             1.002125E-02   8.080000E-03   1.941248E-03    1.000      obsgroup    
+drnflw133             1.073267E-02   9.870000E-03   8.626673E-04    1.000      obsgroup    
+drnflw134             1.131763E-02   1.051000E-02   8.076288E-04    1.000      obsgroup    
+drnflw135             1.206815E-02   1.158000E-02   4.881458E-04    1.000      obsgroup    
+drnflw136             1.268282E-02   1.223000E-02   4.528176E-04    1.000      obsgroup    
+drnflw137             1.362477E-02   1.334000E-02   2.847705E-04    1.000      obsgroup    
+drnflw138             1.458413E-02   1.399000E-02   5.941308E-04    1.000      obsgroup    
+drnflw139             1.555274E-02   1.512000E-02   4.327353E-04    1.000      obsgroup    
+drnflw140             1.652325E-02   1.577000E-02   7.532521E-04    1.000      obsgroup    
+drnflw141             1.700773E-02   1.545000E-02   1.557731E-03    1.000      obsgroup    
+drnflw142             1.813640E-02   1.660000E-02   1.536400E-03    1.000      obsgroup    
+drnflw143             1.927328E-02   1.876000E-02   5.132846E-04    1.000      obsgroup    
+drnflw144             2.027759E-02   2.099000E-02  -7.124109E-04    1.000      obsgroup    
+drnflw145             2.134624E-02   2.326000E-02  -1.913763E-03    1.000      obsgroup    
+drnflw146             2.253123E-02   2.556000E-02  -3.028771E-03    1.000      obsgroup    
+drnflw147             2.318799E-02   2.789000E-02  -4.702014E-03    1.000      obsgroup    
+drnflw148             2.415136E-02   2.839000E-02  -4.238642E-03    1.000      obsgroup    
+drnflw149             2.444861E-02   2.951000E-02  -5.061389E-03    1.000      obsgroup    
+drnflw150             2.573538E-02   3.187000E-02  -6.134620E-03    1.000      obsgroup    
+drnflw151             2.792289E-02   3.229000E-02  -4.367113E-03    1.000      obsgroup    
+drnflw152             3.036775E-02   3.534000E-02  -4.972252E-03    1.000      obsgroup    
+drnflw153             3.191187E-02   3.700000E-02  -5.088129E-03    1.000      obsgroup    
+drnflw154             3.281261E-02   3.800000E-02  -5.187391E-03    1.000      obsgroup    
+drnflw155             3.358467E-02   3.828000E-02  -4.695330E-03    1.000      obsgroup    
+drnflw156             3.461409E-02   3.925000E-02  -4.635914E-03    1.000      obsgroup    
+drnflw157             3.512879E-02   3.949000E-02  -4.361207E-03    1.000      obsgroup    
+drnflw158             3.525747E-02   4.045000E-02  -5.192530E-03    1.000      obsgroup    
+drnflw159             3.551482E-02   4.065000E-02  -5.135176E-03    1.000      obsgroup    
+drnflw160             3.551482E-02   3.948000E-02  -3.965176E-03    1.000      obsgroup    
+drnflw161             3.615821E-02   4.043000E-02  -4.271792E-03    1.000      obsgroup    
+drnflw162             3.602953E-02   4.064000E-02  -4.610468E-03    1.000      obsgroup    
+drnflw163             3.641556E-02   3.946000E-02  -3.044438E-03    1.000      obsgroup    
+drnflw164             3.525747E-02   4.041000E-02  -5.152530E-03    1.000      obsgroup    
+drnflw165             3.474276E-02   4.062000E-02  -5.877237E-03    1.000      obsgroup    
+drnflw166             3.474276E-02   3.945000E-02  -4.707237E-03    1.000      obsgroup    
+drnflw167             3.448541E-02   3.832000E-02  -3.834591E-03    1.000      obsgroup    
+drnflw168             3.487144E-02   3.723000E-02  -2.358561E-03    1.000      obsgroup    
+drnflw169             3.474276E-02   3.823000E-02  -3.487237E-03    1.000      obsgroup    
+drnflw170             3.474276E-02   3.849000E-02  -3.747237E-03    1.000      obsgroup    
+drnflw171             3.435673E-02   3.740000E-02  -3.043268E-03    1.000      obsgroup    
+drnflw172             3.500012E-02   3.839000E-02  -3.389884E-03    1.000      obsgroup    
+drnflw173             3.898910E-02   4.288000E-02  -3.890900E-03    1.000      obsgroup    
+drnflw174             3.963248E-02   4.666000E-02  -7.027515E-03    1.000      obsgroup    
+drnflw175             4.079058E-02   4.894000E-02  -8.149423E-03    1.000      obsgroup    
+drnflw176             4.426485E-02   5.119000E-02  -6.925147E-03    1.000      obsgroup    
+drnflw177             4.645236E-02   5.340000E-02  -6.947640E-03    1.000      obsgroup    
+drnflw178             4.979796E-02   5.321000E-02  -3.412040E-03    1.000      obsgroup    
+drnflw179             5.327224E-02   5.384000E-02  -5.677641E-04    1.000      obsgroup    
+drnflw180             5.507371E-02   5.363000E-02   1.443713E-03    1.000      obsgroup    
+drnflw181             5.597445E-02   5.425000E-02   1.724451E-03    1.000      obsgroup    
+drnflw182             5.751857E-02   5.403000E-02   3.488574E-03    1.000      obsgroup    
+drnflw183             5.687519E-02   5.228000E-02   4.595189E-03    1.000      obsgroup    
+drnflw184             5.674651E-02   5.060000E-02   6.146512E-03    1.000      obsgroup    
+drnflw185             5.443033E-02   4.901000E-02   5.420328E-03    1.000      obsgroup    
+drnflw186             5.533107E-02   4.748000E-02   7.851066E-03    1.000      obsgroup    
+drnflw187             5.314356E-02   4.601000E-02   7.133559E-03    1.000      obsgroup    
+drnflw188             5.108473E-02   4.683000E-02   4.254729E-03    1.000      obsgroup    
+drnflw189             5.018399E-02   4.685000E-02   3.333990E-03    1.000      obsgroup    
+drnflw190             4.786781E-02   4.541000E-02   2.457806E-03    1.000      obsgroup    
+drnflw191             4.632368E-02   4.404000E-02   2.283683E-03    1.000      obsgroup    
+drnflw192             4.503691E-02   4.272000E-02   2.316914E-03    1.000      obsgroup    
+drnflw193             4.323544E-02   4.146000E-02   1.775438E-03    1.000      obsgroup    
+drnflw194             4.156264E-02   4.025000E-02   1.312638E-03    1.000      obsgroup    
+drnflw195             4.091925E-02   3.909000E-02   1.829254E-03    1.000      obsgroup    
+drnflw196             3.976116E-02   3.797000E-02   1.791162E-03    1.000      obsgroup    
+drnflw197             3.834572E-02   3.690000E-02   1.445716E-03    1.000      obsgroup    
+drnflw198             3.705895E-02   3.587000E-02   1.188947E-03    1.000      obsgroup    
+drnflw199             3.577218E-02   3.488000E-02   8.921778E-04    1.000      obsgroup    
+drnflw200             3.487144E-02   3.393000E-02   9.414395E-04    1.000      obsgroup    
+drnflw201             3.345599E-02   3.301000E-02   4.459936E-04    1.000      obsgroup    
+drnflw202             3.216922E-02   3.213000E-02   3.922460E-05    1.000      obsgroup    
+drnflw203             3.178319E-02   3.128000E-02   5.031939E-04    1.000      obsgroup    
+drnflw204             3.049642E-02   3.046000E-02   3.642492E-05    1.000      obsgroup    
+drnflw205             2.869495E-02   2.967000E-02  -9.750517E-04    1.000      obsgroup    
+drnflw206             2.818024E-02   2.892000E-02  -7.397593E-04    1.000      obsgroup    
+drnflw207             2.727950E-02   2.818000E-02  -9.004975E-04    1.000      obsgroup    
+drnflw208             2.637876E-02   2.747000E-02  -1.091236E-03    1.000      obsgroup    
+drnflw209             2.547803E-02   2.679000E-02  -1.311974E-03    1.000      obsgroup    
+drnflw210             2.406258E-02   2.613000E-02  -2.067420E-03    1.000      obsgroup    
+drnflw211             2.341795E-02   2.550000E-02  -2.082048E-03    1.000      obsgroup    
+drnflw212             2.296263E-02   2.488000E-02  -1.917366E-03    1.000      obsgroup    
+drnflw213             2.232220E-02   2.429000E-02  -1.967801E-03    1.000      obsgroup    
+drnflw214             2.153328E-02   2.371000E-02  -2.176721E-03    1.000      obsgroup    
+drnflw215             2.116094E-02   2.316000E-02  -1.999062E-03    1.000      obsgroup    
+drnflw216             2.062372E-02   2.262000E-02  -1.996281E-03    1.000      obsgroup    
+drnflw217             1.976928E-02   2.210000E-02  -2.330719E-03    1.000      obsgroup    
+drnflw218             1.910874E-02   2.159000E-02  -2.481261E-03    1.000      obsgroup    
+drnflw219             1.845876E-02   2.111000E-02  -2.651244E-03    1.000      obsgroup    
+drnflw220             1.797442E-02   2.063000E-02  -2.655583E-03    1.000      obsgroup    
+drnflw221             1.749085E-02   2.018000E-02  -2.689152E-03    1.000      obsgroup    
+drnflw222             1.732963E-02   1.973000E-02  -2.400367E-03    1.000      obsgroup    
+drnflw223             1.684563E-02   1.930000E-02  -2.454374E-03    1.000      obsgroup    
+drnflw224             1.652255E-02   1.888000E-02  -2.357448E-03    1.000      obsgroup    
+drnflw225             1.603742E-02   1.848000E-02  -2.442580E-03    1.000      obsgroup    
+drnflw226             1.571382E-02   1.809000E-02  -2.376181E-03    1.000      obsgroup    
+drnflw227             1.506708E-02   1.771000E-02  -2.642916E-03    1.000      obsgroup    
+drnflw228             1.458344E-02   1.734000E-02  -2.756564E-03    1.000      obsgroup    
+drnflw229             1.426222E-02   1.698000E-02  -2.717784E-03    1.000      obsgroup    
+drnflw230             1.362408E-02   1.663000E-02  -3.005918E-03    1.000      obsgroup    
+drnflw231             1.346566E-02   1.629000E-02  -2.824336E-03    1.000      obsgroup    
+drnflw232             1.299370E-02   1.596000E-02  -2.966298E-03    1.000      obsgroup    
+drnflw233             1.283758E-02   1.564000E-02  -2.802416E-03    1.000      obsgroup    
+drnflw234             1.237331E-02   1.533000E-02  -2.956687E-03    1.000      obsgroup    
+drnflw235             1.222000E-02   1.503000E-02  -2.809999E-03    1.000      obsgroup    
+drnflw236             1.206746E-02   1.473000E-02  -2.662544E-03    1.000      obsgroup    
+drnflw237             1.161465E-02   1.445000E-02  -2.835354E-03    1.000      obsgroup    
+drnflw238             1.146537E-02   1.417000E-02  -2.704633E-03    1.000      obsgroup    
+drnflw239             1.116939E-02   1.390000E-02  -2.730607E-03    1.000      obsgroup    
+drnflw240             1.073200E-02   1.363000E-02  -2.898002E-03    1.000      obsgroup    
+drnflw241             1.073199E-02   1.338000E-02  -2.648009E-03    1.000      obsgroup    
+drnflw242             1.044481E-02   1.313000E-02  -2.685195E-03    1.000      obsgroup    
+drnflw243             1.030253E-02   1.288000E-02  -2.577472E-03    1.000      obsgroup    
+drnflw244             1.002059E-02   1.265000E-02  -2.629414E-03    1.000      obsgroup    
+drnflw245             9.880894E-03   1.241000E-02  -2.529106E-03    1.000      obsgroup    
+drnflw246             9.742041E-03   1.219000E-02  -2.447959E-03    1.000      obsgroup    
+drnflw247             9.604010E-03   1.197000E-02  -2.365990E-03    1.000      obsgroup    
+drnflw248             9.330347E-03   1.175000E-02  -2.419653E-03    1.000      obsgroup    
+drnflw249             9.330341E-03   1.155000E-02  -2.219659E-03    1.000      obsgroup    
+drnflw250             9.059726E-03   1.134000E-02  -2.280274E-03    1.000      obsgroup    
+drnflw251             9.059721E-03   1.114000E-02  -2.080279E-03    1.000      obsgroup    
+drnflw252             8.791955E-03   1.095000E-02  -2.158045E-03    1.000      obsgroup    
+drnflw253             8.659068E-03   1.076000E-02  -2.100932E-03    1.000      obsgroup    
+drnflw254             8.526806E-03   1.058000E-02  -2.053194E-03    1.000      obsgroup    
+drnflw255             8.526801E-03   1.040000E-02  -1.873199E-03    1.000      obsgroup    
+drnflw256             8.264029E-03   1.022000E-02  -1.955971E-03    1.000      obsgroup    
+drnflw257             8.133444E-03   1.005000E-02  -1.916556E-03    1.000      obsgroup    
+drnflw258             8.133439E-03   9.880000E-03  -1.746561E-03    1.000      obsgroup    
+drnflw259             7.873704E-03   9.720000E-03  -1.846296E-03    1.000      obsgroup    
+drnflw260             7.873699E-03   9.560000E-03  -1.686301E-03    1.000      obsgroup    
+drnflw261             7.744469E-03   9.400000E-03  -1.655531E-03    1.000      obsgroup    
+drnflw262             7.615614E-03   9.250000E-03  -1.634386E-03    1.000      obsgroup    
+drnflw263             7.487095E-03   9.100000E-03  -1.612905E-03    1.000      obsgroup    
+drnflw264             7.358873E-03   8.950000E-03  -1.591127E-03    1.000      obsgroup    
+drnflw265             7.230908E-03   8.810000E-03  -1.579092E-03    1.000      obsgroup    
+drnflw266             7.103159E-03   8.670000E-03  -1.566841E-03    1.000      obsgroup    
+drnflw267             7.103154E-03   8.530000E-03  -1.426846E-03    1.000      obsgroup    
+drnflw268             7.103150E-03   8.400000E-03  -1.296850E-03    1.000      obsgroup    
+drnflw269             6.848145E-03   8.270000E-03  -1.421855E-03    1.000      obsgroup    
+drnflw270             6.720804E-03   8.140000E-03  -1.419196E-03    1.000      obsgroup    
+drnflw271             6.720801E-03   8.020000E-03  -1.299199E-03    1.000      obsgroup    
+drnflw272             6.593517E-03   7.890000E-03  -1.296483E-03    1.000      obsgroup    
+drnflw273             6.593513E-03   7.770000E-03  -1.176487E-03    1.000      obsgroup    
+drnflw274             6.466248E-03   7.660000E-03  -1.193752E-03    1.000      obsgroup    
+drnflw275             6.338963E-03   7.540000E-03  -1.201037E-03    1.000      obsgroup    
+drnflw276             6.338959E-03   7.430000E-03  -1.091041E-03    1.000      obsgroup    
+drnflw277             6.211617E-03   7.320000E-03  -1.108383E-03    1.000      obsgroup    
+drnflw278             6.211613E-03   7.210000E-03  -9.983867E-04    1.000      obsgroup    
+drnflw279             6.084177E-03   7.110000E-03  -1.025823E-03    1.000      obsgroup    
+drnflw280             5.956613E-03   7.000000E-03  -1.043387E-03    1.000      obsgroup    
+drnflw281             6.084170E-03   6.900000E-03  -8.158296E-04    1.000      obsgroup    
+drnflw282             5.956606E-03   6.800000E-03  -8.433939E-04    1.000      obsgroup    
+drnflw283             5.828880E-03   6.700000E-03  -8.711204E-04    1.000      obsgroup    
+drnflw284             5.828876E-03   6.610000E-03  -7.811237E-04    1.000      obsgroup    
+drnflw285             5.700955E-03   6.520000E-03  -8.190446E-04    1.000      obsgroup    
+drnflw286             5.700952E-03   6.420000E-03  -7.190478E-04    1.000      obsgroup    
+drnflw287             5.700949E-03   6.330000E-03  -6.290510E-04    1.000      obsgroup    
+drnflw288             5.572804E-03   6.250000E-03  -6.771964E-04    1.000      obsgroup    
+drnflw289             5.572800E-03   6.160000E-03  -5.871995E-04    1.000      obsgroup    
+drnflw290             5.572797E-03   6.070000E-03  -4.972026E-04    1.000      obsgroup    
+drnflw291             5.315723E-03   5.990000E-03  -6.742770E-04    1.000      obsgroup    
+drnflw292             5.444396E-03   5.910000E-03  -4.656043E-04    1.000      obsgroup    
+drnflw293             5.315717E-03   5.830000E-03  -5.142828E-04    1.000      obsgroup    
+drnflw294             5.186734E-03   5.750000E-03  -5.632657E-04    1.000      obsgroup    
+drnflw295             5.186731E-03   5.670000E-03  -4.832685E-04    1.000      obsgroup    
+drnflw296             5.186729E-03   5.600000E-03  -4.132714E-04    1.000      obsgroup    
+drnflw297             5.057420E-03   5.530000E-03  -4.725804E-04    1.000      obsgroup    
+drnflw298             5.186723E-03   5.450000E-03  -2.632770E-04    1.000      obsgroup    
+drnflw299             5.057414E-03   5.380000E-03  -3.225858E-04    1.000      obsgroup    
+drnflw300             4.927760E-03   5.310000E-03  -3.822404E-04    1.000      obsgroup    
+drnflw301             4.927757E-03   5.240000E-03  -3.122430E-04    1.000      obsgroup    
+drnflw302             4.927754E-03   5.170000E-03  -2.422456E-04    1.000      obsgroup    
+drnflw303             4.797738E-03   5.110000E-03  -3.122625E-04    1.000      obsgroup    
+drnflw304             4.797735E-03   5.040000E-03  -2.422650E-04    1.000      obsgroup    
+drnflw305             4.797732E-03   4.980000E-03  -1.822676E-04    1.000      obsgroup    
+drnflw306             4.797730E-03   4.920000E-03  -1.222701E-04    1.000      obsgroup    
+drnflw307             4.667337E-03   4.850000E-03  -1.826630E-04    1.000      obsgroup    
+drnflw308             4.667335E-03   4.790000E-03  -1.226654E-04    1.000      obsgroup    
+drnflw309             4.536555E-03   4.730000E-03  -1.934452E-04    1.000      obsgroup    
+drnflw310             4.536552E-03   4.670000E-03  -1.334476E-04    1.000      obsgroup    
+drnflw311             4.536550E-03   4.620000E-03  -8.344993E-05    1.000      obsgroup    
+drnflw312             4.405376E-03   4.560000E-03  -1.546241E-04    1.000      obsgroup    
+drnflw313             4.536545E-03   4.500000E-03   3.654539E-05    1.000      obsgroup    
+drnflw314             4.273801E-03   4.450000E-03  -1.761989E-04    1.000      obsgroup    
+drnflw315             4.405369E-03   4.400000E-03   5.369194E-06    1.000      obsgroup    
+drnflw316             4.273797E-03   4.340000E-03  -6.620317E-05    1.000      obsgroup    
+drnflw317             4.273795E-03   4.290000E-03  -1.620532E-05    1.000      obsgroup    
+drnflw318             4.273793E-03   4.240000E-03   3.379253E-05    1.000      obsgroup    
+drnflw319             4.273790E-03   4.190000E-03   8.379038E-05    1.000      obsgroup    
+drnflw320             4.141819E-03   4.140000E-03   1.819440E-06    1.000      obsgroup    
+drnflw321             4.273786E-03   4.090000E-03   1.837861E-04    1.000      obsgroup    
+drnflw322             4.141815E-03   4.040000E-03   1.018153E-04    1.000      obsgroup    
+drnflw323             4.141813E-03   4.000000E-03   1.418133E-04    1.000      obsgroup    
+drnflw324             4.009447E-03   3.950000E-03   5.944728E-05    1.000      obsgroup    
+drnflw325             4.009445E-03   3.910000E-03   9.944532E-05    1.000      obsgroup    
+drnflw326             4.009443E-03   3.860000E-03   1.494434E-04    1.000      obsgroup    
+drnflw327             4.009441E-03   3.820000E-03   1.894414E-04    1.000      obsgroup    
+drnflw328             3.876688E-03   3.770000E-03   1.066879E-04    1.000      obsgroup    
+drnflw329             3.876686E-03   3.730000E-03   1.466861E-04    1.000      obsgroup    
+drnflw330             3.876684E-03   3.690000E-03   1.866842E-04    1.000      obsgroup    
+drnflw331             3.876682E-03   3.650000E-03   2.266823E-04    1.000      obsgroup    
+drnflw332             3.876680E-03   3.610000E-03   2.666805E-04    1.000      obsgroup    
+drnflw333             3.743551E-03   3.570000E-03   1.735515E-04    1.000      obsgroup    
+drnflw334             3.876677E-03   3.530000E-03   3.466768E-04    1.000      obsgroup    
+drnflw335             3.743548E-03   3.490000E-03   2.535480E-04    1.000      obsgroup    
+drnflw336             3.743546E-03   3.450000E-03   2.935462E-04    1.000      obsgroup    
+drnflw337             3.743544E-03   3.410000E-03   3.335444E-04    1.000      obsgroup    
+drnflw338             3.743543E-03   3.370000E-03   3.735427E-04    1.000      obsgroup    
+drnflw339             3.610055E-03   3.340000E-03   2.700546E-04    1.000      obsgroup    
+drnflw340             3.743539E-03   3.300000E-03   4.435391E-04    1.000      obsgroup    
+drnflw341             3.610051E-03   3.270000E-03   3.400513E-04    1.000      obsgroup    
+drnflw342             3.610050E-03   3.230000E-03   3.800496E-04    1.000      obsgroup    
+drnflw343             3.610048E-03   3.200000E-03   4.100479E-04    1.000      obsgroup    
+drnflw344             3.476222E-03   3.160000E-03   3.162219E-04    1.000      obsgroup    
+drnflw345             3.476220E-03   3.130000E-03   3.462203E-04    1.000      obsgroup    
+drnflw346             3.342082E-03   3.100000E-03   2.420821E-04    1.000      obsgroup    
+drnflw347             3.476217E-03   3.060000E-03   4.162171E-04    1.000      obsgroup    
+drnflw348             3.476216E-03   3.030000E-03   4.462156E-04    1.000      obsgroup    
+drnflw349             3.342078E-03   3.000000E-03   3.420776E-04    1.000      obsgroup    
+drnflw350             3.342076E-03   2.970000E-03   3.720762E-04    1.000      obsgroup    
+drnflw351             3.342075E-03   2.940000E-03   4.020747E-04    1.000      obsgroup    
+drnflw352             3.342073E-03   2.910000E-03   4.320732E-04    1.000      obsgroup    
+drnflw353             3.342072E-03   2.880000E-03   4.620717E-04    1.000      obsgroup    
+drnflw354             3.342070E-03   2.850000E-03   4.920702E-04    1.000      obsgroup    
+drnflw355             3.342069E-03   2.820000E-03   5.220687E-04    1.000      obsgroup    
+drnflw356             3.342067E-03   2.790000E-03   5.520672E-04    1.000      obsgroup    
+drnflw357             3.342066E-03   2.770000E-03   5.720657E-04    1.000      obsgroup    
+drnflw358             3.342064E-03   2.740000E-03   6.020643E-04    1.000      obsgroup    
+drnflw359             3.207646E-03   2.710000E-03   4.976463E-04    1.000      obsgroup    
+drnflw360             3.207645E-03   2.680000E-03   5.276449E-04    1.000      obsgroup    
+drnflw361             3.207644E-03   2.660000E-03   5.476435E-04    1.000      obsgroup    
+drnflw362             3.207642E-03   2.630000E-03   5.776421E-04    1.000      obsgroup    
+drnflw363             3.072980E-03   2.600000E-03   4.729805E-04    1.000      obsgroup    
+drnflw364             3.207639E-03   2.580000E-03   6.276393E-04    1.000      obsgroup    
+drnflw365             3.072978E-03   2.550000E-03   5.229779E-04    1.000      obsgroup    
+drnflw366             3.207637E-03   2.530000E-03   6.776365E-04    1.000      obsgroup    
+drnflw367             3.072975E-03   2.500000E-03   5.729753E-04    1.000      obsgroup    
+drnflw368             3.072974E-03   2.480000E-03   5.929740E-04    1.000      obsgroup    
+drnflw369             3.072973E-03   2.460000E-03   6.129727E-04    1.000      obsgroup    
+drnflw370             2.938110E-03   2.430000E-03   5.081104E-04    1.000      obsgroup    
+drnflw371             3.072970E-03   2.410000E-03   6.629701E-04    1.000      obsgroup    
+drnflw372             2.938108E-03   2.390000E-03   5.481080E-04    1.000      obsgroup    
+drnflw373             2.938107E-03   2.370000E-03   5.681068E-04    1.000      obsgroup    
+drnflw374             2.938106E-03   2.340000E-03   5.981056E-04    1.000      obsgroup    
+drnflw375             2.938104E-03   2.320000E-03   6.181044E-04    1.000      obsgroup    
+drnflw376             2.938103E-03   2.300000E-03   6.381031E-04    1.000      obsgroup    
+drnflw377             2.938102E-03   2.280000E-03   6.581019E-04    1.000      obsgroup    
+drnflw378             2.938101E-03   2.260000E-03   6.781007E-04    1.000      obsgroup    
+drnflw379             2.938099E-03   2.240000E-03   6.980995E-04    1.000      obsgroup    
+drnflw380             2.938098E-03   2.220000E-03   7.180983E-04    1.000      obsgroup    
+drnflw381             2.938097E-03   2.200000E-03   7.380971E-04    1.000      obsgroup    
+drnflw382             2.938096E-03   2.180000E-03   7.580959E-04    1.000      obsgroup    
+drnflw383             2.938095E-03   2.160000E-03   7.780946E-04    1.000      obsgroup    
+drnflw384             2.803081E-03   2.140000E-03   6.630813E-04    1.000      obsgroup    
+drnflw385             2.938092E-03   2.120000E-03   8.180922E-04    1.000      obsgroup    
+drnflw386             2.938091E-03   2.100000E-03   8.380910E-04    1.000      obsgroup    
+drnflw387             2.803078E-03   2.080000E-03   7.230779E-04    1.000      obsgroup    
+drnflw388             2.803077E-03   2.060000E-03   7.430768E-04    1.000      obsgroup    
+drnflw389             2.938087E-03   2.040000E-03   8.980873E-04    1.000      obsgroup    
+drnflw390             2.803075E-03   2.020000E-03   7.830746E-04    1.000      obsgroup    
+drnflw391             2.667965E-03   2.010000E-03   6.579650E-04    1.000      obsgroup    
+drnflw392             2.803072E-03   1.990000E-03   8.130723E-04    1.000      obsgroup    
+drnflw393             2.803071E-03   1.970000E-03   8.330712E-04    1.000      obsgroup    
+drnflw394             2.667962E-03   1.950000E-03   7.179618E-04    1.000      obsgroup    
+drnflw395             2.803069E-03   1.940000E-03   8.630689E-04    1.000      obsgroup    
+drnflw396             2.667960E-03   1.920000E-03   7.479597E-04    1.000      obsgroup    
+drnflw397             2.667959E-03   1.900000E-03   7.679587E-04    1.000      obsgroup    
+drnflw398             2.667958E-03   1.890000E-03   7.779577E-04    1.000      obsgroup    
+drnflw399             2.532814E-03   1.870000E-03   6.628141E-04    1.000      obsgroup    
+drnflw400             2.667956E-03   1.850000E-03   8.179556E-04    1.000      obsgroup    
+drnflw401             2.667955E-03   1.840000E-03   8.279545E-04    1.000      obsgroup    
+drnflw402             2.532811E-03   1.820000E-03   7.128113E-04    1.000      obsgroup    
+drnflw403             2.532810E-03   1.810000E-03   7.228103E-04    1.000      obsgroup    
+drnflw404             2.667951E-03   1.790000E-03   8.779514E-04    1.000      obsgroup    
+drnflw405             2.532808E-03   1.780000E-03   7.528084E-04    1.000      obsgroup    
+drnflw406             2.532807E-03   1.760000E-03   7.728074E-04    1.000      obsgroup    
+drnflw407             2.532806E-03   1.750000E-03   7.828065E-04    1.000      obsgroup    
+drnflw408             2.532805E-03   1.730000E-03   8.028055E-04    1.000      obsgroup    
+drnflw409             2.532805E-03   1.720000E-03   8.128045E-04    1.000      obsgroup    
+drnflw410             2.532804E-03   1.700000E-03   8.328036E-04    1.000      obsgroup    
+drnflw411             2.532803E-03   1.690000E-03   8.428026E-04    1.000      obsgroup    
+drnflw412             2.532802E-03   1.680000E-03   8.528017E-04    1.000      obsgroup    
+drnflw413             2.532801E-03   1.660000E-03   8.728007E-04    1.000      obsgroup    
+drnflw414             2.532800E-03   1.650000E-03   8.827997E-04    1.000      obsgroup    
+drnflw415             2.532799E-03   1.640000E-03   8.927988E-04    1.000      obsgroup    
+drnflw416             2.532798E-03   1.620000E-03   9.127978E-04    1.000      obsgroup    
+drnflw417             2.397691E-03   1.610000E-03   7.876907E-04    1.000      obsgroup    
+drnflw418             2.532796E-03   1.600000E-03   9.327959E-04    1.000      obsgroup    
+drnflw419             2.532795E-03   1.580000E-03   9.527949E-04    1.000      obsgroup    
+drnflw420             2.397688E-03   1.570000E-03   8.276880E-04    1.000      obsgroup    
+drnflw421             2.532793E-03   1.560000E-03   9.727930E-04    1.000      obsgroup    
+drnflw422             2.397686E-03   1.550000E-03   8.476863E-04    1.000      obsgroup    
+drnflw423             2.532791E-03   1.530000E-03   1.002791E-03    1.000      obsgroup    
+drnflw424             2.397685E-03   1.520000E-03   8.776845E-04    1.000      obsgroup    
+drnflw425             2.397684E-03   1.510000E-03   8.876837E-04    1.000      obsgroup    
+drnflw426             2.397683E-03   1.500000E-03   8.976828E-04    1.000      obsgroup    
+drnflw427             2.397682E-03   1.490000E-03   9.076819E-04    1.000      obsgroup    
+drnflw428             2.262688E-03   1.470000E-03   7.926877E-04    1.000      obsgroup    
+drnflw429             2.397680E-03   1.460000E-03   9.376801E-04    1.000      obsgroup    
+drnflw430             2.397679E-03   1.450000E-03   9.476793E-04    1.000      obsgroup    
+drnflw431             2.262685E-03   1.440000E-03   8.226853E-04    1.000      obsgroup    
+drnflw432             2.262685E-03   1.430000E-03   8.326845E-04    1.000      obsgroup    
+drnflw433             2.262684E-03   1.420000E-03   8.426837E-04    1.000      obsgroup    
+drnflw434             2.262683E-03   1.410000E-03   8.526829E-04    1.000      obsgroup    
+ttl_dflw              0.367000       0.370000      -3.000000E-03    2.000      obsgroup    
+
+See file groof17val2_gr.res for more details of residuals in graph-ready format.
+
+See file groof17val2_gr.seo for composite observation sensitivities.
+
+
+Objective function ----->
+
+  Sum of squared weighted residuals (ie phi)                =  2.3616E-03
+
+
+Correlation Coefficient ----->
+
+  Correlation coefficient                                   =  0.99814    
+
+
+Analysis of residuals ----->
+
+  All residuals:-
+     Number of residuals with non-zero weight                       =   435
+     Mean value of non-zero weighted residuals                      = -2.5297E-05
+     Maximum weighted residual [observation "drnflw186"]            =  7.8511E-03
+     Minimum weighted residual [observation "drnflw175"]            = -8.1494E-03
+     Standard variance of weighted residuals                        =  5.5177E-06
+     Standard error of weighted residuals                           =  2.3490E-03
+
+     Note: the above variance was obtained by dividing the objective 
+     function by the number of system degrees of freedom (ie. number of 
+     observations with non-zero weight plus number of prior information 
+     articles with non-zero weight minus the number of adjustable parameters.)
+     If the degrees of freedom is negative the divisor becomes 
+     the number of observations with non-zero weight plus the number of 
+     prior information items with non-zero weight.
+
+
+K-L information statistics ----->
+
+
+  AIC   =  -5257.841    
+  AICC  =  -5257.503    
+  BIC   =  -5225.239    
+  KIC   =  -5246.848    
+
+Parameter covariance matrix ----->
+
+               ldu_wdth    ldu_ntstr     sl_prsty     sl_fldcp     sl_wltpt    drnm_vdfr    drnm_rghns 
+ldu_wdth        700.6       -11.33        1.729      -9.3626E-03  -6.2256E-03    2.182        27.88    
+ldu_ntstr      -11.33       0.3419      -5.0391E-02   6.5348E-04   4.3379E-04  -5.0633E-02  -0.2979    
+sl_prsty        1.729      -5.0391E-02   1.2179E-02   2.4361E-04   1.6117E-04   7.4333E-03   5.2685E-02
+sl_fldcp      -9.3626E-03   6.5348E-04   2.4361E-04   3.1537E-05   2.1085E-05  -3.4478E-05  -2.1290E-04
+sl_wltpt      -6.2256E-03   4.3379E-04   1.6117E-04   2.1085E-05   1.4164E-05  -2.2694E-05  -1.4365E-04
+drnm_vdfr       2.182      -5.0633E-02   7.4333E-03  -3.4478E-05  -2.2694E-05   1.1296E-02   4.4301E-02
+drnm_rghns      27.88      -0.2979       5.2685E-02  -2.1290E-04  -1.4365E-04   4.4301E-02    1.542    
+
+
+Parameter correlation coefficient matrix ----->
+
+               ldu_wdth    ldu_ntstr     sl_prsty     sl_fldcp     sl_wltpt    drnm_vdfr    drnm_rghns 
+ldu_wdth        1.000      -0.7321       0.5920      -6.2988E-02  -6.2498E-02   0.7758       0.8482    
+ldu_ntstr     -0.7321        1.000      -0.7809       0.1990       0.1971      -0.8147      -0.4102    
+sl_prsty       0.5920      -0.7809        1.000       0.3931       0.3881       0.6338       0.3844    
+sl_fldcp      -6.2988E-02   0.1990       0.3931        1.000       0.9976      -5.7767E-02  -3.0525E-02
+sl_wltpt      -6.2498E-02   0.1971       0.3881       0.9976        1.000      -5.6738E-02  -3.0733E-02
+drnm_vdfr      0.7758      -0.8147       0.6338      -5.7767E-02  -5.6738E-02    1.000       0.3356    
+drnm_rghns     0.8482      -0.4102       0.3844      -3.0525E-02  -3.0733E-02   0.3356        1.000    
+
+
+Normalized eigenvectors of parameter covariance matrix ----->
+
+              Vector_1     Vector_2     Vector_3     Vector_4     Vector_5     Vector_6     Vector_7   
+ldu_wdth      -4.6265E-05   7.9298E-04  -6.9276E-03  -4.1868E-04   3.1017E-02   2.9130E-02  -0.9991    
+ldu_ntstr     -1.1599E-03   2.0162E-02  -1.0614E-02  -0.1636       0.8980      -0.4076       1.6153E-02
+sl_prsty      -5.5558E-03   9.5766E-02  -8.5266E-02  -0.9777      -0.1594       4.8171E-02  -2.4655E-03
+sl_fldcp       0.5991      -0.7933      -7.8400E-02  -7.4909E-02   3.7094E-03  -6.6676E-04   1.3353E-05
+sl_wltpt      -0.8006      -0.5948      -5.1813E-02  -4.9624E-02   2.4700E-03  -4.3907E-04   8.8794E-06
+drnm_vdfr      5.0015E-03  -8.4609E-02   0.9870      -9.5979E-02   3.6869E-02   8.9731E-02  -3.1103E-03
+drnm_rghns     6.6657E-04  -1.1447E-02   9.7745E-02   1.2150E-02  -0.4073      -0.9070      -3.9783E-02
+
+
+Eigenvalues ----->
+
+               3.4044E-08   3.9399E-06   2.7108E-04   4.5900E-03   9.2524E-02   0.5059        701.9    

@@ -1,0 +1,676 @@
+
+                    PEST RUN RECORD: CASE villit0707
+
+
+PEST Version: 13.6
+
+
+PEST run mode:-
+
+   Parameter estimation mode
+
+
+Case dimensions:-
+
+   Number of parameters                           :    11
+   Number of adjustable parameters                :    11
+   Number of parameter groups                     :     1
+   Number of observations                         :   525
+   Number of prior estimates                      :     0
+
+
+Model command line(s):-
+
+   swmm5.exe villit0707.inp villit0707.rpt villit0707.out
+
+
+Jacobian command line:-
+
+   na
+
+
+Model interface files:-
+
+   Templates:
+      villit0707.tpl
+   for model input files:
+      villit0707.inp
+
+   (Parameter values written using single precision protocol.)
+   (Decimal point always included.)
+
+   Instruction files:
+      villit0707.ins
+   for reading model output files:
+      villit0707.txt
+
+
+PEST-to-model message file:-
+
+   na
+
+
+Derivatives calculation:-
+
+Param        Increment   Increment   Increment   Forward or   Multiplier  Method
+group        type                    low bound   central      (central)   (central)
+paragroup    relative    1.0000E-02   none         switch       2.000     parabolic
+
+
+Parameter definitions:-
+
+Name         Trans-            Change       Initial        Lower          Upper
+             formation         limit        value          bound          bound
+infl_schd    none              relative    2.00000        1.00000        3.00000    
+infl_cndt    none              relative    5.00000        1.00000        6.00000    
+infl_intd    none              relative    2.00000        1.00000        5.00000    
+srf_rghns    none              relative    2.00000        1.00000        3.00000    
+str_vdrto    none              relative    2.00000        1.00000        4.00000    
+str_hdcnd    none              relative    2.00000        1.00000        5.00000    
+str_clgfr    none              relative    2.00000        1.00000        8.00000    
+drn_flwco    none              relative    2.00000        1.00000        4.00000    
+drn_fwexp    none              relative    2.00000        1.00000        7.00000    
+srf_width    none              relative    2.00000        1.00000        8.00000    
+int_sat      none              relative    2.00000        1.00000        8.00000    
+
+Name         Group          Scale         Offset        Model command number
+infl_schd    paragroup     1.00000        0.00000            1
+infl_cndt    paragroup     1.00000        0.00000            1
+infl_intd    paragroup     1.00000        0.00000            1
+srf_rghns    paragroup     1.00000        0.00000            1
+str_vdrto    paragroup     1.00000        0.00000            1
+str_hdcnd    paragroup     1.00000        0.00000            1
+str_clgfr    paragroup     1.00000        0.00000            1
+drn_flwco    paragroup     1.00000        0.00000            1
+drn_fwexp    paragroup     1.00000        0.00000            1
+srf_width    paragroup     1.00000        0.00000            1
+int_sat      paragroup     1.00000        0.00000            1
+
+
+Prior information:-
+
+   No prior information supplied
+
+
+Observations:-
+
+Observation name        Observation       Weight       Group
+ stdepth1               0.600000          1.000       obsgroup    
+ stdepth2               0.600000          1.000       obsgroup    
+ stdepth3               0.600000          1.000       obsgroup    
+ stdepth4               0.600000          1.000       obsgroup    
+ stdepth5               0.600000          1.000       obsgroup    
+ stdepth6               0.600000          1.000       obsgroup    
+ stdepth7               0.600000          1.000       obsgroup    
+ stdepth8               0.600000          1.000       obsgroup    
+ stdepth9               0.600000          1.000       obsgroup    
+ stdepth10              0.600000          1.000       obsgroup    
+ stdepth11              0.600000          1.000       obsgroup    
+ stdepth12              0.600000          1.000       obsgroup    
+ stdepth13              0.600000          1.000       obsgroup    
+ stdepth14              0.600000          1.000       obsgroup    
+ stdepth15              0.600000          1.000       obsgroup    
+ stdepth16              0.600000          1.000       obsgroup    
+ stdepth17              0.600000          1.000       obsgroup    
+ stdepth18              0.600000          1.000       obsgroup    
+ stdepth19              0.600000          1.000       obsgroup    
+ stdepth20              0.600000          1.000       obsgroup    
+ stdepth21              0.600000          1.000       obsgroup    
+ stdepth22              0.600000          1.000       obsgroup    
+ stdepth23              0.600000          1.000       obsgroup    
+ stdepth24              0.600000          1.000       obsgroup    
+ stdepth25              0.600000          1.000       obsgroup    
+ stdepth26              0.600000          1.000       obsgroup    
+ stdepth27              0.600000          1.000       obsgroup    
+ stdepth28              0.600000          1.000       obsgroup    
+ stdepth29              0.600000          1.000       obsgroup    
+ stdepth30              0.600000          1.000       obsgroup    
+ stdepth31              0.600000          1.000       obsgroup    
+ stdepth32              0.600000          1.000       obsgroup    
+ stdepth33              0.600000          1.000       obsgroup    
+ stdepth34              0.600000          1.000       obsgroup    
+ stdepth35              0.600000          1.000       obsgroup    
+ stdepth36              0.600000          1.000       obsgroup    
+ stdepth37              0.600000          1.000       obsgroup    
+ stdepth38              0.600000          1.000       obsgroup    
+ stdepth39              0.600000          1.000       obsgroup    
+ stdepth40              0.600000          1.000       obsgroup    
+ stdepth41              0.600000          1.000       obsgroup    
+ stdepth42              0.600000          1.000       obsgroup    
+ stdepth43              0.600000          1.000       obsgroup    
+ stdepth44              0.600000          1.000       obsgroup    
+ stdepth45              0.600000          1.000       obsgroup    
+ stdepth46              0.600000          1.000       obsgroup    
+ stdepth47              0.600000          1.000       obsgroup    
+ stdepth48              0.600000          1.000       obsgroup    
+ stdepth49              0.600000          1.000       obsgroup    
+ stdepth50              0.600000          1.000       obsgroup    
+ stdepth51              0.600000          1.000       obsgroup    
+ stdepth52              0.600000          1.000       obsgroup    
+ stdepth53              0.600000          1.000       obsgroup    
+ stdepth54              0.600000          1.000       obsgroup    
+ stdepth55              0.600000          1.000       obsgroup    
+ stdepth56              0.600000          1.000       obsgroup    
+ stdepth57              0.600000          1.000       obsgroup    
+ stdepth58              0.600000          1.000       obsgroup    
+ stdepth59              0.600000          1.000       obsgroup    
+ stdepth60              0.600000          1.000       obsgroup    
+ stdepth61              0.600000          1.000       obsgroup    
+ stdepth62              0.600000          1.000       obsgroup    
+ stdepth63              0.600000          1.000       obsgroup    
+ stdepth64              0.600000          1.000       obsgroup    
+ stdepth65              0.600000          1.000       obsgroup    
+ stdepth66              0.600000          1.000       obsgroup    
+ stdepth67              0.600000          1.000       obsgroup    
+ stdepth68              0.600000          1.000       obsgroup    
+ stdepth69              0.600000          1.000       obsgroup    
+ stdepth70              0.600000          1.000       obsgroup    
+ stdepth71              0.600000          1.000       obsgroup    
+ stdepth72              0.600000          1.000       obsgroup    
+ stdepth73              0.600000          1.000       obsgroup    
+ stdepth74              0.600000          1.000       obsgroup    
+ stdepth75              0.600000          1.000       obsgroup    
+ stdepth76              0.600000          1.000       obsgroup    
+ stdepth77              0.600000          1.000       obsgroup    
+ stdepth78              0.600000          1.000       obsgroup    
+ stdepth79              0.600000          1.000       obsgroup    
+ stdepth80              0.600000          1.000       obsgroup    
+ stdepth81              0.600000          1.000       obsgroup    
+ stdepth82              0.600000          1.000       obsgroup    
+ stdepth83              0.600000          1.000       obsgroup    
+ stdepth84              0.600000          1.000       obsgroup    
+ stdepth85              0.600000          1.000       obsgroup    
+ stdepth86              0.600000          1.000       obsgroup    
+ stdepth87              0.600000          1.000       obsgroup    
+ stdepth88              0.600000          1.000       obsgroup    
+ stdepth89              0.600000          1.000       obsgroup    
+ stdepth90              0.600000          1.000       obsgroup    
+ stdepth91              0.600000          1.000       obsgroup    
+ stdepth92              0.600000          1.000       obsgroup    
+ stdepth93              0.600000          1.000       obsgroup    
+ stdepth94              0.600000          1.000       obsgroup    
+ stdepth95              0.600000          1.000       obsgroup    
+ stdepth96              0.600000          1.000       obsgroup    
+ stdepth97              0.600000          1.000       obsgroup    
+ stdepth98              0.600000          1.000       obsgroup    
+ stdepth99              0.600000          1.000       obsgroup    
+ stdepth100             0.600000          1.000       obsgroup    
+ stdepth101             0.600000          1.000       obsgroup    
+ stdepth102             0.600000          1.000       obsgroup    
+ stdepth103             0.600000          1.000       obsgroup    
+ stdepth104             0.600000          1.000       obsgroup    
+ stdepth105             0.600000          1.000       obsgroup    
+ stdepth106             0.600000          1.000       obsgroup    
+ stdepth107             0.600000          1.000       obsgroup    
+ stdepth108             0.600000          1.000       obsgroup    
+ stdepth109             0.600000          1.000       obsgroup    
+ stdepth110             0.600000          1.000       obsgroup    
+ stdepth111             0.600000          1.000       obsgroup    
+ stdepth112             0.600000          1.000       obsgroup    
+ stdepth113             0.600000          1.000       obsgroup    
+ stdepth114             0.600000          1.000       obsgroup    
+ stdepth115             0.600000          1.000       obsgroup    
+ stdepth116             0.600000          1.000       obsgroup    
+ stdepth117             0.600000          1.000       obsgroup    
+ stdepth118             0.600000          1.000       obsgroup    
+ stdepth119             0.600000          1.000       obsgroup    
+ stdepth120             0.600000          1.000       obsgroup    
+ stdepth121             0.600000          1.000       obsgroup    
+ stdepth122             0.600000          1.000       obsgroup    
+ stdepth123             0.600000          1.000       obsgroup    
+ stdepth124             0.600000          1.000       obsgroup    
+ stdepth125             0.600000          1.000       obsgroup    
+ stdepth126             0.600000          1.000       obsgroup    
+ stdepth127             0.600000          1.000       obsgroup    
+ stdepth128             0.600000          1.000       obsgroup    
+ stdepth129             0.600000          1.000       obsgroup    
+ stdepth130             0.600000          1.000       obsgroup    
+ stdepth131             0.600000          1.000       obsgroup    
+ stdepth132             0.600000          1.000       obsgroup    
+ stdepth133             0.600000          1.000       obsgroup    
+ stdepth134             0.600000          1.000       obsgroup    
+ stdepth135             0.600000          1.000       obsgroup    
+ stdepth136             0.840000          1.000       obsgroup    
+ stdepth137              1.32000          1.000       obsgroup    
+ stdepth138              1.80000          1.000       obsgroup    
+ stdepth139              2.40000          1.000       obsgroup    
+ stdepth140              2.88000          1.000       obsgroup    
+ stdepth141              3.48000          1.000       obsgroup    
+ stdepth142              4.08000          1.000       obsgroup    
+ stdepth143              4.56000          1.000       obsgroup    
+ stdepth144              5.04000          1.000       obsgroup    
+ stdepth145              5.52000          1.000       obsgroup    
+ stdepth146              6.00000          1.000       obsgroup    
+ stdepth147              6.48000          1.000       obsgroup    
+ stdepth148              6.96000          1.000       obsgroup    
+ stdepth149              7.44000          1.000       obsgroup    
+ stdepth150              7.92000          1.000       obsgroup    
+ stdepth151              8.52000          1.000       obsgroup    
+ stdepth152              9.12000          1.000       obsgroup    
+ stdepth153              9.60000          1.000       obsgroup    
+ stdepth154              10.2000          1.000       obsgroup    
+ stdepth155              10.8000          1.000       obsgroup    
+ stdepth156              11.4000          1.000       obsgroup    
+ stdepth157              12.1200          1.000       obsgroup    
+ stdepth158              13.0800          1.000       obsgroup    
+ stdepth159              14.2800          1.000       obsgroup    
+ stdepth160              16.0800          1.000       obsgroup    
+ stdepth161              18.2400          1.000       obsgroup    
+ stdepth162              21.0000          1.000       obsgroup    
+ stdepth163              24.0000          1.000       obsgroup    
+ stdepth164              27.3600          1.000       obsgroup    
+ stdepth165              30.9600          1.000       obsgroup    
+ stdepth166              35.1600          1.000       obsgroup    
+ stdepth167              39.2400          1.000       obsgroup    
+ stdepth168              43.6800          1.000       obsgroup    
+ stdepth169              47.6400          1.000       obsgroup    
+ stdepth170              50.2800          1.000       obsgroup    
+ stdepth171              52.2000          1.000       obsgroup    
+ stdepth172              53.5200          1.000       obsgroup    
+ stdepth173              54.4800          1.000       obsgroup    
+ stdepth174              55.0800          1.000       obsgroup    
+ stdepth175              55.2000          1.000       obsgroup    
+ stdepth176              54.9600          1.000       obsgroup    
+ stdepth177              54.6000          1.000       obsgroup    
+ stdepth178              54.1200          1.000       obsgroup    
+ stdepth179              53.5200          1.000       obsgroup    
+ stdepth180              53.0400          1.000       obsgroup    
+ stdepth181              52.4400          1.000       obsgroup    
+ stdepth182              51.8400          1.000       obsgroup    
+ stdepth183              51.3600          1.000       obsgroup    
+ stdepth184              51.0000          1.000       obsgroup    
+ stdepth185              50.7600          1.000       obsgroup    
+ stdepth186              50.7600          1.000       obsgroup    
+ stdepth187              50.8800          1.000       obsgroup    
+ stdepth188              51.2400          1.000       obsgroup    
+ stdepth189              51.7200          1.000       obsgroup    
+ stdepth190              52.2000          1.000       obsgroup    
+ stdepth191              52.5600          1.000       obsgroup    
+ stdepth192              53.0400          1.000       obsgroup    
+ stdepth193              53.4000          1.000       obsgroup    
+ stdepth194              53.6400          1.000       obsgroup    
+ stdepth195              53.7600          1.000       obsgroup    
+ stdepth196              53.7600          1.000       obsgroup    
+ stdepth197              53.5200          1.000       obsgroup    
+ stdepth198              53.4000          1.000       obsgroup    
+ stdepth199              53.0400          1.000       obsgroup    
+ stdepth200              52.6800          1.000       obsgroup    
+ stdepth201              52.2000          1.000       obsgroup    
+ stdepth202              51.7200          1.000       obsgroup    
+ stdepth203              51.2400          1.000       obsgroup    
+ stdepth204              50.6400          1.000       obsgroup    
+ stdepth205              50.1600          1.000       obsgroup    
+ stdepth206              49.6800          1.000       obsgroup    
+ stdepth207              49.0800          1.000       obsgroup    
+ stdepth208              48.6000          1.000       obsgroup    
+ stdepth209              48.0000          1.000       obsgroup    
+ stdepth210              47.4000          1.000       obsgroup    
+ stdepth211              46.9200          1.000       obsgroup    
+ stdepth212              46.3200          1.000       obsgroup    
+ stdepth213              45.7200          1.000       obsgroup    
+ stdepth214              45.1200          1.000       obsgroup    
+ stdepth215              44.5200          1.000       obsgroup    
+ stdepth216              43.9200          1.000       obsgroup    
+ stdepth217              43.3200          1.000       obsgroup    
+ stdepth218              42.7200          1.000       obsgroup    
+ stdepth219              42.1200          1.000       obsgroup    
+ stdepth220              41.5200          1.000       obsgroup    
+ stdepth221              40.9200          1.000       obsgroup    
+ stdepth222              40.3200          1.000       obsgroup    
+ stdepth223              39.8400          1.000       obsgroup    
+ stdepth224              39.2400          1.000       obsgroup    
+ stdepth225              38.6400          1.000       obsgroup    
+ stdepth226              38.0400          1.000       obsgroup    
+ stdepth227              37.4400          1.000       obsgroup    
+ stdepth228              36.9600          1.000       obsgroup    
+ stdepth229              36.6000          1.000       obsgroup    
+ stdepth230              36.1200          1.000       obsgroup    
+ stdepth231              35.8800          1.000       obsgroup    
+ stdepth232              35.5200          1.000       obsgroup    
+ stdepth233              35.2800          1.000       obsgroup    
+ stdepth234              35.1600          1.000       obsgroup    
+ stdepth235              35.2800          1.000       obsgroup    
+ stdepth236              35.4000          1.000       obsgroup    
+ stdepth237              35.7600          1.000       obsgroup    
+ stdepth238              36.1200          1.000       obsgroup    
+ stdepth239              36.7200          1.000       obsgroup    
+ stdepth240              37.2000          1.000       obsgroup    
+ stdepth241              37.9200          1.000       obsgroup    
+ stdepth242              38.5200          1.000       obsgroup    
+ stdepth243              39.3600          1.000       obsgroup    
+ stdepth244              40.0800          1.000       obsgroup    
+ stdepth245              40.8000          1.000       obsgroup    
+ stdepth246              41.5200          1.000       obsgroup    
+ stdepth247              42.1200          1.000       obsgroup    
+ stdepth248              42.6000          1.000       obsgroup    
+ stdepth249              42.9600          1.000       obsgroup    
+ stdepth250              43.2000          1.000       obsgroup    
+ stdepth251              43.4400          1.000       obsgroup    
+ stdepth252              43.4400          1.000       obsgroup    
+ stdepth253              43.4400          1.000       obsgroup    
+ stdepth254              43.4400          1.000       obsgroup    
+ stdepth255              43.3200          1.000       obsgroup    
+ stdepth256              43.2000          1.000       obsgroup    
+ stdepth257              42.9600          1.000       obsgroup    
+ stdepth258              42.7200          1.000       obsgroup    
+ stdepth259              42.4800          1.000       obsgroup    
+ stdepth260              42.2400          1.000       obsgroup    
+ stdepth261              42.0000          1.000       obsgroup    
+ stdepth262              41.7600          1.000       obsgroup    
+ stdepth263              41.5200          1.000       obsgroup    
+ stdepth264              41.1600          1.000       obsgroup    
+ stdepth265              40.9200          1.000       obsgroup    
+ stdepth266              40.5600          1.000       obsgroup    
+ stdepth267              40.3200          1.000       obsgroup    
+ stdepth268              39.9600          1.000       obsgroup    
+ stdepth269              39.6000          1.000       obsgroup    
+ stdepth270              39.2400          1.000       obsgroup    
+ stdepth271              38.8800          1.000       obsgroup    
+ stdepth272              38.5200          1.000       obsgroup    
+ stdepth273              38.1600          1.000       obsgroup    
+ stdepth274              37.6800          1.000       obsgroup    
+ stdepth275              37.3200          1.000       obsgroup    
+ stdepth276              36.9600          1.000       obsgroup    
+ stdepth277              36.4800          1.000       obsgroup    
+ stdepth278              36.1200          1.000       obsgroup    
+ stdepth279              35.6400          1.000       obsgroup    
+ stdepth280              35.2800          1.000       obsgroup    
+ stdepth281              34.9200          1.000       obsgroup    
+ stdepth282              34.5600          1.000       obsgroup    
+ stdepth283              34.3200          1.000       obsgroup    
+ stdepth284              33.9600          1.000       obsgroup    
+ stdepth285              33.7200          1.000       obsgroup    
+ stdepth286              33.3600          1.000       obsgroup    
+ stdepth287              33.2400          1.000       obsgroup    
+ stdepth288              33.0000          1.000       obsgroup    
+ stdepth289              32.7600          1.000       obsgroup    
+ stdepth290              32.5200          1.000       obsgroup    
+ stdepth291              32.4000          1.000       obsgroup    
+ stdepth292              32.0400          1.000       obsgroup    
+ stdepth293              32.0400          1.000       obsgroup    
+ stdepth294              31.9200          1.000       obsgroup    
+ stdepth295              31.6800          1.000       obsgroup    
+ stdepth296              31.5600          1.000       obsgroup    
+ stdepth297              31.4400          1.000       obsgroup    
+ stdepth298              31.2000          1.000       obsgroup    
+ stdepth299              31.0800          1.000       obsgroup    
+ stdepth300              30.8400          1.000       obsgroup    
+ stdepth301              30.6000          1.000       obsgroup    
+ stdepth302              30.4800          1.000       obsgroup    
+ stdepth303              30.2400          1.000       obsgroup    
+ stdepth304              30.0000          1.000       obsgroup    
+ stdepth305              29.7600          1.000       obsgroup    
+ stdepth306              29.5200          1.000       obsgroup    
+ stdepth307              29.2800          1.000       obsgroup    
+ stdepth308              29.0400          1.000       obsgroup    
+ stdepth309              28.6800          1.000       obsgroup    
+ stdepth310              28.4400          1.000       obsgroup    
+ stdepth311              28.2000          1.000       obsgroup    
+ stdepth312              27.8400          1.000       obsgroup    
+ stdepth313              27.6000          1.000       obsgroup    
+ stdepth314              27.3600          1.000       obsgroup    
+ stdepth315              27.0000          1.000       obsgroup    
+ stdepth316              26.7600          1.000       obsgroup    
+ stdepth317              26.4000          1.000       obsgroup    
+ stdepth318              26.0400          1.000       obsgroup    
+ stdepth319              25.6800          1.000       obsgroup    
+ stdepth320              25.4400          1.000       obsgroup    
+ stdepth321              25.0800          1.000       obsgroup    
+ stdepth322              24.8400          1.000       obsgroup    
+ stdepth323              24.6000          1.000       obsgroup    
+ stdepth324              24.2400          1.000       obsgroup    
+ stdepth325              24.0000          1.000       obsgroup    
+ stdepth326              23.7600          1.000       obsgroup    
+ stdepth327              23.5200          1.000       obsgroup    
+ stdepth328              23.1600          1.000       obsgroup    
+ stdepth329              22.9200          1.000       obsgroup    
+ stdepth330              22.6800          1.000       obsgroup    
+ stdepth331              22.3200          1.000       obsgroup    
+ stdepth332              22.0800          1.000       obsgroup    
+ stdepth333              21.8400          1.000       obsgroup    
+ stdepth334              21.6000          1.000       obsgroup    
+ stdepth335              21.3600          1.000       obsgroup    
+ stdepth336              21.0000          1.000       obsgroup    
+ stdepth337              20.7600          1.000       obsgroup    
+ stdepth338              20.5200          1.000       obsgroup    
+ stdepth339              20.2800          1.000       obsgroup    
+ stdepth340              20.0400          1.000       obsgroup    
+ stdepth341              19.8000          1.000       obsgroup    
+ stdepth342              19.5600          1.000       obsgroup    
+ stdepth343              19.3200          1.000       obsgroup    
+ stdepth344              19.0800          1.000       obsgroup    
+ stdepth345              18.8400          1.000       obsgroup    
+ stdepth346              18.6000          1.000       obsgroup    
+ stdepth347              18.3600          1.000       obsgroup    
+ stdepth348              18.2400          1.000       obsgroup    
+ stdepth349              18.0000          1.000       obsgroup    
+ stdepth350              17.8800          1.000       obsgroup    
+ stdepth351              17.6400          1.000       obsgroup    
+ stdepth352              17.5200          1.000       obsgroup    
+ stdepth353              17.2800          1.000       obsgroup    
+ stdepth354              17.1600          1.000       obsgroup    
+ stdepth355              16.9200          1.000       obsgroup    
+ stdepth356              16.8000          1.000       obsgroup    
+ stdepth357              16.5600          1.000       obsgroup    
+ stdepth358              16.4400          1.000       obsgroup    
+ stdepth359              16.3200          1.000       obsgroup    
+ stdepth360              16.0800          1.000       obsgroup    
+ stdepth361              15.9600          1.000       obsgroup    
+ stdepth362              15.7200          1.000       obsgroup    
+ stdepth363              15.6000          1.000       obsgroup    
+ stdepth364              15.4800          1.000       obsgroup    
+ stdepth365              15.2400          1.000       obsgroup    
+ stdepth366              15.1200          1.000       obsgroup    
+ stdepth367              15.0000          1.000       obsgroup    
+ stdepth368              14.7600          1.000       obsgroup    
+ stdepth369              14.5200          1.000       obsgroup    
+ stdepth370              14.5200          1.000       obsgroup    
+ stdepth371              14.2800          1.000       obsgroup    
+ stdepth372              14.1600          1.000       obsgroup    
+ stdepth373              14.0400          1.000       obsgroup    
+ stdepth374              13.8000          1.000       obsgroup    
+ stdepth375              13.6800          1.000       obsgroup    
+ stdepth376              13.5600          1.000       obsgroup    
+ stdepth377              13.4400          1.000       obsgroup    
+ stdepth378              13.2000          1.000       obsgroup    
+ stdepth379              13.0800          1.000       obsgroup    
+ stdepth380              12.9600          1.000       obsgroup    
+ stdepth381              12.8400          1.000       obsgroup    
+ stdepth382              12.7200          1.000       obsgroup    
+ stdepth383              12.4800          1.000       obsgroup    
+ stdepth384              12.3600          1.000       obsgroup    
+ stdepth385              12.2400          1.000       obsgroup    
+ stdepth386              12.0000          1.000       obsgroup    
+ stdepth387              11.8800          1.000       obsgroup    
+ stdepth388              11.7600          1.000       obsgroup    
+ stdepth389              11.6400          1.000       obsgroup    
+ stdepth390              11.5200          1.000       obsgroup    
+ stdepth391              11.4000          1.000       obsgroup    
+ stdepth392              11.2800          1.000       obsgroup    
+ stdepth393              11.1600          1.000       obsgroup    
+ stdepth394              11.0400          1.000       obsgroup    
+ stdepth395              10.9200          1.000       obsgroup    
+ stdepth396              10.8000          1.000       obsgroup    
+ stdepth397              10.6800          1.000       obsgroup    
+ stdepth398              10.6800          1.000       obsgroup    
+ stdepth399              10.5600          1.000       obsgroup    
+ stdepth400              10.4400          1.000       obsgroup    
+ stdepth401              10.3200          1.000       obsgroup    
+ stdepth402              10.2000          1.000       obsgroup    
+ stdepth403              10.0800          1.000       obsgroup    
+ stdepth404              9.96000          1.000       obsgroup    
+ stdepth405              9.84000          1.000       obsgroup    
+ stdepth406              9.72000          1.000       obsgroup    
+ stdepth407              9.60000          1.000       obsgroup    
+ stdepth408              9.60000          1.000       obsgroup    
+ stdepth409              9.48000          1.000       obsgroup    
+ stdepth410              9.36000          1.000       obsgroup    
+ stdepth411              9.24000          1.000       obsgroup    
+ stdepth412              9.12000          1.000       obsgroup    
+ stdepth413              9.00000          1.000       obsgroup    
+ stdepth414              8.88000          1.000       obsgroup    
+ stdepth415              8.88000          1.000       obsgroup    
+ stdepth416              8.76000          1.000       obsgroup    
+ stdepth417              8.64000          1.000       obsgroup    
+ stdepth418              8.52000          1.000       obsgroup    
+ stdepth419              8.40000          1.000       obsgroup    
+ stdepth420              8.28000          1.000       obsgroup    
+ stdepth421              8.28000          1.000       obsgroup    
+ stdepth422              8.16000          1.000       obsgroup    
+ stdepth423              8.04000          1.000       obsgroup    
+ stdepth424              7.92000          1.000       obsgroup    
+ stdepth425              7.80000          1.000       obsgroup    
+ stdepth426              7.80000          1.000       obsgroup    
+ stdepth427              7.68000          1.000       obsgroup    
+ stdepth428              7.56000          1.000       obsgroup    
+ stdepth429              7.44000          1.000       obsgroup    
+ stdepth430              7.32000          1.000       obsgroup    
+ stdepth431              7.32000          1.000       obsgroup    
+ stdepth432              7.20000          1.000       obsgroup    
+ stdepth433              7.08000          1.000       obsgroup    
+ stdepth434              6.96000          1.000       obsgroup    
+ stdepth435              6.96000          1.000       obsgroup    
+ stdepth436              6.84000          1.000       obsgroup    
+ stdepth437              6.72000          1.000       obsgroup    
+ stdepth438              6.60000          1.000       obsgroup    
+ stdepth439              6.60000          1.000       obsgroup    
+ stdepth440              6.48000          1.000       obsgroup    
+ stdepth441              6.36000          1.000       obsgroup    
+ stdepth442              6.24000          1.000       obsgroup    
+ stdepth443              6.24000          1.000       obsgroup    
+ stdepth444              6.12000          1.000       obsgroup    
+ stdepth445              6.00000          1.000       obsgroup    
+ stdepth446              6.00000          1.000       obsgroup    
+ stdepth447              5.88000          1.000       obsgroup    
+ stdepth448              5.76000          1.000       obsgroup    
+ stdepth449              5.64000          1.000       obsgroup    
+ stdepth450              5.52000          1.000       obsgroup    
+ stdepth451              5.40000          1.000       obsgroup    
+ stdepth452              5.40000          1.000       obsgroup    
+ stdepth453              5.28000          1.000       obsgroup    
+ stdepth454              5.16000          1.000       obsgroup    
+ stdepth455              5.16000          1.000       obsgroup    
+ stdepth456              5.04000          1.000       obsgroup    
+ stdepth457              5.04000          1.000       obsgroup    
+ stdepth458              4.92000          1.000       obsgroup    
+ stdepth459              4.92000          1.000       obsgroup    
+ stdepth460              4.80000          1.000       obsgroup    
+ stdepth461              4.80000          1.000       obsgroup    
+ stdepth462              4.68000          1.000       obsgroup    
+ stdepth463              4.56000          1.000       obsgroup    
+ stdepth464              4.56000          1.000       obsgroup    
+ stdepth465              4.44000          1.000       obsgroup    
+ stdepth466              4.44000          1.000       obsgroup    
+ stdepth467              4.32000          1.000       obsgroup    
+ stdepth468              4.32000          1.000       obsgroup    
+ stdepth469              4.20000          1.000       obsgroup    
+ stdepth470              4.20000          1.000       obsgroup    
+ stdepth471              4.08000          1.000       obsgroup    
+ stdepth472              4.08000          1.000       obsgroup    
+ stdepth473              3.96000          1.000       obsgroup    
+ stdepth474              3.96000          1.000       obsgroup    
+ stdepth475              3.84000          1.000       obsgroup    
+ stdepth476              3.84000          1.000       obsgroup    
+ stdepth477              3.72000          1.000       obsgroup    
+ stdepth478              3.72000          1.000       obsgroup    
+ stdepth479              3.60000          1.000       obsgroup    
+ stdepth480              3.60000          1.000       obsgroup    
+ stdepth481              3.48000          1.000       obsgroup    
+ stdepth482              3.48000          1.000       obsgroup    
+ stdepth483              3.36000          1.000       obsgroup    
+ stdepth484              3.36000          1.000       obsgroup    
+ stdepth485              3.24000          1.000       obsgroup    
+ stdepth486              3.24000          1.000       obsgroup    
+ stdepth487              3.12000          1.000       obsgroup    
+ stdepth488              3.12000          1.000       obsgroup    
+ stdepth489              3.00000          1.000       obsgroup    
+ stdepth490              3.00000          1.000       obsgroup    
+ stdepth491              2.88000          1.000       obsgroup    
+ stdepth492              2.88000          1.000       obsgroup    
+ stdepth493              2.88000          1.000       obsgroup    
+ stdepth494              2.76000          1.000       obsgroup    
+ stdepth495              2.76000          1.000       obsgroup    
+ stdepth496              2.64000          1.000       obsgroup    
+ stdepth497              2.64000          1.000       obsgroup    
+ stdepth498              2.52000          1.000       obsgroup    
+ stdepth499              2.52000          1.000       obsgroup    
+ stdepth500              2.40000          1.000       obsgroup    
+ stdepth501              2.40000          1.000       obsgroup    
+ stdepth502              2.28000          1.000       obsgroup    
+ stdepth503              2.28000          1.000       obsgroup    
+ stdepth504              2.16000          1.000       obsgroup    
+ stdepth505              2.16000          1.000       obsgroup    
+ stdepth506              2.04000          1.000       obsgroup    
+ stdepth507              2.04000          1.000       obsgroup    
+ stdepth508              2.04000          1.000       obsgroup    
+ stdepth509              1.92000          1.000       obsgroup    
+ stdepth510              1.92000          1.000       obsgroup    
+ stdepth511              1.80000          1.000       obsgroup    
+ stdepth512              1.80000          1.000       obsgroup    
+ stdepth513              1.68000          1.000       obsgroup    
+ stdepth514              1.68000          1.000       obsgroup    
+ stdepth515              1.56000          1.000       obsgroup    
+ stdepth516              1.56000          1.000       obsgroup    
+ stdepth517              1.44000          1.000       obsgroup    
+ stdepth518              1.44000          1.000       obsgroup    
+ stdepth519              1.32000          1.000       obsgroup    
+ stdepth520              1.32000          1.000       obsgroup    
+ stdepth521              1.20000          1.000       obsgroup    
+ stdepth522              1.20000          1.000       obsgroup    
+ stdepth523              1.08000          1.000       obsgroup    
+ stdepth524              1.08000          1.000       obsgroup    
+ stdepth525             0.960000          1.000       obsgroup    
+
+
+Control settings:-
+
+   Initial lambda                                               :  5.0000    
+   Lambda adjustment factor                                     :  2.0000    
+   Sufficient new/old phi ratio per optimisation iteration      : 0.30000    
+   Limiting relative phi reduction between lambdas              : 3.00000E-02
+   Maximum trial lambdas per iteration                          :  10
+   Forgive model run failure during lamda testing               : no
+   Forgive model run failure during Jacobian runs               : no
+
+   Perform Broyden's update of Jacobian matrix                  : no
+   Undertake observation re-referencing                         : no
+
+   Maximum  factor  parameter change (factor-limited changes)   : na
+   Maximum relative parameter change (relative-limited changes) :  3.0000
+   Fraction of initial parameter values used in computing
+   change limit for near-zero parameters                        : 1.00000E-03
+   Allow bending of parameter upgrade vector                    : no
+   Allow parameters to stick to their bounds                    : no
+
+   Relative phi reduction below which to begin use of
+   central derivatives                                          : 0.10000             
+   Iteration at which to first consider derivatives switch      :   1
+
+   Relative phi reduction indicating convergence                : 0.10000E-01
+   Number of phi values required within this range              :   3
+   Maximum number of consecutive failures to lower phi          :   3
+   Minimal relative parameter change indicating convergence     : 0.10000E-01
+   Number of consecutive iterations with minimal param change   :   3
+   Maximum number of optimisation iterations                    :  30
+
+   Attempt automatic user intervention                          : no
+
+   Attempt reuse of parameter sensitivities                     : no
+
+   Scale parameters by their bounds                             : no
+
+
+File saving options: -
+
+   Save best JCO file                                           : yes
+   Save multiple JCO files                                      : no
+   Save multiple REI files                                      : no
+   Save multiple PAR files                                      : no
+
+
+
+******************************************************************************
+Error condition prevents continued PEST execution:-
+
+Cannot open model output file villit0707.txt.
+******************************************************************************

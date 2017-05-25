@@ -1,0 +1,258 @@
+pcf
+* control data
+restart estimation
+  10 227    1     0     1
+    1     1 single point   1   0   0
+  5.0   2.0   0.3  0.03    10
+  3.0   3.0 0.001  0
+  0.1
+   30  0.01     3     3  0.01     3
+    1     1     1
+* parameter groups
+paragroup  relative 0.01  0.0  switch  2.0 parabolic
+* parameter data
+dprsn_strg   fixed  relative  0.11811 0.01 0.50    paragroup 1.0 0.0 1
+sctn_hd   fixed  relative  4.339 0.52 23.38    paragroup 1.0 0.0 1
+hyd_cndct   fixed  relative  0.461 0.01 1.00    paragroup 1.0 0.0 1
+ntl_dfct   none  relative  0.751 0.01 0.99    paragroup 1.0 0.0 1
+vgttn_vlm   fixed  relative  0.20 0.01 0.20    paragroup 1.0 0.0 1
+srf_rghns   fixed  relative  0.25 0.01 0.25    paragroup 1.0 0.0 1
+srf_slope   fixed  relative  1.5 1.00 2.00    paragroup 1.0 0.0 1
+sid_slope   fixed  relative  3.00 2.75 3.25    paragroup 1.0 0.0 1
+srf_width   fixed  relative  12.5 11.50 13.50    paragroup 1.0 0.0 1
+intl_sat   fixed  relative  0.01 0.01 1.00    paragroup 1.0 0.0 1
+* observation groups
+obsgroup
+* observation data
+srunoff1           0 1.0 obsgroup
+srunoff2           0 1.0 obsgroup
+srunoff3           0 1.0 obsgroup
+srunoff4           0 1.0 obsgroup
+srunoff5           0 1.0 obsgroup
+srunoff6           0 1.0 obsgroup
+srunoff7           0 1.0 obsgroup
+srunoff8           0 1.0 obsgroup
+srunoff9           0 1.0 obsgroup
+srunoff10           0 1.0 obsgroup
+srunoff11           0 1.0 obsgroup
+srunoff12           0 1.0 obsgroup
+srunoff13           0 1.0 obsgroup
+srunoff14           0 1.0 obsgroup
+srunoff15           0 1.0 obsgroup
+srunoff16           0 1.0 obsgroup
+srunoff17           0 1.0 obsgroup
+srunoff18           0 1.0 obsgroup
+srunoff19           1.79E-03 1.0 obsgroup
+srunoff20           4.06E-02 1.0 obsgroup
+srunoff21           5.22E-02 1.0 obsgroup
+srunoff22           0.051639517 1.0 obsgroup
+srunoff23           0.048137834 1.0 obsgroup
+srunoff24           0.052399618 1.0 obsgroup
+srunoff25           0.065652626 1.0 obsgroup
+srunoff26           7.43E-02 1.0 obsgroup
+srunoff27           0.075995222 1.0 obsgroup
+srunoff28           0.073293213 1.0 obsgroup
+srunoff29           0.071355561 1.0 obsgroup
+srunoff30           0.070165006 1.0 obsgroup
+srunoff31           0.073170462 1.0 obsgroup
+srunoff32           0.099315918 1.0 obsgroup
+srunoff33           0.135095585 1.0 obsgroup
+srunoff34           0.156270526 1.0 obsgroup
+srunoff35           0.181220881 1.0 obsgroup
+srunoff36           0.188783777 1.0 obsgroup
+srunoff37           0.186577971 1.0 obsgroup
+srunoff38           0.20453497 1.0 obsgroup
+srunoff39           0.207592045 1.0 obsgroup
+srunoff40           0.18891888 1.0 obsgroup
+srunoff41           0.16712784 1.0 obsgroup
+srunoff42           0.153309126 1.0 obsgroup
+srunoff43           0.155279922 1.0 obsgroup
+srunoff44           0.171615911 1.0 obsgroup
+srunoff45           0.192850205 1.0 obsgroup
+srunoff46           0.209430924 1.0 obsgroup
+srunoff47           0.231537714 1.0 obsgroup
+srunoff48           0.257655924 1.0 obsgroup
+srunoff49           0.289616339 1.0 obsgroup
+srunoff50           0.378394812 1.0 obsgroup
+srunoff51           0.495819279 1.0 obsgroup
+srunoff52           0.52749016 1.0 obsgroup
+srunoff53           0.585605736 1.0 obsgroup
+srunoff54           0.586037422 1.0 obsgroup
+srunoff55           0.484364228 1.0 obsgroup
+srunoff56           0.364211376 1.0 obsgroup
+srunoff57           0.264475585 1.0 obsgroup
+srunoff58           0.202938052 1.0 obsgroup
+srunoff59           0.16684056 1.0 obsgroup
+srunoff60           0.130955892 1.0 obsgroup
+srunoff61           0.0987958 1.0 obsgroup
+srunoff62           0.074736335 1.0 obsgroup
+srunoff63           0.054204665 1.0 obsgroup
+srunoff64           0.039513302 1.0 obsgroup
+srunoff65           0.027122496 1.0 obsgroup
+srunoff66           0.016806555 1.0 obsgroup
+srunoff67           0.009143787 1.0 obsgroup
+srunoff68           0.003936864 1.0 obsgroup
+srunoff69           0.000920939 1.0 obsgroup
+srunoff70           1.94963E-05 1.0 obsgroup
+srunoff71           0 1.0 obsgroup
+srunoff72           0 1.0 obsgroup
+srunoff73           0 1.0 obsgroup
+srunoff74           0 1.0 obsgroup
+srunoff75           0 1.0 obsgroup
+srunoff76           0 1.0 obsgroup
+srunoff77           0 1.0 obsgroup
+srunoff78           0 1.0 obsgroup
+srunoff79           0 1.0 obsgroup
+srunoff80           0 1.0 obsgroup
+srunoff81           0 1.0 obsgroup
+srunoff82           0 1.0 obsgroup
+srunoff83           0 1.0 obsgroup
+srunoff84           0.000502189 1.0 obsgroup
+srunoff85           0.008170892 1.0 obsgroup
+srunoff86           0.010833829 1.0 obsgroup
+srunoff87           0.012338289 1.0 obsgroup
+srunoff88           0.017734083 1.0 obsgroup
+srunoff89           0.022928501 1.0 obsgroup
+srunoff90           0.023731659 1.0 obsgroup
+srunoff91           0.02251208 1.0 obsgroup
+srunoff92           0.020982858 1.0 obsgroup
+srunoff93           0.023562147 1.0 obsgroup
+srunoff94           0.074004398 1.0 obsgroup
+srunoff95           0.147522136 1.0 obsgroup
+srunoff96           0.146157637 1.0 obsgroup
+srunoff97           0.114498005 1.0 obsgroup
+srunoff98           0.084871216 1.0 obsgroup
+srunoff99           0.061919044 1.0 obsgroup
+srunoff100           0.04506253 1.0 obsgroup
+srunoff101           0.031787826 1.0 obsgroup
+srunoff102           0.023560447 1.0 obsgroup
+srunoff103           0.017521431 1.0 obsgroup
+srunoff104           0.015585394 1.0 obsgroup
+srunoff105           0.040695509 1.0 obsgroup
+srunoff106           0.093938703 1.0 obsgroup
+srunoff107           0.101602994 1.0 obsgroup
+srunoff108           0.083704221 1.0 obsgroup
+srunoff109           0.06469307 1.0 obsgroup
+srunoff110           0.049009932 1.0 obsgroup
+srunoff111           0.035325793 1.0 obsgroup
+srunoff112           0.023483644 1.0 obsgroup
+srunoff113           0.015387392 1.0 obsgroup
+srunoff114           0.012909903 1.0 obsgroup
+srunoff115           0.017010428 1.0 obsgroup
+srunoff116           0.018127577 1.0 obsgroup
+srunoff117           0.0150505 1.0 obsgroup
+srunoff118           0.010436451 1.0 obsgroup
+srunoff119           0.00558696 1.0 obsgroup
+srunoff120           0.00227201 1.0 obsgroup
+srunoff121           0.000182108 1.0 obsgroup
+srunoff122           0 1.0 obsgroup
+srunoff123           0 1.0 obsgroup
+srunoff124           0 1.0 obsgroup
+srunoff125           0 1.0 obsgroup
+srunoff126           0 1.0 obsgroup
+srunoff127           0 1.0 obsgroup
+srunoff128           0 1.0 obsgroup
+srunoff129           0 1.0 obsgroup
+srunoff130           0 1.0 obsgroup
+srunoff131           0 1.0 obsgroup
+srunoff132           0 1.0 obsgroup
+srunoff133           0 1.0 obsgroup
+srunoff134           0 1.0 obsgroup
+srunoff135           0 1.0 obsgroup
+srunoff136           0 1.0 obsgroup
+srunoff137           0 1.0 obsgroup
+srunoff138           0 1.0 obsgroup
+srunoff139           0 1.0 obsgroup
+srunoff140           0 1.0 obsgroup
+srunoff141           0 1.0 obsgroup
+srunoff142           0 1.0 obsgroup
+srunoff143           0 1.0 obsgroup
+srunoff144           0 1.0 obsgroup
+srunoff145           0 1.0 obsgroup
+srunoff146           0 1.0 obsgroup
+srunoff147           0 1.0 obsgroup
+srunoff148           0 1.0 obsgroup
+srunoff149           0 1.0 obsgroup
+srunoff150           0 1.0 obsgroup
+srunoff151           0 1.0 obsgroup
+srunoff152           0 1.0 obsgroup
+srunoff153           0 1.0 obsgroup
+srunoff154           0 1.0 obsgroup
+srunoff155           0 1.0 obsgroup
+srunoff156           0 1.0 obsgroup
+srunoff157           0 1.0 obsgroup
+srunoff158           0 1.0 obsgroup
+srunoff159           0 1.0 obsgroup
+srunoff160           0 1.0 obsgroup
+srunoff161           0 1.0 obsgroup
+srunoff162           0 1.0 obsgroup
+srunoff163           0 1.0 obsgroup
+srunoff164           0 1.0 obsgroup
+srunoff165           0 1.0 obsgroup
+srunoff166           0 1.0 obsgroup
+srunoff167           0 1.0 obsgroup
+srunoff168           0 1.0 obsgroup
+srunoff169           0 1.0 obsgroup
+srunoff170           0 1.0 obsgroup
+srunoff171           0 1.0 obsgroup
+srunoff172           0 1.0 obsgroup
+srunoff173           0 1.0 obsgroup
+srunoff174           0 1.0 obsgroup
+srunoff175           0 1.0 obsgroup
+srunoff176           0 1.0 obsgroup
+srunoff177           0 1.0 obsgroup
+srunoff178           0 1.0 obsgroup
+srunoff179           0 1.0 obsgroup
+srunoff180           0 1.0 obsgroup
+srunoff181           0 1.0 obsgroup
+srunoff182           0 1.0 obsgroup
+srunoff183           0 1.0 obsgroup
+srunoff184           0 1.0 obsgroup
+srunoff185           0 1.0 obsgroup
+srunoff186           0 1.0 obsgroup
+srunoff187           0 1.0 obsgroup
+srunoff188           0 1.0 obsgroup
+srunoff189           0 1.0 obsgroup
+srunoff190           0 1.0 obsgroup
+srunoff191           0 1.0 obsgroup
+srunoff192           0 1.0 obsgroup
+srunoff193           0 1.0 obsgroup
+srunoff194           0 1.0 obsgroup
+srunoff195           0 1.0 obsgroup
+srunoff196           0 1.0 obsgroup
+srunoff197           0 1.0 obsgroup
+srunoff198           0 1.0 obsgroup
+srunoff199           0 1.0 obsgroup
+srunoff200           0 1.0 obsgroup
+srunoff201           0 1.0 obsgroup
+srunoff202           0 1.0 obsgroup
+srunoff203           0 1.0 obsgroup
+srunoff204           0 1.0 obsgroup
+srunoff205           0 1.0 obsgroup
+srunoff206           0 1.0 obsgroup
+srunoff207           0 1.0 obsgroup
+srunoff208           0 1.0 obsgroup
+srunoff209           0 1.0 obsgroup
+srunoff210           0 1.0 obsgroup
+srunoff211           0 1.0 obsgroup
+srunoff212           0 1.0 obsgroup
+srunoff213           0 1.0 obsgroup
+srunoff214           0 1.0 obsgroup
+srunoff215           0 1.0 obsgroup
+srunoff216           0 1.0 obsgroup
+srunoff217           0 1.0 obsgroup
+srunoff218           0 1.0 obsgroup
+srunoff219           0 1.0 obsgroup
+srunoff220           0 1.0 obsgroup
+srunoff221           0 1.0 obsgroup
+srunoff222           0 1.0 obsgroup
+srunoff223           0 1.0 obsgroup
+srunoff224           0 1.0 obsgroup
+srunoff225           0 1.0 obsgroup
+srunoff226           0 1.0 obsgroup
+srunoff227           0 1.0 obsgroup
+* model command line
+swmm5110_test.exe  WashDOT216.inp WashDOT216.rpt WashDOT216.out
+* model input/output
+WashDOT216.tpl  WashDOT216.inp
+WashDOT216.ins  WashDOT216.txt

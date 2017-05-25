@@ -1,0 +1,26 @@
+                       PARAMETER SENSITIVITIES: CASE umd0111
+
+
+ OPTIMISATION ITERATION NO.  1 ----->
+ Parameter name    Group          Current value    Sensitivity
+   ntl_dfct        paragroup       0.922000         9.695387E-03
+
+
+ OPTIMISATION ITERATION NO.  2 ----->
+ Parameter name    Group          Current value    Sensitivity
+   ntl_dfct        paragroup       0.100000         5.464098E-02
+
+
+ OPTIMISATION ITERATION NO.  3 ----->
+ Parameter name    Group          Current value    Sensitivity
+   ntl_dfct        paragroup       0.100000         5.048623E-02
+
+
+
+                        COMPLETION OF OPTIMISATION PROCESS
+
+ Composite sensitivities for all observations/prior info ----->
+
+ Number of observations with non-zero weight =   649
+ Parameter name    Group          Current value    Sensitivity
+   ntl_dfct        paragroup       0.100000         9.695387E-03
