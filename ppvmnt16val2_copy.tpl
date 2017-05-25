@@ -52,9 +52,9 @@ DRY_ONLY         NO
 [SUBCATCHMENTS]
 ;;Name           Rain Gage        Outlet           Area     %Imperv  Width    %Slope   CurbLen  SnowPack
 ;;-------------- ---------------- ---------------- -------- -------- -------- -------- -------- ----------------
-Roadway          01-11-2006_Storm   LID              #Ryarea#    100      143.000000     .100000000        0
+Roadway          01-11-2006_Storm   LID              0.224    100      143.000000     .100000000        0
 ;Swale
-LID              01-11-2006_Storm   Out1             0.312    0        15.76    1.6      0
+LID              01-11-2006_Storm   Out1             0.312    0        #LDwidth#    1.6      0
  
 [SUBAREAS]
 ;;Subcatchment   N-Imperv   N-Perv     S-Imperv   S-Perv     PctZero    RouteTo    PctRouted
