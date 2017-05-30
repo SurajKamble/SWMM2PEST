@@ -1,36 +1,3 @@
-                      PARAMETER SENSITIVITIES: CASE groof09q1
+                    PARAMETER SENSITIVITIES: CASE E:\UC\EPA\SWMM2PEST\SWMM2PEST\SWMMC-master\2009Q1\groof09Q1
 
 
- OPTIMISATION ITERATION NO.  1 ----->
- Parameter name    Group          Current value    Sensitivity
-   ldu_ntstr       paragroup        1.07000         1.369235E-06
-
-
- OPTIMISATION ITERATION NO.  2 ----->
- Parameter name    Group          Current value    Sensitivity
-   ldu_ntstr       paragroup        5.35000         1.330256E-06
-
-
- OPTIMISATION ITERATION NO.  3 ----->
- Parameter name    Group          Current value    Sensitivity
-   ldu_ntstr       paragroup        15.0993         1.565779E-06
-
-
- OPTIMISATION ITERATION NO.  4 ----->
- Parameter name    Group          Current value    Sensitivity
-   ldu_ntstr       paragroup        16.1054         1.901393E-06
-
-
- OPTIMISATION ITERATION NO.  5 ----->
- Parameter name    Group          Current value    Sensitivity
-   ldu_ntstr       paragroup        15.9981         1.550005E-06
-
-
-
-                        COMPLETION OF OPTIMISATION PROCESS
-
- Composite sensitivities for all observations/prior info ----->
-
- Number of observations with non-zero weight = 24353
- Parameter name    Group          Current value    Sensitivity
-   ldu_ntstr       paragroup        15.0993         1.330256E-06

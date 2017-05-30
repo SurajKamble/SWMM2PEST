@@ -13,9 +13,9 @@ paragroup  relative 0.01  0.0  switch  2.0 parabolic
 
 * parameter data
  srf_strg  fixed  factor   1.0   0.01 100.00  paragroup  1.0   0.0  1
-srf_vgvlm  fixed  factor   0.0   0.0  100.00  paragroup  1.0   0.0  1
+srf_vgvlm  fixed  factor   0.0   -1.0  100.00  paragroup  1.0   0.0  1
 srf_rghns  fixed  factor   0.10  0.01   0.40  paragroup  1.0   0.0  1
-  srf_slp  fixed  factor   0.0   0.0  100.00  paragroup  1.0   0.0  1
+  srf_slp  fixed  factor   0.0   -1.0  100.00  paragroup  1.0   0.0  1
 
  pvm_thck  fixed  factor   9.8   0.01 100.00  paragroup  1.0   0.0  1
  pvm_vdrt  fixed  factor   0.60  0.01   1.00  paragroup  1.0   0.0  1

@@ -1,777 +1,345 @@
+             PEST++ Version 3.5.0
 
-                    PEST RUN RECORD: CASE washdot216
-
-
-PEST Version: 13.6
-
-
-PEST run mode:-
-
-   Parameter estimation mode
+                 by Dave Welter
+     Computational Water Resource Engineering
 
 
-Case dimensions:-
 
-   Number of parameters                           :    10
-   Number of adjustable parameters                :     1
-   Number of parameter groups                     :     1
-   Number of observations                         :   227
-   Number of prior estimates                      :     0
+using control file: "E:\UC\EPA\SWMM2PEST\SWMM2PEST\SWMMC-master\WashDOT216.pst"
 
 
-Model command line(s):-
+PEST++ run mode:- 
+   estimation
 
-   swmm5110_test.exe  WashDOT216.inp WashDOT216.rpt WashDOT216.out
+Case dimensions:- 
+    Number of parameters = 10
+    Number of adjustable parameters = 1
+    Number of observations = 227
+    Number of prior estimates = 0
 
-
-Jacobian command line:-
-
-   na
-
+Model command line(s):- 
+    swmm5  E:\UC\EPA\SWMM2PEST\SWMM2PEST\SWMMC-master\WashDOT216.inp E:\UC\EPA\SWMM2PEST\SWMM2PEST\SWMMC-master\WashDOT216.rpt E:\UC\EPA\SWMM2PEST\SWMM2PEST\SWMMC-master\WashDOT216.out
 
 Model interface files:-
+    template files:
+      E:\UC\EPA\SWMM2PEST\SWMM2PEST\SWMMC-master\WashDOT216.tpl
+    model input files:
+      E:\UC\EPA\SWMM2PEST\SWMM2PEST\SWMMC-master\WashDOT216.inp
+
+    instruction files:
+      E:\UC\EPA\SWMM2PEST\SWMM2PEST\SWMMC-master\WashDOT216.ins
+    model output files:
+      E:\UC\EPA\SWMM2PEST\SWMM2PEST\SWMMC-master\WashDOT216.txt
+
+
+PEST Control Information
+    relparmax = 3
+    facparmax = 3
+    facorig = 0.001
+    phiredswh = 0.1
+    noptmax = 30
+    phiredstp = 0.01
+    nphistp = 3
+    nphinored = 3
+    relparstp = 0.01
+    nrelpar = 3
+
+PEST++ Options
+    n_iter_base = 30                  
+    n_iter_super = 0                   
+    max_n_super = 10                  
+    super eigthres = 1e-06               
+    svd pack = 0                   
+    auto norm = -999                
+    super relparmax = 0.1                 
+    max super frz iter = 5                   
+    mat inv = 1                   
+    max run fail = 3                   
+    max reg iter = 20                  
+    lambdas = 
+            0.1
+              1
+             10
+            100
+           1000
+    uncertainty flag = 1                   
+    parameter covariance file =                     
+    forecast names = 
+    derivative run failure forgive = 1              
+    run overdue reschedule factor = 1.15                
+    run overdue giveup factor = 100                 
+    base parameter jacobian filename =                     
+    prior parameter covariance upgrade scaling factor = -999      
+    sweep parameter csv file =                                                   
+    sweep output csv file = sweep_out.csv                                     
+    sweep chunk size = 500       
+    sweep base run = 0         
+    sweep forgive failed runs = 0         
+
+
+Parameter group information
+NAME            INCREMENT TYPE     DERIVATIVE INCREMENT    INCREMENT LOWER BOUND  FORCE CENTRAL     INCREMENT MULTIPLIER
+paragroup             RELATIVE                     0.01                        0         SWITCH                        2
+
+Parameter information
+NAME           TRANSFORMATION        CHANGE LIMIT  INITIAL VALUE    LOWER BOUND    UPPER BOUND          GROUP          SCALE         OFFSET  DERIVATIVE COMMAND
+dprsn_strg     fixed                 RELATIVE        0.11811           0.01            0.5      paragroup              1              0                   0
+sctn_hd        fixed                 RELATIVE          4.339           0.52          23.38      paragroup              1              0                   0
+hyd_cndct      fixed                 RELATIVE          0.461           0.01              1      paragroup              1              0                   0
+ntl_dfct       none                  RELATIVE          0.751           0.01           0.99      paragroup              1              0                   0
+vgttn_vlm      fixed                 RELATIVE            0.2           0.01            0.2      paragroup              1              0                   0
+srf_rghns      fixed                 RELATIVE           0.25           0.01           0.25      paragroup              1              0                   0
+srf_slope      fixed                 RELATIVE            1.5              1              2      paragroup              1              0                   0
+sid_slope      fixed                 RELATIVE              3           2.75           3.25      paragroup              1              0                   0
+srf_width      fixed                 RELATIVE           12.5           11.5           13.5      paragroup              1              0                   0
+intl_sat       fixed                 RELATIVE           0.01           0.01              1      paragroup              1              0                   0
+
+Observation information
+NAME                                    VALUE               GROUP              WEIGHT
+srunoff1                                    0            obsgroup                   1
+srunoff2                                    0            obsgroup                   1
+srunoff3                                    0            obsgroup                   1
+srunoff4                                    0            obsgroup                   1
+srunoff5                                    0            obsgroup                   1
+srunoff6                                    0            obsgroup                   1
+srunoff7                                    0            obsgroup                   1
+srunoff8                                    0            obsgroup                   1
+srunoff9                                    0            obsgroup                   1
+srunoff10                                   0            obsgroup                   1
+srunoff11                                   0            obsgroup                   1
+srunoff12                                   0            obsgroup                   1
+srunoff13                                   0            obsgroup                   1
+srunoff14                                   0            obsgroup                   1
+srunoff15                                   0            obsgroup                   1
+srunoff16                                   0            obsgroup                   1
+srunoff17                                   0            obsgroup                   1
+srunoff18                                   0            obsgroup                   1
+srunoff19                             0.00179            obsgroup                   1
+srunoff20                              0.0406            obsgroup                   1
+srunoff21                              0.0522            obsgroup                   1
+srunoff22                           0.0516395            obsgroup                   1
+srunoff23                           0.0481378            obsgroup                   1
+srunoff24                           0.0523996            obsgroup                   1
+srunoff25                           0.0656526            obsgroup                   1
+srunoff26                              0.0743            obsgroup                   1
+srunoff27                           0.0759952            obsgroup                   1
+srunoff28                           0.0732932            obsgroup                   1
+srunoff29                           0.0713556            obsgroup                   1
+srunoff30                            0.070165            obsgroup                   1
+srunoff31                           0.0731705            obsgroup                   1
+srunoff32                           0.0993159            obsgroup                   1
+srunoff33                            0.135096            obsgroup                   1
+srunoff34                            0.156271            obsgroup                   1
+srunoff35                            0.181221            obsgroup                   1
+srunoff36                            0.188784            obsgroup                   1
+srunoff37                            0.186578            obsgroup                   1
+srunoff38                            0.204535            obsgroup                   1
+srunoff39                            0.207592            obsgroup                   1
+srunoff40                            0.188919            obsgroup                   1
+srunoff41                            0.167128            obsgroup                   1
+srunoff42                            0.153309            obsgroup                   1
+srunoff43                             0.15528            obsgroup                   1
+srunoff44                            0.171616            obsgroup                   1
+srunoff45                             0.19285            obsgroup                   1
+srunoff46                            0.209431            obsgroup                   1
+srunoff47                            0.231538            obsgroup                   1
+srunoff48                            0.257656            obsgroup                   1
+srunoff49                            0.289616            obsgroup                   1
+srunoff50                            0.378395            obsgroup                   1
+srunoff51                            0.495819            obsgroup                   1
+srunoff52                             0.52749            obsgroup                   1
+srunoff53                            0.585606            obsgroup                   1
+srunoff54                            0.586037            obsgroup                   1
+srunoff55                            0.484364            obsgroup                   1
+srunoff56                            0.364211            obsgroup                   1
+srunoff57                            0.264476            obsgroup                   1
+srunoff58                            0.202938            obsgroup                   1
+srunoff59                            0.166841            obsgroup                   1
+srunoff60                            0.130956            obsgroup                   1
+srunoff61                           0.0987958            obsgroup                   1
+srunoff62                           0.0747363            obsgroup                   1
+srunoff63                           0.0542047            obsgroup                   1
+srunoff64                           0.0395133            obsgroup                   1
+srunoff65                           0.0271225            obsgroup                   1
+srunoff66                           0.0168066            obsgroup                   1
+srunoff67                          0.00914379            obsgroup                   1
+srunoff68                          0.00393686            obsgroup                   1
+srunoff69                         0.000920939            obsgroup                   1
+srunoff70                         1.94963e-05            obsgroup                   1
+srunoff71                                   0            obsgroup                   1
+srunoff72                                   0            obsgroup                   1
+srunoff73                                   0            obsgroup                   1
+srunoff74                                   0            obsgroup                   1
+srunoff75                                   0            obsgroup                   1
+srunoff76                                   0            obsgroup                   1
+srunoff77                                   0            obsgroup                   1
+srunoff78                                   0            obsgroup                   1
+srunoff79                                   0            obsgroup                   1
+srunoff80                                   0            obsgroup                   1
+srunoff81                                   0            obsgroup                   1
+srunoff82                                   0            obsgroup                   1
+srunoff83                                   0            obsgroup                   1
+srunoff84                         0.000502189            obsgroup                   1
+srunoff85                          0.00817089            obsgroup                   1
+srunoff86                           0.0108338            obsgroup                   1
+srunoff87                           0.0123383            obsgroup                   1
+srunoff88                           0.0177341            obsgroup                   1
+srunoff89                           0.0229285            obsgroup                   1
+srunoff90                           0.0237317            obsgroup                   1
+srunoff91                           0.0225121            obsgroup                   1
+srunoff92                           0.0209829            obsgroup                   1
+srunoff93                           0.0235621            obsgroup                   1
+srunoff94                           0.0740044            obsgroup                   1
+srunoff95                            0.147522            obsgroup                   1
+srunoff96                            0.146158            obsgroup                   1
+srunoff97                            0.114498            obsgroup                   1
+srunoff98                           0.0848712            obsgroup                   1
+srunoff99                            0.061919            obsgroup                   1
+srunoff100                          0.0450625            obsgroup                   1
+srunoff101                          0.0317878            obsgroup                   1
+srunoff102                          0.0235604            obsgroup                   1
+srunoff103                          0.0175214            obsgroup                   1
+srunoff104                          0.0155854            obsgroup                   1
+srunoff105                          0.0406955            obsgroup                   1
+srunoff106                          0.0939387            obsgroup                   1
+srunoff107                           0.101603            obsgroup                   1
+srunoff108                          0.0837042            obsgroup                   1
+srunoff109                          0.0646931            obsgroup                   1
+srunoff110                          0.0490099            obsgroup                   1
+srunoff111                          0.0353258            obsgroup                   1
+srunoff112                          0.0234836            obsgroup                   1
+srunoff113                          0.0153874            obsgroup                   1
+srunoff114                          0.0129099            obsgroup                   1
+srunoff115                          0.0170104            obsgroup                   1
+srunoff116                          0.0181276            obsgroup                   1
+srunoff117                          0.0150505            obsgroup                   1
+srunoff118                          0.0104365            obsgroup                   1
+srunoff119                         0.00558696            obsgroup                   1
+srunoff120                         0.00227201            obsgroup                   1
+srunoff121                        0.000182108            obsgroup                   1
+srunoff122                                  0            obsgroup                   1
+srunoff123                                  0            obsgroup                   1
+srunoff124                                  0            obsgroup                   1
+srunoff125                                  0            obsgroup                   1
+srunoff126                                  0            obsgroup                   1
+srunoff127                                  0            obsgroup                   1
+srunoff128                                  0            obsgroup                   1
+srunoff129                                  0            obsgroup                   1
+srunoff130                                  0            obsgroup                   1
+srunoff131                                  0            obsgroup                   1
+srunoff132                                  0            obsgroup                   1
+srunoff133                                  0            obsgroup                   1
+srunoff134                                  0            obsgroup                   1
+srunoff135                                  0            obsgroup                   1
+srunoff136                                  0            obsgroup                   1
+srunoff137                                  0            obsgroup                   1
+srunoff138                                  0            obsgroup                   1
+srunoff139                                  0            obsgroup                   1
+srunoff140                                  0            obsgroup                   1
+srunoff141                                  0            obsgroup                   1
+srunoff142                                  0            obsgroup                   1
+srunoff143                                  0            obsgroup                   1
+srunoff144                                  0            obsgroup                   1
+srunoff145                                  0            obsgroup                   1
+srunoff146                                  0            obsgroup                   1
+srunoff147                                  0            obsgroup                   1
+srunoff148                                  0            obsgroup                   1
+srunoff149                                  0            obsgroup                   1
+srunoff150                                  0            obsgroup                   1
+srunoff151                                  0            obsgroup                   1
+srunoff152                                  0            obsgroup                   1
+srunoff153                                  0            obsgroup                   1
+srunoff154                                  0            obsgroup                   1
+srunoff155                                  0            obsgroup                   1
+srunoff156                                  0            obsgroup                   1
+srunoff157                                  0            obsgroup                   1
+srunoff158                                  0            obsgroup                   1
+srunoff159                                  0            obsgroup                   1
+srunoff160                                  0            obsgroup                   1
+srunoff161                                  0            obsgroup                   1
+srunoff162                                  0            obsgroup                   1
+srunoff163                                  0            obsgroup                   1
+srunoff164                                  0            obsgroup                   1
+srunoff165                                  0            obsgroup                   1
+srunoff166                                  0            obsgroup                   1
+srunoff167                                  0            obsgroup                   1
+srunoff168                                  0            obsgroup                   1
+srunoff169                                  0            obsgroup                   1
+srunoff170                                  0            obsgroup                   1
+srunoff171                                  0            obsgroup                   1
+srunoff172                                  0            obsgroup                   1
+srunoff173                                  0            obsgroup                   1
+srunoff174                                  0            obsgroup                   1
+srunoff175                                  0            obsgroup                   1
+srunoff176                                  0            obsgroup                   1
+srunoff177                                  0            obsgroup                   1
+srunoff178                                  0            obsgroup                   1
+srunoff179                                  0            obsgroup                   1
+srunoff180                                  0            obsgroup                   1
+srunoff181                                  0            obsgroup                   1
+srunoff182                                  0            obsgroup                   1
+srunoff183                                  0            obsgroup                   1
+srunoff184                                  0            obsgroup                   1
+srunoff185                                  0            obsgroup                   1
+srunoff186                                  0            obsgroup                   1
+srunoff187                                  0            obsgroup                   1
+srunoff188                                  0            obsgroup                   1
+srunoff189                                  0            obsgroup                   1
+srunoff190                                  0            obsgroup                   1
+srunoff191                                  0            obsgroup                   1
+srunoff192                                  0            obsgroup                   1
+srunoff193                                  0            obsgroup                   1
+srunoff194                                  0            obsgroup                   1
+srunoff195                                  0            obsgroup                   1
+srunoff196                                  0            obsgroup                   1
+srunoff197                                  0            obsgroup                   1
+srunoff198                                  0            obsgroup                   1
+srunoff199                                  0            obsgroup                   1
+srunoff200                                  0            obsgroup                   1
+srunoff201                                  0            obsgroup                   1
+srunoff202                                  0            obsgroup                   1
+srunoff203                                  0            obsgroup                   1
+srunoff204                                  0            obsgroup                   1
+srunoff205                                  0            obsgroup                   1
+srunoff206                                  0            obsgroup                   1
+srunoff207                                  0            obsgroup                   1
+srunoff208                                  0            obsgroup                   1
+srunoff209                                  0            obsgroup                   1
+srunoff210                                  0            obsgroup                   1
+srunoff211                                  0            obsgroup                   1
+srunoff212                                  0            obsgroup                   1
+srunoff213                                  0            obsgroup                   1
+srunoff214                                  0            obsgroup                   1
+srunoff215                                  0            obsgroup                   1
+srunoff216                                  0            obsgroup                   1
+srunoff217                                  0            obsgroup                   1
+srunoff218                                  0            obsgroup                   1
+srunoff219                                  0            obsgroup                   1
+srunoff220                                  0            obsgroup                   1
+srunoff221                                  0            obsgroup                   1
+srunoff222                                  0            obsgroup                   1
+srunoff223                                  0            obsgroup                   1
+srunoff224                                  0            obsgroup                   1
+srunoff225                                  0            obsgroup                   1
+srunoff226                                  0            obsgroup                   1
+srunoff227                                  0            obsgroup                   1
+
+Prior information
+
+   no prior information provided
+
+PEST SVD Information
+    maxsing = 10
+    eigthresh = 1e-06
+
+
+   -----    Starting PEST++ Iterations    ----    
+
+
+OPTIMISATION ITERATION NUMBER: 1
+
+  Iteration type: base parameter solution
+  SVD Package: Eigen JacobiSVD
+  Matrix Inversion: "Jt Q J"
+  Model calls so far : 0
 
-   Templates:
-      WashDOT216.tpl
-   for model input files:
-      WashDOT216.inp
-
-   (Parameter values written using single precision protocol.)
-   (Decimal point always included.)
-
-   Instruction files:
-      WashDOT216.ins
-   for reading model output files:
-      WashDOT216.txt
-
-
-PEST-to-model message file:-
-
-   na
-
-
-Derivatives calculation:-
-
-Param        Increment   Increment   Increment   Forward or   Multiplier  Method
-group        type                    low bound   central      (central)   (central)
-paragroup    relative    1.0000E-02   none         switch       2.000     parabolic
-
-
-Parameter definitions:-
-
-Name         Trans-            Change       Initial        Lower          Upper
-             formation         limit        value          bound          bound
-dprsn_strg   fixed               na       0.118110          na             na
-sctn_hd      fixed               na        4.33900          na             na
-hyd_cndct    fixed               na       0.461000          na             na
-ntl_dfct     none              relative   0.751000       1.000000E-02   0.990000    
-vgttn_vlm    fixed               na       0.200000          na             na
-srf_rghns    fixed               na       0.250000          na             na
-srf_slope    fixed               na        1.50000          na             na
-sid_slope    fixed               na        3.00000          na             na
-srf_width    fixed               na        12.5000          na             na
-intl_sat     fixed               na       1.000000E-02      na             na
-
-Name         Group          Scale         Offset        Model command number
-dprsn_strg   paragroup     1.00000        0.00000            1
-sctn_hd      paragroup     1.00000        0.00000            1
-hyd_cndct    paragroup     1.00000        0.00000            1
-ntl_dfct     paragroup     1.00000        0.00000            1
-vgttn_vlm    paragroup     1.00000        0.00000            1
-srf_rghns    paragroup     1.00000        0.00000            1
-srf_slope    paragroup     1.00000        0.00000            1
-sid_slope    paragroup     1.00000        0.00000            1
-srf_width    paragroup     1.00000        0.00000            1
-intl_sat     paragroup     1.00000        0.00000            1
-
-
-Prior information:-
-
-   No prior information supplied
-
-
-Observations:-
-
-Observation name        Observation       Weight       Group
- srunoff1                0.00000          1.000       obsgroup    
- srunoff2                0.00000          1.000       obsgroup    
- srunoff3                0.00000          1.000       obsgroup    
- srunoff4                0.00000          1.000       obsgroup    
- srunoff5                0.00000          1.000       obsgroup    
- srunoff6                0.00000          1.000       obsgroup    
- srunoff7                0.00000          1.000       obsgroup    
- srunoff8                0.00000          1.000       obsgroup    
- srunoff9                0.00000          1.000       obsgroup    
- srunoff10               0.00000          1.000       obsgroup    
- srunoff11               0.00000          1.000       obsgroup    
- srunoff12               0.00000          1.000       obsgroup    
- srunoff13               0.00000          1.000       obsgroup    
- srunoff14               0.00000          1.000       obsgroup    
- srunoff15               0.00000          1.000       obsgroup    
- srunoff16               0.00000          1.000       obsgroup    
- srunoff17               0.00000          1.000       obsgroup    
- srunoff18               0.00000          1.000       obsgroup    
- srunoff19              1.790000E-03      1.000       obsgroup    
- srunoff20              4.060000E-02      1.000       obsgroup    
- srunoff21              5.220000E-02      1.000       obsgroup    
- srunoff22              5.163952E-02      1.000       obsgroup    
- srunoff23              4.813783E-02      1.000       obsgroup    
- srunoff24              5.239962E-02      1.000       obsgroup    
- srunoff25              6.565263E-02      1.000       obsgroup    
- srunoff26              7.430000E-02      1.000       obsgroup    
- srunoff27              7.599522E-02      1.000       obsgroup    
- srunoff28              7.329321E-02      1.000       obsgroup    
- srunoff29              7.135556E-02      1.000       obsgroup    
- srunoff30              7.016501E-02      1.000       obsgroup    
- srunoff31              7.317046E-02      1.000       obsgroup    
- srunoff32              9.931592E-02      1.000       obsgroup    
- srunoff33              0.135096          1.000       obsgroup    
- srunoff34              0.156271          1.000       obsgroup    
- srunoff35              0.181221          1.000       obsgroup    
- srunoff36              0.188784          1.000       obsgroup    
- srunoff37              0.186578          1.000       obsgroup    
- srunoff38              0.204535          1.000       obsgroup    
- srunoff39              0.207592          1.000       obsgroup    
- srunoff40              0.188919          1.000       obsgroup    
- srunoff41              0.167128          1.000       obsgroup    
- srunoff42              0.153309          1.000       obsgroup    
- srunoff43              0.155280          1.000       obsgroup    
- srunoff44              0.171616          1.000       obsgroup    
- srunoff45              0.192850          1.000       obsgroup    
- srunoff46              0.209431          1.000       obsgroup    
- srunoff47              0.231538          1.000       obsgroup    
- srunoff48              0.257656          1.000       obsgroup    
- srunoff49              0.289616          1.000       obsgroup    
- srunoff50              0.378395          1.000       obsgroup    
- srunoff51              0.495819          1.000       obsgroup    
- srunoff52              0.527490          1.000       obsgroup    
- srunoff53              0.585606          1.000       obsgroup    
- srunoff54              0.586037          1.000       obsgroup    
- srunoff55              0.484364          1.000       obsgroup    
- srunoff56              0.364211          1.000       obsgroup    
- srunoff57              0.264476          1.000       obsgroup    
- srunoff58              0.202938          1.000       obsgroup    
- srunoff59              0.166841          1.000       obsgroup    
- srunoff60              0.130956          1.000       obsgroup    
- srunoff61              9.879580E-02      1.000       obsgroup    
- srunoff62              7.473634E-02      1.000       obsgroup    
- srunoff63              5.420467E-02      1.000       obsgroup    
- srunoff64              3.951330E-02      1.000       obsgroup    
- srunoff65              2.712250E-02      1.000       obsgroup    
- srunoff66              1.680656E-02      1.000       obsgroup    
- srunoff67              9.143787E-03      1.000       obsgroup    
- srunoff68              3.936864E-03      1.000       obsgroup    
- srunoff69              9.209390E-04      1.000       obsgroup    
- srunoff70              1.949630E-05      1.000       obsgroup    
- srunoff71               0.00000          1.000       obsgroup    
- srunoff72               0.00000          1.000       obsgroup    
- srunoff73               0.00000          1.000       obsgroup    
- srunoff74               0.00000          1.000       obsgroup    
- srunoff75               0.00000          1.000       obsgroup    
- srunoff76               0.00000          1.000       obsgroup    
- srunoff77               0.00000          1.000       obsgroup    
- srunoff78               0.00000          1.000       obsgroup    
- srunoff79               0.00000          1.000       obsgroup    
- srunoff80               0.00000          1.000       obsgroup    
- srunoff81               0.00000          1.000       obsgroup    
- srunoff82               0.00000          1.000       obsgroup    
- srunoff83               0.00000          1.000       obsgroup    
- srunoff84              5.021890E-04      1.000       obsgroup    
- srunoff85              8.170892E-03      1.000       obsgroup    
- srunoff86              1.083383E-02      1.000       obsgroup    
- srunoff87              1.233829E-02      1.000       obsgroup    
- srunoff88              1.773408E-02      1.000       obsgroup    
- srunoff89              2.292850E-02      1.000       obsgroup    
- srunoff90              2.373166E-02      1.000       obsgroup    
- srunoff91              2.251208E-02      1.000       obsgroup    
- srunoff92              2.098286E-02      1.000       obsgroup    
- srunoff93              2.356215E-02      1.000       obsgroup    
- srunoff94              7.400440E-02      1.000       obsgroup    
- srunoff95              0.147522          1.000       obsgroup    
- srunoff96              0.146158          1.000       obsgroup    
- srunoff97              0.114498          1.000       obsgroup    
- srunoff98              8.487122E-02      1.000       obsgroup    
- srunoff99              6.191904E-02      1.000       obsgroup    
- srunoff100             4.506253E-02      1.000       obsgroup    
- srunoff101             3.178783E-02      1.000       obsgroup    
- srunoff102             2.356045E-02      1.000       obsgroup    
- srunoff103             1.752143E-02      1.000       obsgroup    
- srunoff104             1.558539E-02      1.000       obsgroup    
- srunoff105             4.069551E-02      1.000       obsgroup    
- srunoff106             9.393870E-02      1.000       obsgroup    
- srunoff107             0.101603          1.000       obsgroup    
- srunoff108             8.370422E-02      1.000       obsgroup    
- srunoff109             6.469307E-02      1.000       obsgroup    
- srunoff110             4.900993E-02      1.000       obsgroup    
- srunoff111             3.532579E-02      1.000       obsgroup    
- srunoff112             2.348364E-02      1.000       obsgroup    
- srunoff113             1.538739E-02      1.000       obsgroup    
- srunoff114             1.290990E-02      1.000       obsgroup    
- srunoff115             1.701043E-02      1.000       obsgroup    
- srunoff116             1.812758E-02      1.000       obsgroup    
- srunoff117             1.505050E-02      1.000       obsgroup    
- srunoff118             1.043645E-02      1.000       obsgroup    
- srunoff119             5.586960E-03      1.000       obsgroup    
- srunoff120             2.272010E-03      1.000       obsgroup    
- srunoff121             1.821080E-04      1.000       obsgroup    
- srunoff122              0.00000          1.000       obsgroup    
- srunoff123              0.00000          1.000       obsgroup    
- srunoff124              0.00000          1.000       obsgroup    
- srunoff125              0.00000          1.000       obsgroup    
- srunoff126              0.00000          1.000       obsgroup    
- srunoff127              0.00000          1.000       obsgroup    
- srunoff128              0.00000          1.000       obsgroup    
- srunoff129              0.00000          1.000       obsgroup    
- srunoff130              0.00000          1.000       obsgroup    
- srunoff131              0.00000          1.000       obsgroup    
- srunoff132              0.00000          1.000       obsgroup    
- srunoff133              0.00000          1.000       obsgroup    
- srunoff134              0.00000          1.000       obsgroup    
- srunoff135              0.00000          1.000       obsgroup    
- srunoff136              0.00000          1.000       obsgroup    
- srunoff137              0.00000          1.000       obsgroup    
- srunoff138              0.00000          1.000       obsgroup    
- srunoff139              0.00000          1.000       obsgroup    
- srunoff140              0.00000          1.000       obsgroup    
- srunoff141              0.00000          1.000       obsgroup    
- srunoff142              0.00000          1.000       obsgroup    
- srunoff143              0.00000          1.000       obsgroup    
- srunoff144              0.00000          1.000       obsgroup    
- srunoff145              0.00000          1.000       obsgroup    
- srunoff146              0.00000          1.000       obsgroup    
- srunoff147              0.00000          1.000       obsgroup    
- srunoff148              0.00000          1.000       obsgroup    
- srunoff149              0.00000          1.000       obsgroup    
- srunoff150              0.00000          1.000       obsgroup    
- srunoff151              0.00000          1.000       obsgroup    
- srunoff152              0.00000          1.000       obsgroup    
- srunoff153              0.00000          1.000       obsgroup    
- srunoff154              0.00000          1.000       obsgroup    
- srunoff155              0.00000          1.000       obsgroup    
- srunoff156              0.00000          1.000       obsgroup    
- srunoff157              0.00000          1.000       obsgroup    
- srunoff158              0.00000          1.000       obsgroup    
- srunoff159              0.00000          1.000       obsgroup    
- srunoff160              0.00000          1.000       obsgroup    
- srunoff161              0.00000          1.000       obsgroup    
- srunoff162              0.00000          1.000       obsgroup    
- srunoff163              0.00000          1.000       obsgroup    
- srunoff164              0.00000          1.000       obsgroup    
- srunoff165              0.00000          1.000       obsgroup    
- srunoff166              0.00000          1.000       obsgroup    
- srunoff167              0.00000          1.000       obsgroup    
- srunoff168              0.00000          1.000       obsgroup    
- srunoff169              0.00000          1.000       obsgroup    
- srunoff170              0.00000          1.000       obsgroup    
- srunoff171              0.00000          1.000       obsgroup    
- srunoff172              0.00000          1.000       obsgroup    
- srunoff173              0.00000          1.000       obsgroup    
- srunoff174              0.00000          1.000       obsgroup    
- srunoff175              0.00000          1.000       obsgroup    
- srunoff176              0.00000          1.000       obsgroup    
- srunoff177              0.00000          1.000       obsgroup    
- srunoff178              0.00000          1.000       obsgroup    
- srunoff179              0.00000          1.000       obsgroup    
- srunoff180              0.00000          1.000       obsgroup    
- srunoff181              0.00000          1.000       obsgroup    
- srunoff182              0.00000          1.000       obsgroup    
- srunoff183              0.00000          1.000       obsgroup    
- srunoff184              0.00000          1.000       obsgroup    
- srunoff185              0.00000          1.000       obsgroup    
- srunoff186              0.00000          1.000       obsgroup    
- srunoff187              0.00000          1.000       obsgroup    
- srunoff188              0.00000          1.000       obsgroup    
- srunoff189              0.00000          1.000       obsgroup    
- srunoff190              0.00000          1.000       obsgroup    
- srunoff191              0.00000          1.000       obsgroup    
- srunoff192              0.00000          1.000       obsgroup    
- srunoff193              0.00000          1.000       obsgroup    
- srunoff194              0.00000          1.000       obsgroup    
- srunoff195              0.00000          1.000       obsgroup    
- srunoff196              0.00000          1.000       obsgroup    
- srunoff197              0.00000          1.000       obsgroup    
- srunoff198              0.00000          1.000       obsgroup    
- srunoff199              0.00000          1.000       obsgroup    
- srunoff200              0.00000          1.000       obsgroup    
- srunoff201              0.00000          1.000       obsgroup    
- srunoff202              0.00000          1.000       obsgroup    
- srunoff203              0.00000          1.000       obsgroup    
- srunoff204              0.00000          1.000       obsgroup    
- srunoff205              0.00000          1.000       obsgroup    
- srunoff206              0.00000          1.000       obsgroup    
- srunoff207              0.00000          1.000       obsgroup    
- srunoff208              0.00000          1.000       obsgroup    
- srunoff209              0.00000          1.000       obsgroup    
- srunoff210              0.00000          1.000       obsgroup    
- srunoff211              0.00000          1.000       obsgroup    
- srunoff212              0.00000          1.000       obsgroup    
- srunoff213              0.00000          1.000       obsgroup    
- srunoff214              0.00000          1.000       obsgroup    
- srunoff215              0.00000          1.000       obsgroup    
- srunoff216              0.00000          1.000       obsgroup    
- srunoff217              0.00000          1.000       obsgroup    
- srunoff218              0.00000          1.000       obsgroup    
- srunoff219              0.00000          1.000       obsgroup    
- srunoff220              0.00000          1.000       obsgroup    
- srunoff221              0.00000          1.000       obsgroup    
- srunoff222              0.00000          1.000       obsgroup    
- srunoff223              0.00000          1.000       obsgroup    
- srunoff224              0.00000          1.000       obsgroup    
- srunoff225              0.00000          1.000       obsgroup    
- srunoff226              0.00000          1.000       obsgroup    
- srunoff227              0.00000          1.000       obsgroup    
-
-
-Control settings:-
-
-   Initial lambda                                               :  5.0000    
-   Lambda adjustment factor                                     :  2.0000    
-   Sufficient new/old phi ratio per optimisation iteration      : 0.30000    
-   Limiting relative phi reduction between lambdas              : 3.00000E-02
-   Maximum trial lambdas per iteration                          :  10
-   Forgive model run failure during lamda testing               : no
-   Forgive model run failure during Jacobian runs               : no
-
-   Perform Broyden's update of Jacobian matrix                  : no
-   Undertake observation re-referencing                         : no
-
-   Maximum  factor  parameter change (factor-limited changes)   : na
-   Maximum relative parameter change (relative-limited changes) :  3.0000
-   Fraction of initial parameter values used in computing
-   change limit for near-zero parameters                        : 1.00000E-03
-   Allow bending of parameter upgrade vector                    : no
-   Allow parameters to stick to their bounds                    : no
-
-   Relative phi reduction below which to begin use of
-   central derivatives                                          : 0.10000             
-   Iteration at which to first consider derivatives switch      :   1
-
-   Relative phi reduction indicating convergence                : 0.10000E-01
-   Number of phi values required within this range              :   3
-   Maximum number of consecutive failures to lower phi          :   3
-   Minimal relative parameter change indicating convergence     : 0.10000E-01
-   Number of consecutive iterations with minimal param change   :   3
-   Maximum number of optimisation iterations                    :  30
-
-   Attempt automatic user intervention                          : no
-
-   Attempt reuse of parameter sensitivities                     : no
-
-   Scale parameters by their bounds                             : no
-
-
-File saving options: -
-
-   Save best JCO file                                           : yes
-   Save multiple JCO files                                      : no
-   Save multiple REI files                                      : no
-   Save multiple PAR files                                      : no
-
-
-                            OPTIMISATION RECORD
-
-
-INITIAL CONDITIONS: 
-   Sum of squared weighted residuals (ie phi) =   1.4813    
-
-      Current parameter values
-      dprsn_strg      0.118110    
-      sctn_hd          4.33900    
-      hyd_cndct       0.461000    
-      ntl_dfct        0.751000    
-      vgttn_vlm       0.200000    
-      srf_rghns       0.250000    
-      srf_slope        1.50000    
-      sid_slope        3.00000    
-      srf_width        12.5000    
-      intl_sat        1.000000E-02
-
-
-OPTIMISATION ITERATION NO.        : 1
-   Model calls so far             : 1
-   Starting phi for this iteration:   1.4813    
-
-       Lambda =   5.0000     ----->
-          Phi =  0.96112      (  0.649 of starting phi)
-
-       Lambda =   2.5000     ----->
-          Phi =  0.96112      (  0.649 of starting phi)
-
-   No more lambdas: relative phi reduction between lambdas less than 0.0300
-   Lowest phi this iteration:  0.96112    
-
-      Current parameter values                 Previous parameter values
-      dprsn_strg      0.118110                 dprsn_strg       0.118110    
-      sctn_hd          4.33900                 sctn_hd           4.33900    
-      hyd_cndct       0.461000                 hyd_cndct        0.461000    
-      ntl_dfct        0.990000                 ntl_dfct         0.751000    
-      vgttn_vlm       0.200000                 vgttn_vlm        0.200000    
-      srf_rghns       0.250000                 srf_rghns        0.250000    
-      srf_slope        1.50000                 srf_slope         1.50000    
-      sid_slope        3.00000                 sid_slope         3.00000    
-      srf_width        12.5000                 srf_width         12.5000    
-      intl_sat        1.000000E-02             intl_sat         1.000000E-02
-   Maximum relative change: 0.3182     ["ntl_dfct"]
-
-
-OPTIMISATION ITERATION NO.        : 2
-   Model calls so far             : 4
-   Starting phi for this iteration:  0.96112    
-       param "ntl_dfct" frozen: gradient and update vectors out of bounds
-      all parameters frozen
-   Switch to higher order derivatives calculation
-   (restart from best parameters so far - these achieved at iteration    1)
-
-      Current parameter values
-      dprsn_strg      0.118110    
-      sctn_hd          4.33900    
-      hyd_cndct       0.461000    
-      ntl_dfct        0.990000    
-      vgttn_vlm       0.200000    
-      srf_rghns       0.250000    
-      srf_slope        1.50000    
-      sid_slope        3.00000    
-      srf_width        12.5000    
-      intl_sat        1.000000E-02
-
-
-OPTIMISATION ITERATION NO.        : 3
-   Model calls so far             : 5
-   Starting phi for this iteration:  0.96112    
-   All frozen parameters freed.
-       param "ntl_dfct" frozen: gradient and update vectors out of bounds
-      all parameters frozen
-
-   Optimisation complete: all parameters at their limits.
-   Total model calls:      7
-
-   The model has been run one final time using best parameters. 
-   Thus all model input files contain best parameter values, and model 
-   output files contain model results based on these parameters.
-
-
-                            OPTIMISATION RESULTS
-
-
-Adjustable parameters ----->
-
-Parameter        Estimated         95% percent confidence limits
-                 value             lower limit       upper limit
- ntl_dfct       0.990000           0.918354           1.06165    
-
-Note: confidence limits provide only an indication of parameter uncertainty.
-      They rely on a linearity assumption which  may not extend as far in 
-      parameter space as the confidence limits themselves - see PEST manual.
-
-
-Fixed parameters ----->
-
-Parameter      Fixed value
- dprsn_strg     0.118110    
- sctn_hd         4.33900    
- hyd_cndct      0.461000    
- vgttn_vlm      0.200000    
- srf_rghns      0.250000    
- srf_slope       1.50000    
- sid_slope       3.00000    
- srf_width       12.5000    
- intl_sat       1.000000E-02
-
-See file washdot216.sen for parameter sensitivities.
-
-
-Observations ----->
-
-Observation            Measured       Calculated     Residual       Weight     Group
-                       value          value
-srunoff1               0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff2               0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff3               0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff4               0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff5               0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff6               0.00000       5.000000E-05  -5.000000E-05    1.000      obsgroup    
-srunoff7               0.00000       1.600000E-04  -1.600000E-04    1.000      obsgroup    
-srunoff8               0.00000       1.800000E-04  -1.800000E-04    1.000      obsgroup    
-srunoff9               0.00000       1.700000E-04  -1.700000E-04    1.000      obsgroup    
-srunoff10              0.00000       1.900000E-04  -1.900000E-04    1.000      obsgroup    
-srunoff11              0.00000       2.400000E-04  -2.400000E-04    1.000      obsgroup    
-srunoff12              0.00000       3.600000E-04  -3.600000E-04    1.000      obsgroup    
-srunoff13              0.00000       7.900000E-04  -7.900000E-04    1.000      obsgroup    
-srunoff14              0.00000       5.500000E-04  -5.500000E-04    1.000      obsgroup    
-srunoff15              0.00000       6.900000E-04  -6.900000E-04    1.000      obsgroup    
-srunoff16              0.00000       7.400000E-04  -7.400000E-04    1.000      obsgroup    
-srunoff17              0.00000       6.900000E-04  -6.900000E-04    1.000      obsgroup    
-srunoff18              0.00000       6.200000E-04  -6.200000E-04    1.000      obsgroup    
-srunoff19             1.790000E-03   5.600000E-04   1.230000E-03    1.000      obsgroup    
-srunoff20             4.060000E-02   5.300000E-04   4.007000E-02    1.000      obsgroup    
-srunoff21             5.220000E-02   9.000000E-04   5.130000E-02    1.000      obsgroup    
-srunoff22             5.163952E-02   6.300000E-04   5.100952E-02    1.000      obsgroup    
-srunoff23             4.813783E-02   7.200000E-04   4.741783E-02    1.000      obsgroup    
-srunoff24             5.239962E-02   7.100000E-04   5.168962E-02    1.000      obsgroup    
-srunoff25             6.565263E-02   6.700000E-04   6.498263E-02    1.000      obsgroup    
-srunoff26             7.430000E-02   6.600000E-04   7.364000E-02    1.000      obsgroup    
-srunoff27             7.599522E-02   7.400000E-04   7.525522E-02    1.000      obsgroup    
-srunoff28             7.329321E-02   7.500000E-04   7.254321E-02    1.000      obsgroup    
-srunoff29             7.135556E-02   8.300000E-04   7.052556E-02    1.000      obsgroup    
-srunoff30             7.016501E-02   1.020000E-03   6.914501E-02    1.000      obsgroup    
-srunoff31             7.317046E-02   2.040000E-03   7.113046E-02    1.000      obsgroup    
-srunoff32             9.931592E-02   5.610000E-03   9.370592E-02    1.000      obsgroup    
-srunoff33             0.135096       1.381000E-02   0.121286        1.000      obsgroup    
-srunoff34             0.156271       2.588000E-02   0.130391        1.000      obsgroup    
-srunoff35             0.181221       3.775000E-02   0.143471        1.000      obsgroup    
-srunoff36             0.188784       5.788000E-02   0.130904        1.000      obsgroup    
-srunoff37             0.186578       8.510000E-02   0.101478        1.000      obsgroup    
-srunoff38             0.204535       0.107180       9.735497E-02    1.000      obsgroup    
-srunoff39             0.207592       0.117970       8.962205E-02    1.000      obsgroup    
-srunoff40             0.188919       0.123060       6.585888E-02    1.000      obsgroup    
-srunoff41             0.167128       0.130610       3.651784E-02    1.000      obsgroup    
-srunoff42             0.153309       0.144070       9.239126E-03    1.000      obsgroup    
-srunoff43             0.155280       0.163770      -8.490078E-03    1.000      obsgroup    
-srunoff44             0.171616       0.185250      -1.363409E-02    1.000      obsgroup    
-srunoff45             0.192850       0.212770      -1.991979E-02    1.000      obsgroup    
-srunoff46             0.209431       0.248610      -3.917908E-02    1.000      obsgroup    
-srunoff47             0.231538       0.294830      -6.329229E-02    1.000      obsgroup    
-srunoff48             0.257656       0.357000      -9.934408E-02    1.000      obsgroup    
-srunoff49             0.289616       0.455220      -0.165604        1.000      obsgroup    
-srunoff50             0.378395       0.590800      -0.212405        1.000      obsgroup    
-srunoff51             0.495819       0.700220      -0.204401        1.000      obsgroup    
-srunoff52             0.527490       0.818210      -0.290720        1.000      obsgroup    
-srunoff53             0.585606       0.906670      -0.321064        1.000      obsgroup    
-srunoff54             0.586037       0.867270      -0.281233        1.000      obsgroup    
-srunoff55             0.484364       0.743930      -0.259566        1.000      obsgroup    
-srunoff56             0.364211       0.618000      -0.253789        1.000      obsgroup    
-srunoff57             0.264476       0.519110      -0.254634        1.000      obsgroup    
-srunoff58             0.202938       0.425510      -0.222572        1.000      obsgroup    
-srunoff59             0.166841       0.341020      -0.174179        1.000      obsgroup    
-srunoff60             0.130956       0.271540      -0.140584        1.000      obsgroup    
-srunoff61             9.879580E-02   0.214090      -0.115294        1.000      obsgroup    
-srunoff62             7.473634E-02   0.165710      -9.097367E-02    1.000      obsgroup    
-srunoff63             5.420467E-02   0.124890      -7.068534E-02    1.000      obsgroup    
-srunoff64             3.951330E-02   9.345000E-02  -5.393670E-02    1.000      obsgroup    
-srunoff65             2.712250E-02   6.882000E-02  -4.169750E-02    1.000      obsgroup    
-srunoff66             1.680656E-02   4.717000E-02  -3.036344E-02    1.000      obsgroup    
-srunoff67             9.143787E-03   2.942000E-02  -2.027621E-02    1.000      obsgroup    
-srunoff68             3.936864E-03   1.623000E-02  -1.229314E-02    1.000      obsgroup    
-srunoff69             9.209390E-04   6.450000E-03  -5.529061E-03    1.000      obsgroup    
-srunoff70             1.949630E-05   4.400000E-04  -4.205037E-04    1.000      obsgroup    
-srunoff71              0.00000       1.800000E-04  -1.800000E-04    1.000      obsgroup    
-srunoff72              0.00000       1.300000E-04  -1.300000E-04    1.000      obsgroup    
-srunoff73              0.00000       1.300000E-04  -1.300000E-04    1.000      obsgroup    
-srunoff74              0.00000       1.500000E-04  -1.500000E-04    1.000      obsgroup    
-srunoff75              0.00000       1.700000E-04  -1.700000E-04    1.000      obsgroup    
-srunoff76              0.00000       2.000000E-04  -2.000000E-04    1.000      obsgroup    
-srunoff77              0.00000       5.800000E-04  -5.800000E-04    1.000      obsgroup    
-srunoff78              0.00000       2.680000E-03  -2.680000E-03    1.000      obsgroup    
-srunoff79              0.00000       5.600000E-03  -5.600000E-03    1.000      obsgroup    
-srunoff80              0.00000       9.120000E-03  -9.120000E-03    1.000      obsgroup    
-srunoff81              0.00000       1.000000E-02  -1.000000E-02    1.000      obsgroup    
-srunoff82              0.00000       9.810000E-03  -9.810000E-03    1.000      obsgroup    
-srunoff83              0.00000       9.140000E-03  -9.140000E-03    1.000      obsgroup    
-srunoff84             5.021890E-04   1.069000E-02  -1.018781E-02    1.000      obsgroup    
-srunoff85             8.170892E-03   1.475000E-02  -6.579108E-03    1.000      obsgroup    
-srunoff86             1.083383E-02   1.820000E-02  -7.366171E-03    1.000      obsgroup    
-srunoff87             1.233829E-02   2.027000E-02  -7.931711E-03    1.000      obsgroup    
-srunoff88             1.773408E-02   2.071000E-02  -2.975917E-03    1.000      obsgroup    
-srunoff89             2.292850E-02   2.223000E-02   6.985010E-04    1.000      obsgroup    
-srunoff90             2.373166E-02   2.917000E-02  -5.438341E-03    1.000      obsgroup    
-srunoff91             2.251208E-02   4.340000E-02  -2.088792E-02    1.000      obsgroup    
-srunoff92             2.098286E-02   7.085000E-02  -4.986714E-02    1.000      obsgroup    
-srunoff93             2.356215E-02   0.115490      -9.192785E-02    1.000      obsgroup    
-srunoff94             7.400440E-02   0.153070      -7.906560E-02    1.000      obsgroup    
-srunoff95             0.147522       0.164760      -1.723786E-02    1.000      obsgroup    
-srunoff96             0.146158       0.159870      -1.371236E-02    1.000      obsgroup    
-srunoff97             0.114498       0.147240      -3.274200E-02    1.000      obsgroup    
-srunoff98             8.487122E-02   0.129620      -4.474878E-02    1.000      obsgroup    
-srunoff99             6.191904E-02   0.110650      -4.873096E-02    1.000      obsgroup    
-srunoff100            4.506253E-02   9.359000E-02  -4.852747E-02    1.000      obsgroup    
-srunoff101            3.178783E-02   8.806000E-02  -5.627217E-02    1.000      obsgroup    
-srunoff102            2.356045E-02   9.459000E-02  -7.102955E-02    1.000      obsgroup    
-srunoff103            1.752143E-02   0.103450      -8.592857E-02    1.000      obsgroup    
-srunoff104            1.558539E-02   0.125700      -0.110115        1.000      obsgroup    
-srunoff105            4.069551E-02   0.137390      -9.669449E-02    1.000      obsgroup    
-srunoff106            9.393870E-02   0.134640      -4.070130E-02    1.000      obsgroup    
-srunoff107            0.101603       0.124170      -2.256701E-02    1.000      obsgroup    
-srunoff108            8.370422E-02   0.108350      -2.464578E-02    1.000      obsgroup    
-srunoff109            6.469307E-02   9.050000E-02  -2.580693E-02    1.000      obsgroup    
-srunoff110            4.900993E-02   7.798000E-02  -2.897007E-02    1.000      obsgroup    
-srunoff111            3.532579E-02   7.476000E-02  -3.943421E-02    1.000      obsgroup    
-srunoff112            2.348364E-02   7.052000E-02  -4.703636E-02    1.000      obsgroup    
-srunoff113            1.538739E-02   6.261000E-02  -4.722261E-02    1.000      obsgroup    
-srunoff114            1.290990E-02   5.155000E-02  -3.864010E-02    1.000      obsgroup    
-srunoff115            1.701043E-02   3.969000E-02  -2.267957E-02    1.000      obsgroup    
-srunoff116            1.812758E-02   2.907000E-02  -1.094242E-02    1.000      obsgroup    
-srunoff117            1.505050E-02   2.006000E-02  -5.009500E-03    1.000      obsgroup    
-srunoff118            1.043645E-02   1.203000E-02  -1.593549E-03    1.000      obsgroup    
-srunoff119            5.586960E-03   5.280000E-03   3.069600E-04    1.000      obsgroup    
-srunoff120            2.272010E-03   8.400000E-04   1.432010E-03    1.000      obsgroup    
-srunoff121            1.821080E-04   1.900000E-04  -7.892000E-06    1.000      obsgroup    
-srunoff122             0.00000       1.400000E-04  -1.400000E-04    1.000      obsgroup    
-srunoff123             0.00000       1.200000E-04  -1.200000E-04    1.000      obsgroup    
-srunoff124             0.00000       1.200000E-04  -1.200000E-04    1.000      obsgroup    
-srunoff125             0.00000       1.100000E-04  -1.100000E-04    1.000      obsgroup    
-srunoff126             0.00000       1.100000E-04  -1.100000E-04    1.000      obsgroup    
-srunoff127             0.00000       1.000000E-04  -1.000000E-04    1.000      obsgroup    
-srunoff128             0.00000       8.000000E-05  -8.000000E-05    1.000      obsgroup    
-srunoff129             0.00000       5.000000E-05  -5.000000E-05    1.000      obsgroup    
-srunoff130             0.00000       3.000000E-05  -3.000000E-05    1.000      obsgroup    
-srunoff131             0.00000       2.000000E-05  -2.000000E-05    1.000      obsgroup    
-srunoff132             0.00000       1.000000E-05  -1.000000E-05    1.000      obsgroup    
-srunoff133             0.00000       1.000000E-05  -1.000000E-05    1.000      obsgroup    
-srunoff134             0.00000       1.000000E-05  -1.000000E-05    1.000      obsgroup    
-srunoff135             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff136             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff137             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff138             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff139             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff140             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff141             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff142             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff143             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff144             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff145             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff146             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff147             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff148             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff149             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff150             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff151             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff152             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff153             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff154             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff155             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff156             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff157             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff158             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff159             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff160             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff161             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff162             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff163             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff164             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff165             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff166             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff167             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff168             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff169             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff170             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff171             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff172             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff173             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff174             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff175             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff176             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff177             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff178             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff179             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff180             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff181             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff182             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff183             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff184             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff185             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff186             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff187             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff188             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff189             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff190             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff191             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff192             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff193             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff194             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff195             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff196             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff197             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff198             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff199             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff200             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff201             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff202             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff203             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff204             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff205             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff206             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff207             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff208             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff209             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff210             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff211             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff212             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff213             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff214             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff215             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff216             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff217             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff218             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff219             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff220             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff221             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff222             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff223             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff224             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff225             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff226             0.00000        0.00000        0.00000        1.000      obsgroup    
-srunoff227             0.00000        0.00000        0.00000        1.000      obsgroup    
-
-See file washdot216.res for more details of residuals in graph-ready format.
-
-See file washdot216.seo for composite observation sensitivities.
-
-
-Objective function ----->
-
-  Sum of squared weighted residuals (ie phi)                =  0.9611    
-
-
-Correlation Coefficient ----->
-
-  Correlation coefficient                                   =  0.94094    
-
-
-Analysis of residuals ----->
-
-  All residuals:-
-     Number of residuals with non-zero weight                       =   227
-     Mean value of non-zero weighted residuals                      = -1.3310E-02
-     Maximum weighted residual [observation "srunoff35"]            =  0.1435    
-     Minimum weighted residual [observation "srunoff53"]            = -0.3211    
-     Standard variance of weighted residuals                        =  4.2527E-03
-     Standard error of weighted residuals                           =  6.5213E-02
-
-     Note: the above variance was obtained by dividing the objective 
-     function by the number of system degrees of freedom (ie. number of 
-     observations with non-zero weight plus number of prior information 
-     articles with non-zero weight minus the number of adjustable parameters.)
-     If the degrees of freedom is negative the divisor becomes 
-     the number of observations with non-zero weight plus the number of 
-     prior information items with non-zero weight.
-
-
-K-L information statistics ----->
-
-
-  AIC   =  -1236.466    
-  AICC  =  -1236.413    
-  BIC   =  -1229.616    
-  KIC   =  -1235.682    
-
-Parameter covariance matrix ----->
-
-               ntl_dfct  
-ntl_dfct       1.3362E-03
-
-
-Parameter correlation coefficient matrix ----->
-
-               ntl_dfct  
-ntl_dfct        1.000    
-
-
-Normalized eigenvectors of parameter covariance matrix ----->
-
-              Vector_1   
-ntl_dfct        1.000    
-
-
-Eigenvalues ----->
-
-               1.3362E-03

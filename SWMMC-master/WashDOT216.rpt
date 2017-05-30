@@ -36,8 +36,8 @@
   Total Precipitation ......         0.000         0.200
   Outfall Runon ............         0.013         5.520
   Evaporation Loss .........         0.000         0.000
-  Infiltration Loss ........         0.011         4.622
-  Surface Runoff ...........         0.003         1.098
+  Infiltration Loss ........         0.010         4.373
+  Surface Runoff ...........         0.003         1.347
   Final Storage ............         0.000         0.000
   Continuity Error (%) .....         0.000
   
@@ -68,7 +68,7 @@
                            Precip      Runon       Evap      Infil     Runoff      Runoff   Runoff   Coeff
   Subcatchment                 in         in         in         in         in    10^6 gal      CFS
   --------------------------------------------------------------------------------------------------------
-  SwaleArea                  0.20       5.52       0.00       4.62       1.10        0.00     0.03   0.192
+  SwaleArea                  0.20       5.52       0.00       4.37       1.35        0.00     0.03   0.235
   
 
   ***********************
@@ -80,8 +80,8 @@
                                         Inflow      Loss      Loss   Outflow   Outflow   Storage   Storage       Error
   Subcatchment      LID Control             in        in        in        in        in        in        in           %
   --------------------------------------------------------------------------------------------------------------------
-  SwaleArea         Swale1                5.72      0.00      4.62      1.10      0.00      0.00      0.00       -0.01
+  SwaleArea         Swale1                5.72      0.00      4.37      1.35      0.00      0.00      0.00       -0.00
 
-  Analysis begun on:  Thu Aug 25 11:36:19 2016
-  Analysis ended on:  Thu Aug 25 11:36:19 2016
+  Analysis begun on:  Tue May 30 14:31:29 2017
+  Analysis ended on:  Tue May 30 14:31:29 2017
   Total elapsed time: < 1 sec

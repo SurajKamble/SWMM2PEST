@@ -27,12 +27,9 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
 
         self.current_sub = None
 
-        
-
-
-        # self.show()
 
     def openFileDialog(self):
+
 
         dir = '/Users/surajkamble/Documents/SWMM2PEST'
 
@@ -40,6 +37,7 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
 
         fname = QFileDialog.getOpenFileName(self, 'Select input file', dir)
         print(str(fname[0][-3:]))
+
 
         self.inp_fname = fname[0]
 
@@ -85,6 +83,7 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
         lid_controls_data = all_data[1]
 
         self.loadLIDControlsUI(lid_controls_data)
+        self.hide()
 
 
         self.secondPage.buttonOkParameters.clicked.connect(self.replace_subcatchment_data)
@@ -174,7 +173,7 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
 
         split_lines = lines[start_line].split(" ")
 
-
+        '''
         index = 0
 
         print(' '.join(split_lines))
@@ -219,45 +218,61 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
             if i == index_got:
                 location_end = location_start + len(split_lines[i])
 
-        print(location_start)
-        print(location_end)
+        '''
+
+        self.writeInsFile(lines, start_line, index_needed - 1)
 
 
-        if location_end > location_start:
-            self.writeInsFile(lines, start_line, index_needed - 1, location_start, location_end)
-        else:
-            print("Wrong locations generated")
-
-
-    def writeInsFile(self, lines, start_line, index, location_start, location_end):
+    def writeInsFile(self, lines, start_line, index):
 
         ins_lines = "pif #\n#-------#\n"
 
         self.ins_fname = self.out_fname[:-3] + "ins"
 
+        print("In writeInsFile")
 
         obs_name = ""
 
         if index == 2:
             self.secondPage.pushButtonTotalEvap.setFlat(True)
             obs_name = "tevap"
+            location_start = 45
+            location_end = 51
         if index == 3:
             self.secondPage.pushButtonSurfInfil.setFlat(True)
             obs_name = "sinfil"
+            location_start = 55
+            location_end = 61
         if index == 4:
             obs_name = "sperc"
+            location_start = 75
+            location_end = 81
         if index == 5:
             obs_name = "binfil"
+            location_start = 85
+            location_end = 91
         if index == 6:
             obs_name = "srunoff"
+            location_start = 94
+            location_end = 100
         if index == 7:
             obs_name = "dflow"
+            location_start = 104
+            location_end = 110
         if index == 8:
             obs_name = "sudepth"
+            location_start = 114
+            location_end = 120
         if index == 9:
             obs_name = "smoist"
+            location_start = 134
+            location_end = 140
         if index == 10:
             obs_name = "stdepth"
+            location_start = 144
+            location_end = 150
+
+        print("After Switch Case")
 
         line_num = start_line
 
@@ -269,13 +284,14 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
 
             dstamp = lines[line_num].split()[0]
 
-            dstamp = dstamp.split("-")[1]
+            dstamp = dstamp.split("/")[0] + dstamp.split("/")[1]
 
             tstamp = lines[line_num].split()[1]
 
             tstamp = tstamp.split(":")[0] + tstamp.split(":")[1]
 
             print(dstamp + tstamp)
+
 
             # obs_name += tstamp
 
@@ -406,11 +422,15 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
             par_low_limit = par.get_lower_limit()
             par_up_limit = par.get_upper_limit()
 
+            control_file_data += par_short_name + "           "
 
-            control_file_data += par_short_name + "                  fixed  factor    " + par_val + "    " + par_low_limit + "    " + \
+            if par.is_checked_fixed:
+                control_file_data += "fixed"
+            if par.is_checked_none:
+                control_file_data += "none"
+
+            control_file_data += "  factor    " + par_val + "    " + par_low_limit + "    " + \
                 par_up_limit + "    paragroup  1.0  0.0  1\n"
-
-
 
         '''
         Observation data
@@ -431,13 +451,14 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
 
             dstamp = lines[line_num].split()[0]
 
-            dstamp = dstamp.split("-")[1]
+            dstamp = dstamp.split("/")[0] + dstamp.split("/")[1]
 
             tstamp = lines[line_num].split()[1]
 
             tstamp = tstamp.split(":")[0] + tstamp.split(":")[1]
 
             print(dstamp + tstamp)
+
 
             # obs_name += tstamp
 
@@ -447,19 +468,43 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
 
             line_num += 1
 
-        control_file_data += obs_lines
+        control_file_data += obs_lines + "\n"
 
+        '''
+        Model Command Line Section
+        '''
+
+        control_file_data += "* model command line\n"
+
+        self.rpt_fname = self.inp_fname[:-3] + "rpt"
+        self.out_fname1 = self.inp_fname[:-3] + "out"
+        command_line_data = "swmm5 " + self.inp_fname + " " + self.rpt_fname + " " + self.out_fname1 + "\n\n"
+
+        control_file_data += command_line_data
+
+        '''
+        Model Input Output Data Section
+        '''
+
+        control_file_data += "* model input/output\n"
+
+        self.tpl_fname = self.inp_fname[:-3] + "tpl"
+
+        control_file_data += self.tpl_fname + " " + self.inp_fname + "\n"
+
+        control_file_data += self.ins_fname + " " + self.out_fname + "\n\n"
+
+        control_file_data += "* prior information\n\n"
 
         self.control_fname = self.inp_fname[:-3] + "pst"
 
         with open(self.control_fname, 'w') as f:
             f.write(control_file_data)
 
+        self.run_pest()
 
-
-
-
-
+    def run_pest(self):
+        pest_run_command_line = "pest " + self.control_fname
 
 
 
@@ -558,6 +603,11 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
         if parameter.upper_limit != '':
             self.dialog_box.lineEdit_UpperLimit.setText(parameter.upper_limit)
 
+        if parameter.is_checked_fixed:
+            self.dialog_box.checkBox_Fixed.setChecked(True)
+        if parameter.is_checked_none:
+            self.dialog_box.checkBox_None.setChecked(True)
+
         
         self.dialog_box.buttonBox.accepted.connect(lambda: self.saveParameterValues(parameter))
 
@@ -573,15 +623,25 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
 
         upper_limit = self.dialog_box.lineEdit_UpperLimit.text()
 
+        is_checked_fixed = self.dialog_box.checkBox_Fixed.checkState()
+
+        is_checked_none = self.dialog_box.checkBox_None.checkState()
+
         if (self.current_sub is not None) and (parameter.name in vars(self.current_sub).keys()):
 
             vars(vars(self.current_sub)[parameter.name])['lower_limit'] = lower_limit
             vars(vars(self.current_sub)[parameter.name])['upper_limit'] = upper_limit
 
+            vars(vars(self.current_sub)[parameter.name])['is_checked_fixed'] = is_checked_fixed
+            vars(vars(self.current_sub)[parameter.name])['is_checked_none'] = is_checked_none
+
         if parameter.name in vars(self.lid_controls_data).keys():
 
             vars(vars(self.lid_controls_data)[parameter.name])['lower_limit'] = lower_limit
             vars(vars(self.lid_controls_data)[parameter.name])['upper_limit'] = upper_limit
+
+            vars(vars(self.lid_controls_data)[parameter.name])['is_checked_fixed'] = is_checked_fixed
+            vars(vars(self.lid_controls_data)[parameter.name])['is_checked_none'] = is_checked_none
 
 
         # print(self.current_sub.area.lower_limit)
@@ -901,7 +961,7 @@ class cQLineEdit(QtWidgets.QLineEdit):
     clicked = pyqtSignal()
 
     def __init__(self, widget):
-        super().__init__(widget)
+        super(cQLineEdit, self).__init__(widget)
 
     def mousePressEvent(self, QMouseEvent):
         self.clicked.emit()

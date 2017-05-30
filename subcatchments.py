@@ -224,6 +224,10 @@ class DataField():
 
         self.is_selected_for_estimation = self.check_if_selected_for_estimation()
 
+        self.is_checked_fixed = False
+        self.is_checked_none = False
+
+
     def get_value(self):
         return self.value
 
@@ -264,7 +268,7 @@ class DataField():
                 self.short_name = self.sub_name[0] + self.sub_name[-1] + self.short_name
 
         if len(self.name) > 6:
-            return "#" + self.short_name + "#"
+            return "#" + self.short_name[:12] + "#"
         else:
             if len(self.sub_name) > 0:
                 return "#" + self.sub_name[0] + self.sub_name[-1] + self.name + "#"

@@ -252,7 +252,7 @@ srunoff225           0 1.0 obsgroup
 srunoff226           0 1.0 obsgroup
 srunoff227           0 1.0 obsgroup
 * model command line
-swmm5110_test.exe  WashDOT216.inp WashDOT216.rpt WashDOT216.out
+swmm5  E:\UC\EPA\SWMM2PEST\SWMM2PEST\SWMMC-master\WashDOT216.inp E:\UC\EPA\SWMM2PEST\SWMM2PEST\SWMMC-master\WashDOT216.rpt E:\UC\EPA\SWMM2PEST\SWMM2PEST\SWMMC-master\WashDOT216.out
 * model input/output
-WashDOT216.tpl  WashDOT216.inp
-WashDOT216.ins  WashDOT216.txt
+E:\UC\EPA\SWMM2PEST\SWMM2PEST\SWMMC-master\WashDOT216.tpl  E:\UC\EPA\SWMM2PEST\SWMM2PEST\SWMMC-master\WashDOT216.inp
+E:\UC\EPA\SWMM2PEST\SWMM2PEST\SWMMC-master\WashDOT216.ins  E:\UC\EPA\SWMM2PEST\SWMM2PEST\SWMMC-master\WashDOT216.txt

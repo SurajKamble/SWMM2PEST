@@ -46,7 +46,7 @@ DRY_ONLY         NO
 [RAINGAGES]
 ;;Name           Format    Interval SCF      Source
 ;;-------------- --------- ------ ------ ----------
-1                INTENSITY 0:01     1.0      FILE       "C:\Users\mplatz\Projects\SWMM Validation Study\tippingBucket\data\storm157.dat" strm157    IN
+1                INTENSITY 0:01     1.0      FILE       storm157
  
 [SUBCATCHMENTS]
 ;;Name           Rain Gage        Outlet           Area     %Imperv  Width    %Slope   CurbLen  SnowPack

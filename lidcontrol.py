@@ -30,11 +30,7 @@ class LIDControl():
         """does lid have drainmat system"""
 
         self.surface_layer_storage_depth = DataField('surface_layer_storage_depth', "Surface_Layer_Storage_Depth", index=2)
-        """When confining walls or berms are present this is the maximum depth to
-            which water can pond above the surface of the unit before overflow
-            occurs (in inches or mm). For LIDs that experience overland flow it is
-            the height of any surface depression storage. For swales, it is the height
-            of its trapezoidal cross section. """
+
 
         self.surface_layer_vegetative_cover_fraction = DataField('surface_layer_vegetative_cover_fraction', "Surface_Layer_Vegetative_Cover_Fraction", index=3)
         """Fraction of the storage area above the surface that is filled with vegetation"""

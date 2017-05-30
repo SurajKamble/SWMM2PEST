@@ -59,93 +59,10 @@
   Station    First        Last         Recording   Periods    Periods    Periods
   ID         Date         Date         Frequency  w/Precip    Missing    Malfunc.
   -------------------------------------------------------------------------------
-  strm127    APR-27-2011  APR-28-2011      1 min       331          0          0
 
   
-  *********************************************************
-  NOTE: The summary statistics displayed in this report are
-  based on results found at every computational time step,  
-  not just on results from each reporting time step.
-  *********************************************************
-  
-  ****************
-  Analysis Options
-  ****************
-  Flow Units ............... GPM
-  Process Models:
-    Rainfall/Runoff ........ YES
-    RDII ................... NO
-    Snowmelt ............... NO
-    Groundwater ............ NO
-    Flow Routing ........... NO
-    Water Quality .......... NO
-  Infiltration Method ...... GREEN_AMPT
-  Starting Date ............ APR-27-2011 20:40:00
-  Ending Date .............. APR-28-2011 16:00:00
-  Antecedent Dry Days ...... 0.0
-  Report Time Step ......... 00:02:00
-  Wet Time Step ............ 00:00:15
-  Dry Time Step ............ 00:02:00
-  
-  
-  *********************
-  Control Actions Taken
-  *********************
+  ERROR 317: cannot open rainfall data file storm127.dat.
 
-  
-  **************************        Volume         Depth
-  Runoff Quantity Continuity     acre-feet        inches
-  **************************     ---------       -------
-  Initial LID Storage ......         0.000         0.320
-  Total Precipitation ......         0.002         1.273
-  Evaporation Loss .........         0.000         0.000
-  Infiltration Loss ........         0.002         1.349
-  Surface Runoff ...........         0.000         0.000
-  LID Drainage .............         0.000         0.021
-  Final Storage ............         0.000         0.223
-  Continuity Error (%) .....         0.000
-  
-  
-  **************************        Volume        Volume
-  Flow Routing Continuity        acre-feet      10^6 gal
-  **************************     ---------     ---------
-  Dry Weather Inflow .......         0.000         0.000
-  Wet Weather Inflow .......         0.000         0.000
-  Groundwater Inflow .......         0.000         0.000
-  RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
-  Evaporation Loss .........         0.000         0.000
-  Exfiltration Loss ........         0.000         0.000
-  Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
-  
-  
-  ***************************
-  Subcatchment Runoff Summary
-  ***************************
-  
-  --------------------------------------------------------------------------------------------------------
-                            Total      Total      Total      Total      Total       Total     Peak  Runoff
-                           Precip      Runon       Evap      Infil     Runoff      Runoff   Runoff   Coeff
-  Subcatchment                 in         in         in         in         in    10^6 gal      GPM
-  --------------------------------------------------------------------------------------------------------
-  parkinglot                 1.27       0.00       0.00       1.35       0.02        0.00     0.35   0.017
-  
-
-  ***********************
-  LID Performance Summary
-  ***********************
-
-  --------------------------------------------------------------------------------------------------------------------
-                                         Total      Evap     Infil   Surface    Drain    Initial     Final  Continuity
-                                        Inflow      Loss      Loss   Outflow   Outflow   Storage   Storage       Error
-  Subcatchment      LID Control             in        in        in        in        in        in        in           %
-  --------------------------------------------------------------------------------------------------------------------
-  parkinglot        prPvmnt               1.28      0.00      1.35      0.00      0.02      0.32      0.22       -0.02
-
-  Analysis begun on:  Tue Aug 23 16:05:30 2016
-  Analysis ended on:  Tue Aug 23 16:05:30 2016
+  Analysis begun on:  Tue May 30 15:48:47 2017
+  Analysis ended on:  Tue May 30 15:48:47 2017
   Total elapsed time: < 1 sec

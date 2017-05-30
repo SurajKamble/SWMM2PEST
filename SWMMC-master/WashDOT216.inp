@@ -1,5 +1,5 @@
 ;Washington DOT Bioswale storm 2/16/2010
- 
+
 [OPTIONS]
 ;;Option             Value
 FLOW_UNITS           CFS
@@ -9,7 +9,7 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0
 ALLOW_PONDING        YES
 SKIP_STEADY_STATE    NO
- 
+
 START_DATE           02/15/2010
 START_TIME           21:30:00
 REPORT_START_DATE    02/15/2010
@@ -23,7 +23,7 @@ REPORT_STEP          00:05:00
 WET_STEP             00:05:00
 DRY_STEP             00:05:00
 ROUTING_STEP         0:00:05
- 
+
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 FORCE_MAIN_EQUATION  H-W
@@ -36,57 +36,57 @@ SYS_FLOW_TOL         5
 LAT_FLOW_TOL         5
 MINIMUM_STEP         0.5
 THREADS              1
- 
+
 [EVAPORATION]
 ;;Data Source    Parameters
 ;;-------------- ----------------
 CONSTANT         0.0
 DRY_ONLY         NO
- 
+
 [RAINGAGES]
 ;;Name           Format    Interval SCF      Source
 ;;-------------- --------- ------ ------ ----------
 Gage1            INTENSITY 0:01     1.0      TIMESERIES storm216
- 
+
 [SUBCATCHMENTS]
 ;;Name           Rain Gage        Outlet           Area     %Imperv  Width    %Slope   CurbLen  SnowPack
 ;;-------------- ---------------- ---------------- -------- -------- -------- -------- -------- ----------------
 ;Bioswale LID
 SwaleArea        Gage1            Out1             0.02869605 0        12.5      1.5      0
- 
+
 [SUBAREAS]
 ;;Subcatchment   N-Imperv   N-Perv     S-Imperv   S-Perv     PctZero    RouteTo    PctRouted
 ;;-------------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
 SwaleArea        0          0.22       0          .11811000000 25         OUTLET
- 
+
 [INFILTRATION]
 ;;Subcatchment   Suction    Ksat       IMD
 ;;-------------- ---------- ---------- ----------
-SwaleArea        4.3390000 .4610000000 .990000000
- 
+SwaleArea        4.3390000 .4610000000 .758510000
+
 [LID_CONTROLS]
 ;;Name           Type/Layer Parameters
 ;;-------------- ---------- ----------
 Swale1           VS
 Swale1           SURFACE    12    .2000000000 .2500000000 1.500000000 3.000000000
- 
+
 [LID_USAGE]
 ;;Subcatchment   LID Process      Number  Area       Width      InitSat    FromImp    ToPerv     RptFile                  DrainTo
 ;;-------------- ---------------- ------- ---------- ---------- ---------- ---------- ---------- ------------------------ ----------------
 SwaleArea        Swale1           1       1250.00    12.50000000 .010000000       100        0          ".\WashDOT216.txt"
- 
+
 [OUTFALLS]
 ;;Name           Elevation  Type       Stage Data       Gated    Route To
 ;;-------------- ---------- ---------- ---------------- -------- ----------------
 Out1             0          FREE                        NO
 ;Inflow to swale
 Out2             0          FREE                        NO       SwaleArea
- 
+
 [INFLOWS]
 ;;Node           Constituent      Time Series      Type     Mfactor  Sfactor  Baseline Pattern
 ;;-------------- ---------------- ---------------- -------- -------- -------- -------- --------
 Out2             FLOW             216Inflow        FLOW     1.0      1.0
- 
+
 [TIMESERIES]
 ;;Name           Date       Time       Value
 ;;-------------- ---------- ---------- ----------
@@ -502,7 +502,7 @@ storm216         2/16/2010  5:53       0.12
 storm216         2/16/2010  5:54       0.12
 storm216         2/16/2010  5:55       0.12
 storm216         2/16/2010  5:56       0.12
- 
+
 [REPORT]
 ;;Reporting Options
 INPUT      NO
@@ -510,23 +510,23 @@ CONTROLS   NO
 SUBCATCHMENTS NONE
 NODES ALL
 LINKS ALL
- 
+
 [TAGS]
- 
+
 [MAP]
 DIMENSIONS -1814.268 0.000 11814.268 10000.000
 Units      Feet
- 
+
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord
 ;;-------------- ------------------ ------------------
 Out1             643.963            5121.001
 Out2             5730.339           2058.324
- 
+
 [VERTICES]
 ;;Link           X-Coord            Y-Coord
 ;;-------------- ------------------ ------------------
- 
+
 [Polygons]
 ;;Subcatchment   X-Coord            Y-Coord
 ;;-------------- ------------------ ------------------
@@ -534,13 +534,13 @@ SwaleArea        4742.991           2336.449
 SwaleArea        5093.458           2768.692
 SwaleArea        2359.813           4415.888
 SwaleArea        2079.439           3983.645
- 
+
 [SYMBOLS]
 ;;Gage           X-Coord            Y-Coord
 ;;-------------- ------------------ ------------------
 Gage1            4146.624           4535.101
- 
- 
+
+
 [BACKDROP]
 FILE       "\\Aa.ad.epa.gov\ord\CIN\Users\main\L-P\mplatz\Net MyDocuments\EPA\EPA SWMM Projects\SWMM Backdrop Photos\Washington DOT1.JPG"
 DIMENSIONS -1814.268 936.184 11814.268 9063.816
