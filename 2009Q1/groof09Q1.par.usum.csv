@@ -1,0 +1,2 @@
+name,prior_mean,prior_stdev,prior_lower_bound,prior_upper_bound,post_mean,post_stdev,post_lower_bound,post_upper_bound
+F0PRCNT_NTLL,14.9395,12.5,-10.0605,39.9395,14.9395,12.5,-10.0605,39.9395

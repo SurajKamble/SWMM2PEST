@@ -1,0 +1,1120 @@
+PEST++ performance logger started at:  16:07:37
+        ( time = 16:07:37,  elapsed time = 2ms )
+  starting to process control file
+          ( time = 16:07:37,  elapsed time = 5ms )
+  finished processing control file
+          ( time = 16:07:37,  elapsed time = 72ms )
+    starting basic model IO error checking
+            ( time = 16:07:37,  elapsed time = 2ms )
+    finished basic model IO error checking
+
+            ( time = 16:07:37,  elapsed time = 7ms )
+beginning iteration 1
+        ( time = 16:07:37,  elapsed time = 160us )
+  commencing to build jacobian parameter sets
+          ( time = 16:07:37,  elapsed time = 50ms )
+  jacobian parameter sets built, commencing model runs
+          ( time = 16:07:40,  elapsed time = 2sec )
+  jacobian runs complete, processing runs
+          ( time = 16:07:40,  elapsed time = 378us )
+  processing jacobian runs complete
+          ( time = 16:07:40,  elapsed time = 253us )
+  saving jacobian and sen files
+          ( time = 16:07:40,  elapsed time = 9ms )
+  commencing calculation of upgrade vector
+          ( time = 16:07:40,  elapsed time = 744us )
+  forming JtQJ matrix
+          ( time = 16:07:40,  elapsed time = 274us )
+  commencing SVD factorization
+          ( time = 16:07:40,  elapsed time = 243us )
+  SVD factorization complete
+          ( time = 16:07:40,  elapsed time = 1ms )
+  commencing linear algebra multiplication to compute ugrade
+          ( time = 16:07:40,  elapsed time = 235us )
+  Vt info: rows = 0: cols = 1: size = 0: nonzeros = 0
+          ( time = 16:07:40,  elapsed time = 229us )
+  U info: rows = 1: cols = 0: size = 0: nonzeros = 0
+          ( time = 16:07:40,  elapsed time = 231us )
+  jac info: rows = 1052: cols = 1: size = 1052: nonzeros = 0
+          ( time = 16:07:40,  elapsed time = 275us )
+  linear algebra multiplication to compute ugrade complete
+          ( time = 16:07:40,  elapsed time = 211us )
+  commencing check of parameter bounds
+          ( time = 16:07:40,  elapsed time = 79ms )
+  beginning upgrade vector calculations, lambda = 0.1
+          ( time = 16:07:40,  elapsed time = 551us )
+    commencing calculation of upgrade vector
+            ( time = 16:07:40,  elapsed time = 1ms )
+    forming JtQJ matrix
+            ( time = 16:07:40,  elapsed time = 639us )
+    commencing to scale JtQJ matrix
+            ( time = 16:07:40,  elapsed time = 580us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:07:40,  elapsed time = 502us )
+    JS
+            ( time = 16:07:40,  elapsed time = 534us )
+    JS.transpose() * q_mat * JS + lambda * S.transpose() * S
+            ( time = 16:07:40,  elapsed time = 601us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:07:40,  elapsed time = 493us )
+    commencing SVD factorization
+            ( time = 16:07:40,  elapsed time = 516us )
+    SVD factorization complete
+            ( time = 16:07:40,  elapsed time = 3ms )
+    commencing linear algebra multiplication to compute ugrade
+            ( time = 16:07:40,  elapsed time = 573us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0Vt info: rows = 0: cols = 1: size = 0: nonzeros = 0
+            ( time = 16:07:40,  elapsed time = 511us )
+    U info: rows = 1: cols = 0: size = 0: nonzeros = 0
+            ( time = 16:07:40,  elapsed time = 507us )
+    jac info: rows = 1052: cols = 1: size = 1052: nonzeros = 0
+            ( time = 16:07:40,  elapsed time = 577us )
+    linear algebra multiplication to compute ugrade complete
+            ( time = 16:07:40,  elapsed time = 551us )
+    commencing check of parameter bounds
+            ( time = 16:07:40,  elapsed time = 17ms )
+  beginning upgrade vector calculations, lambda = 1
+          ( time = 16:07:40,  elapsed time = 545us )
+    commencing calculation of upgrade vector
+            ( time = 16:07:40,  elapsed time = 1ms )
+    forming JtQJ matrix
+            ( time = 16:07:40,  elapsed time = 586us )
+    commencing to scale JtQJ matrix
+            ( time = 16:07:40,  elapsed time = 563us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:07:40,  elapsed time = 784us )
+    JS
+            ( time = 16:07:40,  elapsed time = 532us )
+    JS.transpose() * q_mat * JS + lambda * S.transpose() * S
+            ( time = 16:07:40,  elapsed time = 595us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:07:40,  elapsed time = 502us )
+    commencing SVD factorization
+            ( time = 16:07:40,  elapsed time = 515us )
+    SVD factorization complete
+            ( time = 16:07:40,  elapsed time = 3ms )
+    commencing linear algebra multiplication to compute ugrade
+            ( time = 16:07:40,  elapsed time = 290us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0Vt info: rows = 0: cols = 1: size = 0: nonzeros = 0
+            ( time = 16:07:40,  elapsed time = 281us )
+    U info: rows = 1: cols = 0: size = 0: nonzeros = 0
+            ( time = 16:07:40,  elapsed time = 283us )
+    jac info: rows = 1052: cols = 1: size = 1052: nonzeros = 0
+            ( time = 16:07:40,  elapsed time = 313us )
+    linear algebra multiplication to compute ugrade complete
+            ( time = 16:07:40,  elapsed time = 292us )
+    commencing check of parameter bounds
+            ( time = 16:07:40,  elapsed time = 1ms )
+  beginning upgrade vector calculations, lambda = 10
+          ( time = 16:07:40,  elapsed time = 290us )
+    commencing calculation of upgrade vector
+            ( time = 16:07:40,  elapsed time = 1ms )
+    forming JtQJ matrix
+            ( time = 16:07:40,  elapsed time = 316us )
+    commencing to scale JtQJ matrix
+            ( time = 16:07:40,  elapsed time = 306us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:07:40,  elapsed time = 252us )
+    JS
+            ( time = 16:07:40,  elapsed time = 262us )
+    JS.transpose() * q_mat * JS + lambda * S.transpose() * S
+            ( time = 16:07:40,  elapsed time = 291us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:07:40,  elapsed time = 241us )
+    commencing SVD factorization
+            ( time = 16:07:40,  elapsed time = 245us )
+    SVD factorization complete
+            ( time = 16:07:40,  elapsed time = 1ms )
+    commencing linear algebra multiplication to compute ugrade
+            ( time = 16:07:40,  elapsed time = 192us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0Vt info: rows = 0: cols = 1: size = 0: nonzeros = 0
+            ( time = 16:07:40,  elapsed time = 187us )
+    U info: rows = 1: cols = 0: size = 0: nonzeros = 0
+            ( time = 16:07:40,  elapsed time = 182us )
+    jac info: rows = 1052: cols = 1: size = 1052: nonzeros = 0
+            ( time = 16:07:40,  elapsed time = 207us )
+    linear algebra multiplication to compute ugrade complete
+            ( time = 16:07:40,  elapsed time = 192us )
+    commencing check of parameter bounds
+            ( time = 16:07:40,  elapsed time = 14ms )
+  beginning upgrade vector calculations, lambda = 20
+          ( time = 16:07:40,  elapsed time = 338us )
+    commencing calculation of upgrade vector
+            ( time = 16:07:40,  elapsed time = 1ms )
+    forming JtQJ matrix
+            ( time = 16:07:40,  elapsed time = 370us )
+    commencing to scale JtQJ matrix
+            ( time = 16:07:40,  elapsed time = 331us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:07:40,  elapsed time = 327us )
+    JS
+            ( time = 16:07:40,  elapsed time = 343us )
+    JS.transpose() * q_mat * JS + lambda * S.transpose() * S
+            ( time = 16:07:40,  elapsed time = 374us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:07:40,  elapsed time = 319us )
+    commencing SVD factorization
+            ( time = 16:07:40,  elapsed time = 329us )
+    SVD factorization complete
+            ( time = 16:07:40,  elapsed time = 2ms )
+    commencing linear algebra multiplication to compute ugrade
+            ( time = 16:07:40,  elapsed time = 331us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0Vt info: rows = 0: cols = 1: size = 0: nonzeros = 0
+            ( time = 16:07:40,  elapsed time = 333us )
+    U info: rows = 1: cols = 0: size = 0: nonzeros = 0
+            ( time = 16:07:40,  elapsed time = 351us )
+    jac info: rows = 1052: cols = 1: size = 1052: nonzeros = 0
+            ( time = 16:07:40,  elapsed time = 343us )
+    linear algebra multiplication to compute ugrade complete
+            ( time = 16:07:40,  elapsed time = 300us )
+    commencing check of parameter bounds
+            ( time = 16:07:40,  elapsed time = 26ms )
+  beginning upgrade vector calculations, lambda = 40
+          ( time = 16:07:40,  elapsed time = 323us )
+    commencing calculation of upgrade vector
+            ( time = 16:07:40,  elapsed time = 1ms )
+    forming JtQJ matrix
+            ( time = 16:07:40,  elapsed time = 328us )
+    commencing to scale JtQJ matrix
+            ( time = 16:07:40,  elapsed time = 308us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:07:40,  elapsed time = 279us )
+    JS
+            ( time = 16:07:40,  elapsed time = 295us )
+    JS.transpose() * q_mat * JS + lambda * S.transpose() * S
+            ( time = 16:07:40,  elapsed time = 330us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:07:40,  elapsed time = 272us )
+    commencing SVD factorization
+            ( time = 16:07:40,  elapsed time = 408us )
+    SVD factorization complete
+            ( time = 16:07:40,  elapsed time = 3ms )
+    commencing linear algebra multiplication to compute ugrade
+            ( time = 16:07:40,  elapsed time = 516us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0Vt info: rows = 0: cols = 1: size = 0: nonzeros = 0
+            ( time = 16:07:40,  elapsed time = 570us )
+    U info: rows = 1: cols = 0: size = 0: nonzeros = 0
+            ( time = 16:07:40,  elapsed time = 521us )
+    jac info: rows = 1052: cols = 1: size = 1052: nonzeros = 0
+            ( time = 16:07:40,  elapsed time = 588us )
+    linear algebra multiplication to compute ugrade complete
+            ( time = 16:07:40,  elapsed time = 543us )
+    commencing check of parameter bounds
+            ( time = 16:07:40,  elapsed time = 3ms )
+  beginning upgrade vector calculations, lambda = 100
+          ( time = 16:07:40,  elapsed time = 525us )
+    commencing calculation of upgrade vector
+            ( time = 16:07:40,  elapsed time = 1ms )
+    forming JtQJ matrix
+            ( time = 16:07:40,  elapsed time = 552us )
+    commencing to scale JtQJ matrix
+            ( time = 16:07:40,  elapsed time = 572us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:07:40,  elapsed time = 480us )
+    JS
+            ( time = 16:07:40,  elapsed time = 539us )
+    JS.transpose() * q_mat * JS + lambda * S.transpose() * S
+            ( time = 16:07:40,  elapsed time = 646us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:07:40,  elapsed time = 500us )
+    commencing SVD factorization
+            ( time = 16:07:40,  elapsed time = 481us )
+    SVD factorization complete
+            ( time = 16:07:40,  elapsed time = 3ms )
+    commencing linear algebra multiplication to compute ugrade
+            ( time = 16:07:40,  elapsed time = 534us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0Vt info: rows = 0: cols = 1: size = 0: nonzeros = 0
+            ( time = 16:07:40,  elapsed time = 580us )
+    U info: rows = 1: cols = 0: size = 0: nonzeros = 0
+            ( time = 16:07:40,  elapsed time = 523us )
+    jac info: rows = 1052: cols = 1: size = 1052: nonzeros = 0
+            ( time = 16:07:40,  elapsed time = 592us )
+    linear algebra multiplication to compute ugrade complete
+            ( time = 16:07:40,  elapsed time = 531us )
+    commencing check of parameter bounds
+            ( time = 16:07:40,  elapsed time = 3ms )
+  beginning upgrade vector calculations, lambda = 1000
+          ( time = 16:07:40,  elapsed time = 612us )
+    commencing calculation of upgrade vector
+            ( time = 16:07:40,  elapsed time = 1ms )
+    forming JtQJ matrix
+            ( time = 16:07:40,  elapsed time = 592us )
+    commencing to scale JtQJ matrix
+            ( time = 16:07:40,  elapsed time = 564us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:07:40,  elapsed time = 498us )
+    JS
+            ( time = 16:07:40,  elapsed time = 476us )
+    JS.transpose() * q_mat * JS + lambda * S.transpose() * S
+            ( time = 16:07:40,  elapsed time = 310us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:07:40,  elapsed time = 239us )
+    commencing SVD factorization
+            ( time = 16:07:40,  elapsed time = 275us )
+    SVD factorization complete
+            ( time = 16:07:40,  elapsed time = 1ms )
+    commencing linear algebra multiplication to compute ugrade
+            ( time = 16:07:40,  elapsed time = 252us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0Vt info: rows = 0: cols = 1: size = 0: nonzeros = 0
+            ( time = 16:07:40,  elapsed time = 256us )
+    U info: rows = 1: cols = 0: size = 0: nonzeros = 0
+            ( time = 16:07:40,  elapsed time = 278us )
+    jac info: rows = 1052: cols = 1: size = 1052: nonzeros = 0
+            ( time = 16:07:40,  elapsed time = 324us )
+    linear algebra multiplication to compute ugrade complete
+            ( time = 16:07:40,  elapsed time = 294us )
+    commencing check of parameter bounds
+            ( time = 16:07:49,  elapsed time = 8sec )
+completed iteration 1
+time to complete iteration 1
+        ( elapsed time = 11sec )
+
+        ( time = 16:07:49,  elapsed time = 126ms )
+beginning iteration 2
+        ( time = 16:07:49,  elapsed time = 144us )
+  commencing to build jacobian parameter sets
+          ( time = 16:07:49,  elapsed time = 26ms )
+  jacobian parameter sets built, commencing model runs
+          ( time = 16:07:51,  elapsed time = 2sec )
+  jacobian runs complete, processing runs
+          ( time = 16:07:51,  elapsed time = 2ms )
+  processing jacobian runs complete
+          ( time = 16:07:51,  elapsed time = 382us )
+  saving jacobian and sen files
+          ( time = 16:07:51,  elapsed time = 11ms )
+  commencing calculation of upgrade vector
+          ( time = 16:07:51,  elapsed time = 586us )
+  forming JtQJ matrix
+          ( time = 16:07:51,  elapsed time = 181us )
+  commencing SVD factorization
+          ( time = 16:07:51,  elapsed time = 158us )
+  SVD factorization complete
+          ( time = 16:07:51,  elapsed time = 1ms )
+  commencing linear algebra multiplication to compute ugrade
+          ( time = 16:07:51,  elapsed time = 163us )
+  Vt info: rows = 0: cols = 1: size = 0: nonzeros = 0
+          ( time = 16:07:51,  elapsed time = 144us )
+  U info: rows = 1: cols = 0: size = 0: nonzeros = 0
+          ( time = 16:07:51,  elapsed time = 140us )
+  jac info: rows = 1052: cols = 1: size = 1052: nonzeros = 0
+          ( time = 16:07:51,  elapsed time = 156us )
+  linear algebra multiplication to compute ugrade complete
+          ( time = 16:07:51,  elapsed time = 125us )
+  commencing check of parameter bounds
+          ( time = 16:07:51,  elapsed time = 39ms )
+  beginning upgrade vector calculations, lambda = 0.05
+          ( time = 16:07:51,  elapsed time = 343us )
+    commencing calculation of upgrade vector
+            ( time = 16:07:51,  elapsed time = 1ms )
+    forming JtQJ matrix
+            ( time = 16:07:51,  elapsed time = 510us )
+    commencing to scale JtQJ matrix
+            ( time = 16:07:51,  elapsed time = 199us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:07:51,  elapsed time = 155us )
+    JS
+            ( time = 16:07:51,  elapsed time = 164us )
+    JS.transpose() * q_mat * JS + lambda * S.transpose() * S
+            ( time = 16:07:51,  elapsed time = 182us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:07:51,  elapsed time = 149us )
+    commencing SVD factorization
+            ( time = 16:07:51,  elapsed time = 253us )
+    SVD factorization complete
+            ( time = 16:07:51,  elapsed time = 1ms )
+    commencing linear algebra multiplication to compute ugrade
+            ( time = 16:07:51,  elapsed time = 173us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0Vt info: rows = 0: cols = 1: size = 0: nonzeros = 0
+            ( time = 16:07:51,  elapsed time = 162us )
+    U info: rows = 1: cols = 0: size = 0: nonzeros = 0
+            ( time = 16:07:51,  elapsed time = 168us )
+    jac info: rows = 1052: cols = 1: size = 1052: nonzeros = 0
+            ( time = 16:07:51,  elapsed time = 192us )
+    linear algebra multiplication to compute ugrade complete
+            ( time = 16:07:51,  elapsed time = 172us )
+    commencing check of parameter bounds
+            ( time = 16:07:51,  elapsed time = 1ms )
+  beginning upgrade vector calculations, lambda = 0.1
+          ( time = 16:07:51,  elapsed time = 161us )
+    commencing calculation of upgrade vector
+            ( time = 16:07:51,  elapsed time = 847us )
+    forming JtQJ matrix
+            ( time = 16:07:51,  elapsed time = 207us )
+    commencing to scale JtQJ matrix
+            ( time = 16:07:51,  elapsed time = 186us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:07:51,  elapsed time = 149us )
+    JS
+            ( time = 16:07:51,  elapsed time = 145us )
+    JS.transpose() * q_mat * JS + lambda * S.transpose() * S
+            ( time = 16:07:51,  elapsed time = 152us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:07:51,  elapsed time = 125us )
+    commencing SVD factorization
+            ( time = 16:07:51,  elapsed time = 119us )
+    SVD factorization complete
+            ( time = 16:07:51,  elapsed time = 717us )
+    commencing linear algebra multiplication to compute ugrade
+            ( time = 16:07:51,  elapsed time = 104us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0Vt info: rows = 0: cols = 1: size = 0: nonzeros = 0
+            ( time = 16:07:51,  elapsed time = 101us )
+    U info: rows = 1: cols = 0: size = 0: nonzeros = 0
+            ( time = 16:07:51,  elapsed time = 87us )
+    jac info: rows = 1052: cols = 1: size = 1052: nonzeros = 0
+            ( time = 16:07:51,  elapsed time = 105us )
+    linear algebra multiplication to compute ugrade complete
+            ( time = 16:07:51,  elapsed time = 94us )
+    commencing check of parameter bounds
+            ( time = 16:07:51,  elapsed time = 592us )
+  beginning upgrade vector calculations, lambda = 0.2
+          ( time = 16:07:51,  elapsed time = 121us )
+    commencing calculation of upgrade vector
+            ( time = 16:07:51,  elapsed time = 686us )
+    forming JtQJ matrix
+            ( time = 16:07:51,  elapsed time = 157us )
+    commencing to scale JtQJ matrix
+            ( time = 16:07:51,  elapsed time = 133us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:07:51,  elapsed time = 112us )
+    JS
+            ( time = 16:07:51,  elapsed time = 123us )
+    JS.transpose() * q_mat * JS + lambda * S.transpose() * S
+            ( time = 16:07:51,  elapsed time = 139us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:07:51,  elapsed time = 114us )
+    commencing SVD factorization
+            ( time = 16:07:51,  elapsed time = 100us )
+    SVD factorization complete
+            ( time = 16:07:51,  elapsed time = 539us )
+    commencing linear algebra multiplication to compute ugrade
+            ( time = 16:07:51,  elapsed time = 89us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0Vt info: rows = 0: cols = 1: size = 0: nonzeros = 0
+            ( time = 16:07:51,  elapsed time = 84us )
+    U info: rows = 1: cols = 0: size = 0: nonzeros = 0
+            ( time = 16:07:51,  elapsed time = 82us )
+    jac info: rows = 1052: cols = 1: size = 1052: nonzeros = 0
+            ( time = 16:07:51,  elapsed time = 98us )
+    linear algebra multiplication to compute ugrade complete
+            ( time = 16:07:51,  elapsed time = 95us )
+    commencing check of parameter bounds
+            ( time = 16:07:51,  elapsed time = 40ms )
+  beginning upgrade vector calculations, lambda = 1
+          ( time = 16:07:51,  elapsed time = 197us )
+    commencing calculation of upgrade vector
+            ( time = 16:07:51,  elapsed time = 644us )
+    forming JtQJ matrix
+            ( time = 16:07:51,  elapsed time = 237us )
+    commencing to scale JtQJ matrix
+            ( time = 16:07:51,  elapsed time = 218us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:07:51,  elapsed time = 191us )
+    JS
+            ( time = 16:07:51,  elapsed time = 195us )
+    JS.transpose() * q_mat * JS + lambda * S.transpose() * S
+            ( time = 16:07:51,  elapsed time = 247us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:07:51,  elapsed time = 203us )
+    commencing SVD factorization
+            ( time = 16:07:51,  elapsed time = 194us )
+    SVD factorization complete
+            ( time = 16:07:51,  elapsed time = 941us )
+    commencing linear algebra multiplication to compute ugrade
+            ( time = 16:07:51,  elapsed time = 113us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0Vt info: rows = 0: cols = 1: size = 0: nonzeros = 0
+            ( time = 16:07:51,  elapsed time = 105us )
+    U info: rows = 1: cols = 0: size = 0: nonzeros = 0
+            ( time = 16:07:51,  elapsed time = 101us )
+    jac info: rows = 1052: cols = 1: size = 1052: nonzeros = 0
+            ( time = 16:07:51,  elapsed time = 183us )
+    linear algebra multiplication to compute ugrade complete
+            ( time = 16:07:51,  elapsed time = 201us )
+    commencing check of parameter bounds
+            ( time = 16:07:51,  elapsed time = 63ms )
+  beginning upgrade vector calculations, lambda = 10
+          ( time = 16:07:51,  elapsed time = 580us )
+    commencing calculation of upgrade vector
+            ( time = 16:07:51,  elapsed time = 1ms )
+    forming JtQJ matrix
+            ( time = 16:07:51,  elapsed time = 559us )
+    commencing to scale JtQJ matrix
+            ( time = 16:07:51,  elapsed time = 551us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:07:51,  elapsed time = 489us )
+    JS
+            ( time = 16:07:51,  elapsed time = 516us )
+    JS.transpose() * q_mat * JS + lambda * S.transpose() * S
+            ( time = 16:07:51,  elapsed time = 585us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:07:51,  elapsed time = 492us )
+    commencing SVD factorization
+            ( time = 16:07:51,  elapsed time = 515us )
+    SVD factorization complete
+            ( time = 16:07:51,  elapsed time = 3ms )
+    commencing linear algebra multiplication to compute ugrade
+            ( time = 16:07:51,  elapsed time = 532us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0Vt info: rows = 0: cols = 1: size = 0: nonzeros = 0
+            ( time = 16:07:51,  elapsed time = 507us )
+    U info: rows = 1: cols = 0: size = 0: nonzeros = 0
+            ( time = 16:07:52,  elapsed time = 576us )
+    jac info: rows = 1052: cols = 1: size = 1052: nonzeros = 0
+            ( time = 16:07:52,  elapsed time = 582us )
+    linear algebra multiplication to compute ugrade complete
+            ( time = 16:07:52,  elapsed time = 543us )
+    commencing check of parameter bounds
+            ( time = 16:07:52,  elapsed time = 48ms )
+  beginning upgrade vector calculations, lambda = 100
+          ( time = 16:07:52,  elapsed time = 538us )
+    commencing calculation of upgrade vector
+            ( time = 16:07:52,  elapsed time = 1ms )
+    forming JtQJ matrix
+            ( time = 16:07:52,  elapsed time = 583us )
+    commencing to scale JtQJ matrix
+            ( time = 16:07:52,  elapsed time = 555us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:07:52,  elapsed time = 498us )
+    JS
+            ( time = 16:07:52,  elapsed time = 523us )
+    JS.transpose() * q_mat * JS + lambda * S.transpose() * S
+            ( time = 16:07:52,  elapsed time = 617us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:07:52,  elapsed time = 493us )
+    commencing SVD factorization
+            ( time = 16:07:52,  elapsed time = 509us )
+    SVD factorization complete
+            ( time = 16:07:52,  elapsed time = 3ms )
+    commencing linear algebra multiplication to compute ugrade
+            ( time = 16:07:52,  elapsed time = 515us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0Vt info: rows = 0: cols = 1: size = 0: nonzeros = 0
+            ( time = 16:07:52,  elapsed time = 521us )
+    U info: rows = 1: cols = 0: size = 0: nonzeros = 0
+            ( time = 16:07:52,  elapsed time = 502us )
+    jac info: rows = 1052: cols = 1: size = 1052: nonzeros = 0
+            ( time = 16:07:52,  elapsed time = 560us )
+    linear algebra multiplication to compute ugrade complete
+            ( time = 16:07:52,  elapsed time = 517us )
+    commencing check of parameter bounds
+            ( time = 16:07:52,  elapsed time = 3ms )
+  beginning upgrade vector calculations, lambda = 1000
+          ( time = 16:07:52,  elapsed time = 521us )
+    commencing calculation of upgrade vector
+            ( time = 16:07:52,  elapsed time = 1ms )
+    forming JtQJ matrix
+            ( time = 16:07:52,  elapsed time = 592us )
+    commencing to scale JtQJ matrix
+            ( time = 16:07:52,  elapsed time = 581us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:07:52,  elapsed time = 498us )
+    JS
+            ( time = 16:07:52,  elapsed time = 531us )
+    JS.transpose() * q_mat * JS + lambda * S.transpose() * S
+            ( time = 16:07:52,  elapsed time = 602us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:07:52,  elapsed time = 498us )
+    commencing SVD factorization
+            ( time = 16:07:52,  elapsed time = 517us )
+    SVD factorization complete
+            ( time = 16:07:52,  elapsed time = 3ms )
+    commencing linear algebra multiplication to compute ugrade
+            ( time = 16:07:52,  elapsed time = 509us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0Vt info: rows = 0: cols = 1: size = 0: nonzeros = 0
+            ( time = 16:07:52,  elapsed time = 514us )
+    U info: rows = 1: cols = 0: size = 0: nonzeros = 0
+            ( time = 16:07:52,  elapsed time = 506us )
+    jac info: rows = 1052: cols = 1: size = 1052: nonzeros = 0
+            ( time = 16:07:52,  elapsed time = 559us )
+    linear algebra multiplication to compute ugrade complete
+            ( time = 16:07:52,  elapsed time = 536us )
+    commencing check of parameter bounds
+            ( time = 16:08:00,  elapsed time = 8sec )
+completed iteration 2
+time to complete iteration 2
+        ( elapsed time = 11sec )
+
+        ( time = 16:08:00,  elapsed time = 90ms )
+beginning iteration 3
+        ( time = 16:08:00,  elapsed time = 193us )
+  commencing to build jacobian parameter sets
+          ( time = 16:08:00,  elapsed time = 62ms )
+  jacobian parameter sets built, commencing model runs
+          ( time = 16:08:03,  elapsed time = 2sec )
+  jacobian runs complete, processing runs
+          ( time = 16:08:03,  elapsed time = 2ms )
+  processing jacobian runs complete
+          ( time = 16:08:03,  elapsed time = 197us )
+  saving jacobian and sen files
+          ( time = 16:08:03,  elapsed time = 9ms )
+  commencing calculation of upgrade vector
+          ( time = 16:08:03,  elapsed time = 712us )
+  forming JtQJ matrix
+          ( time = 16:08:03,  elapsed time = 253us )
+  commencing SVD factorization
+          ( time = 16:08:03,  elapsed time = 232us )
+  SVD factorization complete
+          ( time = 16:08:03,  elapsed time = 1ms )
+  commencing linear algebra multiplication to compute ugrade
+          ( time = 16:08:03,  elapsed time = 211us )
+  Vt info: rows = 0: cols = 1: size = 0: nonzeros = 0
+          ( time = 16:08:03,  elapsed time = 204us )
+  U info: rows = 1: cols = 0: size = 0: nonzeros = 0
+          ( time = 16:08:03,  elapsed time = 230us )
+  jac info: rows = 1052: cols = 1: size = 1052: nonzeros = 0
+          ( time = 16:08:03,  elapsed time = 208us )
+  linear algebra multiplication to compute ugrade complete
+          ( time = 16:08:03,  elapsed time = 187us )
+  commencing check of parameter bounds
+          ( time = 16:08:03,  elapsed time = 35ms )
+  beginning upgrade vector calculations, lambda = 0.025
+          ( time = 16:08:03,  elapsed time = 164us )
+    commencing calculation of upgrade vector
+            ( time = 16:08:03,  elapsed time = 601us )
+    forming JtQJ matrix
+            ( time = 16:08:03,  elapsed time = 177us )
+    commencing to scale JtQJ matrix
+            ( time = 16:08:03,  elapsed time = 149us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:08:03,  elapsed time = 121us )
+    JS
+            ( time = 16:08:03,  elapsed time = 129us )
+    JS.transpose() * q_mat * JS + lambda * S.transpose() * S
+            ( time = 16:08:03,  elapsed time = 135us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:08:03,  elapsed time = 111us )
+    commencing SVD factorization
+            ( time = 16:08:03,  elapsed time = 117us )
+    SVD factorization complete
+            ( time = 16:08:03,  elapsed time = 822us )
+    commencing linear algebra multiplication to compute ugrade
+            ( time = 16:08:03,  elapsed time = 134us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0Vt info: rows = 0: cols = 1: size = 0: nonzeros = 0
+            ( time = 16:08:03,  elapsed time = 119us )
+    U info: rows = 1: cols = 0: size = 0: nonzeros = 0
+            ( time = 16:08:03,  elapsed time = 116us )
+    jac info: rows = 1052: cols = 1: size = 1052: nonzeros = 0
+            ( time = 16:08:03,  elapsed time = 173us )
+    linear algebra multiplication to compute ugrade complete
+            ( time = 16:08:03,  elapsed time = 141us )
+    commencing check of parameter bounds
+            ( time = 16:08:03,  elapsed time = 25ms )
+  beginning upgrade vector calculations, lambda = 0.05
+          ( time = 16:08:03,  elapsed time = 249us )
+    commencing calculation of upgrade vector
+            ( time = 16:08:03,  elapsed time = 755us )
+    forming JtQJ matrix
+            ( time = 16:08:03,  elapsed time = 257us )
+    commencing to scale JtQJ matrix
+            ( time = 16:08:03,  elapsed time = 248us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:08:03,  elapsed time = 223us )
+    JS
+            ( time = 16:08:03,  elapsed time = 234us )
+    JS.transpose() * q_mat * JS + lambda * S.transpose() * S
+            ( time = 16:08:03,  elapsed time = 260us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:08:03,  elapsed time = 224us )
+    commencing SVD factorization
+            ( time = 16:08:03,  elapsed time = 230us )
+    SVD factorization complete
+            ( time = 16:08:03,  elapsed time = 1ms )
+    commencing linear algebra multiplication to compute ugrade
+            ( time = 16:08:03,  elapsed time = 255us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0Vt info: rows = 0: cols = 1: size = 0: nonzeros = 0
+            ( time = 16:08:03,  elapsed time = 211us )
+    U info: rows = 1: cols = 0: size = 0: nonzeros = 0
+            ( time = 16:08:03,  elapsed time = 208us )
+    jac info: rows = 1052: cols = 1: size = 1052: nonzeros = 0
+            ( time = 16:08:03,  elapsed time = 219us )
+    linear algebra multiplication to compute ugrade complete
+            ( time = 16:08:03,  elapsed time = 193us )
+    commencing check of parameter bounds
+            ( time = 16:08:03,  elapsed time = 913us )
+  beginning upgrade vector calculations, lambda = 0.1
+          ( time = 16:08:03,  elapsed time = 194us )
+    commencing calculation of upgrade vector
+            ( time = 16:08:03,  elapsed time = 636us )
+    forming JtQJ matrix
+            ( time = 16:08:03,  elapsed time = 336us )
+    commencing to scale JtQJ matrix
+            ( time = 16:08:03,  elapsed time = 209us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:08:03,  elapsed time = 175us )
+    JS
+            ( time = 16:08:03,  elapsed time = 182us )
+    JS.transpose() * q_mat * JS + lambda * S.transpose() * S
+            ( time = 16:08:03,  elapsed time = 205us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:08:03,  elapsed time = 184us )
+    commencing SVD factorization
+            ( time = 16:08:03,  elapsed time = 151us )
+    SVD factorization complete
+            ( time = 16:08:03,  elapsed time = 1ms )
+    commencing linear algebra multiplication to compute ugrade
+            ( time = 16:08:03,  elapsed time = 117us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0Vt info: rows = 0: cols = 1: size = 0: nonzeros = 0
+            ( time = 16:08:03,  elapsed time = 110us )
+    U info: rows = 1: cols = 0: size = 0: nonzeros = 0
+            ( time = 16:08:03,  elapsed time = 108us )
+    jac info: rows = 1052: cols = 1: size = 1052: nonzeros = 0
+            ( time = 16:08:03,  elapsed time = 129us )
+    linear algebra multiplication to compute ugrade complete
+            ( time = 16:08:03,  elapsed time = 117us )
+    commencing check of parameter bounds
+            ( time = 16:08:03,  elapsed time = 24ms )
+  beginning upgrade vector calculations, lambda = 1
+          ( time = 16:08:03,  elapsed time = 554us )
+    commencing calculation of upgrade vector
+            ( time = 16:08:03,  elapsed time = 1ms )
+    forming JtQJ matrix
+            ( time = 16:08:03,  elapsed time = 672us )
+    commencing to scale JtQJ matrix
+            ( time = 16:08:03,  elapsed time = 574us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:08:03,  elapsed time = 511us )
+    JS
+            ( time = 16:08:03,  elapsed time = 538us )
+    JS.transpose() * q_mat * JS + lambda * S.transpose() * S
+            ( time = 16:08:03,  elapsed time = 600us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:08:03,  elapsed time = 508us )
+    commencing SVD factorization
+            ( time = 16:08:03,  elapsed time = 532us )
+    SVD factorization complete
+            ( time = 16:08:03,  elapsed time = 3ms )
+    commencing linear algebra multiplication to compute ugrade
+            ( time = 16:08:03,  elapsed time = 550us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0Vt info: rows = 0: cols = 1: size = 0: nonzeros = 0
+            ( time = 16:08:03,  elapsed time = 501us )
+    U info: rows = 1: cols = 0: size = 0: nonzeros = 0
+            ( time = 16:08:03,  elapsed time = 523us )
+    jac info: rows = 1052: cols = 1: size = 1052: nonzeros = 0
+            ( time = 16:08:03,  elapsed time = 568us )
+    linear algebra multiplication to compute ugrade complete
+            ( time = 16:08:03,  elapsed time = 504us )
+    commencing check of parameter bounds
+            ( time = 16:08:03,  elapsed time = 21ms )
+  beginning upgrade vector calculations, lambda = 10
+          ( time = 16:08:03,  elapsed time = 481us )
+    commencing calculation of upgrade vector
+            ( time = 16:08:03,  elapsed time = 1ms )
+    forming JtQJ matrix
+            ( time = 16:08:03,  elapsed time = 532us )
+    commencing to scale JtQJ matrix
+            ( time = 16:08:03,  elapsed time = 563us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:08:03,  elapsed time = 509us )
+    JS
+            ( time = 16:08:03,  elapsed time = 539us )
+    JS.transpose() * q_mat * JS + lambda * S.transpose() * S
+            ( time = 16:08:03,  elapsed time = 559us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:08:03,  elapsed time = 517us )
+    commencing SVD factorization
+            ( time = 16:08:03,  elapsed time = 494us )
+    SVD factorization complete
+            ( time = 16:08:03,  elapsed time = 3ms )
+    commencing linear algebra multiplication to compute ugrade
+            ( time = 16:08:03,  elapsed time = 542us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0Vt info: rows = 0: cols = 1: size = 0: nonzeros = 0
+            ( time = 16:08:03,  elapsed time = 531us )
+    U info: rows = 1: cols = 0: size = 0: nonzeros = 0
+            ( time = 16:08:03,  elapsed time = 536us )
+    jac info: rows = 1052: cols = 1: size = 1052: nonzeros = 0
+            ( time = 16:08:03,  elapsed time = 577us )
+    linear algebra multiplication to compute ugrade complete
+            ( time = 16:08:03,  elapsed time = 545us )
+    commencing check of parameter bounds
+            ( time = 16:08:03,  elapsed time = 3ms )
+  beginning upgrade vector calculations, lambda = 100
+          ( time = 16:08:03,  elapsed time = 502us )
+    commencing calculation of upgrade vector
+            ( time = 16:08:03,  elapsed time = 1ms )
+    forming JtQJ matrix
+            ( time = 16:08:03,  elapsed time = 530us )
+    commencing to scale JtQJ matrix
+            ( time = 16:08:03,  elapsed time = 503us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:08:03,  elapsed time = 440us )
+    JS
+            ( time = 16:08:03,  elapsed time = 479us )
+    JS.transpose() * q_mat * JS + lambda * S.transpose() * S
+            ( time = 16:08:03,  elapsed time = 516us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:08:03,  elapsed time = 449us )
+    commencing SVD factorization
+            ( time = 16:08:03,  elapsed time = 398us )
+    SVD factorization complete
+            ( time = 16:08:03,  elapsed time = 2ms )
+    commencing linear algebra multiplication to compute ugrade
+            ( time = 16:08:03,  elapsed time = 483us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0Vt info: rows = 0: cols = 1: size = 0: nonzeros = 0
+            ( time = 16:08:03,  elapsed time = 450us )
+    U info: rows = 1: cols = 0: size = 0: nonzeros = 0
+            ( time = 16:08:03,  elapsed time = 456us )
+    jac info: rows = 1052: cols = 1: size = 1052: nonzeros = 0
+            ( time = 16:08:03,  elapsed time = 530us )
+    linear algebra multiplication to compute ugrade complete
+            ( time = 16:08:03,  elapsed time = 491us )
+    commencing check of parameter bounds
+            ( time = 16:08:03,  elapsed time = 3ms )
+  beginning upgrade vector calculations, lambda = 1000
+          ( time = 16:08:03,  elapsed time = 569us )
+    commencing calculation of upgrade vector
+            ( time = 16:08:03,  elapsed time = 1ms )
+    forming JtQJ matrix
+            ( time = 16:08:03,  elapsed time = 582us )
+    commencing to scale JtQJ matrix
+            ( time = 16:08:03,  elapsed time = 567us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:08:03,  elapsed time = 561us )
+    JS
+            ( time = 16:08:03,  elapsed time = 539us )
+    JS.transpose() * q_mat * JS + lambda * S.transpose() * S
+            ( time = 16:08:03,  elapsed time = 597us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:08:03,  elapsed time = 519us )
+    commencing SVD factorization
+            ( time = 16:08:03,  elapsed time = 523us )
+    SVD factorization complete
+            ( time = 16:08:03,  elapsed time = 3ms )
+    commencing linear algebra multiplication to compute ugrade
+            ( time = 16:08:03,  elapsed time = 541us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0Vt info: rows = 0: cols = 1: size = 0: nonzeros = 0
+            ( time = 16:08:03,  elapsed time = 526us )
+    U info: rows = 1: cols = 0: size = 0: nonzeros = 0
+            ( time = 16:08:03,  elapsed time = 523us )
+    jac info: rows = 1052: cols = 1: size = 1052: nonzeros = 0
+            ( time = 16:08:03,  elapsed time = 569us )
+    linear algebra multiplication to compute ugrade complete
+            ( time = 16:08:03,  elapsed time = 532us )
+    commencing check of parameter bounds
+            ( time = 16:08:11,  elapsed time = 8sec )
+completed iteration 3
+time to complete iteration 3
+        ( elapsed time = 10sec )
+
+        ( time = 16:08:11,  elapsed time = 78ms )
+beginning iteration 4
+        ( time = 16:08:11,  elapsed time = 247us )
+  commencing to build jacobian parameter sets
+          ( time = 16:08:11,  elapsed time = 44ms )
+  jacobian parameter sets built, commencing model runs
+          ( time = 16:08:14,  elapsed time = 2sec )
+  jacobian runs complete, processing runs
+          ( time = 16:08:14,  elapsed time = 2ms )
+  processing jacobian runs complete
+          ( time = 16:08:14,  elapsed time = 135us )
+  saving jacobian and sen files
+          ( time = 16:08:14,  elapsed time = 8ms )
+  commencing calculation of upgrade vector
+          ( time = 16:08:14,  elapsed time = 535us )
+  forming JtQJ matrix
+          ( time = 16:08:14,  elapsed time = 168us )
+  commencing SVD factorization
+          ( time = 16:08:14,  elapsed time = 147us )
+  SVD factorization complete
+          ( time = 16:08:14,  elapsed time = 742us )
+  commencing linear algebra multiplication to compute ugrade
+          ( time = 16:08:14,  elapsed time = 121us )
+  Vt info: rows = 0: cols = 1: size = 0: nonzeros = 0
+          ( time = 16:08:14,  elapsed time = 143us )
+  U info: rows = 1: cols = 0: size = 0: nonzeros = 0
+          ( time = 16:08:14,  elapsed time = 143us )
+  jac info: rows = 1052: cols = 1: size = 1052: nonzeros = 0
+          ( time = 16:08:14,  elapsed time = 127us )
+  linear algebra multiplication to compute ugrade complete
+          ( time = 16:08:14,  elapsed time = 144us )
+  commencing check of parameter bounds
+          ( time = 16:08:14,  elapsed time = 91ms )
+  beginning upgrade vector calculations, lambda = 0.0125
+          ( time = 16:08:14,  elapsed time = 544us )
+    commencing calculation of upgrade vector
+            ( time = 16:08:14,  elapsed time = 2ms )
+    forming JtQJ matrix
+            ( time = 16:08:14,  elapsed time = 581us )
+    commencing to scale JtQJ matrix
+            ( time = 16:08:14,  elapsed time = 562us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 485us )
+    JS
+            ( time = 16:08:14,  elapsed time = 530us )
+    JS.transpose() * q_mat * JS + lambda * S.transpose() * S
+            ( time = 16:08:14,  elapsed time = 595us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 504us )
+    commencing SVD factorization
+            ( time = 16:08:14,  elapsed time = 507us )
+    SVD factorization complete
+            ( time = 16:08:14,  elapsed time = 3ms )
+    commencing linear algebra multiplication to compute ugrade
+            ( time = 16:08:14,  elapsed time = 532us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0Vt info: rows = 0: cols = 1: size = 0: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 508us )
+    U info: rows = 1: cols = 0: size = 0: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 511us )
+    jac info: rows = 1052: cols = 1: size = 1052: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 560us )
+    linear algebra multiplication to compute ugrade complete
+            ( time = 16:08:14,  elapsed time = 517us )
+    commencing check of parameter bounds
+            ( time = 16:08:14,  elapsed time = 49ms )
+  beginning upgrade vector calculations, lambda = 0.025
+          ( time = 16:08:14,  elapsed time = 290us )
+    commencing calculation of upgrade vector
+            ( time = 16:08:14,  elapsed time = 998us )
+    forming JtQJ matrix
+            ( time = 16:08:14,  elapsed time = 293us )
+    commencing to scale JtQJ matrix
+            ( time = 16:08:14,  elapsed time = 281us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 235us )
+    JS
+            ( time = 16:08:14,  elapsed time = 247us )
+    JS.transpose() * q_mat * JS + lambda * S.transpose() * S
+            ( time = 16:08:14,  elapsed time = 342us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 270us )
+    commencing SVD factorization
+            ( time = 16:08:14,  elapsed time = 255us )
+    SVD factorization complete
+            ( time = 16:08:14,  elapsed time = 1ms )
+    commencing linear algebra multiplication to compute ugrade
+            ( time = 16:08:14,  elapsed time = 258us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0Vt info: rows = 0: cols = 1: size = 0: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 261us )
+    U info: rows = 1: cols = 0: size = 0: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 255us )
+    jac info: rows = 1052: cols = 1: size = 1052: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 298us )
+    linear algebra multiplication to compute ugrade complete
+            ( time = 16:08:14,  elapsed time = 278us )
+    commencing check of parameter bounds
+            ( time = 16:08:14,  elapsed time = 1ms )
+  beginning upgrade vector calculations, lambda = 0.05
+          ( time = 16:08:14,  elapsed time = 353us )
+    commencing calculation of upgrade vector
+            ( time = 16:08:14,  elapsed time = 1ms )
+    forming JtQJ matrix
+            ( time = 16:08:14,  elapsed time = 285us )
+    commencing to scale JtQJ matrix
+            ( time = 16:08:14,  elapsed time = 285us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 238us )
+    JS
+            ( time = 16:08:14,  elapsed time = 245us )
+    JS.transpose() * q_mat * JS + lambda * S.transpose() * S
+            ( time = 16:08:14,  elapsed time = 275us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 236us )
+    commencing SVD factorization
+            ( time = 16:08:14,  elapsed time = 250us )
+    SVD factorization complete
+            ( time = 16:08:14,  elapsed time = 1ms )
+    commencing linear algebra multiplication to compute ugrade
+            ( time = 16:08:14,  elapsed time = 270us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0Vt info: rows = 0: cols = 1: size = 0: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 268us )
+    U info: rows = 1: cols = 0: size = 0: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 253us )
+    jac info: rows = 1052: cols = 1: size = 1052: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 278us )
+    linear algebra multiplication to compute ugrade complete
+            ( time = 16:08:14,  elapsed time = 288us )
+    commencing check of parameter bounds
+            ( time = 16:08:14,  elapsed time = 1ms )
+  beginning upgrade vector calculations, lambda = 0.1
+          ( time = 16:08:14,  elapsed time = 262us )
+    commencing calculation of upgrade vector
+            ( time = 16:08:14,  elapsed time = 993us )
+    forming JtQJ matrix
+            ( time = 16:08:14,  elapsed time = 325us )
+    commencing to scale JtQJ matrix
+            ( time = 16:08:14,  elapsed time = 282us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 257us )
+    JS
+            ( time = 16:08:14,  elapsed time = 211us )
+    JS.transpose() * q_mat * JS + lambda * S.transpose() * S
+            ( time = 16:08:14,  elapsed time = 209us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 165us )
+    commencing SVD factorization
+            ( time = 16:08:14,  elapsed time = 171us )
+    SVD factorization complete
+            ( time = 16:08:14,  elapsed time = 1ms )
+    commencing linear algebra multiplication to compute ugrade
+            ( time = 16:08:14,  elapsed time = 143us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0Vt info: rows = 0: cols = 1: size = 0: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 128us )
+    U info: rows = 1: cols = 0: size = 0: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 121us )
+    jac info: rows = 1052: cols = 1: size = 1052: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 142us )
+    linear algebra multiplication to compute ugrade complete
+            ( time = 16:08:14,  elapsed time = 117us )
+    commencing check of parameter bounds
+            ( time = 16:08:14,  elapsed time = 61ms )
+  beginning upgrade vector calculations, lambda = 1
+          ( time = 16:08:14,  elapsed time = 248us )
+    commencing calculation of upgrade vector
+            ( time = 16:08:14,  elapsed time = 788us )
+    forming JtQJ matrix
+            ( time = 16:08:14,  elapsed time = 269us )
+    commencing to scale JtQJ matrix
+            ( time = 16:08:14,  elapsed time = 260us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 232us )
+    JS
+            ( time = 16:08:14,  elapsed time = 245us )
+    JS.transpose() * q_mat * JS + lambda * S.transpose() * S
+            ( time = 16:08:14,  elapsed time = 243us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 182us )
+    commencing SVD factorization
+            ( time = 16:08:14,  elapsed time = 185us )
+    SVD factorization complete
+            ( time = 16:08:14,  elapsed time = 1ms )
+    commencing linear algebra multiplication to compute ugrade
+            ( time = 16:08:14,  elapsed time = 147us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0Vt info: rows = 0: cols = 1: size = 0: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 136us )
+    U info: rows = 1: cols = 0: size = 0: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 131us )
+    jac info: rows = 1052: cols = 1: size = 1052: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 153us )
+    linear algebra multiplication to compute ugrade complete
+            ( time = 16:08:14,  elapsed time = 163us )
+    commencing check of parameter bounds
+            ( time = 16:08:14,  elapsed time = 987us )
+  beginning upgrade vector calculations, lambda = 10
+          ( time = 16:08:14,  elapsed time = 126us )
+    commencing calculation of upgrade vector
+            ( time = 16:08:14,  elapsed time = 581us )
+    forming JtQJ matrix
+            ( time = 16:08:14,  elapsed time = 142us )
+    commencing to scale JtQJ matrix
+            ( time = 16:08:14,  elapsed time = 129us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 111us )
+    JS
+            ( time = 16:08:14,  elapsed time = 116us )
+    JS.transpose() * q_mat * JS + lambda * S.transpose() * S
+            ( time = 16:08:14,  elapsed time = 136us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 107us )
+    commencing SVD factorization
+            ( time = 16:08:14,  elapsed time = 112us )
+    SVD factorization complete
+            ( time = 16:08:14,  elapsed time = 705us )
+    commencing linear algebra multiplication to compute ugrade
+            ( time = 16:08:14,  elapsed time = 114us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0Vt info: rows = 0: cols = 1: size = 0: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 110us )
+    U info: rows = 1: cols = 0: size = 0: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 109us )
+    jac info: rows = 1052: cols = 1: size = 1052: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 137us )
+    linear algebra multiplication to compute ugrade complete
+            ( time = 16:08:14,  elapsed time = 127us )
+    commencing check of parameter bounds
+            ( time = 16:08:14,  elapsed time = 58ms )
+  beginning upgrade vector calculations, lambda = 100
+          ( time = 16:08:14,  elapsed time = 245us )
+    commencing calculation of upgrade vector
+            ( time = 16:08:14,  elapsed time = 786us )
+    forming JtQJ matrix
+            ( time = 16:08:14,  elapsed time = 266us )
+    commencing to scale JtQJ matrix
+            ( time = 16:08:14,  elapsed time = 255us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 193us )
+    JS
+            ( time = 16:08:14,  elapsed time = 194us )
+    JS.transpose() * q_mat * JS + lambda * S.transpose() * S
+            ( time = 16:08:14,  elapsed time = 218us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 181us )
+    commencing SVD factorization
+            ( time = 16:08:14,  elapsed time = 190us )
+    SVD factorization complete
+            ( time = 16:08:14,  elapsed time = 1ms )
+    commencing linear algebra multiplication to compute ugrade
+            ( time = 16:08:14,  elapsed time = 198us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0Vt info: rows = 0: cols = 1: size = 0: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 184us )
+    U info: rows = 1: cols = 0: size = 0: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 186us )
+    jac info: rows = 1052: cols = 1: size = 1052: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 202us )
+    linear algebra multiplication to compute ugrade complete
+            ( time = 16:08:14,  elapsed time = 196us )
+    commencing check of parameter bounds
+            ( time = 16:08:14,  elapsed time = 1ms )
+  beginning upgrade vector calculations, lambda = 1000
+          ( time = 16:08:14,  elapsed time = 185us )
+    commencing calculation of upgrade vector
+            ( time = 16:08:14,  elapsed time = 590us )
+    forming JtQJ matrix
+            ( time = 16:08:14,  elapsed time = 151us )
+    commencing to scale JtQJ matrix
+            ( time = 16:08:14,  elapsed time = 141us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 120us )
+    JS
+            ( time = 16:08:14,  elapsed time = 131us )
+    JS.transpose() * q_mat * JS + lambda * S.transpose() * S
+            ( time = 16:08:14,  elapsed time = 137us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 110us )
+    commencing SVD factorization
+            ( time = 16:08:14,  elapsed time = 110us )
+    SVD factorization complete
+            ( time = 16:08:14,  elapsed time = 715us )
+    commencing linear algebra multiplication to compute ugrade
+            ( time = 16:08:14,  elapsed time = 140us )
+    S info: rows = 1: cols = 1: size = 1: nonzeros = 0Vt info: rows = 0: cols = 1: size = 0: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 116us )
+    U info: rows = 1: cols = 0: size = 0: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 110us )
+    jac info: rows = 1052: cols = 1: size = 1052: nonzeros = 0
+            ( time = 16:08:14,  elapsed time = 133us )
+    linear algebra multiplication to compute ugrade complete
+            ( time = 16:08:14,  elapsed time = 116us )
+    commencing check of parameter bounds
+            ( time = 16:08:24,  elapsed time = 10sec )
+completed iteration 4
+time to complete iteration 4
+        ( elapsed time = 12sec )
+
+
+-----------------------------------
+starting linear uncertainty analyses
+-----------------------------------
+
+16:08:24-> starting calc_posterior
+16:08:24->-> starting align
+16:08:24->-> finished align, elapsed time = 8ms
+16:08:24->-> starting invert obscov
+16:08:24->->-> starting inverting diagonal matrix in place
+16:08:24->->->-> starting extracting diagonal
+16:08:24->->->->-> starting inverting diagonal
+16:08:24->->->->->-> starting buidling triplets
+16:08:24->->->->->->-> starting ber of row/col names does not match matrix dimensions
+16:08:24->->->->->->->-> starting setting matrix from triplets
+16:08:24->->->->->->->-> finished invert obscov, elapsed time = 851us
+16:08:24->->->->->->->-> starting form JtQJ
+16:08:24->->->->->->->-> finished form JtQJ, elapsed time = 198us
+16:08:24->->->->->->->-> starting invert parcov
+16:08:24->->->->->->->-> finished invert parcov, elapsed time = 125us
+16:08:24->->->->->->->-> starting form posterior
+16:08:24->->->->->->->-> finished form posterior, elapsed time = 126us
+16:08:24->->->->->->->-> starting invert posterior
+16:08:24->->->->->->->->-> starting inverting non-diagonal matrix in place
+16:08:24->->->->->->->->->-> starting instantiate solver
+16:08:24->->->->->->->->->->-> starting computing inverse
+16:08:24->->->->->->->->->->->-> starting getting identity instance for solution
+16:08:24->->->->->->->->->->->->-> starting solving
+16:08:24->->->->->->->->->->->->-> finished invert posterior, elapsed time = 719us
+16:08:24->->->->->->->->->->->-> finished calc_posterior, elapsed time = 11ms
+16:08:24->->->->->->->->->->->-> starting prior_parameter_variance
+16:08:24->->->->->->->->->->->-> finished prior_parameter_variance, elapsed time = 93us
+16:08:24->->->->->->->->->->->-> starting posterior_parameter_variance
+16:08:24->->->->->->->->->->->-> finished posterior_parameter_variance, elapsed time = 110us

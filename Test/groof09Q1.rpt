@@ -1,0 +1,55 @@
+
+  EPA STORM WATER MANAGEMENT MODEL - VERSION 5.1 (Build 5.1.012)
+  --------------------------------------------------------------
+
+  
+  *************
+  Element Count
+  *************
+  Number of rain gages ...... 1
+  Number of subcatchments ... 1
+  Number of nodes ........... 1
+  Number of links ........... 0
+  Number of pollutants ...... 0
+  Number of land uses ....... 0
+  
+  
+  ****************
+  Raingage Summary
+  ****************
+                                                      Data       Recording
+  Name                 Data Source                    Type       Interval 
+  ------------------------------------------------------------------------
+  Jan-March_Storms     Jan-Mar2009                    INTENSITY    5 min.
+  
+  
+  ********************
+  Subcatchment Summary
+  ********************
+  Name                       Area     Width   %Imperv    %Slope Rain Gage            Outlet              
+  -----------------------------------------------------------------------------------------------------------
+  FS10                       0.15     80.00      0.00    4.1670 Jan-March_Storms     1                   
+
+
+  *******************
+  LID Control Summary
+  *******************
+                                   No. of        Unit        Unit      % Area    % Imperv
+  Subcatchment     LID Control      Units        Area       Width     Covered     Treated
+  ---------------------------------------------------------------------------------------
+  FS10             GreenRoof            1     6400.00       90.10       99.94      100.00
+  
+  
+  ************
+  Node Summary
+  ************
+                                           Invert      Max.    Ponded    External
+  Name                 Type                 Elev.     Depth      Area    Inflow  
+  -------------------------------------------------------------------------------
+  1                    OUTFALL               0.00      0.00       0.0
+  
+  
+
+  Analysis begun on:  Tue May 30 15:37:49 2017
+  Analysis ended on:  Tue May 30 15:37:49 2017
+  Total elapsed time: < 1 sec

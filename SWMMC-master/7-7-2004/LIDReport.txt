@@ -1,0 +1,66 @@
+
+  EPA STORM WATER MANAGEMENT MODEL - VERSION 5.1 (Build 5.1.010)
+  --------------------------------------------------------------
+
+  
+  *************
+  Element Count
+  *************
+  Number of rain gages ...... 1
+  Number of subcatchments ... 1
+  Number of nodes ........... 2
+  Number of links ........... 0
+  Number of pollutants ...... 0
+  Number of land uses ....... 0
+  
+  
+  ****************
+  Raingage Summary
+  ****************
+                                                      Data       Recording
+  Name                 Data Source                    Type       Interval 
+  ------------------------------------------------------------------------
+  1                    E:\UC\EPA\SWMM2PEST\SWMM2PEST\SWMMC-master\7-7-2004\storm157.dat
+  
+  
+  ********************
+  Subcatchment Summary
+  ********************
+  Name                       Area     Width   %Imperv    %Slope Rain Gage            Outlet              
+  -----------------------------------------------------------------------------------------------------------
+  LID                        0.00      9.84     83.00    0.5000 1                    Outflow             
+
+
+  *******************
+  LID Control Summary
+  *******************
+                                   No. of        Unit        Unit      % Area    % Imperv
+  Subcatchment     LID Control      Units        Area       Width     Covered     Treated
+  ---------------------------------------------------------------------------------------
+  LID              VillIT               1      125.89        9.84      100.00      100.00
+  
+  
+  ************
+  Node Summary
+  ************
+                                           Invert      Max.    Ponded    External
+  Name                 Type                 Elev.     Depth      Area    Inflow  
+  -------------------------------------------------------------------------------
+  Inflow               OUTFALL               0.00      0.00       0.0    Yes
+  Outflow              OUTFALL               0.00      0.00       0.0
+  
+  
+  
+  *********************
+  Rainfall File Summary
+  *********************
+  Station    First        Last         Recording   Periods    Periods    Periods
+  ID         Date         Date         Frequency  w/Precip    Missing    Malfunc.
+  -------------------------------------------------------------------------------
+
+  
+  ERROR 317: cannot open rainfall data file E:\UC\EPA\SWMM2PEST\SWMM2PEST\SWMMC-master\7-7-2004\storm157.dat.
+
+  Analysis begun on:  Tue May 30 11:50:08 2017
+  Analysis ended on:  Tue May 30 11:50:08 2017
+  Total elapsed time: < 1 sec
