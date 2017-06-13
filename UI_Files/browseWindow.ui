@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Open Output File</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../Images/EPA1.png</normaloff>../Images/EPA1.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -19,11 +23,12 @@
      <widget class="QLabel" name="label">
       <property name="font">
        <font>
+        <family>Calibri</family>
         <pointsize>22</pointsize>
        </font>
       </property>
       <property name="text">
-       <string>                Select SWMM Output File:</string>
+       <string>            Select SWMM Output File:   </string>
       </property>
      </widget>
     </item>
@@ -35,8 +40,17 @@
         <height>16777215</height>
        </size>
       </property>
+      <property name="font">
+       <font>
+        <family>Calibri</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
       <property name="text">
-       <string>Browse</string>
+       <string>Browse...</string>
+      </property>
+      <property name="default">
+       <bool>true</bool>
       </property>
      </widget>
     </item>

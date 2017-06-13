@@ -7,11 +7,15 @@
     <x>0</x>
     <y>0</y>
     <width>500</width>
-    <height>200</height>
+    <height>150</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Estimate Parameter</string>
+   <string>Enter the Range of Parameter</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../Images/EPA1.png</normaloff>../Images/EPA1.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout">

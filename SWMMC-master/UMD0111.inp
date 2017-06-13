@@ -76,7 +76,7 @@ Swale            SURFACE    2164.000000 .2000000000 .4100000000 1.600000000 3.25
 [LID_USAGE]
 ;;Subcatchment   LID Process      Number  Area       Width      InitSat    FromImp    ToPerv     RptFile                  DrainTo
 ;;-------------- ---------------- ------- ---------- ---------- ---------- ---------- ---------- ------------------------ ----------------
-LID              Swale            1       3120       15.76      .01000000          100        0          ".\UMD0111.txt"
+LID              Swale            1       3120       15.76      .01000000          100        0          "E:\UC\EPA\SWMM2PEST\SWMM2PEST\SWMMC-master\UMD0111.txt"
  
 [OUTFALLS]
 ;;Name           Elevation  Type       Stage Data       Gated    Route To

@@ -20,7 +20,7 @@ from numpy import linspace
 
 
 
-#Separate thrad that calls pest and runs it in the background
+#Separate thread that calls pest and runs it in the background
 class CallPestThread(QThread):
     
     def __init__(self ,tpl_obj):

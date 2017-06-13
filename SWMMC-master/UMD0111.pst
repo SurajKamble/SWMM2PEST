@@ -13,7 +13,7 @@ paragroup  relative 0.01  0.0  switch  2.0 parabolic
 * parameter data
 rd_width   fixed  relative  143 143 193    paragroup 1.0 0.0 1
 rd_slope   fixed  relative  0.1 0.1 1.0    paragroup 1.0 0.0 1
-rd_rghns   fixed  relative  0.020 0.12 0.020    paragroup 1.0 0.0 1
+rd_rghns   fixed  relative  0.020 0.020 0.021    paragroup 1.0 0.0 1
 dprsn_strg   fixed  relative  5.0 5.0 150.0    paragroup 1.0 0.0 1
 sctn_hd   fixed  relative  275.9 13.2 594.0    paragroup 1.0 0.0 1
 hyd_cndct    fixed  relative  3.00 3.0 11.2    paragroup 1.0 0.0 1

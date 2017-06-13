@@ -11,7 +11,10 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(500, 200)
+        MainWindow.resize(500, 150)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("../Images/EPA1.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        MainWindow.setWindowIcon(icon)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.centralwidget)
@@ -76,7 +79,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Estimate Parameter"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Enter the Range of Parameter"))
         self.lineEdit_UpperLimit.setPlaceholderText(_translate("MainWindow", "Upper Limit"))
         self.checkBox_Fixed.setText(_translate("MainWindow", "Fixed"))
         self.checkBox_None.setText(_translate("MainWindow", "None"))

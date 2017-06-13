@@ -6,17 +6,34 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>500</width>
+    <width>450</width>
     <height>500</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Parameters</string>
+   <string>Select Parameters for Estimation</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../Images/EPA1.png</normaloff>../Images/EPA1.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <layout class="QFormLayout" name="formLayout"/>
+     <layout class="QFormLayout" name="formLayout">
+      <property name="horizontalSpacing">
+       <number>10</number>
+      </property>
+      <property name="verticalSpacing">
+       <number>12</number>
+      </property>
+      <property name="leftMargin">
+       <number>50</number>
+      </property>
+      <property name="rightMargin">
+       <number>50</number>
+      </property>
+     </layout>
     </item>
    </layout>
   </widget>

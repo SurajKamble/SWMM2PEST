@@ -6,20 +6,59 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>807</width>
-    <height>600</height>
+    <width>700</width>
+    <height>563</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>SWMM2PEST</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../Images/EPA1.png</normaloff>../Images/EPA1.png</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
     <item row="4" column="0">
-     <layout class="QVBoxLayout" name="verticalLayout_5"/>
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <property name="bottomMargin">
+       <number>160</number>
+      </property>
+     </layout>
     </item>
     <item row="0" column="0">
-     <layout class="QVBoxLayout" name="verticalLayout_3"/>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QWidget" name="widget" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../Images/EPA1.png</pixmap>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="widget_2" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
     <item row="3" column="0">
      <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -28,25 +67,37 @@
       </item>
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_8">
+        <property name="spacing">
+         <number>20</number>
+        </property>
         <item alignment="Qt::AlignHCenter">
          <widget class="QLabel" name="label">
           <property name="font">
            <font>
-            <family>Times New Roman</family>
+            <family>Calibri</family>
             <pointsize>16</pointsize>
             <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
           <property name="text">
-           <string>Browse or Drop SWMM Input File</string>
+           <string>Open SWMM Input File</string>
           </property>
          </widget>
         </item>
         <item alignment="Qt::AlignHCenter">
          <widget class="QPushButton" name="btnBrowse">
+          <property name="font">
+           <font>
+            <family>Calibri</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
           <property name="text">
-           <string>Browse</string>
+           <string>Browse...</string>
+          </property>
+          <property name="default">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
@@ -64,8 +115,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>807</width>
-     <height>22</height>
+     <width>700</width>
+     <height>21</height>
     </rect>
    </property>
   </widget>
