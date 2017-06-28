@@ -81,7 +81,7 @@ GreenRoof        DRAINMAT 3.00000000 .3000000000 3.750000000
 [LID_USAGE]
 ;;Subcatchment   LID Process      Number  Area       Width      InitSatur  FromImprv  ToPerv     Report File
 ;;-------------- ---------------- ------- ---------- ---------- ---------- ---------- ---------- -----------
-FS10             GreenRoof        1       6400                                                   #F0tp_wdth_vr#                                               #F0prcnt_ntll# 100        0          "E:\UC\EPA\SWMM2PEST\SWMM2PEST\2009Q1\groof09Q1.txt"
+FS10             GreenRoof        1       6400                                                    #F0tp_wdth_vr#                                                #F0prcnt_ntll# 100        0          "E:\UC\EPA\SWMM2PEST\SWMM2PEST\2009Q1\groof09Q1.txt"
 
 [OUTFALLS]
 ;;Name           Elevation  Type       Stage Data       Gated    Route To

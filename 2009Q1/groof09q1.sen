@@ -1,23 +1,26 @@
-                    PARAMETER SENSITIVITIES: CASE E:/UC/EPA/SWMM2PEST/SWMM2PEST/2009Q1/groof09Q1
+   PARAMETER SENSITIVITIES: CASE e:/uc/epa/swmm2pest/swmm2pest/2009q1/groof09q1
 
 
-NUMERIC PARAMETER SENSITIVITIES FOR OPTIMISATION ITERATION NO. 1   ----->
- Parameter name   Group        Current Value           CSS w/reg           CSS w/o reg
-   f0prcnt_ntll    paragroup    14.9394670000        0.000000000000       0.000000000000      
+ OPTIMISATION ITERATION NO.  1 ----->
+ Parameter name    Group          Current value    Sensitivity
+   f0prcnt_ntll    paragroup        14.9395         1.411286E-06
 
 
-NUMERIC PARAMETER SENSITIVITIES FOR OPTIMISATION ITERATION NO. 2   ----->
- Parameter name   Group        Current Value           CSS w/reg           CSS w/o reg
-   f0prcnt_ntll    paragroup    14.9394670000        0.000000000000       0.000000000000      
+ OPTIMISATION ITERATION NO.  2 ----->
+ Parameter name    Group          Current value    Sensitivity
+   f0prcnt_ntll    paragroup        21.6645         1.470731E-06
 
 
-NUMERIC PARAMETER SENSITIVITIES FOR OPTIMISATION ITERATION NO. 3   ----->
- Parameter name   Group        Current Value           CSS w/reg           CSS w/o reg
-   f0prcnt_ntll    paragroup    14.9394670000        0.000000000000       0.000000000000      
+ OPTIMISATION ITERATION NO.  3 ----->
+ Parameter name    Group          Current value    Sensitivity
+   f0prcnt_ntll    paragroup        25.0000         1.495301E-06
 
 
-NUMERIC PARAMETER SENSITIVITIES FOR OPTIMISATION ITERATION NO. 4   ----->
- Parameter name   Group        Current Value           CSS w/reg           CSS w/o reg
-   f0prcnt_ntll    paragroup    14.9394670000        0.000000000000       0.000000000000      
 
+                        COMPLETION OF OPTIMISATION PROCESS
 
+ Composite sensitivities for all observations/prior info ----->
+
+ Number of observations with non-zero weight = 24352
+ Parameter name    Group          Current value    Sensitivity
+   f0prcnt_ntll    paragroup        25.0000         1.470731E-06
