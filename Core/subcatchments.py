@@ -1,5 +1,6 @@
 from PyQt5 import QtWidgets
 
+# Class type for subcatchments and all its parameters as variables
 
 class Subcatchment():
     """Subcatchment geometry, location, parameters, and time-series data"""

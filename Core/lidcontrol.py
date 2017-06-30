@@ -1,6 +1,8 @@
 
 from subcatchments import DataField
 
+# Class type for LID with all its parameters as variables
+
 class LIDControl():
 
     def __init__(self):

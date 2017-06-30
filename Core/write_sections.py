@@ -1,11 +1,14 @@
 from readsections import ReadSections
 
+# Writing data provided on GUI to text files.
 
 class write_sections():
     def __init__(self, subcatchments_data, lid_controls_data):
 
         self.subcatchments_data = subcatchments_data
         self.lid_controls_data = lid_controls_data
+
+    # Write the new subcatchment data to template file
 
     def write_template_data(self, subcatchments):
 
@@ -94,6 +97,8 @@ class write_sections():
 
                 self.replace_lid_controls_data(line_num, self.lid_controls_data)
 
+    # Replace LID controls data for each LID
+
     def replace_lid_controls_data(self, line_num, lid_controls_data):
 
         line_num += 1
@@ -168,10 +173,6 @@ class write_sections():
 
 
 
-
-
-
-
     def read_section_data(self, list_of_file_lines, line_num, string_of_file_lines):
 
         original_data = ""
@@ -186,6 +187,7 @@ class write_sections():
         print(original_data)
 
         return original_data
+
 
     def replace_subcatchment_data(self, section_name, line_num, subcatchments):
 

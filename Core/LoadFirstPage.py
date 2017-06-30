@@ -64,6 +64,7 @@ class PestThread(QThread):
 # from the .txt after running PEST.
 
 
+# This class contains all the functionalities required for the UI
 
 class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
 
@@ -82,23 +83,26 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
 
         self.current_sub = None
 
+    # First window prompting to provide SWMM input file
 
     def openFileDialog(self):
 
 
         dir = '/Users/surajkamble/Documents/SWMM2PEST'
 
-        print(dir)
+        # print(dir)
 
         fname = QFileDialog.getOpenFileName(self, 'Select input file', dir)
-        print(str(fname[0][-3:]))
+        # print(str(fname[0][-3:]))
 
 
         self.inp_fname = fname[0]
 
         if str(fname[0][-4:]) == ".inp":
-            print("Second page")
+            # print("Second page")
             self.loadSecondPage(fname[0])
+
+    # Loads second window after getting SWMM input file
 
     def loadSecondPage(self, fname):
 
@@ -126,20 +130,20 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
 
             subcatchments_listItems.append(QtWidgets.QListWidgetItem(self.subcatchments_data[i].name))
 
-        print("Between FOr loops")
+        # print("Between FOr loops")
 
-        print(subcatchments_listItems)
+        # print(subcatchments_listItems)
 
         for i in range(len(subcatchments_listItems)):
 
             self.secondPage.listSubcatchments.addItem(subcatchments_listItems[i])
-            print("Sub for loop")
+            # print("Sub for loop")
 
-        print("after 2nd for loop")
+        # print("after 2nd for loop")
 
         # self.secondPage.listSubcatchments.setItemSelected(subcatchments_listItems[0], True)
 
-        print("After Set item selected")
+        # print("After Set item selected")
 
         self.secondPage.listSubcatchments.itemClicked[QtWidgets.QListWidgetItem].connect(self.clickedSlotSub)
 
@@ -191,6 +195,8 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
 
         self.browseOutFileWindow.pushButtonBrowse.clicked.connect(self.outputFileDialog)
 
+    # Provide SWMM output file
+
     def outputFileDialog(self):
 
         dir = '/Users/surajkamble/Documents/SWMM2PEST'
@@ -220,8 +226,6 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
 
 
     def readOutputFile(self, out_fname, index_needed):
-
-
 
         self.out_fname = out_fname
 
@@ -285,6 +289,7 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
 
         self.writeInsFile(lines, start_line, index_needed - 1)
 
+    # Write Instruction file based on the output parameter selected
 
     def writeInsFile(self, lines, start_line, index):
 
@@ -425,6 +430,8 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
         self.secondPage.tabOuter.setCurrentIndex(2)
         self.enterControlSection(obs_name)
 
+    # Provide observation file
+
     def enterControlSection(self, obs_name):
 
         self.browseObsFileWindow = LoadBrowseWindow()
@@ -432,6 +439,8 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
         self.browseObsFileWindow.label.setText("                Select Observation data File for " + obs_name + ":")
 
         self.browseObsFileWindow.pushButtonBrowse.clicked.connect(self.readObsFile)
+
+    # Read observation file and create control file based on all the data provided
 
     def readObsFile(self):
 
@@ -633,6 +642,8 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
 
         self.secondPage.pushButtonRunPEST.clicked.connect(self.run_pest)
 
+    # Run PEST when button clicked
+
     def run_pest(self):
 
         self.secondPage.pushButtonRunPEST.setEnabled(False)
@@ -650,6 +661,7 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
 
         self.pest_thread.finished.connect(self.finished_pest_thread)
 
+    # After running PEST
 
     def finished_pest_thread(self):
 
@@ -689,6 +701,8 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
         # x = linspace(0, 5, 5)
 
         self.plot_graphs()
+
+    # Display graphs
 
     def plot_graphs(self):
         print(len(self.measured_data))
@@ -841,7 +855,7 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
         if parameter.is_checked_none:
             self.dialog_box.checkBox_None.setChecked(True)
 
-        
+
         self.dialog_box.buttonBox.accepted.connect(lambda: self.saveParameterValues(parameter))
 
         self.dialog_box.buttonBox.rejected.connect(self.hideDialog)
@@ -849,6 +863,7 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
     def hideDialog(self):
         self.dialog_box.hide()
 
+    # Save upper and lower limit of the parameter value whenever changed
 
     def saveParameterValues(self, parameter):
 
@@ -881,6 +896,8 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
         # print(self.current_sub.area.upper_limit)
 
         self.dialog_box.hide()
+
+    # Load the parameters window for subcatchments and LID controls
 
     def loadParametersWindow(self, item, type_of):
 
@@ -1047,7 +1064,7 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
 
             initial_moisture_deficit_line_edit = self.createLineEdit(self.current_sub.initial_moisture_deficit)
 
-                                                                                                                                                                                                                                                                          
+
 
             # oneLineEdit1.setObjectName("oneLineEdit1")
 
