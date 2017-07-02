@@ -13,7 +13,7 @@ paragroup  relative 0.01  0.0  switch  2.0 parabolic
 
 * parameter data
 F0tp_wdth_vr           fixed  factor    9.0100000E+01    0    100    paragroup  1.0  0.0  1
-F0prcnt_ntll           none  factor    1.4939467E+01    0    25    paragroup  1.0  0.0  1
+F0prcnt_ntll           none  factor    2.7051898E+01    0    50    paragroup  1.0  0.0  1
 * observation groups
 obsgroup
 

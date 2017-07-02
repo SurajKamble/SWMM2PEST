@@ -1,5 +1,4 @@
-from readsections import ReadSections
-
+from Core.readsections import ReadSections
 # Writing data provided on GUI to text files.
 
 class write_sections():

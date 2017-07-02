@@ -62,7 +62,7 @@ Parameter definitions:-
 Name         Trans-            Change       Initial        Lower          Upper
              formation         limit        value          bound          bound
 f0tp_wdth_vr fixed               na        90.1000          na             na
-f0prcnt_ntll none              factor      14.9395        0.00000        25.0000    
+f0prcnt_ntll none              factor      27.0519        0.00000        50.0000    
 
 Name         Group          Scale         Offset        Model command number
 f0tp_wdth_vr paragroup     1.00000        0.00000            1
@@ -24481,63 +24481,76 @@ File saving options: -
 
 
 INITIAL CONDITIONS: 
-   Sum of squared weighted residuals (ie phi) =   1.1777    
+   Sum of squared weighted residuals (ie phi) =   1.0624    
 
       Current parameter values
       f0tp_wdth_vr     90.1000    
-      f0prcnt_ntll     14.9395    
+      f0prcnt_ntll     27.0519    
 
 
 OPTIMISATION ITERATION NO.        : 1
    Model calls so far             : 1
-   Starting phi for this iteration:   1.1777    
+   Starting phi for this iteration:   1.0624    
 
        Lambda =   5.0000     ----->
-          Phi =   1.0892      (  0.925 of starting phi)
+          Phi =   1.0625      (  1.000 times starting phi)
 
        Lambda =   2.5000     ----->
-          Phi =   1.0892      (  0.925 of starting phi)
+          Phi =   1.0625      (  1.000 times starting phi)
 
    No more lambdas: relative phi reduction between lambdas less than 0.0100
-   Lowest phi this iteration:   1.0892    
+   Lowest phi this iteration:   1.0625    
    Relative phi reduction between optimisation iterations less than 0.1000
    Switch to higher order derivatives calculation
+   (restart from best parameters so far - these achieved at iteration    0)
 
-      Current parameter values                 Previous parameter values
-      f0tp_wdth_vr     90.1000                 f0tp_wdth_vr      90.1000    
-      f0prcnt_ntll     21.6645                 f0prcnt_ntll      14.9395    
-   Maximum   factor change:  1.450     ["f0prcnt_ntll"]
-   Maximum relative change: 0.4502     ["f0prcnt_ntll"]
+      Current parameter values
+      f0tp_wdth_vr     90.1000    
+      f0prcnt_ntll     27.0519    
 
 
 OPTIMISATION ITERATION NO.        : 2
    Model calls so far             : 4
-   Starting phi for this iteration:   1.0892    
+   Starting phi for this iteration:   1.0624    
+
+       Lambda =   5.0000     ----->
+          Phi =   1.0625      (  1.000 times starting phi)
 
        Lambda =   2.5000     ----->
-          Phi =   1.0667      (  0.979 of starting phi)
-
-       Lambda =   1.2500     ----->
-          Phi =   1.0667      (  0.979 of starting phi)
+          Phi =   1.0625      (  1.000 times starting phi)
 
    No more lambdas: relative phi reduction between lambdas less than 0.0100
-   Lowest phi this iteration:   1.0667    
+   Lowest phi this iteration:   1.0625    
 
       Current parameter values                 Previous parameter values
       f0tp_wdth_vr     90.1000                 f0tp_wdth_vr      90.1000    
-      f0prcnt_ntll     25.0000                 f0prcnt_ntll      21.6645    
-   Maximum   factor change:  1.154     ["f0prcnt_ntll"]
-   Maximum relative change: 0.1540     ["f0prcnt_ntll"]
+      f0prcnt_ntll     27.0545                 f0prcnt_ntll      27.0519    
+   Maximum   factor change:  1.000     ["f0prcnt_ntll"]
+   Maximum relative change: 9.5187E-05 ["f0prcnt_ntll"]
 
 
 OPTIMISATION ITERATION NO.        : 3
    Model calls so far             : 8
-   Starting phi for this iteration:   1.0667    
-       param "f0prcnt_ntll" frozen: gradient and update vectors out of bounds
-      all parameters frozen
+   Starting phi for this iteration:   1.0625    
 
-   Optimisation complete: all parameters at their limits.
-   Total model calls:     10
+       Lambda =   2.5000     ----->
+          Phi =   1.0625      (  1.000 of starting phi)
+
+       Lambda =   1.2500     ----->
+          Phi =   1.0625      (  1.000 of starting phi)
+
+   No more lambdas: relative phi reduction between lambdas less than 0.0100
+   Lowest phi this iteration:   1.0625    
+
+      Current parameter values                 Previous parameter values
+      f0tp_wdth_vr     90.1000                 f0tp_wdth_vr      90.1000    
+      f0prcnt_ntll     27.0542                 f0prcnt_ntll      27.0545    
+   Maximum   factor change:  1.000     ["f0prcnt_ntll"]
+   Maximum relative change: 9.4994E-06 ["f0prcnt_ntll"]
+
+   Optimisation complete: the  4 lowest phi's are within a relative distance
+                          of eachother of 1.000E-02
+   Total model calls:     12
 
    The model has been run one final time using best parameters. 
    Thus all model input files contain best parameter values, and model 
@@ -24551,7 +24564,7 @@ Adjustable parameters ----->
 
 Parameter        Estimated         95% percent confidence limits
                  value             lower limit       upper limit
- f0prcnt_ntll    25.0000            24.6378           25.3622    
+ f0prcnt_ntll    27.0519            26.6987           27.4051    
 
 Note: confidence limits provide only an indication of parameter uncertainty.
       They rely on a linearity assumption which  may not extend as far in 
@@ -24570,369 +24583,369 @@ Observations ----->
 
 Observation            Measured       Calculated     Residual       Weight     Group
                        value          value
-dflowjan061040        5.065042E-03   0.145720      -0.140655        1.000      obsgroup    
-dflowjan061045        8.134418E-03   0.132850      -0.124716        1.000      obsgroup    
-dflowjan061050        8.134413E-03   0.121530      -0.113396        1.000      obsgroup    
-dflowjan061055        7.982723E-03   0.111540      -0.103557        1.000      obsgroup    
-dflowjan061100        7.982718E-03   0.102670      -9.468728E-02    1.000      obsgroup    
-dflowjan061105        7.982714E-03   9.477000E-02  -8.678729E-02    1.000      obsgroup    
-dflowjan061110        7.831068E-03   8.770000E-02  -7.986893E-02    1.000      obsgroup    
-dflowjan061115        7.679421E-03   8.136000E-02  -7.368058E-02    1.000      obsgroup    
-dflowjan061120        7.831059E-03   7.564000E-02  -6.780894E-02    1.000      obsgroup    
-dflowjan061125        7.679412E-03   7.048000E-02  -6.280059E-02    1.000      obsgroup    
-dflowjan061130        7.679407E-03   6.580000E-02  -5.812059E-02    1.000      obsgroup    
-dflowjan061135        7.527715E-03   6.155000E-02  -5.402229E-02    1.000      obsgroup    
-dflowjan061140        7.527711E-03   5.768000E-02  -5.015229E-02    1.000      obsgroup    
-dflowjan061145        7.527706E-03   5.415000E-02  -4.662229E-02    1.000      obsgroup    
-dflowjan061150        7.527702E-03   5.091000E-02  -4.338230E-02    1.000      obsgroup    
-dflowjan061155        7.375921E-03   4.794000E-02  -4.056408E-02    1.000      obsgroup    
-dflowjan061200        7.375917E-03   4.520000E-02  -3.782408E-02    1.000      obsgroup    
-dflowjan061205        7.224006E-03   4.269000E-02  -3.546599E-02    1.000      obsgroup    
-dflowjan061210        7.224002E-03   4.036000E-02  -3.313600E-02    1.000      obsgroup    
-dflowjan061215        7.223998E-03   3.821000E-02  -3.098600E-02    1.000      obsgroup    
-dflowjan061220        7.071916E-03   3.622000E-02  -2.914808E-02    1.000      obsgroup    
-dflowjan061225        7.071912E-03   3.438000E-02  -2.730809E-02    1.000      obsgroup    
-dflowjan061230        7.223986E-03   3.266000E-02  -2.543601E-02    1.000      obsgroup    
-dflowjan061235        6.919617E-03   3.106000E-02  -2.414038E-02    1.000      obsgroup    
-dflowjan061240        7.071900E-03   2.957000E-02  -2.249810E-02    1.000      obsgroup    
-dflowjan061245        7.071896E-03   2.818000E-02  -2.110810E-02    1.000      obsgroup    
-dflowjan061250        6.767072E-03   2.688000E-02  -2.011293E-02    1.000      obsgroup    
-dflowjan061255        6.919602E-03   2.566000E-02  -1.874040E-02    1.000      obsgroup    
-dflowjan061300        6.767065E-03   2.452000E-02  -1.775294E-02    1.000      obsgroup    
-dflowjan061305        6.767061E-03   2.344000E-02  -1.667294E-02    1.000      obsgroup    
-dflowjan061310        6.767057E-03   2.244000E-02  -1.567294E-02    1.000      obsgroup    
-dflowjan061315        6.767054E-03   2.149000E-02  -1.472295E-02    1.000      obsgroup    
-dflowjan061320        6.614236E-03   2.060000E-02  -1.398576E-02    1.000      obsgroup    
-dflowjan061325        6.614233E-03   1.976000E-02  -1.314577E-02    1.000      obsgroup    
-dflowjan061330        6.614229E-03   1.897000E-02  -1.235577E-02    1.000      obsgroup    
-dflowjan061335        6.461099E-03   1.822000E-02  -1.175890E-02    1.000      obsgroup    
-dflowjan061340        6.461095E-03   1.751000E-02  -1.104891E-02    1.000      obsgroup    
-dflowjan061345        6.307622E-03   1.684000E-02  -1.053238E-02    1.000      obsgroup    
-dflowjan061350        6.461088E-03   1.621000E-02  -9.748912E-03    1.000      obsgroup    
-dflowjan061355        6.307615E-03   1.561000E-02  -9.302385E-03    1.000      obsgroup    
-dflowjan061400        6.461081E-03   1.504000E-02  -8.578919E-03    1.000      obsgroup    
-dflowjan061405        6.307608E-03   1.449000E-02  -8.182392E-03    1.000      obsgroup    
-dflowjan061410        6.307605E-03   1.398000E-02  -7.672395E-03    1.000      obsgroup    
-dflowjan061415        6.307602E-03   1.349000E-02  -7.182398E-03    1.000      obsgroup    
-dflowjan061420        6.307598E-03   1.303000E-02  -6.722402E-03    1.000      obsgroup    
-dflowjan061425        6.307595E-03   1.258000E-02  -6.272405E-03    1.000      obsgroup    
-dflowjan061430        6.153753E-03   1.216000E-02  -6.006247E-03    1.000      obsgroup    
-dflowjan061435        6.307588E-03   1.176000E-02  -5.452412E-03    1.000      obsgroup    
-dflowjan061440        6.153746E-03   1.137000E-02  -5.216254E-03    1.000      obsgroup    
-dflowjan061445        6.153743E-03   1.101000E-02  -4.856257E-03    1.000      obsgroup    
-dflowjan061450        5.999507E-03   1.066000E-02  -4.660493E-03    1.000      obsgroup    
-dflowjan061455        5.999504E-03   1.032000E-02  -4.320496E-03    1.000      obsgroup    
-dflowjan061500        5.999501E-03   1.000000E-02  -4.000499E-03    1.000      obsgroup    
-dflowjan061505        5.999497E-03   9.700000E-03  -3.700503E-03    1.000      obsgroup    
-dflowjan061510        5.999494E-03   9.400000E-03  -3.400506E-03    1.000      obsgroup    
-dflowjan061515        5.999491E-03   9.120000E-03  -3.120509E-03    1.000      obsgroup    
-dflowjan061520        5.844841E-03   8.850000E-03  -3.005159E-03    1.000      obsgroup    
-dflowjan061525        5.999485E-03   8.600000E-03  -2.600515E-03    1.000      obsgroup    
-dflowjan061530        5.689756E-03   8.350000E-03  -2.660244E-03    1.000      obsgroup    
-dflowjan061535        5.844832E-03   8.110000E-03  -2.265168E-03    1.000      obsgroup    
-dflowjan061540        5.689750E-03   7.880000E-03  -2.190250E-03    1.000      obsgroup    
-dflowjan061545        5.844826E-03   7.660000E-03  -1.815174E-03    1.000      obsgroup    
-dflowjan061550        5.534219E-03   7.450000E-03  -1.915781E-03    1.000      obsgroup    
-dflowjan061555        5.689741E-03   7.250000E-03  -1.560259E-03    1.000      obsgroup    
-dflowjan061600        5.689738E-03   7.050000E-03  -1.360262E-03    1.000      obsgroup    
-dflowjan061605        5.689735E-03   6.860000E-03  -1.170265E-03    1.000      obsgroup    
-dflowjan061610        5.534208E-03   6.680000E-03  -1.145792E-03    1.000      obsgroup    
-dflowjan061615        5.534205E-03   6.510000E-03  -9.757950E-04    1.000      obsgroup    
-dflowjan061620        5.378221E-03   6.340000E-03  -9.617790E-04    1.000      obsgroup    
-dflowjan061625        5.534199E-03   6.180000E-03  -6.458010E-04    1.000      obsgroup    
-dflowjan061630        5.378216E-03   6.020000E-03  -6.417840E-04    1.000      obsgroup    
-dflowjan061635        5.378213E-03   5.870000E-03  -4.917870E-04    1.000      obsgroup    
-dflowjan061640        5.221768E-03   5.730000E-03  -5.082320E-04    1.000      obsgroup    
-dflowjan061645        5.378207E-03   5.590000E-03  -2.117930E-04    1.000      obsgroup    
-dflowjan061650        5.378205E-03   5.450000E-03  -7.179500E-05    1.000      obsgroup    
-dflowjan061655        5.221760E-03   5.320000E-03  -9.824000E-05    1.000      obsgroup    
-dflowjan061700        5.378199E-03   5.190000E-03   1.881990E-04    1.000      obsgroup    
-dflowjan061705        5.221754E-03   5.070000E-03   1.517540E-04    1.000      obsgroup    
-dflowjan061710        5.378194E-03   4.950000E-03   4.281940E-04    1.000      obsgroup    
-dflowjan061715        5.221749E-03   4.840000E-03   3.817490E-04    1.000      obsgroup    
-dflowjan061720        5.378188E-03   4.730000E-03   6.481880E-04    1.000      obsgroup    
-dflowjan061725        5.221744E-03   4.620000E-03   6.017440E-04    1.000      obsgroup    
-dflowjan061730        4.985696E-03   4.520000E-03   4.656960E-04    1.000      obsgroup    
-dflowjan061735        4.749648E-03   4.410000E-03   3.396480E-04    1.000      obsgroup    
-dflowjan061740        5.064831E-03   4.320000E-03   7.448310E-04    1.000      obsgroup    
-dflowjan061745        5.064828E-03   4.220000E-03   8.448280E-04    1.000      obsgroup    
-dflowjan061750        5.064826E-03   4.130000E-03   9.348260E-04    1.000      obsgroup    
-dflowjan061755        5.064823E-03   4.040000E-03   1.024823E-03    1.000      obsgroup    
-dflowjan061800        5.064821E-03   3.960000E-03   1.104821E-03    1.000      obsgroup    
-dflowjan061805        4.907453E-03   3.870000E-03   1.037453E-03    1.000      obsgroup    
-dflowjan061810        5.064816E-03   3.790000E-03   1.274816E-03    1.000      obsgroup    
-dflowjan061815        4.907448E-03   3.710000E-03   1.197448E-03    1.000      obsgroup    
-dflowjan061820        5.064811E-03   3.640000E-03   1.424811E-03    1.000      obsgroup    
-dflowjan061825        4.907443E-03   3.560000E-03   1.347443E-03    1.000      obsgroup    
-dflowjan061830        5.064806E-03   3.490000E-03   1.574806E-03    1.000      obsgroup    
-dflowjan061835        5.378147E-03   3.420000E-03   1.958147E-03    1.000      obsgroup    
-dflowjan061840        5.844718E-03   3.350000E-03   2.494718E-03    1.000      obsgroup    
-dflowjan061845        5.689640E-03   3.280000E-03   2.409640E-03    1.000      obsgroup    
-dflowjan061850        5.689637E-03   3.220000E-03   2.469637E-03    1.000      obsgroup    
-dflowjan061855        5.378136E-03   3.160000E-03   2.218136E-03    1.000      obsgroup    
-dflowjan061900        5.221694E-03   3.100000E-03   2.121694E-03    1.000      obsgroup    
-dflowjan061905        5.378131E-03   3.040000E-03   2.338131E-03    1.000      obsgroup    
-dflowjan061910        5.378128E-03   2.980000E-03   2.398128E-03    1.000      obsgroup    
-dflowjan061915        5.689622E-03   2.920000E-03   2.769622E-03    1.000      obsgroup    
-dflowjan061920        6.153561E-03   2.870000E-03   3.283561E-03    1.000      obsgroup    
-dflowjan061925        6.153558E-03   2.810000E-03   3.343558E-03    1.000      obsgroup    
-dflowjan061930        6.153555E-03   2.760000E-03   3.393555E-03    1.000      obsgroup    
-dflowjan061935        6.153551E-03   2.710000E-03   3.443551E-03    1.000      obsgroup    
-dflowjan061940        5.999322E-03   2.660000E-03   3.339322E-03    1.000      obsgroup    
-dflowjan061945        5.844678E-03   2.610000E-03   3.234678E-03    1.000      obsgroup    
-dflowjan061950        5.844675E-03   2.570000E-03   3.274675E-03    1.000      obsgroup    
-dflowjan061955        5.844672E-03   2.520000E-03   3.324672E-03    1.000      obsgroup    
-dflowjan062000        5.689596E-03   2.480000E-03   3.209596E-03    1.000      obsgroup    
-dflowjan062005        5.689593E-03   2.430000E-03   3.259593E-03    1.000      obsgroup    
-dflowjan062010        5.689590E-03   2.390000E-03   3.299590E-03    1.000      obsgroup    
-dflowjan062015        5.689587E-03   2.350000E-03   3.339587E-03    1.000      obsgroup    
-dflowjan062020        5.689584E-03   2.310000E-03   3.379584E-03    1.000      obsgroup    
-dflowjan062025        5.689581E-03   2.270000E-03   3.419581E-03    1.000      obsgroup    
-dflowjan062030        5.689578E-03   2.230000E-03   3.459578E-03    1.000      obsgroup    
-dflowjan062035        5.844647E-03   2.190000E-03   3.654647E-03    1.000      obsgroup    
-dflowjan062040        5.689572E-03   2.160000E-03   3.529572E-03    1.000      obsgroup    
-dflowjan062045        5.689569E-03   2.120000E-03   3.569569E-03    1.000      obsgroup    
-dflowjan062050        5.999277E-03   2.090000E-03   3.909277E-03    1.000      obsgroup    
-dflowjan062055        6.613906E-03   2.050000E-03   4.563906E-03    1.000      obsgroup    
-dflowjan062100        6.919228E-03   2.020000E-03   4.899228E-03    1.000      obsgroup    
-dflowjan062105        7.071500E-03   1.990000E-03   5.081500E-03    1.000      obsgroup    
-dflowjan062110        7.071496E-03   1.950000E-03   5.121496E-03    1.000      obsgroup    
-dflowjan062115        7.071493E-03   1.920000E-03   5.151493E-03    1.000      obsgroup    
-dflowjan062120        7.223555E-03   1.890000E-03   5.333555E-03    1.000      obsgroup    
-dflowjan062125        7.223551E-03   1.860000E-03   5.363551E-03    1.000      obsgroup    
-dflowjan062130        7.527206E-03   1.830000E-03   5.697206E-03    1.000      obsgroup    
-dflowjan062135        7.527202E-03   1.800000E-03   5.727202E-03    1.000      obsgroup    
-dflowjan062140        7.678873E-03   1.780000E-03   5.898873E-03    1.000      obsgroup    
-dflowjan062145        7.830498E-03   1.750000E-03   6.080498E-03    1.000      obsgroup    
-dflowjan062150        7.830493E-03   1.720000E-03   6.110493E-03    1.000      obsgroup    
-dflowjan062155        7.982117E-03   1.700000E-03   6.282117E-03    1.000      obsgroup    
-dflowjan062200        8.285545E-03   1.670000E-03   6.615545E-03    1.000      obsgroup    
-dflowjan062205        8.589518E-03   1.650000E-03   6.939518E-03    1.000      obsgroup    
-dflowjan062210        8.894410E-03   1.620000E-03   7.274410E-03    1.000      obsgroup    
-dflowjan062215        9.354290E-03   1.600000E-03   7.754290E-03    1.000      obsgroup    
-dflowjan062220        9.818308E-03   1.570000E-03   8.248308E-03    1.000      obsgroup    
-dflowjan062225        1.013053E-02   1.550000E-03   8.580530E-03    1.000      obsgroup    
-dflowjan062230        1.013052E-02   1.530000E-03   8.600524E-03    1.000      obsgroup    
-dflowjan062235        1.044542E-02   1.510000E-03   8.935424E-03    1.000      obsgroup    
-dflowjan062240        1.092343E-02   1.480000E-03   9.443433E-03    1.000      obsgroup    
-dflowjan062245        1.124625E-02   1.460000E-03   9.786250E-03    1.000      obsgroup    
-dflowjan062250        1.190278E-02   1.440000E-03   1.046278E-02    1.000      obsgroup    
-dflowjan062255        1.223680E-02   1.420000E-03   1.081680E-02    1.000      obsgroup    
-dflowjan062300        1.257479E-02   1.400000E-03   1.117479E-02    1.000      obsgroup    
-dflowjan062305        1.343739E-02   1.380000E-03   1.205739E-02    1.000      obsgroup    
-dflowjan062310        1.396684E-02   1.360000E-03   1.260684E-02    1.000      obsgroup    
-dflowjan062315        1.523406E-02   1.340000E-03   1.389406E-02    1.000      obsgroup    
-dflowjan062320        1.653761E-02   1.320000E-03   1.521761E-02    1.000      obsgroup    
-dflowjan062325        1.805435E-02   1.310000E-03   1.674435E-02    1.000      obsgroup    
-dflowjan062330        1.938922E-02   1.290000E-03   1.809922E-02    1.000      obsgroup    
-dflowjan062335        2.053170E-02   1.270000E-03   1.926170E-02    1.000      obsgroup    
-dflowjan062340        2.224750E-02   1.250000E-03   2.099750E-02    1.000      obsgroup    
-dflowjan062345        2.463670E-02   1.240000E-03   2.339670E-02    1.000      obsgroup    
-dflowjan062350        2.721416E-02   1.220000E-03   2.599416E-02    1.000      obsgroup    
-dflowjan062355        2.917588E-02   1.210000E-03   2.796588E-02    1.000      obsgroup    
-dflowjan070000        3.158214E-02   1.190000E-03   3.039214E-02    1.000      obsgroup    
-dflowjan070005        3.474035E-02   1.170000E-03   3.357035E-02    1.000      obsgroup    
-dflowjan070010        3.850013E-02   1.160000E-03   3.734013E-02    1.000      obsgroup    
-dflowjan070015        4.105678E-02   1.140000E-03   3.991678E-02    1.000      obsgroup    
-dflowjan070020        4.361343E-02   1.130000E-03   4.248343E-02    1.000      obsgroup    
-dflowjan070025        4.601968E-02   1.110000E-03   4.490968E-02    1.000      obsgroup    
-dflowjan070030        4.857633E-02   1.100000E-03   4.747633E-02    1.000      obsgroup    
-dflowjan070035        5.008025E-02   1.090000E-03   4.899025E-02    1.000      obsgroup    
-dflowjan070040        5.143377E-02   1.070000E-03   5.036377E-02    1.000      obsgroup    
-dflowjan070045        5.203533E-02   1.060000E-03   5.097533E-02    1.000      obsgroup    
-dflowjan070050        5.233611E-02   1.050000E-03   5.128611E-02    1.000      obsgroup    
-dflowjan070055        5.218572E-02   1.030000E-03   5.115572E-02    1.000      obsgroup    
-dflowjan070100        5.173455E-02   1.020000E-03   5.071455E-02    1.000      obsgroup    
-dflowjan070105        5.128337E-02   1.010000E-03   5.027337E-02    1.000      obsgroup    
-dflowjan070110        5.068181E-02   9.900000E-04   4.969181E-02    1.000      obsgroup    
-dflowjan070115        4.962907E-02   9.800000E-04   4.864907E-02    1.000      obsgroup    
-dflowjan070120        4.887712E-02   9.700000E-04   4.790712E-02    1.000      obsgroup    
-dflowjan070125        4.812516E-02   9.600000E-04   4.716516E-02    1.000      obsgroup    
-dflowjan070130        4.707242E-02   9.500000E-04   4.612242E-02    1.000      obsgroup    
-dflowjan070135        4.617008E-02   9.400000E-04   4.523007E-02    1.000      obsgroup    
-dflowjan070140        4.526773E-02   9.200000E-04   4.434773E-02    1.000      obsgroup    
-dflowjan070145        4.451577E-02   9.100000E-04   4.360577E-02    1.000      obsgroup    
-dflowjan070150        4.331264E-02   9.000000E-04   4.241264E-02    1.000      obsgroup    
-dflowjan070155        4.256069E-02   8.900000E-04   4.167069E-02    1.000      obsgroup    
-dflowjan070200        4.150795E-02   8.800000E-04   4.062795E-02    1.000      obsgroup    
-dflowjan070205        4.090639E-02   8.700000E-04   4.003639E-02    1.000      obsgroup    
-dflowjan070210        4.045521E-02   8.600000E-04   3.959521E-02    1.000      obsgroup    
-dflowjan070215        3.955287E-02   8.500000E-04   3.870287E-02    1.000      obsgroup    
-dflowjan070220        3.895130E-02   8.400000E-04   3.811130E-02    1.000      obsgroup    
-dflowjan070225        3.819935E-02   8.300000E-04   3.736935E-02    1.000      obsgroup    
-dflowjan070230        3.714661E-02   8.200000E-04   3.632661E-02    1.000      obsgroup    
-dflowjan070235        3.699622E-02   8.100000E-04   3.618622E-02    1.000      obsgroup    
-dflowjan070240        3.609387E-02   8.000000E-04   3.529387E-02    1.000      obsgroup    
-dflowjan070245        3.534191E-02   8.000000E-04   3.454191E-02    1.000      obsgroup    
-dflowjan070250        3.458996E-02   7.900000E-04   3.379996E-02    1.000      obsgroup    
-dflowjan070255        3.413879E-02   7.800000E-04   3.335878E-02    1.000      obsgroup    
-dflowjan070300        3.308605E-02   7.700000E-04   3.231605E-02    1.000      obsgroup    
-dflowjan070305        3.278527E-02   7.600000E-04   3.202527E-02    1.000      obsgroup    
-dflowjan070310        3.263487E-02   7.500000E-04   3.188487E-02    1.000      obsgroup    
-dflowjan070315        3.203331E-02   7.400000E-04   3.129331E-02    1.000      obsgroup    
-dflowjan070320        3.143174E-02   7.400000E-04   3.069174E-02    1.000      obsgroup    
-dflowjan070325        3.098057E-02   7.300000E-04   3.025057E-02    1.000      obsgroup    
-dflowjan070330        3.052940E-02   7.200000E-04   2.980940E-02    1.000      obsgroup    
-dflowjan070335        3.022862E-02   7.100000E-04   2.951862E-02    1.000      obsgroup    
-dflowjan070340        2.992783E-02   7.000000E-04   2.922783E-02    1.000      obsgroup    
-dflowjan070345        2.992783E-02   7.000000E-04   2.922783E-02    1.000      obsgroup    
-dflowjan070350        2.902549E-02   6.900000E-04   2.833549E-02    1.000      obsgroup    
-dflowjan070355        2.887510E-02   6.800000E-04   2.819510E-02    1.000      obsgroup    
-dflowjan070400        2.857431E-02   6.800000E-04   2.789431E-02    1.000      obsgroup    
-dflowjan070405        2.827353E-02   6.700000E-04   2.760353E-02    1.000      obsgroup    
-dflowjan070410        2.812314E-02   6.600000E-04   2.746314E-02    1.000      obsgroup    
-dflowjan070415        2.722079E-02   6.500000E-04   2.657079E-02    1.000      obsgroup    
-dflowjan070420        2.714560E-02   6.500000E-04   2.649560E-02    1.000      obsgroup    
-dflowjan070425        2.707040E-02   6.400000E-04   2.643040E-02    1.000      obsgroup    
-dflowjan070430        2.699521E-02   6.300000E-04   2.636521E-02    1.000      obsgroup    
-dflowjan070435        2.692001E-02   6.300000E-04   2.629001E-02    1.000      obsgroup    
-dflowjan070440        2.684482E-02   6.200000E-04   2.622482E-02    1.000      obsgroup    
+dflowjan061040        5.065042E-03   0.166190      -0.161125        1.000      obsgroup    
+dflowjan061045        8.134418E-03   0.150730      -0.142596        1.000      obsgroup    
+dflowjan061050        8.134413E-03   0.137240      -0.129106        1.000      obsgroup    
+dflowjan061055        7.982723E-03   0.125400      -0.117417        1.000      obsgroup    
+dflowjan061100        7.982718E-03   0.114960      -0.106977        1.000      obsgroup    
+dflowjan061105        7.982714E-03   0.105710      -9.772729E-02    1.000      obsgroup    
+dflowjan061110        7.831068E-03   9.748000E-02  -8.964893E-02    1.000      obsgroup    
+dflowjan061115        7.679421E-03   9.013000E-02  -8.245058E-02    1.000      obsgroup    
+dflowjan061120        7.831059E-03   8.354000E-02  -7.570894E-02    1.000      obsgroup    
+dflowjan061125        7.679412E-03   7.761000E-02  -6.993059E-02    1.000      obsgroup    
+dflowjan061130        7.679407E-03   7.226000E-02  -6.458059E-02    1.000      obsgroup    
+dflowjan061135        7.527715E-03   6.742000E-02  -5.989229E-02    1.000      obsgroup    
+dflowjan061140        7.527711E-03   6.302000E-02  -5.549229E-02    1.000      obsgroup    
+dflowjan061145        7.527706E-03   5.902000E-02  -5.149229E-02    1.000      obsgroup    
+dflowjan061150        7.527702E-03   5.537000E-02  -4.784230E-02    1.000      obsgroup    
+dflowjan061155        7.375921E-03   5.203000E-02  -4.465408E-02    1.000      obsgroup    
+dflowjan061200        7.375917E-03   4.897000E-02  -4.159408E-02    1.000      obsgroup    
+dflowjan061205        7.224006E-03   4.615000E-02  -3.892599E-02    1.000      obsgroup    
+dflowjan061210        7.224002E-03   4.356000E-02  -3.633600E-02    1.000      obsgroup    
+dflowjan061215        7.223998E-03   4.117000E-02  -3.394600E-02    1.000      obsgroup    
+dflowjan061220        7.071916E-03   3.896000E-02  -3.188808E-02    1.000      obsgroup    
+dflowjan061225        7.071912E-03   3.692000E-02  -2.984809E-02    1.000      obsgroup    
+dflowjan061230        7.223986E-03   3.502000E-02  -2.779601E-02    1.000      obsgroup    
+dflowjan061235        6.919617E-03   3.326000E-02  -2.634038E-02    1.000      obsgroup    
+dflowjan061240        7.071900E-03   3.162000E-02  -2.454810E-02    1.000      obsgroup    
+dflowjan061245        7.071896E-03   3.009000E-02  -2.301810E-02    1.000      obsgroup    
+dflowjan061250        6.767072E-03   2.866000E-02  -2.189293E-02    1.000      obsgroup    
+dflowjan061255        6.919602E-03   2.733000E-02  -2.041040E-02    1.000      obsgroup    
+dflowjan061300        6.767065E-03   2.608000E-02  -1.931294E-02    1.000      obsgroup    
+dflowjan061305        6.767061E-03   2.491000E-02  -1.814294E-02    1.000      obsgroup    
+dflowjan061310        6.767057E-03   2.382000E-02  -1.705294E-02    1.000      obsgroup    
+dflowjan061315        6.767054E-03   2.279000E-02  -1.602295E-02    1.000      obsgroup    
+dflowjan061320        6.614236E-03   2.182000E-02  -1.520576E-02    1.000      obsgroup    
+dflowjan061325        6.614233E-03   2.091000E-02  -1.429577E-02    1.000      obsgroup    
+dflowjan061330        6.614229E-03   2.005000E-02  -1.343577E-02    1.000      obsgroup    
+dflowjan061335        6.461099E-03   1.924000E-02  -1.277890E-02    1.000      obsgroup    
+dflowjan061340        6.461095E-03   1.848000E-02  -1.201891E-02    1.000      obsgroup    
+dflowjan061345        6.307622E-03   1.776000E-02  -1.145238E-02    1.000      obsgroup    
+dflowjan061350        6.461088E-03   1.707000E-02  -1.060891E-02    1.000      obsgroup    
+dflowjan061355        6.307615E-03   1.643000E-02  -1.012239E-02    1.000      obsgroup    
+dflowjan061400        6.461081E-03   1.582000E-02  -9.358919E-03    1.000      obsgroup    
+dflowjan061405        6.307608E-03   1.524000E-02  -8.932392E-03    1.000      obsgroup    
+dflowjan061410        6.307605E-03   1.468000E-02  -8.372395E-03    1.000      obsgroup    
+dflowjan061415        6.307602E-03   1.416000E-02  -7.852398E-03    1.000      obsgroup    
+dflowjan061420        6.307598E-03   1.366000E-02  -7.352402E-03    1.000      obsgroup    
+dflowjan061425        6.307595E-03   1.319000E-02  -6.882405E-03    1.000      obsgroup    
+dflowjan061430        6.153753E-03   1.274000E-02  -6.586247E-03    1.000      obsgroup    
+dflowjan061435        6.307588E-03   1.231000E-02  -6.002412E-03    1.000      obsgroup    
+dflowjan061440        6.153746E-03   1.190000E-02  -5.746254E-03    1.000      obsgroup    
+dflowjan061445        6.153743E-03   1.151000E-02  -5.356257E-03    1.000      obsgroup    
+dflowjan061450        5.999507E-03   1.114000E-02  -5.140493E-03    1.000      obsgroup    
+dflowjan061455        5.999504E-03   1.078000E-02  -4.780496E-03    1.000      obsgroup    
+dflowjan061500        5.999501E-03   1.044000E-02  -4.440499E-03    1.000      obsgroup    
+dflowjan061505        5.999497E-03   1.012000E-02  -4.120503E-03    1.000      obsgroup    
+dflowjan061510        5.999494E-03   9.800000E-03  -3.800506E-03    1.000      obsgroup    
+dflowjan061515        5.999491E-03   9.510000E-03  -3.510509E-03    1.000      obsgroup    
+dflowjan061520        5.844841E-03   9.220000E-03  -3.375159E-03    1.000      obsgroup    
+dflowjan061525        5.999485E-03   8.950000E-03  -2.950515E-03    1.000      obsgroup    
+dflowjan061530        5.689756E-03   8.690000E-03  -3.000244E-03    1.000      obsgroup    
+dflowjan061535        5.844832E-03   8.430000E-03  -2.585168E-03    1.000      obsgroup    
+dflowjan061540        5.689750E-03   8.190000E-03  -2.500250E-03    1.000      obsgroup    
+dflowjan061545        5.844826E-03   7.960000E-03  -2.115174E-03    1.000      obsgroup    
+dflowjan061550        5.534219E-03   7.740000E-03  -2.205781E-03    1.000      obsgroup    
+dflowjan061555        5.689741E-03   7.530000E-03  -1.840259E-03    1.000      obsgroup    
+dflowjan061600        5.689738E-03   7.320000E-03  -1.630262E-03    1.000      obsgroup    
+dflowjan061605        5.689735E-03   7.120000E-03  -1.430265E-03    1.000      obsgroup    
+dflowjan061610        5.534208E-03   6.930000E-03  -1.395792E-03    1.000      obsgroup    
+dflowjan061615        5.534205E-03   6.750000E-03  -1.215795E-03    1.000      obsgroup    
+dflowjan061620        5.378221E-03   6.570000E-03  -1.191779E-03    1.000      obsgroup    
+dflowjan061625        5.534199E-03   6.400000E-03  -8.658010E-04    1.000      obsgroup    
+dflowjan061630        5.378216E-03   6.240000E-03  -8.617840E-04    1.000      obsgroup    
+dflowjan061635        5.378213E-03   6.080000E-03  -7.017870E-04    1.000      obsgroup    
+dflowjan061640        5.221768E-03   5.930000E-03  -7.082320E-04    1.000      obsgroup    
+dflowjan061645        5.378207E-03   5.780000E-03  -4.017930E-04    1.000      obsgroup    
+dflowjan061650        5.378205E-03   5.640000E-03  -2.617950E-04    1.000      obsgroup    
+dflowjan061655        5.221760E-03   5.500000E-03  -2.782400E-04    1.000      obsgroup    
+dflowjan061700        5.378199E-03   5.370000E-03   8.199000E-06    1.000      obsgroup    
+dflowjan061705        5.221754E-03   5.240000E-03  -1.824600E-05    1.000      obsgroup    
+dflowjan061710        5.378194E-03   5.110000E-03   2.681940E-04    1.000      obsgroup    
+dflowjan061715        5.221749E-03   4.990000E-03   2.317490E-04    1.000      obsgroup    
+dflowjan061720        5.378188E-03   4.880000E-03   4.981880E-04    1.000      obsgroup    
+dflowjan061725        5.221744E-03   4.770000E-03   4.517440E-04    1.000      obsgroup    
+dflowjan061730        4.985696E-03   4.660000E-03   3.256960E-04    1.000      obsgroup    
+dflowjan061735        4.749648E-03   4.550000E-03   1.996480E-04    1.000      obsgroup    
+dflowjan061740        5.064831E-03   4.450000E-03   6.148310E-04    1.000      obsgroup    
+dflowjan061745        5.064828E-03   4.350000E-03   7.148280E-04    1.000      obsgroup    
+dflowjan061750        5.064826E-03   4.260000E-03   8.048260E-04    1.000      obsgroup    
+dflowjan061755        5.064823E-03   4.160000E-03   9.048230E-04    1.000      obsgroup    
+dflowjan061800        5.064821E-03   4.070000E-03   9.948210E-04    1.000      obsgroup    
+dflowjan061805        4.907453E-03   3.990000E-03   9.174530E-04    1.000      obsgroup    
+dflowjan061810        5.064816E-03   3.900000E-03   1.164816E-03    1.000      obsgroup    
+dflowjan061815        4.907448E-03   3.820000E-03   1.087448E-03    1.000      obsgroup    
+dflowjan061820        5.064811E-03   3.740000E-03   1.324811E-03    1.000      obsgroup    
+dflowjan061825        4.907443E-03   3.660000E-03   1.247443E-03    1.000      obsgroup    
+dflowjan061830        5.064806E-03   3.590000E-03   1.474806E-03    1.000      obsgroup    
+dflowjan061835        5.378147E-03   3.510000E-03   1.868147E-03    1.000      obsgroup    
+dflowjan061840        5.844718E-03   3.440000E-03   2.404718E-03    1.000      obsgroup    
+dflowjan061845        5.689640E-03   3.370000E-03   2.319640E-03    1.000      obsgroup    
+dflowjan061850        5.689637E-03   3.310000E-03   2.379637E-03    1.000      obsgroup    
+dflowjan061855        5.378136E-03   3.240000E-03   2.138136E-03    1.000      obsgroup    
+dflowjan061900        5.221694E-03   3.180000E-03   2.041694E-03    1.000      obsgroup    
+dflowjan061905        5.378131E-03   3.120000E-03   2.258131E-03    1.000      obsgroup    
+dflowjan061910        5.378128E-03   3.060000E-03   2.318128E-03    1.000      obsgroup    
+dflowjan061915        5.689622E-03   3.000000E-03   2.689622E-03    1.000      obsgroup    
+dflowjan061920        6.153561E-03   2.940000E-03   3.213561E-03    1.000      obsgroup    
+dflowjan061925        6.153558E-03   2.890000E-03   3.263558E-03    1.000      obsgroup    
+dflowjan061930        6.153555E-03   2.830000E-03   3.323555E-03    1.000      obsgroup    
+dflowjan061935        6.153551E-03   2.780000E-03   3.373551E-03    1.000      obsgroup    
+dflowjan061940        5.999322E-03   2.730000E-03   3.269322E-03    1.000      obsgroup    
+dflowjan061945        5.844678E-03   2.680000E-03   3.164678E-03    1.000      obsgroup    
+dflowjan061950        5.844675E-03   2.630000E-03   3.214675E-03    1.000      obsgroup    
+dflowjan061955        5.844672E-03   2.580000E-03   3.264672E-03    1.000      obsgroup    
+dflowjan062000        5.689596E-03   2.540000E-03   3.149596E-03    1.000      obsgroup    
+dflowjan062005        5.689593E-03   2.490000E-03   3.199593E-03    1.000      obsgroup    
+dflowjan062010        5.689590E-03   2.450000E-03   3.239590E-03    1.000      obsgroup    
+dflowjan062015        5.689587E-03   2.410000E-03   3.279587E-03    1.000      obsgroup    
+dflowjan062020        5.689584E-03   2.360000E-03   3.329584E-03    1.000      obsgroup    
+dflowjan062025        5.689581E-03   2.320000E-03   3.369581E-03    1.000      obsgroup    
+dflowjan062030        5.689578E-03   2.280000E-03   3.409578E-03    1.000      obsgroup    
+dflowjan062035        5.844647E-03   2.240000E-03   3.604647E-03    1.000      obsgroup    
+dflowjan062040        5.689572E-03   2.210000E-03   3.479572E-03    1.000      obsgroup    
+dflowjan062045        5.689569E-03   2.170000E-03   3.519569E-03    1.000      obsgroup    
+dflowjan062050        5.999277E-03   2.130000E-03   3.869277E-03    1.000      obsgroup    
+dflowjan062055        6.613906E-03   2.100000E-03   4.513906E-03    1.000      obsgroup    
+dflowjan062100        6.919228E-03   2.060000E-03   4.859228E-03    1.000      obsgroup    
+dflowjan062105        7.071500E-03   2.030000E-03   5.041500E-03    1.000      obsgroup    
+dflowjan062110        7.071496E-03   2.000000E-03   5.071496E-03    1.000      obsgroup    
+dflowjan062115        7.071493E-03   1.960000E-03   5.111493E-03    1.000      obsgroup    
+dflowjan062120        7.223555E-03   1.930000E-03   5.293555E-03    1.000      obsgroup    
+dflowjan062125        7.223551E-03   1.900000E-03   5.323551E-03    1.000      obsgroup    
+dflowjan062130        7.527206E-03   1.870000E-03   5.657206E-03    1.000      obsgroup    
+dflowjan062135        7.527202E-03   1.840000E-03   5.687202E-03    1.000      obsgroup    
+dflowjan062140        7.678873E-03   1.810000E-03   5.868873E-03    1.000      obsgroup    
+dflowjan062145        7.830498E-03   1.790000E-03   6.040498E-03    1.000      obsgroup    
+dflowjan062150        7.830493E-03   1.760000E-03   6.070493E-03    1.000      obsgroup    
+dflowjan062155        7.982117E-03   1.730000E-03   6.252117E-03    1.000      obsgroup    
+dflowjan062200        8.285545E-03   1.710000E-03   6.575545E-03    1.000      obsgroup    
+dflowjan062205        8.589518E-03   1.680000E-03   6.909518E-03    1.000      obsgroup    
+dflowjan062210        8.894410E-03   1.650000E-03   7.244410E-03    1.000      obsgroup    
+dflowjan062215        9.354290E-03   1.630000E-03   7.724290E-03    1.000      obsgroup    
+dflowjan062220        9.818308E-03   1.610000E-03   8.208308E-03    1.000      obsgroup    
+dflowjan062225        1.013053E-02   1.580000E-03   8.550530E-03    1.000      obsgroup    
+dflowjan062230        1.013052E-02   1.560000E-03   8.570524E-03    1.000      obsgroup    
+dflowjan062235        1.044542E-02   1.540000E-03   8.905424E-03    1.000      obsgroup    
+dflowjan062240        1.092343E-02   1.510000E-03   9.413433E-03    1.000      obsgroup    
+dflowjan062245        1.124625E-02   1.490000E-03   9.756250E-03    1.000      obsgroup    
+dflowjan062250        1.190278E-02   1.470000E-03   1.043278E-02    1.000      obsgroup    
+dflowjan062255        1.223680E-02   1.450000E-03   1.078680E-02    1.000      obsgroup    
+dflowjan062300        1.257479E-02   1.430000E-03   1.114479E-02    1.000      obsgroup    
+dflowjan062305        1.343739E-02   1.410000E-03   1.202739E-02    1.000      obsgroup    
+dflowjan062310        1.396684E-02   1.390000E-03   1.257684E-02    1.000      obsgroup    
+dflowjan062315        1.523406E-02   1.370000E-03   1.386406E-02    1.000      obsgroup    
+dflowjan062320        1.653761E-02   1.350000E-03   1.518761E-02    1.000      obsgroup    
+dflowjan062325        1.805435E-02   1.330000E-03   1.672435E-02    1.000      obsgroup    
+dflowjan062330        1.938922E-02   1.310000E-03   1.807922E-02    1.000      obsgroup    
+dflowjan062335        2.053170E-02   1.300000E-03   1.923170E-02    1.000      obsgroup    
+dflowjan062340        2.224750E-02   1.280000E-03   2.096750E-02    1.000      obsgroup    
+dflowjan062345        2.463670E-02   1.260000E-03   2.337670E-02    1.000      obsgroup    
+dflowjan062350        2.721416E-02   1.240000E-03   2.597416E-02    1.000      obsgroup    
+dflowjan062355        2.917588E-02   1.230000E-03   2.794588E-02    1.000      obsgroup    
+dflowjan070000        3.158214E-02   1.210000E-03   3.037214E-02    1.000      obsgroup    
+dflowjan070005        3.474035E-02   1.190000E-03   3.355035E-02    1.000      obsgroup    
+dflowjan070010        3.850013E-02   1.180000E-03   3.732013E-02    1.000      obsgroup    
+dflowjan070015        4.105678E-02   1.160000E-03   3.989678E-02    1.000      obsgroup    
+dflowjan070020        4.361343E-02   1.150000E-03   4.246343E-02    1.000      obsgroup    
+dflowjan070025        4.601968E-02   1.130000E-03   4.488968E-02    1.000      obsgroup    
+dflowjan070030        4.857633E-02   1.120000E-03   4.745633E-02    1.000      obsgroup    
+dflowjan070035        5.008025E-02   1.100000E-03   4.898025E-02    1.000      obsgroup    
+dflowjan070040        5.143377E-02   1.090000E-03   5.034377E-02    1.000      obsgroup    
+dflowjan070045        5.203533E-02   1.080000E-03   5.095533E-02    1.000      obsgroup    
+dflowjan070050        5.233611E-02   1.060000E-03   5.127611E-02    1.000      obsgroup    
+dflowjan070055        5.218572E-02   1.050000E-03   5.113572E-02    1.000      obsgroup    
+dflowjan070100        5.173455E-02   1.040000E-03   5.069455E-02    1.000      obsgroup    
+dflowjan070105        5.128337E-02   1.020000E-03   5.026337E-02    1.000      obsgroup    
+dflowjan070110        5.068181E-02   1.010000E-03   4.967181E-02    1.000      obsgroup    
+dflowjan070115        4.962907E-02   1.000000E-03   4.862907E-02    1.000      obsgroup    
+dflowjan070120        4.887712E-02   9.900000E-04   4.788712E-02    1.000      obsgroup    
+dflowjan070125        4.812516E-02   9.700000E-04   4.715516E-02    1.000      obsgroup    
+dflowjan070130        4.707242E-02   9.600000E-04   4.611242E-02    1.000      obsgroup    
+dflowjan070135        4.617008E-02   9.500000E-04   4.522008E-02    1.000      obsgroup    
+dflowjan070140        4.526773E-02   9.400000E-04   4.432773E-02    1.000      obsgroup    
+dflowjan070145        4.451577E-02   9.300000E-04   4.358577E-02    1.000      obsgroup    
+dflowjan070150        4.331264E-02   9.200000E-04   4.239264E-02    1.000      obsgroup    
+dflowjan070155        4.256069E-02   9.100000E-04   4.165069E-02    1.000      obsgroup    
+dflowjan070200        4.150795E-02   9.000000E-04   4.060795E-02    1.000      obsgroup    
+dflowjan070205        4.090639E-02   8.900000E-04   4.001639E-02    1.000      obsgroup    
+dflowjan070210        4.045521E-02   8.800000E-04   3.957521E-02    1.000      obsgroup    
+dflowjan070215        3.955287E-02   8.700000E-04   3.868287E-02    1.000      obsgroup    
+dflowjan070220        3.895130E-02   8.600000E-04   3.809130E-02    1.000      obsgroup    
+dflowjan070225        3.819935E-02   8.500000E-04   3.734935E-02    1.000      obsgroup    
+dflowjan070230        3.714661E-02   8.400000E-04   3.630661E-02    1.000      obsgroup    
+dflowjan070235        3.699622E-02   8.300000E-04   3.616622E-02    1.000      obsgroup    
+dflowjan070240        3.609387E-02   8.200000E-04   3.527387E-02    1.000      obsgroup    
+dflowjan070245        3.534191E-02   8.100000E-04   3.453191E-02    1.000      obsgroup    
+dflowjan070250        3.458996E-02   8.000000E-04   3.378996E-02    1.000      obsgroup    
+dflowjan070255        3.413879E-02   7.900000E-04   3.334879E-02    1.000      obsgroup    
+dflowjan070300        3.308605E-02   7.800000E-04   3.230605E-02    1.000      obsgroup    
+dflowjan070305        3.278527E-02   7.700000E-04   3.201527E-02    1.000      obsgroup    
+dflowjan070310        3.263487E-02   7.600000E-04   3.187487E-02    1.000      obsgroup    
+dflowjan070315        3.203331E-02   7.600000E-04   3.127331E-02    1.000      obsgroup    
+dflowjan070320        3.143174E-02   7.500000E-04   3.068174E-02    1.000      obsgroup    
+dflowjan070325        3.098057E-02   7.400000E-04   3.024057E-02    1.000      obsgroup    
+dflowjan070330        3.052940E-02   7.300000E-04   2.979940E-02    1.000      obsgroup    
+dflowjan070335        3.022862E-02   7.200000E-04   2.950862E-02    1.000      obsgroup    
+dflowjan070340        2.992783E-02   7.200000E-04   2.920783E-02    1.000      obsgroup    
+dflowjan070345        2.992783E-02   7.100000E-04   2.921783E-02    1.000      obsgroup    
+dflowjan070350        2.902549E-02   7.000000E-04   2.832549E-02    1.000      obsgroup    
+dflowjan070355        2.887510E-02   6.900000E-04   2.818510E-02    1.000      obsgroup    
+dflowjan070400        2.857431E-02   6.900000E-04   2.788431E-02    1.000      obsgroup    
+dflowjan070405        2.827353E-02   6.800000E-04   2.759353E-02    1.000      obsgroup    
+dflowjan070410        2.812314E-02   6.700000E-04   2.745314E-02    1.000      obsgroup    
+dflowjan070415        2.722079E-02   6.600000E-04   2.656079E-02    1.000      obsgroup    
+dflowjan070420        2.714560E-02   6.600000E-04   2.648560E-02    1.000      obsgroup    
+dflowjan070425        2.707040E-02   6.500000E-04   2.642040E-02    1.000      obsgroup    
+dflowjan070430        2.699521E-02   6.400000E-04   2.635521E-02    1.000      obsgroup    
+dflowjan070435        2.692001E-02   6.400000E-04   2.628001E-02    1.000      obsgroup    
+dflowjan070440        2.684482E-02   6.300000E-04   2.621482E-02    1.000      obsgroup    
 dflowjan070445        2.676962E-02   6.200000E-04   2.614962E-02    1.000      obsgroup    
-dflowjan070450        2.620470E-02   6.100000E-04   2.559470E-02    1.000      obsgroup    
-dflowjan070455        2.596727E-02   6.000000E-04   2.536727E-02    1.000      obsgroup    
-dflowjan070500        2.550721E-02   6.000000E-04   2.490721E-02    1.000      obsgroup    
-dflowjan070505        2.506436E-02   5.900000E-04   2.447436E-02    1.000      obsgroup    
+dflowjan070450        2.620470E-02   6.200000E-04   2.558470E-02    1.000      obsgroup    
+dflowjan070455        2.596727E-02   6.100000E-04   2.535727E-02    1.000      obsgroup    
+dflowjan070500        2.550721E-02   6.100000E-04   2.489721E-02    1.000      obsgroup    
+dflowjan070505        2.506436E-02   6.000000E-04   2.446436E-02    1.000      obsgroup    
 dflowjan070510        2.463594E-02   5.900000E-04   2.404594E-02    1.000      obsgroup    
-dflowjan070515        2.401496E-02   5.800000E-04   2.343496E-02    1.000      obsgroup    
-dflowjan070520        2.361225E-02   5.700000E-04   2.304225E-02    1.000      obsgroup    
-dflowjan070525        2.302050E-02   5.700000E-04   2.245050E-02    1.000      obsgroup    
-dflowjan070530        2.263197E-02   5.600000E-04   2.207197E-02    1.000      obsgroup    
+dflowjan070515        2.401496E-02   5.900000E-04   2.342496E-02    1.000      obsgroup    
+dflowjan070520        2.361225E-02   5.800000E-04   2.303225E-02    1.000      obsgroup    
+dflowjan070525        2.302050E-02   5.800000E-04   2.244050E-02    1.000      obsgroup    
+dflowjan070530        2.263197E-02   5.700000E-04   2.206197E-02    1.000      obsgroup    
 dflowjan070535        2.205504E-02   5.600000E-04   2.149504E-02    1.000      obsgroup    
-dflowjan070540        2.205503E-02   5.500000E-04   2.150503E-02    1.000      obsgroup    
+dflowjan070540        2.205503E-02   5.600000E-04   2.149503E-02    1.000      obsgroup    
 dflowjan070545        2.148227E-02   5.500000E-04   2.093227E-02    1.000      obsgroup    
-dflowjan070550        2.129184E-02   5.400000E-04   2.075184E-02    1.000      obsgroup    
+dflowjan070550        2.129184E-02   5.500000E-04   2.074184E-02    1.000      obsgroup    
 dflowjan070555        2.110154E-02   5.400000E-04   2.056154E-02    1.000      obsgroup    
-dflowjan070600        2.072113E-02   5.300000E-04   2.019113E-02    1.000      obsgroup    
+dflowjan070600        2.072113E-02   5.400000E-04   2.018113E-02    1.000      obsgroup    
 dflowjan070605        2.072112E-02   5.300000E-04   2.019112E-02    1.000      obsgroup    
-dflowjan070610        2.034068E-02   5.200000E-04   1.982068E-02    1.000      obsgroup    
+dflowjan070610        2.034068E-02   5.300000E-04   1.981068E-02    1.000      obsgroup    
 dflowjan070615        2.015037E-02   5.200000E-04   1.963037E-02    1.000      obsgroup    
-dflowjan070620        1.996000E-02   5.100000E-04   1.945000E-02    1.000      obsgroup    
+dflowjan070620        1.996000E-02   5.200000E-04   1.944000E-02    1.000      obsgroup    
 dflowjan070625        1.976954E-02   5.100000E-04   1.925954E-02    1.000      obsgroup    
-dflowjan070630        1.957901E-02   5.000000E-04   1.907901E-02    1.000      obsgroup    
+dflowjan070630        1.957901E-02   5.100000E-04   1.906901E-02    1.000      obsgroup    
 dflowjan070635        1.919773E-02   5.000000E-04   1.869773E-02    1.000      obsgroup    
-dflowjan070640        1.900701E-02   4.900000E-04   1.851701E-02    1.000      obsgroup    
+dflowjan070640        1.900701E-02   5.000000E-04   1.850701E-02    1.000      obsgroup    
 dflowjan070645        1.862551E-02   4.900000E-04   1.813551E-02    1.000      obsgroup    
-dflowjan070650        1.862550E-02   4.800000E-04   1.814550E-02    1.000      obsgroup    
+dflowjan070650        1.862550E-02   4.900000E-04   1.813550E-02    1.000      obsgroup    
 dflowjan070655        1.824409E-02   4.800000E-04   1.776409E-02    1.000      obsgroup    
-dflowjan070700        1.786305E-02   4.700000E-04   1.739305E-02    1.000      obsgroup    
-dflowjan070705        1.748266E-02   4.700000E-04   1.701266E-02    1.000      obsgroup    
+dflowjan070700        1.786305E-02   4.800000E-04   1.738305E-02    1.000      obsgroup    
+dflowjan070705        1.748266E-02   4.800000E-04   1.700266E-02    1.000      obsgroup    
 dflowjan070710        1.729281E-02   4.700000E-04   1.682281E-02    1.000      obsgroup    
-dflowjan070715        1.691404E-02   4.600000E-04   1.645404E-02    1.000      obsgroup    
+dflowjan070715        1.691404E-02   4.700000E-04   1.644404E-02    1.000      obsgroup    
 dflowjan070720        1.653677E-02   4.600000E-04   1.607677E-02    1.000      obsgroup    
-dflowjan070725        1.634881E-02   4.500000E-04   1.589881E-02    1.000      obsgroup    
-dflowjan070730        1.616135E-02   4.500000E-04   1.571135E-02    1.000      obsgroup    
+dflowjan070725        1.634881E-02   4.600000E-04   1.588881E-02    1.000      obsgroup    
+dflowjan070730        1.616135E-02   4.600000E-04   1.570135E-02    1.000      obsgroup    
 dflowjan070735        1.616135E-02   4.500000E-04   1.571135E-02    1.000      obsgroup    
-dflowjan070740        1.560248E-02   4.400000E-04   1.516248E-02    1.000      obsgroup    
+dflowjan070740        1.560248E-02   4.500000E-04   1.515248E-02    1.000      obsgroup    
 dflowjan070745        1.541749E-02   4.400000E-04   1.497749E-02    1.000      obsgroup    
-dflowjan070750        1.523320E-02   4.300000E-04   1.480320E-02    1.000      obsgroup    
-dflowjan070755        1.523320E-02   4.300000E-04   1.480320E-02    1.000      obsgroup    
+dflowjan070750        1.523320E-02   4.400000E-04   1.479320E-02    1.000      obsgroup    
+dflowjan070755        1.523320E-02   4.400000E-04   1.479320E-02    1.000      obsgroup    
 dflowjan070800        1.504966E-02   4.300000E-04   1.461966E-02    1.000      obsgroup    
-dflowjan070805        1.468498E-02   4.200000E-04   1.426498E-02    1.000      obsgroup    
+dflowjan070805        1.468498E-02   4.300000E-04   1.425498E-02    1.000      obsgroup    
 dflowjan070810        1.450389E-02   4.200000E-04   1.408389E-02    1.000      obsgroup    
 dflowjan070815        1.432368E-02   4.200000E-04   1.390368E-02    1.000      obsgroup    
-dflowjan070820        1.432367E-02   4.100000E-04   1.391367E-02    1.000      obsgroup    
+dflowjan070820        1.432367E-02   4.200000E-04   1.390367E-02    1.000      obsgroup    
 dflowjan070825        1.414435E-02   4.100000E-04   1.373435E-02    1.000      obsgroup    
-dflowjan070830        1.378852E-02   4.000000E-04   1.338852E-02    1.000      obsgroup    
-dflowjan070835        1.361203E-02   4.000000E-04   1.321203E-02    1.000      obsgroup    
+dflowjan070830        1.378852E-02   4.100000E-04   1.337852E-02    1.000      obsgroup    
+dflowjan070835        1.361203E-02   4.100000E-04   1.320203E-02    1.000      obsgroup    
 dflowjan070840        1.361202E-02   4.000000E-04   1.321202E-02    1.000      obsgroup    
-dflowjan070845        1.326199E-02   3.900000E-04   1.287199E-02    1.000      obsgroup    
-dflowjan070850        1.308846E-02   3.900000E-04   1.269846E-02    1.000      obsgroup    
+dflowjan070845        1.326199E-02   4.000000E-04   1.286199E-02    1.000      obsgroup    
+dflowjan070850        1.308846E-02   4.000000E-04   1.268846E-02    1.000      obsgroup    
 dflowjan070855        1.291594E-02   3.900000E-04   1.252594E-02    1.000      obsgroup    
-dflowjan070900        1.274442E-02   3.800000E-04   1.236442E-02    1.000      obsgroup    
-dflowjan070905        1.257392E-02   3.800000E-04   1.219392E-02    1.000      obsgroup    
+dflowjan070900        1.274442E-02   3.900000E-04   1.235442E-02    1.000      obsgroup    
+dflowjan070905        1.257392E-02   3.900000E-04   1.218392E-02    1.000      obsgroup    
 dflowjan070910        1.257391E-02   3.800000E-04   1.219391E-02    1.000      obsgroup    
 dflowjan070915        1.240441E-02   3.800000E-04   1.202441E-02    1.000      obsgroup    
-dflowjan070920        1.223591E-02   3.700000E-04   1.186591E-02    1.000      obsgroup    
+dflowjan070920        1.223591E-02   3.800000E-04   1.185591E-02    1.000      obsgroup    
 dflowjan070925        1.206841E-02   3.700000E-04   1.169841E-02    1.000      obsgroup    
 dflowjan070930        1.190190E-02   3.700000E-04   1.153189E-02    1.000      obsgroup    
-dflowjan070935        1.190189E-02   3.600000E-04   1.154189E-02    1.000      obsgroup    
+dflowjan070935        1.190189E-02   3.700000E-04   1.153189E-02    1.000      obsgroup    
 dflowjan070940        1.190188E-02   3.600000E-04   1.154188E-02    1.000      obsgroup    
 dflowjan070945        1.173634E-02   3.600000E-04   1.137634E-02    1.000      obsgroup    
-dflowjan070950        1.157175E-02   3.500000E-04   1.122175E-02    1.000      obsgroup    
-dflowjan070955        1.140810E-02   3.500000E-04   1.105810E-02    1.000      obsgroup    
+dflowjan070950        1.157175E-02   3.600000E-04   1.121175E-02    1.000      obsgroup    
+dflowjan070955        1.140810E-02   3.600000E-04   1.104810E-02    1.000      obsgroup    
 dflowjan071000        1.124536E-02   3.500000E-04   1.089536E-02    1.000      obsgroup    
 dflowjan071005        1.108352E-02   3.500000E-04   1.073352E-02    1.000      obsgroup    
-dflowjan071010        1.108352E-02   3.400000E-04   1.074352E-02    1.000      obsgroup    
+dflowjan071010        1.108352E-02   3.500000E-04   1.073352E-02    1.000      obsgroup    
 dflowjan071015        1.108351E-02   3.400000E-04   1.074351E-02    1.000      obsgroup    
 dflowjan071020        1.108350E-02   3.400000E-04   1.074350E-02    1.000      obsgroup    
-dflowjan071025        1.092253E-02   3.300000E-04   1.059253E-02    1.000      obsgroup    
-dflowjan071030        1.076240E-02   3.300000E-04   1.043240E-02    1.000      obsgroup    
+dflowjan071025        1.092253E-02   3.400000E-04   1.058253E-02    1.000      obsgroup    
+dflowjan071030        1.076240E-02   3.400000E-04   1.042240E-02    1.000      obsgroup    
 dflowjan071035        1.060308E-02   3.300000E-04   1.027308E-02    1.000      obsgroup    
 dflowjan071040        1.044453E-02   3.300000E-04   1.011453E-02    1.000      obsgroup    
-dflowjan071045        1.044453E-02   3.200000E-04   1.012453E-02    1.000      obsgroup    
-dflowjan071050        1.044452E-02   3.200000E-04   1.012452E-02    1.000      obsgroup    
+dflowjan071045        1.044453E-02   3.300000E-04   1.011453E-02    1.000      obsgroup    
+dflowjan071050        1.044452E-02   3.300000E-04   1.011452E-02    1.000      obsgroup    
 dflowjan071055        1.044452E-02   3.200000E-04   1.012451E-02    1.000      obsgroup    
 dflowjan071100        1.028672E-02   3.200000E-04   9.966716E-03    1.000      obsgroup    
-dflowjan071105        1.028671E-02   3.100000E-04   9.976710E-03    1.000      obsgroup    
-dflowjan071110        1.012962E-02   3.100000E-04   9.819619E-03    1.000      obsgroup    
+dflowjan071105        1.028671E-02   3.200000E-04   9.966710E-03    1.000      obsgroup    
+dflowjan071110        1.012962E-02   3.200000E-04   9.809619E-03    1.000      obsgroup    
 dflowjan071115        9.973198E-03   3.100000E-04   9.663198E-03    1.000      obsgroup    
 dflowjan071120        9.817408E-03   3.100000E-04   9.507408E-03    1.000      obsgroup    
-dflowjan071125        9.817402E-03   3.000000E-04   9.517402E-03    1.000      obsgroup    
-dflowjan071130        9.817397E-03   3.000000E-04   9.517397E-03    1.000      obsgroup    
+dflowjan071125        9.817402E-03   3.100000E-04   9.507402E-03    1.000      obsgroup    
+dflowjan071130        9.817397E-03   3.100000E-04   9.507397E-03    1.000      obsgroup    
 dflowjan071135        9.817391E-03   3.000000E-04   9.517391E-03    1.000      obsgroup    
 dflowjan071140        9.662192E-03   3.000000E-04   9.362192E-03    1.000      obsgroup    
 dflowjan071145        9.507541E-03   3.000000E-04   9.207541E-03    1.000      obsgroup    
-dflowjan071150        9.507535E-03   2.900000E-04   9.217535E-03    1.000      obsgroup    
+dflowjan071150        9.507535E-03   3.000000E-04   9.207535E-03    1.000      obsgroup    
 dflowjan071155        9.353390E-03   2.900000E-04   9.063390E-03    1.000      obsgroup    
 dflowjan071200        9.353384E-03   2.900000E-04   9.063384E-03    1.000      obsgroup    
 dflowjan071205        9.353379E-03   2.900000E-04   9.063379E-03    1.000      obsgroup    
-dflowjan071210        9.199694E-03   2.800000E-04   8.919694E-03    1.000      obsgroup    
-dflowjan071215        9.199689E-03   2.800000E-04   8.919689E-03    1.000      obsgroup    
+dflowjan071210        9.199694E-03   2.900000E-04   8.909694E-03    1.000      obsgroup    
+dflowjan071215        9.199689E-03   2.900000E-04   8.909689E-03    1.000      obsgroup    
 dflowjan071220        9.199683E-03   2.800000E-04   8.919683E-03    1.000      obsgroup    
 dflowjan071225        9.046415E-03   2.800000E-04   8.766415E-03    1.000      obsgroup    
 dflowjan071230        9.046409E-03   2.800000E-04   8.766409E-03    1.000      obsgroup    
-dflowjan071235        9.046404E-03   2.700000E-04   8.776404E-03    1.000      obsgroup    
-dflowjan071240        8.740936E-03   2.700000E-04   8.470936E-03    1.000      obsgroup    
+dflowjan071235        9.046404E-03   2.800000E-04   8.766404E-03    1.000      obsgroup    
+dflowjan071240        8.740936E-03   2.800000E-04   8.460936E-03    1.000      obsgroup    
 dflowjan071245        8.893501E-03   2.700000E-04   8.623501E-03    1.000      obsgroup    
 dflowjan071250        8.740926E-03   2.700000E-04   8.470926E-03    1.000      obsgroup    
 dflowjan071255        8.740921E-03   2.700000E-04   8.470921E-03    1.000      obsgroup    
-dflowjan071300        8.588624E-03   2.600000E-04   8.328624E-03    1.000      obsgroup    
-dflowjan071305        8.436556E-03   2.600000E-04   8.176556E-03    1.000      obsgroup    
+dflowjan071300        8.588624E-03   2.700000E-04   8.318624E-03    1.000      obsgroup    
+dflowjan071305        8.436556E-03   2.700000E-04   8.166556E-03    1.000      obsgroup    
 dflowjan071310        8.588614E-03   2.600000E-04   8.328614E-03    1.000      obsgroup    
 dflowjan071315        8.436547E-03   2.600000E-04   8.176547E-03    1.000      obsgroup    
 dflowjan071320        8.436542E-03   2.600000E-04   8.176542E-03    1.000      obsgroup    
 dflowjan071325        8.436537E-03   2.600000E-04   8.176537E-03    1.000      obsgroup    
-dflowjan071330        8.436532E-03   2.500000E-04   8.186532E-03    1.000      obsgroup    
+dflowjan071330        8.436532E-03   2.600000E-04   8.176532E-03    1.000      obsgroup    
 dflowjan071335        8.436527E-03   2.500000E-04   8.186527E-03    1.000      obsgroup    
 dflowjan071340        8.284644E-03   2.500000E-04   8.034644E-03    1.000      obsgroup    
 dflowjan071345        8.284639E-03   2.500000E-04   8.034639E-03    1.000      obsgroup    
 dflowjan071350        8.132892E-03   2.500000E-04   7.882892E-03    1.000      obsgroup    
-dflowjan071355        8.284629E-03   2.400000E-04   8.044629E-03    1.000      obsgroup    
-dflowjan071400        8.132883E-03   2.400000E-04   7.892883E-03    1.000      obsgroup    
+dflowjan071355        8.284629E-03   2.500000E-04   8.034629E-03    1.000      obsgroup    
+dflowjan071400        8.132883E-03   2.500000E-04   7.882883E-03    1.000      obsgroup    
 dflowjan071405        8.132878E-03   2.400000E-04   7.892878E-03    1.000      obsgroup    
 dflowjan071410        7.981221E-03   2.400000E-04   7.741221E-03    1.000      obsgroup    
 dflowjan071415        7.981217E-03   2.400000E-04   7.741217E-03    1.000      obsgroup    
 dflowjan071420        7.981212E-03   2.400000E-04   7.741212E-03    1.000      obsgroup    
-dflowjan071425        7.829600E-03   2.300000E-04   7.599600E-03    1.000      obsgroup    
-dflowjan071430        7.829596E-03   2.300000E-04   7.599596E-03    1.000      obsgroup    
+dflowjan071425        7.829600E-03   2.400000E-04   7.589600E-03    1.000      obsgroup    
+dflowjan071430        7.829596E-03   2.400000E-04   7.589596E-03    1.000      obsgroup    
 dflowjan071435        7.829591E-03   2.300000E-04   7.599591E-03    1.000      obsgroup    
 dflowjan071440        7.829587E-03   2.300000E-04   7.599587E-03    1.000      obsgroup    
 dflowjan071445        7.829582E-03   2.300000E-04   7.599582E-03    1.000      obsgroup    
 dflowjan071450        7.829578E-03   2.300000E-04   7.599578E-03    1.000      obsgroup    
 dflowjan071455        7.829573E-03   2.300000E-04   7.599573E-03    1.000      obsgroup    
-dflowjan071500        7.677961E-03   2.200000E-04   7.457961E-03    1.000      obsgroup    
+dflowjan071500        7.677961E-03   2.300000E-04   7.447961E-03    1.000      obsgroup    
 dflowjan071505        7.829564E-03   2.200000E-04   7.609564E-03    1.000      obsgroup    
 dflowjan071510        7.677952E-03   2.200000E-04   7.457952E-03    1.000      obsgroup    
 dflowjan071515        7.677948E-03   2.200000E-04   7.457948E-03    1.000      obsgroup    
 dflowjan071520        7.677943E-03   2.200000E-04   7.457943E-03    1.000      obsgroup    
 dflowjan071525        7.526286E-03   2.200000E-04   7.306286E-03    1.000      obsgroup    
-dflowjan071530        7.677934E-03   2.100000E-04   7.467934E-03    1.000      obsgroup    
-dflowjan071535        7.374536E-03   2.100000E-04   7.164536E-03    1.000      obsgroup    
+dflowjan071530        7.677934E-03   2.200000E-04   7.457934E-03    1.000      obsgroup    
+dflowjan071535        7.374536E-03   2.200000E-04   7.154536E-03    1.000      obsgroup    
 dflowjan071540        7.677926E-03   2.100000E-04   7.467926E-03    1.000      obsgroup    
 dflowjan071545        7.526269E-03   2.100000E-04   7.316269E-03    1.000      obsgroup    
 dflowjan071550        7.829524E-03   2.100000E-04   7.619524E-03    1.000      obsgroup    
 dflowjan071555        7.829519E-03   2.100000E-04   7.619519E-03    1.000      obsgroup    
 dflowjan071600        8.132770E-03   2.100000E-04   7.922770E-03    1.000      obsgroup    
 dflowjan071605        8.132765E-03   2.100000E-04   7.922765E-03    1.000      obsgroup    
-dflowjan071610        8.436375E-03   2.000000E-04   8.236375E-03    1.000      obsgroup    
+dflowjan071610        8.436375E-03   2.100000E-04   8.226375E-03    1.000      obsgroup    
 dflowjan071615        8.436370E-03   2.000000E-04   8.236370E-03    1.000      obsgroup    
 dflowjan071620        8.893277E-03   2.000000E-04   8.693277E-03    1.000      obsgroup    
 dflowjan071625        9.199419E-03   2.000000E-04   8.999419E-03    1.000      obsgroup    
 dflowjan071630        9.817050E-03   2.000000E-04   9.617050E-03    1.000      obsgroup    
 dflowjan071635        1.012923E-02   2.000000E-04   9.929232E-03    1.000      obsgroup    
 dflowjan071640        1.092205E-02   2.000000E-04   1.072205E-02    1.000      obsgroup    
-dflowjan071645        1.140755E-02   1.900000E-04   1.121755E-02    1.000      obsgroup    
-dflowjan071650        1.223528E-02   1.900000E-04   1.204528E-02    1.000      obsgroup    
+dflowjan071645        1.140755E-02   2.000000E-04   1.120755E-02    1.000      obsgroup    
+dflowjan071650        1.223528E-02   2.000000E-04   1.203528E-02    1.000      obsgroup    
 dflowjan071655        1.361126E-02   1.900000E-04   1.342126E-02    1.000      obsgroup    
 dflowjan071700        1.523229E-02   1.900000E-04   1.504229E-02    1.000      obsgroup    
 dflowjan071705        1.691299E-02   1.900000E-04   1.672299E-02    1.000      obsgroup    
@@ -24940,134 +24953,134 @@ dflowjan071710        1.862433E-02   1.900000E-04   1.843433E-02    1.000      o
 dflowjan071715        2.033935E-02   1.900000E-04   2.014935E-02    1.000      obsgroup    
 dflowjan071720        2.263043E-02   1.900000E-04   2.244043E-02    1.000      obsgroup    
 dflowjan071725        2.644562E-02   1.900000E-04   2.625562E-02    1.000      obsgroup    
-dflowjan071730        2.857431E-02   1.800000E-04   2.839431E-02    1.000      obsgroup    
+dflowjan071730        2.857431E-02   1.900000E-04   2.838431E-02    1.000      obsgroup    
 dflowjan071735        3.368761E-02   1.800000E-04   3.350761E-02    1.000      obsgroup    
 dflowjan071740        3.985365E-02   1.800000E-04   3.967365E-02    1.000      obsgroup    
 dflowjan071745        4.617008E-02   1.800000E-04   4.599008E-02    1.000      obsgroup    
 dflowjan071750        5.308807E-02   1.800000E-04   5.290807E-02    1.000      obsgroup    
-dflowjan071755        5.820137E-02   1.800000E-04   5.802137E-02    1.000      obsgroup    
-dflowjan071800        6.557053E-02   1.800000E-04   6.539053E-02    1.000      obsgroup    
-dflowjan071805        7.248852E-02   1.800000E-04   7.230852E-02    1.000      obsgroup    
-dflowjan071810        7.790260E-02   1.800000E-04   7.772260E-02    1.000      obsgroup    
-dflowjan071815        8.136160E-02   1.420000E-03   7.994160E-02    1.000      obsgroup    
-dflowjan071820        8.482060E-02   3.460000E-03   8.136059E-02    1.000      obsgroup    
-dflowjan071825        8.812920E-02   6.110000E-03   8.201920E-02    1.000      obsgroup    
-dflowjan071830        9.083624E-02   9.260000E-03   8.157624E-02    1.000      obsgroup    
-dflowjan071835        9.309211E-02   8.980000E-03   8.411211E-02    1.000      obsgroup    
-dflowjan071840        9.534797E-02   1.679000E-02   7.855797E-02    1.000      obsgroup    
-dflowjan071845        0.100311       2.088000E-02   7.943088E-02    1.000      obsgroup    
-dflowjan071850        0.106026       2.002000E-02   8.600574E-02    1.000      obsgroup    
-dflowjan071855        0.110989       2.975000E-02   8.123865E-02    1.000      obsgroup    
-dflowjan071900        0.115200       4.042000E-02   7.477960E-02    1.000      obsgroup    
-dflowjan071905        0.115500       4.480000E-02   7.070038E-02    1.000      obsgroup    
-dflowjan071910        0.113094       4.910000E-02   6.399413E-02    1.000      obsgroup    
-dflowjan071915        0.114448       5.329000E-02   6.115765E-02    1.000      obsgroup    
-dflowjan071920        0.117455       5.013000E-02   6.732547E-02    1.000      obsgroup    
-dflowjan071925        0.118057       5.430000E-02   6.375703E-02    1.000      obsgroup    
-dflowjan071930        0.118358       5.834000E-02   6.001782E-02    1.000      obsgroup    
-dflowjan071935        0.118809       6.223000E-02   5.657899E-02    1.000      obsgroup    
-dflowjan071940        0.118959       6.597000E-02   5.298938E-02    1.000      obsgroup    
-dflowjan071945        0.120764       6.955000E-02   5.121407E-02    1.000      obsgroup    
-dflowjan071950        0.120463       7.296000E-02   4.750329E-02    1.000      obsgroup    
-dflowjan071955        0.119862       7.620000E-02   4.366173E-02    1.000      obsgroup    
-dflowjan072000        0.120163       7.926000E-02   4.090251E-02    1.000      obsgroup    
-dflowjan072005        0.120914       8.215000E-02   3.876447E-02    1.000      obsgroup    
-dflowjan072010        0.120914       8.488000E-02   3.603447E-02    1.000      obsgroup    
-dflowjan072015        0.121065       8.744000E-02   3.362486E-02    1.000      obsgroup    
-dflowjan072020        0.120614       8.984000E-02   3.077368E-02    1.000      obsgroup    
-dflowjan072025        0.121065       9.209000E-02   2.897486E-02    1.000      obsgroup    
-dflowjan072030        0.121215       9.418000E-02   2.703525E-02    1.000      obsgroup    
-dflowjan072035        0.121065       9.614000E-02   2.492486E-02    1.000      obsgroup    
-dflowjan072040        0.120614       9.797000E-02   2.264368E-02    1.000      obsgroup    
-dflowjan072045        0.120012       9.966000E-02   2.035212E-02    1.000      obsgroup    
-dflowjan072050        0.119711       0.101240       1.847134E-02    1.000      obsgroup    
-dflowjan072055        0.119110       0.102700       1.640977E-02    1.000      obsgroup    
-dflowjan072100        0.117907       0.104060       1.384664E-02    1.000      obsgroup    
-dflowjan072105        0.118207       0.105320       1.288742E-02    1.000      obsgroup    
-dflowjan072110        0.117756       9.713000E-02   2.062625E-02    1.000      obsgroup    
-dflowjan072115        0.117455       0.108300       9.155469E-03    1.000      obsgroup    
-dflowjan072120        0.117606       0.109230       8.375860E-03    1.000      obsgroup    
-dflowjan072125        0.117004       0.110100       6.904295E-03    1.000      obsgroup    
-dflowjan072130        0.117606       0.110900       6.705860E-03    1.000      obsgroup    
-dflowjan072135        0.117756       0.111630       6.126251E-03    1.000      obsgroup    
-dflowjan072140        0.119260       0.112310       6.950162E-03    1.000      obsgroup    
-dflowjan072145        0.123471       0.112930       1.054111E-02    1.000      obsgroup    
-dflowjan072150        0.124674       0.113510       1.116424E-02    1.000      obsgroup    
-dflowjan072155        0.124524       0.123990       5.338520E-04    1.000      obsgroup    
-dflowjan072200        0.126479       0.133920      -7.441064E-03    1.000      obsgroup    
-dflowjan072205        0.127983       0.132720      -4.737153E-03    1.000      obsgroup    
-dflowjan072210        0.128284       0.131620      -3.336370E-03    1.000      obsgroup    
-dflowjan072215        0.128885       0.130610      -1.724806E-03    1.000      obsgroup    
-dflowjan072220        0.130088       0.140170      -1.008168E-02    1.000      obsgroup    
-dflowjan072225        0.131141       0.138390      -7.248939E-03    1.000      obsgroup    
-dflowjan072230        0.132645       0.136770      -4.125028E-03    1.000      obsgroup    
-dflowjan072235        0.133547       0.145940      -1.239268E-02    1.000      obsgroup    
-dflowjan072240        0.134149       0.143610      -9.461116E-03    1.000      obsgroup    
-dflowjan072245        0.132795       0.152340      -1.954464E-02    1.000      obsgroup    
-dflowjan072250        0.133096       0.149390      -1.629385E-02    1.000      obsgroup    
-dflowjan072255        0.134299       0.146730      -1.243073E-02    1.000      obsgroup    
-dflowjan072300        0.134600       0.144320      -9.719943E-03    1.000      obsgroup    
-dflowjan072305        0.133397       0.142150      -8.753072E-03    1.000      obsgroup    
-dflowjan072310        0.134149       0.150970      -1.682112E-02    1.000      obsgroup    
-dflowjan072315        0.134299       0.148160      -1.386072E-02    1.000      obsgroup    
-dflowjan072320        0.135352       0.134990       3.620130E-04    1.000      obsgroup    
-dflowjan072325        0.137157       0.144270      -7.113294E-03    1.000      obsgroup    
-dflowjan072330        0.139563       0.142100      -2.537036E-03    1.000      obsgroup    
-dflowjan072335        0.139413       0.150930      -1.151743E-02    1.000      obsgroup    
-dflowjan072340        0.139713       0.159140      -1.942664E-02    1.000      obsgroup    
-dflowjan072345        0.138360       0.155510      -1.715017E-02    1.000      obsgroup    
-dflowjan072350        0.137457       0.163390      -2.593251E-02    1.000      obsgroup    
-dflowjan072355        0.136405       0.159320      -2.291525E-02    1.000      obsgroup    
-dflowjan080000        0.137457       0.155670      -1.821251E-02    1.000      obsgroup    
-dflowjan080005        0.137307       0.152390      -1.508290E-02    1.000      obsgroup    
-dflowjan080010        0.138360       0.149440      -1.108017E-02    1.000      obsgroup    
-dflowjan080015        0.139262       0.157760      -1.849782E-02    1.000      obsgroup    
-dflowjan080020        0.139563       0.154270      -1.470704E-02    1.000      obsgroup    
-dflowjan080025        0.138510       0.162240      -2.372977E-02    1.000      obsgroup    
-dflowjan080030        0.137157       0.158290      -2.113329E-02    1.000      obsgroup    
-dflowjan080035        0.135502       0.154750      -1.924760E-02    1.000      obsgroup    
-dflowjan080040        0.134149       0.151560      -1.741112E-02    1.000      obsgroup    
-dflowjan080045        0.132645       0.148690      -1.604503E-02    1.000      obsgroup    
-dflowjan080050        0.129186       0.146090      -1.690402E-02    1.000      obsgroup    
-dflowjan080055        0.126479       0.143750      -1.727106E-02    1.000      obsgroup    
-dflowjan080100        0.123020       0.141630      -1.861006E-02    1.000      obsgroup    
-dflowjan080105        0.120313       0.129260      -8.947100E-03    1.000      obsgroup    
-dflowjan080110        0.116553       0.128470      -1.191688E-02    1.000      obsgroup    
-dflowjan080115        0.113094       0.117670      -4.575874E-03    1.000      obsgroup    
-dflowjan080120        0.108582       0.117860      -9.277608E-03    1.000      obsgroup    
-dflowjan080125        0.104823       0.108290      -3.467386E-03    1.000      obsgroup    
-dflowjan080130        0.100762       9.978000E-02   9.820540E-04    1.000      obsgroup    
-dflowjan080135        9.655110E-02   9.218000E-02   4.371102E-03    1.000      obsgroup    
-dflowjan080140        9.279132E-02   8.538000E-02   7.411324E-03    1.000      obsgroup    
-dflowjan080145        8.888116E-02   7.927000E-02   9.611155E-03    1.000      obsgroup    
-dflowjan080150        8.451981E-02   7.376000E-02   1.075981E-02    1.000      obsgroup    
-dflowjan080155        8.045925E-02   6.878000E-02   1.167925E-02    1.000      obsgroup    
-dflowjan080200        7.624830E-02   6.426000E-02   1.198830E-02    1.000      obsgroup    
-dflowjan080205        7.263891E-02   6.015000E-02   1.248891E-02    1.000      obsgroup    
-dflowjan080210        6.902953E-02   5.640000E-02   1.262953E-02    1.000      obsgroup    
-dflowjan080215        6.511936E-02   5.297000E-02   1.214936E-02    1.000      obsgroup    
-dflowjan080220        6.150997E-02   4.983000E-02   1.167997E-02    1.000      obsgroup    
+dflowjan071755        5.820137E-02   2.800000E-04   5.792137E-02    1.000      obsgroup    
+dflowjan071800        6.557053E-02   1.640000E-03   6.393053E-02    1.000      obsgroup    
+dflowjan071805        7.248852E-02   3.760000E-03   6.872852E-02    1.000      obsgroup    
+dflowjan071810        7.790260E-02   6.480000E-03   7.142260E-02    1.000      obsgroup    
+dflowjan071815        8.136160E-02   9.680000E-03   7.168160E-02    1.000      obsgroup    
+dflowjan071820        8.482060E-02   1.326000E-02   7.156060E-02    1.000      obsgroup    
+dflowjan071825        8.812920E-02   1.715000E-02   7.097920E-02    1.000      obsgroup    
+dflowjan071830        9.083624E-02   2.125000E-02   6.958624E-02    1.000      obsgroup    
+dflowjan071835        9.309211E-02   2.038000E-02   7.271211E-02    1.000      obsgroup    
+dflowjan071840        9.534797E-02   3.014000E-02   6.520797E-02    1.000      obsgroup    
+dflowjan071845        0.100311       3.457000E-02   6.574088E-02    1.000      obsgroup    
+dflowjan071850        0.106026       3.284000E-02   7.318574E-02    1.000      obsgroup    
+dflowjan071855        0.110989       4.373000E-02   6.725865E-02    1.000      obsgroup    
+dflowjan071900        0.115200       5.518000E-02   6.001960E-02    1.000      obsgroup    
+dflowjan071905        0.115500       5.919000E-02   5.631038E-02    1.000      obsgroup    
+dflowjan071910        0.113094       6.305000E-02   5.004413E-02    1.000      obsgroup    
+dflowjan071915        0.114448       6.676000E-02   4.768765E-02    1.000      obsgroup    
+dflowjan071920        0.117455       6.242000E-02   5.503547E-02    1.000      obsgroup    
+dflowjan071925        0.118057       6.615000E-02   5.190703E-02    1.000      obsgroup    
+dflowjan071930        0.118358       6.972000E-02   4.863782E-02    1.000      obsgroup    
+dflowjan071935        0.118809       7.312000E-02   4.568899E-02    1.000      obsgroup    
+dflowjan071940        0.118959       7.635000E-02   4.260938E-02    1.000      obsgroup    
+dflowjan071945        0.120764       7.941000E-02   4.135407E-02    1.000      obsgroup    
+dflowjan071950        0.120463       8.229000E-02   3.817329E-02    1.000      obsgroup    
+dflowjan071955        0.119862       8.501000E-02   3.485173E-02    1.000      obsgroup    
+dflowjan072000        0.120163       8.756000E-02   3.260251E-02    1.000      obsgroup    
+dflowjan072005        0.120914       8.995000E-02   3.096446E-02    1.000      obsgroup    
+dflowjan072010        0.120914       9.219000E-02   2.872447E-02    1.000      obsgroup    
+dflowjan072015        0.121065       9.428000E-02   2.678486E-02    1.000      obsgroup    
+dflowjan072020        0.120614       9.624000E-02   2.437368E-02    1.000      obsgroup    
+dflowjan072025        0.121065       9.805000E-02   2.301486E-02    1.000      obsgroup    
+dflowjan072030        0.121215       9.974000E-02   2.147525E-02    1.000      obsgroup    
+dflowjan072035        0.121065       0.101310       1.975486E-02    1.000      obsgroup    
+dflowjan072040        0.120614       0.102770       1.784368E-02    1.000      obsgroup    
+dflowjan072045        0.120012       0.104120       1.589212E-02    1.000      obsgroup    
+dflowjan072050        0.119711       0.105370       1.434134E-02    1.000      obsgroup    
+dflowjan072055        0.119110       0.106530       1.257977E-02    1.000      obsgroup    
+dflowjan072100        0.117907       0.107600       1.030664E-02    1.000      obsgroup    
+dflowjan072105        0.118207       0.108590       9.617424E-03    1.000      obsgroup    
+dflowjan072110        0.117756       0.100050       1.770625E-02    1.000      obsgroup    
+dflowjan072115        0.117455       0.111110       6.345469E-03    1.000      obsgroup    
+dflowjan072120        0.117606       0.111830       5.775860E-03    1.000      obsgroup    
+dflowjan072125        0.117004       0.112490       4.514295E-03    1.000      obsgroup    
+dflowjan072130        0.117606       0.113100       4.505860E-03    1.000      obsgroup    
+dflowjan072135        0.117756       0.113660       4.096251E-03    1.000      obsgroup    
+dflowjan072140        0.119260       0.114180       5.080162E-03    1.000      obsgroup    
+dflowjan072145        0.123471       0.114650       8.821114E-03    1.000      obsgroup    
+dflowjan072150        0.124674       0.115090       9.584243E-03    1.000      obsgroup    
+dflowjan072155        0.124524       0.125500      -9.761480E-04    1.000      obsgroup    
+dflowjan072200        0.126479       0.135350      -8.871064E-03    1.000      obsgroup    
+dflowjan072205        0.127983       0.134010      -6.027153E-03    1.000      obsgroup    
+dflowjan072210        0.128284       0.132790      -4.506370E-03    1.000      obsgroup    
+dflowjan072215        0.128885       0.131690      -2.804806E-03    1.000      obsgroup    
+dflowjan072220        0.130088       0.141170      -1.108168E-02    1.000      obsgroup    
+dflowjan072225        0.131141       0.139300      -8.158939E-03    1.000      obsgroup    
+dflowjan072230        0.132645       0.137600      -4.955028E-03    1.000      obsgroup    
+dflowjan072235        0.133547       0.146720      -1.317268E-02    1.000      obsgroup    
+dflowjan072240        0.134149       0.144320      -1.017112E-02    1.000      obsgroup    
+dflowjan072245        0.132795       0.152990      -2.019464E-02    1.000      obsgroup    
+dflowjan072250        0.133096       0.149980      -1.688385E-02    1.000      obsgroup    
+dflowjan072255        0.134299       0.147260      -1.296073E-02    1.000      obsgroup    
+dflowjan072300        0.134600       0.144810      -1.020994E-02    1.000      obsgroup    
+dflowjan072305        0.133397       0.142590      -9.193072E-03    1.000      obsgroup    
+dflowjan072310        0.134149       0.151380      -1.723112E-02    1.000      obsgroup    
+dflowjan072315        0.134299       0.148520      -1.422073E-02    1.000      obsgroup    
+dflowjan072320        0.135352       0.135310       4.201300E-05    1.000      obsgroup    
+dflowjan072325        0.137157       0.144570      -7.413294E-03    1.000      obsgroup    
+dflowjan072330        0.139563       0.142380      -2.817036E-03    1.000      obsgroup    
+dflowjan072335        0.139413       0.151180      -1.176743E-02    1.000      obsgroup    
+dflowjan072340        0.139713       0.159380      -1.966664E-02    1.000      obsgroup    
+dflowjan072345        0.138360       0.155720      -1.736017E-02    1.000      obsgroup    
+dflowjan072350        0.137457       0.163580      -2.612251E-02    1.000      obsgroup    
+dflowjan072355        0.136405       0.159500      -2.309525E-02    1.000      obsgroup    
+dflowjan080000        0.137457       0.155830      -1.837251E-02    1.000      obsgroup    
+dflowjan080005        0.137307       0.152540      -1.523290E-02    1.000      obsgroup    
+dflowjan080010        0.138360       0.149570      -1.121017E-02    1.000      obsgroup    
+dflowjan080015        0.139262       0.157880      -1.861782E-02    1.000      obsgroup    
+dflowjan080020        0.139563       0.154370      -1.480704E-02    1.000      obsgroup    
+dflowjan080025        0.138510       0.162340      -2.382977E-02    1.000      obsgroup    
+dflowjan080030        0.137157       0.158380      -2.122329E-02    1.000      obsgroup    
+dflowjan080035        0.135502       0.154830      -1.932760E-02    1.000      obsgroup    
+dflowjan080040        0.134149       0.151630      -1.748112E-02    1.000      obsgroup    
+dflowjan080045        0.132645       0.148750      -1.610503E-02    1.000      obsgroup    
+dflowjan080050        0.129186       0.146150      -1.696402E-02    1.000      obsgroup    
+dflowjan080055        0.126479       0.143800      -1.732106E-02    1.000      obsgroup    
+dflowjan080100        0.123020       0.141680      -1.866006E-02    1.000      obsgroup    
+dflowjan080105        0.120313       0.129300      -8.987100E-03    1.000      obsgroup    
+dflowjan080110        0.116553       0.128510      -1.195688E-02    1.000      obsgroup    
+dflowjan080115        0.113094       0.117700      -4.605874E-03    1.000      obsgroup    
+dflowjan080120        0.108582       0.117890      -9.307608E-03    1.000      obsgroup    
+dflowjan080125        0.104823       0.108310      -3.487386E-03    1.000      obsgroup    
+dflowjan080130        0.100762       9.980000E-02   9.620540E-04    1.000      obsgroup    
+dflowjan080135        9.655110E-02   9.220000E-02   4.351102E-03    1.000      obsgroup    
+dflowjan080140        9.279132E-02   8.540000E-02   7.391324E-03    1.000      obsgroup    
+dflowjan080145        8.888116E-02   7.929000E-02   9.591155E-03    1.000      obsgroup    
+dflowjan080150        8.451981E-02   7.378000E-02   1.073981E-02    1.000      obsgroup    
+dflowjan080155        8.045925E-02   6.879000E-02   1.166925E-02    1.000      obsgroup    
+dflowjan080200        7.624830E-02   6.427000E-02   1.197830E-02    1.000      obsgroup    
+dflowjan080205        7.263891E-02   6.016000E-02   1.247891E-02    1.000      obsgroup    
+dflowjan080210        6.902953E-02   5.641000E-02   1.261953E-02    1.000      obsgroup    
+dflowjan080215        6.511936E-02   5.298000E-02   1.213936E-02    1.000      obsgroup    
+dflowjan080220        6.150997E-02   4.984000E-02   1.166997E-02    1.000      obsgroup    
 dflowjan080225        5.880293E-02   4.695000E-02   1.185293E-02    1.000      obsgroup    
-dflowjan080230        5.519354E-02   4.429000E-02   1.090354E-02    1.000      obsgroup    
+dflowjan080230        5.519354E-02   4.430000E-02   1.089354E-02    1.000      obsgroup    
 dflowjan080235        5.233611E-02   4.185000E-02   1.048611E-02    1.000      obsgroup    
-dflowjan080240        4.932829E-02   4.620000E-02   3.128289E-03    1.000      obsgroup    
+dflowjan080240        4.932829E-02   4.621000E-02   3.118289E-03    1.000      obsgroup    
 dflowjan080245        4.632047E-02   4.361000E-02   2.710467E-03    1.000      obsgroup    
-dflowjan080250        4.421499E-02   4.121000E-02   3.004991E-03    1.000      obsgroup    
+dflowjan080250        4.421499E-02   4.122000E-02   2.994991E-03    1.000      obsgroup    
 dflowjan080255        4.180873E-02   3.900000E-02   2.808733E-03    1.000      obsgroup    
-dflowjan080300        3.940248E-02   3.695000E-02   2.452475E-03    1.000      obsgroup    
-dflowjan080305        3.729700E-02   3.505000E-02   2.246999E-03    1.000      obsgroup    
+dflowjan080300        3.940248E-02   3.696000E-02   2.442475E-03    1.000      obsgroup    
+dflowjan080305        3.729700E-02   3.506000E-02   2.236999E-03    1.000      obsgroup    
 dflowjan080310        3.534191E-02   3.329000E-02   2.051914E-03    1.000      obsgroup    
-dflowjan080315        3.323644E-02   3.164000E-02   1.596439E-03    1.000      obsgroup    
-dflowjan080320        3.218370E-02   3.011000E-02   2.073701E-03    1.000      obsgroup    
+dflowjan080315        3.323644E-02   3.165000E-02   1.586439E-03    1.000      obsgroup    
+dflowjan080320        3.218370E-02   3.012000E-02   2.063701E-03    1.000      obsgroup    
 dflowjan080325        3.052940E-02   2.869000E-02   1.839398E-03    1.000      obsgroup    
-dflowjan080330        2.947666E-02   2.735000E-02   2.126661E-03    1.000      obsgroup    
-dflowjan080335        2.872471E-02   2.610000E-02   2.624705E-03    1.000      obsgroup    
-dflowjan080340        2.752158E-02   2.493000E-02   2.591576E-03    1.000      obsgroup    
+dflowjan080330        2.947666E-02   2.736000E-02   2.116661E-03    1.000      obsgroup    
+dflowjan080335        2.872471E-02   2.611000E-02   2.614705E-03    1.000      obsgroup    
+dflowjan080340        2.752158E-02   2.494000E-02   2.581576E-03    1.000      obsgroup    
 dflowjan080345        2.737119E-02   2.384000E-02   3.531185E-03    1.000      obsgroup    
 dflowjan080350        2.722079E-02   2.818000E-02  -9.592060E-04    1.000      obsgroup    
-dflowjan080355        2.714164E-02   3.258000E-02  -5.438360E-03    1.000      obsgroup    
+dflowjan080355        2.714164E-02   3.259000E-02  -5.448360E-03    1.000      obsgroup    
 dflowjan080400        2.706249E-02   3.702000E-02  -9.957513E-03    1.000      obsgroup    
-dflowjan080405        2.698333E-02   3.511000E-02  -8.126666E-03    1.000      obsgroup    
+dflowjan080405        2.698333E-02   3.512000E-02  -8.136666E-03    1.000      obsgroup    
 dflowjan080410        2.690418E-02   3.954000E-02  -1.263582E-02    1.000      obsgroup    
 dflowjan080415        2.682503E-02   3.745000E-02  -1.062497E-02    1.000      obsgroup    
 dflowjan080420        2.674587E-02   3.552000E-02  -8.774126E-03    1.000      obsgroup    
@@ -25109,7 +25122,7 @@ dflowjan080715        1.615889E-02   1.113000E-02   5.028889E-03    1.000      o
 dflowjan080720        1.578573E-02   1.077000E-02   5.015726E-03    1.000      obsgroup    
 dflowjan080725        1.541510E-02   1.043000E-02   4.985104E-03    1.000      obsgroup    
 dflowjan080730        1.523084E-02   1.011000E-02   5.120838E-03    1.000      obsgroup    
-dflowjan080735        1.486460E-02   9.790000E-03   5.074598E-03    1.000      obsgroup    
+dflowjan080735        1.486460E-02   9.800000E-03   5.064598E-03    1.000      obsgroup    
 dflowjan080740        1.468268E-02   9.500000E-03   5.182682E-03    1.000      obsgroup    
 dflowjan080745        1.450161E-02   9.210000E-03   5.291612E-03    1.000      obsgroup    
 dflowjan080750        1.414213E-02   8.940000E-03   5.202128E-03    1.000      obsgroup    
@@ -48930,23 +48943,23 @@ See file e:/uc/epa/swmm2pest/swmm2pest/2009q1/groof09q1.seo for composite observ
 
 Objective function ----->
 
-  Sum of squared weighted residuals (ie phi)                =   1.067    
+  Sum of squared weighted residuals (ie phi)                =   1.062    
 
 
 Correlation Coefficient ----->
 
-  Correlation coefficient                                   =  0.74786    
+  Correlation coefficient                                   =  0.75124    
 
 
 Analysis of residuals ----->
 
   All residuals:-
      Number of residuals with non-zero weight                       = 24352
-     Mean value of non-zero weighted residuals                      =  2.3404E-03
-     Maximum weighted residual [observation "dflowjan071850"]       =  8.6006E-02
-     Minimum weighted residual [observation "dflowjan061040"]       = -0.1407    
-     Standard variance of weighted residuals                        =  4.3806E-05
-     Standard error of weighted residuals                           =  6.6186E-03
+     Mean value of non-zero weighted residuals                      =  2.3160E-03
+     Maximum weighted residual [observation "dflowmar151020"]       =  7.5196E-02
+     Minimum weighted residual [observation "dflowjan061040"]       = -0.1611    
+     Standard variance of weighted residuals                        =  4.3631E-05
+     Standard error of weighted residuals                           =  6.6053E-03
 
      Note: the above variance was obtained by dividing the objective 
      function by the number of system degrees of freedom (ie. number of 
@@ -48960,15 +48973,15 @@ Analysis of residuals ----->
 K-L information statistics ----->
 
 
-  AIC   =  -244387.2    
-  AICC  =  -244387.2    
-  BIC   =  -244371.0    
-  KIC   =  -244389.7    
+  AIC   =  -244485.1    
+  AICC  =  -244485.0    
+  BIC   =  -244468.8    
+  KIC   =  -244487.5    
 
 Parameter covariance matrix ----->
 
              f0prcnt_ntll
-f0prcnt_ntll   3.4151E-02
+f0prcnt_ntll   3.2467E-02
 
 
 Parameter correlation coefficient matrix ----->
@@ -48985,4 +48998,4 @@ f0prcnt_ntll    1.000
 
 Eigenvalues ----->
 
-               3.4151E-02
+               3.2467E-02

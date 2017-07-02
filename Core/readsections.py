@@ -1,6 +1,6 @@
-from subcatchments import Subcatchment
-from lidcontrol import LIDControl
 
+from Core.subcatchments import Subcatchment
+from Core.lidcontrol import LIDControl
 
 class ReadSections:
 

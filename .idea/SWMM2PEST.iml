@@ -5,9 +5,8 @@
       <sourceFolder url="file://$MODULE_DIR$/pyswmm-master" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/SWMMOutputAPI-master" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/SWMMOutputAPI-master/swmmoutputapi" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Core" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 2.7.10 (/System/Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.6.1 (C:\Users\Suraj\AppData\Local\Programs\Python\Python36-32\python.exe)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TestRunnerService">

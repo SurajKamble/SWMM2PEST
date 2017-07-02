@@ -1,5 +1,4 @@
-
-from subcatchments import DataField
+from Core.subcatchments import DataField
 
 # Class type for LID with all its parameters as variables
 

@@ -3,7 +3,7 @@ ptf #
 ;;Data from Seattle FS10 Green Roof Study
 ;;Data entered on December 9, 2013, 2013 by E. Hirschmann
 ;;LID 23, Storm 187
-
+ 
 [OPTIONS]
 ;;Option             Value
 FLOW_UNITS           GPM
@@ -13,7 +13,7 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0
 ALLOW_PONDING        YES
 SKIP_STEADY_STATE    NO
-
+ 
 START_DATE           01/06/2009
 START_TIME           10:35:00
 REPORT_START_DATE    01/06/2009
@@ -27,7 +27,7 @@ REPORT_STEP          00:05:00
 WET_STEP             00:05:00
 DRY_STEP             00:05:00
 ROUTING_STEP         0:00:05
-
+ 
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 FORCE_MAIN_EQUATION  H-W
@@ -40,33 +40,33 @@ SYS_FLOW_TOL         5
 LAT_FLOW_TOL         5
 MINIMUM_STEP         0.5
 THREADS              1
-
+ 
 [EVAPORATION]
 ;;Data Source    Parameters
 ;;-------------- ----------------
 CONSTANT         0.0
 DRY_ONLY         NO
-
+ 
 [RAINGAGES]
 ;;Name           Format    Interval SCF      Source
 ;;-------------- --------- ------ ------ ----------
 Jan-March_Storms INTENSITY 0:05     1.0      TIMESERIES Jan-Mar2009
-
+ 
 [SUBCATCHMENTS]
 ;;Name           Rain Gage        Outlet           Area     %Imperv  Width    %Slope   CurbLen  SnowPack
 ;;-------------- ---------------- ---------------- -------- -------- -------- -------- -------- ----------------
 FS10             Jan-March_Storms 1                0.147    0.0      80       4.167    0
-
+ 
 [SUBAREAS]
 ;;Subcatchment   N-Imperv   N-Perv     S-Imperv   S-Perv     PctZero    RouteTo    PctRouted
 ;;-------------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
 FS10             0.01       0.1        0.05       0.05       25         OUTLET
-
+ 
 [INFILTRATION]
 ;;Subcatchment   Suction    Ksat       IMD
 ;;-------------- ---------- ---------- ----------
 FS10             3.0        0.5        4
-
+ 
 [LID_CONTROLS]
 ;;               Type/Layer Parameters
 ;;-------------- ---------- ----------
@@ -77,17 +77,17 @@ GreenRoof        SURFACE        1.0000000E+00       5.0000000E-02 .4100000000 4.
 GreenRoof        SOIL     4.00000000 .4700000000 .3300000000 .090000000  3.00000000  .500000000  4.00000000
 ;;GreenRoof      DRAINMAT  dmt_thck   dmt_vdrto   dmt_rghns
 GreenRoof        DRAINMAT 3.00000000 .3000000000 3.750000000
-
+ 
 [LID_USAGE]
 ;;Subcatchment   LID Process      Number  Area       Width      InitSatur  FromImprv  ToPerv     Report File
 ;;-------------- ---------------- ------- ---------- ---------- ---------- ---------- ---------- -----------
-FS10             GreenRoof        1       6400                                                    #F0tp_wdth_vr#                                                #F0prcnt_ntll# 100        0          "E:\UC\EPA\SWMM2PEST\SWMM2PEST\2009Q1\groof09Q1.txt"
-
+FS10             GreenRoof        1       6400                                                        #F0tp_wdth_vr#                                                    #F0prcnt_ntll# 100        0          "E:\UC\EPA\SWMM2PEST\SWMM2PEST\2009Q1\groof09Q1.txt"
+ 
 [OUTFALLS]
 ;;Name           Elevation  Type       Stage Data       Gated    Route To
 ;;-------------- ---------- ---------- ---------------- -------- ----------------
 1                0          FREE                        NO
-
+ 
 [TIMESERIES]
 ;;Name           Date       Time       Value
 ;;-------------- ---------- ---------- ----------

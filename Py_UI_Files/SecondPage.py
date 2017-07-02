@@ -6,7 +6,11 @@
 #
 # WARNING! All changes made in this file will be lost!
 
+# --------Py UI Files include Image directories refactored for the sake of executable file.---------
+
 from PyQt5 import QtCore, QtGui, QtWidgets
+
+import Images
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -15,7 +19,7 @@ class Ui_MainWindow(object):
         MainWindow.resize(771, 516)
         MainWindow.setContextMenuPolicy(QtCore.Qt.DefaultContextMenu)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../Images/EPA1.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("Images\EPA1.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
         MainWindow.setTabShape(QtWidgets.QTabWidget.Rounded)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
@@ -77,7 +81,7 @@ class Ui_MainWindow(object):
         self.buttonOkParameters = QtWidgets.QPushButton(self.tabParameters)
         self.buttonOkParameters.setMaximumSize(QtCore.QSize(100, 16777215))
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("../Images/21828-200.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap("Images\\21828-200.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.buttonOkParameters.setIcon(icon1)
         self.buttonOkParameters.setCheckable(False)
         self.buttonOkParameters.setChecked(False)
@@ -157,7 +161,7 @@ class Ui_MainWindow(object):
         font.setWeight(50)
         self.pushButtonRunPEST.setFont(font)
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("../Images/Go.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap("Images\Go.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButtonRunPEST.setIcon(icon2)
         self.pushButtonRunPEST.setDefault(True)
         self.pushButtonRunPEST.setObjectName("pushButtonRunPEST")

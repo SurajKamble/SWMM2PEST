@@ -8,12 +8,14 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+import Images
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(700, 563)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../Images/EPA1.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("Images\EPA1.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
@@ -31,7 +33,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout.addWidget(self.widget)
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
         self.label_2.setText("")
-        self.label_2.setPixmap(QtGui.QPixmap("../Images/EPA1.png"))
+        self.label_2.setPixmap(QtGui.QPixmap('Images\EPA1.png'))
         self.label_2.setObjectName("label_2")
         self.horizontalLayout.addWidget(self.label_2)
         self.widget_2 = QtWidgets.QWidget(self.centralwidget)

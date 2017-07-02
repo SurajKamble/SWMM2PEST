@@ -32,25 +32,25 @@
   **************************        Volume         Depth
   Runoff Quantity Continuity     acre-feet        inches
   **************************     ---------       -------
-  Initial LID Storage ......         0.015         1.189
+  Initial LID Storage ......         0.015         1.257
   Total Precipitation ......         0.024         1.930
   Evaporation Loss .........         0.000         0.000
   Infiltration Loss ........         0.000         0.000
   Surface Runoff ...........         0.000         0.000
-  LID Drainage .............         0.019         1.574
+  LID Drainage .............         0.020         1.624
   Final Storage ............         0.016         1.319
-  Continuity Error (%) .....         7.243
+  Continuity Error (%) .....         7.668
   
   
   **************************        Volume        Volume
   Flow Routing Continuity        acre-feet      10^6 gal
   **************************     ---------     ---------
   Dry Weather Inflow .......         0.000         0.000
-  Wet Weather Inflow .......         0.019         0.006
+  Wet Weather Inflow .......         0.020         0.006
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
   External Inflow ..........         0.000         0.000
-  External Outflow .........         0.019         0.006
+  External Outflow .........         0.020         0.006
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
@@ -68,7 +68,7 @@
                            Precip      Runon       Evap      Infil     Runoff      Runoff   Runoff   Coeff
   Subcatchment                 in         in         in         in         in    10^6 gal      GPM
   --------------------------------------------------------------------------------------------------------
-  FS10                       1.93       0.00       0.00       0.00       1.57        0.01    10.86   0.816
+  FS10                       1.93       0.00       0.00       0.00       1.62        0.01    11.05   0.841
   
 
   ***********************
@@ -80,8 +80,8 @@
                                         Inflow      Loss      Loss   Outflow   Outflow   Storage   Storage       Error
   Subcatchment      LID Control             in        in        in        in        in        in        in           %
   --------------------------------------------------------------------------------------------------------------------
-  FS10              GreenRoof             1.93      0.00      0.00      0.00      1.57      1.19      1.32        7.21
+  FS10              GreenRoof             1.93      0.00      0.00      0.00      1.62      1.26      1.32        7.64
 
-  Analysis begun on:  Mon Jun 26 12:03:17 2017
-  Analysis ended on:  Mon Jun 26 12:03:18 2017
+  Analysis begun on:  Sat Jul 01 16:27:01 2017
+  Analysis ended on:  Sat Jul 01 16:27:02 2017
   Total elapsed time: 00:00:01

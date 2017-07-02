@@ -1,18 +1,22 @@
-from PyQt5.QtWidgets import (QMainWindow, QTextEdit, QAction, QFileDialog, QApplication)
-from PyQt5 import QtWidgets, QtGui, QtCore
-from PyQt5.QtGui import *
+import sys
+
+from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtCore import *
 from PyQt5.QtCore import pyqtSignal
-from Py_UI_Files import FirstPage, SecondPage, ParametersWindow, DialogBox, browseWindow, PESTOutputWindow
-from subcatchments import Subcatchment, DataField
+from PyQt5.QtWidgets import (QMainWindow, QFileDialog, QApplication)
+
+# from Py_UI_Files import *  # FirstPage, SecondPage, ParametersWindow, DialogBox, browseWindow, PESTOutputWindow
+
+from Core.readsections import ReadSections
+from Py_UI_Files import FirstPage, DialogBox, browseWindow, PESTOutputWindow, SecondPage, ParametersWindow
+from Core.write_sections import write_sections
+from Core.subcatchments import DataField
 import os
-import re
-import matplotlib.pyplot as plt
-from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
-from matplotlib.figure import Figure
-import sys
-from readsections import ReadSections
-from write_sections import write_sections
+'''
+from .subcatchments import DataField
+from .readsections import ReadSections
+from .write_sections import write_sections
+'''
 from numpy import linspace
 
 import pyqtgraph as pg

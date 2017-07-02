@@ -3,17 +3,17 @@
 
  OPTIMISATION ITERATION NO.  1 ----->
  Parameter name    Group          Current value    Sensitivity
-   f0prcnt_ntll    paragroup        14.9395         1.411286E-06
+   f0prcnt_ntll    paragroup        27.0519         1.505359E-06
 
 
  OPTIMISATION ITERATION NO.  2 ----->
  Parameter name    Group          Current value    Sensitivity
-   f0prcnt_ntll    paragroup        21.6645         1.470731E-06
+   f0prcnt_ntll    paragroup        27.0519         1.504610E-06
 
 
  OPTIMISATION ITERATION NO.  3 ----->
  Parameter name    Group          Current value    Sensitivity
-   f0prcnt_ntll    paragroup        25.0000         1.495301E-06
+   f0prcnt_ntll    paragroup        27.0545         1.504427E-06
 
 
 
@@ -23,4 +23,4 @@
 
  Number of observations with non-zero weight = 24352
  Parameter name    Group          Current value    Sensitivity
-   f0prcnt_ntll    paragroup        25.0000         1.470731E-06
+   f0prcnt_ntll    paragroup        27.0519         1.505359E-06

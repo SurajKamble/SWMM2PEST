@@ -1,4 +1,3 @@
-from PyQt5 import QtWidgets
 
 # Class type for subcatchments and all its parameters as variables
 

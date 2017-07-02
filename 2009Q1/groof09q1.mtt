@@ -7,7 +7,7 @@
 
  Adjustable        Group           Current          Standard
  parameter                         value            deviation
- f0prcnt_ntll      paragroup        25.0000         0.181763    
+ f0prcnt_ntll      paragroup        27.0545         0.180298    
 
  Note that if a parameter is log-transformed, the standard deviation in the 
  above table refers to the log of the parameter. Note also that the objective
@@ -18,7 +18,7 @@
  Parameter covariance matrix ----->
 
               f0prcnt_ntll
- f0prcnt_ntll   3.3038E-02
+ f0prcnt_ntll   3.2507E-02
 
 
  Parameter correlation coefficient matrix ----->
@@ -35,4 +35,4 @@
 
  Eigenvalues ----->
 
-                3.3038E-02
+                3.2507E-02
