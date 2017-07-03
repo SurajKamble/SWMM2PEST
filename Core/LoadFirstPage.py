@@ -676,17 +676,19 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
         # print(self.output_values_before_calibration)
 
         with open(self.out_fname, 'r') as out_file:
-            lines = out_file.readlines()
+            out_lines = out_file.readlines()
 
-        for line_num in range(len(lines)):
-            if lines[line_num].startswith("-------"):
+        for line_num in range(len(out_lines)):
+            if out_lines[line_num].startswith("-------"):
                 start_line = line_num + 1
 
         # Output values after calibration:
 
+        out_lines = out_lines[start_line:]
+
         self.output_values_after_calibration = []
 
-        for line in self.out_lines:
+        for line in out_lines:
             self.output_values_after_calibration.append(line[self.output_location_start:(self.output_location_end + 1)])
 
         # print(self.output_values_after_calibration)
@@ -709,7 +711,7 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
     # Display graphs
 
     def plot_graphs(self):
-        print(len(self.measured_data))
+        # print(len(self.measured_data))
         # m = self.output_values_before_calibration[0:10]
 
         temp = []
@@ -725,13 +727,19 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
 
         self.measured_data = temp1
 
+        print("Measured data: ")
         print(self.measured_data)
+
+        print("Before calibration: ")
+        print(self.output_values_before_calibration)
+
+        print("After calibration: ")
         print(self.output_values_after_calibration)
 
         self.measured_data = self.measured_data[:len(self.output_values_after_calibration)]
 
-        print(len(self.measured_data))
-        print(len(self.output_values_after_calibration))
+        # print(len(self.measured_data))
+        # print(len(self.output_values_after_calibration))
 
         x = linspace(min(self.measured_data), max(self.measured_data), len(self.measured_data))
 
@@ -928,20 +936,20 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
             if item.text() == "Surface":
                 surface_layer_storage_depth_line_edit = self.createLineEdit(self.lid_controls_data.surface_layer_storage_depth)
                 surface_layer_vegetative_cover_fraction_line_edit = self.createLineEdit(self.lid_controls_data.surface_layer_vegetative_cover_fraction)
-                surface_layer_surface_roughness_line_edit = self.createLineEdit(self.lid_controls_data.surface_layer_surface_roughness)
-                surface_layer_surface_slope_line_edit = self.createLineEdit(self.lid_controls_data.surface_layer_surface_slope)
+                surface_layer_roughness_line_edit = self.createLineEdit(self.lid_controls_data.surface_layer_roughness)
+                surface_layer_slope_line_edit = self.createLineEdit(self.lid_controls_data.surface_layer_slope)
                 surface_layer_swale_side_slope_line_edit = self.createLineEdit(self.lid_controls_data.surface_layer_swale_side_slope)
 
                 surface_layer_storage_depth_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.surface_layer_storage_depth))
                 surface_layer_vegetative_cover_fraction_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.surface_layer_vegetative_cover_fraction))
-                surface_layer_surface_roughness_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.surface_layer_surface_roughness))
-                surface_layer_surface_slope_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.surface_layer_surface_slope))
+                surface_layer_roughness_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.surface_layer_roughness))
+                surface_layer_slope_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.surface_layer_slope))
                 surface_layer_swale_side_slope_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.surface_layer_swale_side_slope))
 
                 self.window.formLayout.addRow(self.lid_controls_data.surface_layer_storage_depth.label, surface_layer_storage_depth_line_edit)
                 self.window.formLayout.addRow(self.lid_controls_data.surface_layer_vegetative_cover_fraction.label, surface_layer_vegetative_cover_fraction_line_edit)
-                self.window.formLayout.addRow(self.lid_controls_data.surface_layer_surface_roughness.label, surface_layer_surface_roughness_line_edit)
-                self.window.formLayout.addRow(self.lid_controls_data.surface_layer_surface_slope.label, surface_layer_surface_slope_line_edit)
+                self.window.formLayout.addRow(self.lid_controls_data.surface_layer_roughness.label, surface_layer_roughness_line_edit)
+                self.window.formLayout.addRow(self.lid_controls_data.surface_layer_slope.label, surface_layer_slope_line_edit)
                 self.window.formLayout.addRow(self.lid_controls_data.surface_layer_swale_side_slope.label, surface_layer_swale_side_slope_line_edit)
 
                 print(self.lid_controls_data.has_drainmat_system)
@@ -971,7 +979,7 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
                 soil_layer_field_capacity_line_edit = self.createLineEdit(self.lid_controls_data.soil_layer_field_capacity)
                 soil_layer_wilting_point_line_edit = self.createLineEdit(self.lid_controls_data.soil_layer_wilting_point)
                 soil_layer_conductivity_line_edit = self.createLineEdit(self.lid_controls_data.soil_layer_conductivity)
-                soil_layer_conductivity_slope_line_edit = self.createLineEdit(self.lid_controls_data.soil_layer_conductivity_slope)
+                soil_layer_slope_line_edit = self.createLineEdit(self.lid_controls_data.soil_layer_slope)
                 soil_layer_suction_head_line_edit = self.createLineEdit(self.lid_controls_data.soil_layer_suction_head)
 
                 soil_layer_thickness_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.soil_layer_thickness))
@@ -979,7 +987,7 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
                 soil_layer_field_capacity_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.soil_layer_field_capacity))
                 soil_layer_wilting_point_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.soil_layer_wilting_point))
                 soil_layer_conductivity_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.soil_layer_conductivity))
-                soil_layer_conductivity_slope_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.soil_layer_conductivity_slope))
+                soil_layer_slope_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.soil_layer_slope))
                 soil_layer_suction_head_line_edit.clicked.connect(lambda: self.loadDialogBoxWindow(self.lid_controls_data.soil_layer_suction_head))
 
                 self.window.formLayout.addRow(self.lid_controls_data.soil_layer_thickness.label, soil_layer_thickness_line_edit)
@@ -987,7 +995,7 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
                 self.window.formLayout.addRow(self.lid_controls_data.soil_layer_field_capacity.label, soil_layer_field_capacity_line_edit)
                 self.window.formLayout.addRow(self.lid_controls_data.soil_layer_wilting_point.label, soil_layer_wilting_point_line_edit)
                 self.window.formLayout.addRow(self.lid_controls_data.soil_layer_conductivity.label, soil_layer_conductivity_line_edit)
-                self.window.formLayout.addRow(self.lid_controls_data.soil_layer_conductivity_slope.label, soil_layer_conductivity_slope_line_edit)
+                self.window.formLayout.addRow(self.lid_controls_data.soil_layer_slope.label, soil_layer_slope_line_edit)
                 self.window.formLayout.addRow(self.lid_controls_data.soil_layer_suction_head.label, soil_layer_suction_head_line_edit)
 
             if item.text() == "Storage":

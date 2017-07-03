@@ -36,10 +36,10 @@ class LIDControl():
         self.surface_layer_vegetative_cover_fraction = DataField('surface_layer_vegetative_cover_fraction', "Surface_Layer_Vegetative_Cover_Fraction", index=3)
         """Fraction of the storage area above the surface that is filled with vegetation"""
 
-        self.surface_layer_surface_roughness = DataField('surface_layer_surface_roughness', "Surface_Layer_Surface_Roughness", index=4)
+        self.surface_layer_roughness = DataField('surface_layer_roughness', "surface_layer_roughness", index=4)
         """Manning's n for overland flow over the surface of porous pavement or a vegetative swale"""
 
-        self.surface_layer_surface_slope = DataField('surface_layer_surface_slope', "Surface_Layer_Surface_Slope", index=5)
+        self.surface_layer_slope = DataField('surface_layer_slope', "surface_layer_slope", index=5)
         """Slope of porous pavement surface or vegetative swale"""
 
         self.surface_layer_swale_side_slope = DataField('surface_layer_swale_side_slope', "Surface_Layer_Swale_Side_Slope", index=6)
@@ -76,7 +76,7 @@ class LIDControl():
         self.soil_layer_conductivity = DataField('soil_layer_conductivity', "Soil_Layer_Conductivity", index=6)
         """Hydraulic conductivity for the fully saturated soil"""
 
-        self.soil_layer_conductivity_slope = DataField('soil_layer_conductivity_slope', "Soil_Layer_Conductivity_Slope", index=7)
+        self.soil_layer_slope = DataField('soil_layer_slope', "soil_layer_slope", index=7)
         """Slope of the curve of log(conductivity) versus soil moisture content"""
 
         self.soil_layer_suction_head = DataField('soil_layer_suction_head', "Soil_Layer_Suction_Head", index=8)
@@ -119,8 +119,8 @@ class LIDControl():
 
     def get_surface_control_pars_as_list(self):
 
-        return [self.surface_layer_storage_depth, self.surface_layer_vegetative_cover_fraction, self.surface_layer_surface_roughness,
-                self.surface_layer_surface_slope, self.surface_layer_swale_side_slope]
+        return [self.surface_layer_storage_depth, self.surface_layer_vegetative_cover_fraction, self.surface_layer_roughness,
+                self.surface_layer_slope, self.surface_layer_swale_side_slope]
 
     def get_pavement_control_pars_as_list(self):
 
@@ -130,7 +130,7 @@ class LIDControl():
     def get_soil_control_pars_as_list(self):
 
         return [self.soil_layer_thickness, self.soil_layer_porosity, self.soil_layer_field_capacity, self.soil_layer_wilting_point,
-                self.soil_layer_conductivity, self.soil_layer_conductivity_slope, self.soil_layer_suction_head]
+                self.soil_layer_conductivity, self.soil_layer_slope, self.soil_layer_suction_head]
 
     def get_storage_control_pars_as_list(self):
 
@@ -146,14 +146,14 @@ class LIDControl():
 
     def get_all_data_as_list(self):
 
-        return [self.surface_layer_storage_depth, self.surface_layer_vegetative_cover_fraction, self.surface_layer_surface_roughness,
-                self.surface_layer_surface_slope, self.surface_layer_swale_side_slope,
+        return [self.surface_layer_storage_depth, self.surface_layer_vegetative_cover_fraction, self.surface_layer_roughness,
+                self.surface_layer_slope, self.surface_layer_swale_side_slope,
                 self.pavement_layer_thickness, self.pavement_layer_void_ratio,
                 self.pavement_layer_impervious_surface_fraction,
                 self.pavement_layer_permeability, self.pavement_layer_clogging_factor,
                 self.soil_layer_thickness, self.soil_layer_porosity, self.soil_layer_field_capacity,
                 self.soil_layer_wilting_point,
-                self.soil_layer_conductivity, self.soil_layer_conductivity_slope, self.soil_layer_suction_head,
+                self.soil_layer_conductivity, self.soil_layer_slope, self.soil_layer_suction_head,
                 self.storage_layer_height, self.storage_layer_void_ratio, self.storage_layer_filtration_rate,
                 self.storage_layer_clogging_factor,
                 self.drain_coefficient, self.drain_exponent, self.drain_offset_height, self.drain_delay,

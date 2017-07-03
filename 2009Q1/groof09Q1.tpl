@@ -72,16 +72,16 @@ FS10             3.0        0.5        4
 ;;-------------- ---------- ----------
 GreenRoof        GR
 ;;GreenRoof      SURFACE   srf_strg   srf_vgvlm   srf_rghns    srf_slp   0.0
-GreenRoof        SURFACE        1.0000000E+00       5.0000000E-02 .4100000000 4.17000000  0.0
+GreenRoof        SURFACE        #srfc_lyr_str#       #srfc_lyr_vgt# #srfc_lyr_rgh# #srfc_lyr_slp#  0.0
 ;;GreenRoof      SOIL       sl_thck    sl_prsty    sl_fldcp   sl_wltpt      sl_kst     sl_kcff     sl_sctn
-GreenRoof        SOIL     4.00000000 .4700000000 .3300000000 .090000000  3.00000000  .500000000  4.00000000
+GreenRoof        SOIL     #sl_lyr_thckn# #sl_lyr_prsty# #sl_lyr_fld_c# #sl_lyr_wltng#  #sl_lyr_cndct#  #sl_lyr_slp#  #sl_lyr_sctn_#
 ;;GreenRoof      DRAINMAT  dmt_thck   dmt_vdrto   dmt_rghns
-GreenRoof        DRAINMAT 3.00000000 .3000000000 3.750000000
+GreenRoof        DRAINMAT #drnmt_thckns# #drnmt_vd_frc# #drnmt_rghnss#
  
 [LID_USAGE]
 ;;Subcatchment   LID Process      Number  Area       Width      InitSatur  FromImprv  ToPerv     Report File
 ;;-------------- ---------------- ------- ---------- ---------- ---------- ---------- ---------- -----------
-FS10             GreenRoof        1       6400                                                        #F0tp_wdth_vr#                                                    #F0prcnt_ntll# 100        0          "E:\UC\EPA\SWMM2PEST\SWMM2PEST\2009Q1\groof09Q1.txt"
+FS10             GreenRoof        1       6400        #F0tp_wdth_vr#      #F0prcnt_ntll#  100    0          "E:\UC\EPA\SWMM2PEST\SWMM2PEST\2009Q1\groof09Q1.txt"
  
 [OUTFALLS]
 ;;Name           Elevation  Type       Stage Data       Gated    Route To

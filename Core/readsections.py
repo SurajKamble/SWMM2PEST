@@ -143,8 +143,8 @@ class ReadSections:
                             self.lid_control_data.has_surface_layer = True
                             self.lid_control_data.surface_layer_storage_depth.value = lid_item[2]
                             self.lid_control_data.surface_layer_vegetative_cover_fraction.value = lid_item[3]
-                            self.lid_control_data.surface_layer_surface_roughness.value = lid_item[4]
-                            self.lid_control_data.surface_layer_surface_slope.value = lid_item[5]
+                            self.lid_control_data.surface_layer_roughness.value = lid_item[4]
+                            self.lid_control_data.surface_layer_slope.value = lid_item[5]
                             self.lid_control_data.surface_layer_swale_side_slope.value = lid_item[6]
 
                         if lid_item[1] == "PAVEMENT":
@@ -162,7 +162,7 @@ class ReadSections:
                             self.lid_control_data.soil_layer_field_capacity.value = lid_item[4]
                             self.lid_control_data.soil_layer_wilting_point.value = lid_item[5]
                             self.lid_control_data.soil_layer_conductivity.value = lid_item[6]
-                            self.lid_control_data.soil_layer_conductivity_slope.value = lid_item[7]
+                            self.lid_control_data.soil_layer_slope.value = lid_item[7]
                             self.lid_control_data.soil_layer_suction_head.value = lid_item[8]
 
                         if lid_item[1] == "STORAGE":
