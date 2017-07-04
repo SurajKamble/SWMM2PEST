@@ -1,4 +1,4 @@
-Open <b>SWMM2PEST.exe</b> file to run the application.
+Open <b>SWMM2PEST.exe</b> to run the application.
 
 <b>Prerequisites</b>
 
