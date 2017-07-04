@@ -3,12 +3,12 @@ import sys
 from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtCore import *
 from PyQt5.QtCore import pyqtSignal
-from PyQt5.QtWidgets import (QMainWindow, QFileDialog, QApplication)
+from PyQt5.QtWidgets import (QMainWindow, QFileDialog, QApplication, qApp)
 
 # from Py_UI_Files import *  # FirstPage, SecondPage, ParametersWindow, DialogBox, browseWindow, PESTOutputWindow
 
 from Core.readsections import ReadSections
-from Py_UI_Files import FirstPage, DialogBox, browseWindow, PESTOutputWindow, SecondPage, ParametersWindow
+from Py_UI_Files import FirstPage, DialogBox, browseWindow, PESTOutputWindow, SecondPage, ParametersWindow, HelpWindow
 from Core.write_sections import write_sections
 from Core.subcatchments import DataField
 import os
@@ -106,11 +106,20 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
             # print("Second page")
             self.loadSecondPage(fname[0])
 
+    def loadHelpWindow(self):
+
+        self.helpWindow = LoadHelpWindow()
+
+
     # Loads second window after getting SWMM input file
 
     def loadSecondPage(self, fname):
 
         self.secondPage = LoadSecondPage()
+
+        self.secondPage.actionExit.triggered.connect(qApp.quit)
+
+        self.secondPage.actionHelp.triggered.connect(self.loadHelpWindow)
 
         # pg.plot([1, 2, 3])
 
@@ -1243,6 +1252,16 @@ class LoadBrowseWindow(QMainWindow, browseWindow.Ui_MainWindow):
 
 
 class LoadPESTOutputWindow(QMainWindow, PESTOutputWindow.Ui_MainWindow):
+
+    def __init__(self):
+        super(self.__class__, self).__init__()
+
+        self.setupUi(self)
+        self.setWindowFlags(QtCore.Qt.WindowCloseButtonHint)
+        self.show()
+
+
+class LoadHelpWindow(QMainWindow, HelpWindow.Ui_MainWindow):
 
     def __init__(self):
         super(self.__class__, self).__init__()

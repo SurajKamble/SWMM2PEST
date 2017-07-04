@@ -1,16 +1,12 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'E:\UC\EPA\SWMM2PEST\SWMM2PEST\UI_Files\SecondPage.ui'
+# Form implementation generated from reading ui file 'SecondPage.ui'
 #
 # Created by: PyQt5 UI code generator 5.8.2
 #
 # WARNING! All changes made in this file will be lost!
 
-# --------Py UI Files include Image directories refactored for the sake of executable file.---------
-
 from PyQt5 import QtCore, QtGui, QtWidgets
-
-import Images
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -81,7 +77,7 @@ class Ui_MainWindow(object):
         self.buttonOkParameters = QtWidgets.QPushButton(self.tabParameters)
         self.buttonOkParameters.setMaximumSize(QtCore.QSize(100, 16777215))
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("Images\\21828-200.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap("Images/21828-200.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.buttonOkParameters.setIcon(icon1)
         self.buttonOkParameters.setCheckable(False)
         self.buttonOkParameters.setChecked(False)
@@ -192,7 +188,10 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
         self.actionExit = QtWidgets.QAction(MainWindow)
         self.actionExit.setObjectName("actionExit")
+        self.actionHelp = QtWidgets.QAction(MainWindow)
+        self.actionHelp.setObjectName("actionHelp")
         self.menuFile.addSeparator()
+        self.menuFile.addAction(self.actionHelp)
         self.menuFile.addAction(self.actionExit)
         self.menubar.addAction(self.menuFile.menuAction())
 
@@ -223,4 +222,5 @@ class Ui_MainWindow(object):
         self.tabOuter.setTabText(self.tabOuter.indexOf(self.tabControls), _translate("MainWindow", "Control Data"))
         self.menuFile.setTitle(_translate("MainWindow", "File"))
         self.actionExit.setText(_translate("MainWindow", "Exit"))
+        self.actionHelp.setText(_translate("MainWindow", "Help"))
 

@@ -34,7 +34,7 @@
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tabParameters">
        <attribute name="title">
@@ -349,6 +349,7 @@
      <string>File</string>
     </property>
     <addaction name="separator"/>
+    <addaction name="actionHelp"/>
     <addaction name="actionExit"/>
    </widget>
    <addaction name="menuFile"/>
@@ -357,6 +358,11 @@
   <action name="actionExit">
    <property name="text">
     <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Help</string>
    </property>
   </action>
  </widget>

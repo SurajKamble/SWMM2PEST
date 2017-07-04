@@ -8,7 +8,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-import Images
+# Make sure Image directories are mentioned properly according to the setup.py build
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
