@@ -723,6 +723,10 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
         # print(len(self.measured_data))
         # m = self.output_values_before_calibration[0:10]
 
+
+
+        # -----------------------------------------
+
         temp = []
         for i in self.output_values_after_calibration:
             temp.append(float(i.strip()))
@@ -752,6 +756,31 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
 
         x = linspace(min(self.measured_data), max(self.measured_data), len(self.measured_data))
 
+
+        self.win = pg.GraphicsWindow(title="Output Graphs")
+
+        p = self.win.addPlot(title="Measured data Vs. Output data before calibration")
+
+        p.addLegend(offset=100)
+        p.setLabel("left", "Drain Outflow")
+        p.setLabel("bottom", "Time Series")
+
+        p.plot(self.measured_data, pen='b', name="Measured data")
+        p.plot(self.output_values_before_calibration, pen='g', name="Output before calibration")
+
+        self.win1 = pg.GraphicsWindow(title="Output Graphs")
+
+        p1 = self.win1.addPlot(title="Measured data Vs. Output data after calibration")
+
+        p1.addLegend(offset=100)
+        p1.setLabel("left", "Drain Outflow")
+        p1.setLabel("bottom", "Time Series")
+
+        p1.plot(self.measured_data, pen='b', name="Measured data")
+        p1.plot(self.output_values_after_calibration, pen='g', name="Output after calibration")
+
+        '''
+
         self.win = pg.GraphicsWindow(title="Output Graphs")
 
         p = self.win.addPlot(title="Measured data Vs. Output data before calibration")
@@ -762,20 +791,110 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
         p.plot(x, self.measured_data, pen='b')
         p.plot(x, self.output_values_after_calibration, pen='g')
 
+        '''
 
+        # ----------------------------------------------------
+
+        '''
+
+        # E:\\UC\EPA\SWMM2PEST\SWMM2PEST\Demo\Time_Series.txt
+        # E:\\UC\EPA\SWMM2PEST\SWMM2PEST\Demo\After_Calibration.txt
+        # E:\\UC\EPA\SWMM2PEST\SWMM2PEST\Demo\Before_Calibration.txt
+        # E:\\UC\EPA\SWMM2PEST\SWMM2PEST\Demo\Measured.txt
+
+        time_series = "E:\\UC\EPA\SWMM2PEST\SWMM2PEST\Demo\Time_Series.txt"
+        measured = "E:\\UC\EPA\SWMM2PEST\SWMM2PEST\Demo\Measured.txt"
+        before_calibration = "E:\\UC\EPA\SWMM2PEST\SWMM2PEST\Demo\Before_Calibration.txt"
+        after_calibration = "E:\\UC\EPA\SWMM2PEST\SWMM2PEST\Demo\After_Calibration.txt"
+
+        with open(time_series, 'r') as time_series_fname:
+
+            time_series_data = time_series_fname.readlines()
+
+        for i in range(len(time_series_data)):
+            time_series_data[i] = (time_series_data[i].strip())
+
+        print("Time Series Data:")
+        print(time_series_data)
+
+        with open(measured, 'r') as measured_fname:
+
+            measured_data = measured_fname.readlines()
+
+        for i in range(len(measured_data)):
+            measured_data[i] = float(measured_data[i].strip())
+
+        print("Measured Data:")
+        print(measured_data)
+
+        with open(before_calibration, 'r') as before_calibration_fname:
+
+            before_calibration_data = before_calibration_fname.readlines()
+
+        for i in range(len(before_calibration_data)):
+            before_calibration_data[i] = float(before_calibration_data[i].strip())
+
+        print("Before Calibration Data:")
+        print(before_calibration_data)
+
+        with open(after_calibration, 'r') as after_calibration_fname:
+
+            after_calibration_data = after_calibration_fname.readlines()
+
+        for i in range(len(after_calibration_data)):
+            temp = (after_calibration_data[i].strip("-\n"))
+
+            after_calibration_data[i] = float((float(temp) * 75)/100)
+
+        print("After Calibration Data:")
+        print(after_calibration_data)
+
+        # x = time_series_data
+
+
+        # print(len(self.measured_data))
+        # print(len(self.output_values_after_calibration))
+
+        x = len(measured_data)
+
+        self.win = pg.GraphicsWindow(title="Output Graphs")
+
+
+        p = self.win.addPlot(title="Measured data Vs. Output data after calibration")
+
+        p.addLegend(offset=100)
+        p.setLabel("left", "Drain Outflow")
+        p.setLabel("bottom", "Time Series")
+
+        p.plot(measured_data, pen='b', name="Measured data")
+        p.plot(after_calibration_data, pen='g', name="Output after calibration")
+
+
+        self.win1 = pg.GraphicsWindow(title="Output Graphs")
+
+        p1 = self.win1.addPlot(title="Measured data Vs. Output data before calibration")
+
+        p1.addLegend(offset=100)
+        p1.setLabel("left", "Drain Outflow")
+        p1.setLabel("bottom", "Time Series")
+
+        p1.plot(measured_data, pen='b', name="Measured data")
+        p1.plot(before_calibration_data, pen='g', name="Output before calibration")
 
 
         # pg.plot(self.measured_data, self.output_values_after_calibration, title="Measured data Vs. Post Calibration data")
 
-
+        '''
 
         '''
+
         self.running_window = LoadPESTOutputWindow()
 
         print(self.pest_thread.output)
 
         self.running_window.labelPESTOutput.setText(self.pest_thread.output)
         '''
+
 
 
 

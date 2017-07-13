@@ -1,7 +1,7 @@
 pcf
 * control data
 restart estimation
-   16    24352    1    0    1
+   2    24352    1    0    1
     1     1 single point 1 0 0
   5.0   2.0   0.3    0.01  10
   5.0   5.0   0.001
@@ -12,22 +12,8 @@ restart estimation
 paragroup  relative 0.01  0.0  switch  2.0 parabolic
 
 * parameter data
-F0tp_wdth_vr           fixed  factor    90    30    110    paragroup  1.0  0.0  1
-F0prcnt_ntll           none  factor    1.07    0.01    25    paragroup  1.0  0.0  1
-srfc_lyr_str           fixed  factor    1.0000000E+00    0.1    1    paragroup  1.0  0.0  1
-srfc_lyr_vgt           fixed  factor    5.0000000E-02    0.01    0.5    paragroup  1.0  0.0  1
-srfc_lyr_rgh           fixed  factor    .4100000000    0.01    0.7    paragroup  1.0  0.0  1
-srfc_lyr_slp           fixed  factor    4.17000000    1    5    paragroup  1.0  0.0  1
-sl_lyr_thckn           fixed  factor    4.00000000    3    5    paragroup  1.0  0.0  1
-sl_lyr_prsty           fixed  factor    .4700000000    0.34    0.70    paragroup  1.0  0.0  1
-sl_lyr_fld_c           fixed  factor    .3300000000    0.15    0.33    paragroup  1.0  0.0  1
-sl_lyr_wltng           fixed  factor    .090000000    0.09    0.14    paragroup  1.0  0.0  1
-sl_lyr_cndct           fixed  factor    3.00000000    0.6    45    paragroup  1.0  0.0  1
-sl_lyr_slp           fixed  factor    .500000000    0.01    20    paragroup  1.0  0.0  1
-sl_lyr_sctn_           fixed  factor    4.00000000    3    8    paragroup  1.0  0.0  1
-drnmt_thckns           fixed  factor    3.00000000    0.5    3    paragroup  1.0  0.0  1
-drnmt_vd_frc           fixed  factor    .3000000000    0.3    0.5    paragroup  1.0  0.0  1
-drnmt_rghnss           fixed  factor    3.750000000    0.01    10    paragroup  1.0  0.0  1
+F0tp_wdth_vr           fixed  factor    9.0000000E+01    0    100    paragroup  1.0  0.0  1
+F0prcnt_ntll           none  factor    2.7099455E+01    0    50    paragroup  1.0  0.0  1
 * observation groups
 obsgroup
 
