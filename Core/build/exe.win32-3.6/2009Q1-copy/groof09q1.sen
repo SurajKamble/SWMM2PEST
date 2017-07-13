@@ -1,0 +1,26 @@
+PARAMETER SENSITIVITIES: CASE e:/uc/epa/swmm2pest/swmm2pest/core/build/exe.win32-3.6/2009q1-copy/groof09q1
+
+
+ OPTIMISATION ITERATION NO.  1 ----->
+ Parameter name    Group          Current value    Sensitivity
+   f0prcnt_ntll    paragroup        27.0995         1.505548E-06
+
+
+ OPTIMISATION ITERATION NO.  2 ----->
+ Parameter name    Group          Current value    Sensitivity
+   f0prcnt_ntll    paragroup        27.0995         1.504551E-06
+
+
+ OPTIMISATION ITERATION NO.  3 ----->
+ Parameter name    Group          Current value    Sensitivity
+   f0prcnt_ntll    paragroup        27.0734         1.504009E-06
+
+
+
+                        COMPLETION OF OPTIMISATION PROCESS
+
+ Composite sensitivities for all observations/prior info ----->
+
+ Number of observations with non-zero weight = 24352
+ Parameter name    Group          Current value    Sensitivity
+   f0prcnt_ntll    paragroup        27.0995         1.505548E-06
