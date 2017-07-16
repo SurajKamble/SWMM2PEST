@@ -978,6 +978,9 @@ class LoadFirstPage(QMainWindow, FirstPage.Ui_MainWindow):
 
         self.dialog_box = LoadDialogBoxWindow()
 
+        self.dialog_box.setWindowTitle("Enter range for parameter: " + parameter.label)
+        print(parameter.label)
+
         self.dialog_box.lineEdit_Value.setText(parameter.value)
 
         print("Lower limit: " + parameter.lower_limit)

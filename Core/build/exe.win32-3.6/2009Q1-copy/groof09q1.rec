@@ -12,7 +12,7 @@ PEST run mode:-
 
 Case dimensions:-
 
-   Number of parameters                           :     2
+   Number of parameters                           :     4
    Number of adjustable parameters                :     1
    Number of parameter groups                     :     1
    Number of observations                         : 24352
@@ -63,10 +63,14 @@ Name         Trans-            Change       Initial        Lower          Upper
              formation         limit        value          bound          bound
 f0tp_wdth_vr fixed               na        90.0000          na             na
 f0prcnt_ntll none              factor      27.0995        0.00000        50.0000    
+sl_lyr_slp   fixed               na       0.500000          na             na
+drnmt_rghnss fixed               na        3.75000          na             na
 
 Name         Group          Scale         Offset        Model command number
 f0tp_wdth_vr paragroup     1.00000        0.00000            1
 f0prcnt_ntll paragroup     1.00000        0.00000            1
+sl_lyr_slp   paragroup     1.00000        0.00000            1
+drnmt_rghnss paragroup     1.00000        0.00000            1
 
 
 Prior information:-
@@ -24486,6 +24490,8 @@ INITIAL CONDITIONS:
       Current parameter values
       f0tp_wdth_vr     90.0000    
       f0prcnt_ntll     27.0995    
+      sl_lyr_slp      0.500000    
+      drnmt_rghnss     3.75000    
 
 
 OPTIMISATION ITERATION NO.        : 1
@@ -24507,6 +24513,8 @@ OPTIMISATION ITERATION NO.        : 1
       Current parameter values
       f0tp_wdth_vr     90.0000    
       f0prcnt_ntll     27.0995    
+      sl_lyr_slp      0.500000    
+      drnmt_rghnss     3.75000    
 
 
 OPTIMISATION ITERATION NO.        : 2
@@ -24525,6 +24533,8 @@ OPTIMISATION ITERATION NO.        : 2
       Current parameter values                 Previous parameter values
       f0tp_wdth_vr     90.0000                 f0tp_wdth_vr      90.0000    
       f0prcnt_ntll     27.0734                 f0prcnt_ntll      27.0995    
+      sl_lyr_slp      0.500000                 sl_lyr_slp       0.500000    
+      drnmt_rghnss     3.75000                 drnmt_rghnss      3.75000    
    Maximum   factor change:  1.001     ["f0prcnt_ntll"]
    Maximum relative change: 9.6043E-04 ["f0prcnt_ntll"]
 
@@ -24545,6 +24555,8 @@ OPTIMISATION ITERATION NO.        : 3
       Current parameter values                 Previous parameter values
       f0tp_wdth_vr     90.0000                 f0tp_wdth_vr      90.0000    
       f0prcnt_ntll     27.0669                 f0prcnt_ntll      27.0734    
+      sl_lyr_slp      0.500000                 sl_lyr_slp       0.500000    
+      drnmt_rghnss     3.75000                 drnmt_rghnss      3.75000    
    Maximum   factor change:  1.000     ["f0prcnt_ntll"]
    Maximum relative change: 2.4216E-04 ["f0prcnt_ntll"]
 
@@ -24575,6 +24587,8 @@ Fixed parameters ----->
 
 Parameter      Fixed value
  f0tp_wdth_vr    90.0000    
+ sl_lyr_slp     0.500000    
+ drnmt_rghnss    3.75000    
 
 See file e:/uc/epa/swmm2pest/swmm2pest/core/build/exe.win32-3.6/2009q1-copy/groof09q1.sen for parameter sensitivities.
 
